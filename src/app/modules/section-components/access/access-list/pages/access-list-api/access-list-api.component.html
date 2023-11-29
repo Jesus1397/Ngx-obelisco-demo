@@ -1,0 +1,133 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Lista de Accesos</h2>
+    <pre class="code import">
+      <code appPrism code="import { OAccessModule } from '@gcba/ngx-obelisco/access';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OAccessList</h4>
+    <p>Selector: <strong>o-access-list</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>AccessList</h4>
+    <p>Permite establecer los valores de la propiedad <strong>items</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfaceAccessList }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="exampleDBAccessListInterface"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>AccessHeader</h4>
+    <p>Permite establecer los valores de la propiedad <strong>header</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfaceAccessListHeader }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="exampleDBAccessListInterfaceHeader"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>Access</h4>
+    <p>Permite establecer los valores de la propiedad <strong>children</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfaceAccessListAccess }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="exampleDBAccessListInterfaceAccess"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>AccessCategory</h4>
+    <p>Permite establecer los valores de la propiedad <strong>children</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfaceAccessListCategory }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="exampleDBAccessListInterfaceAccessCategory"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>AccessFootter</h4>
+    <p>Permite establecer los valores de la propiedad <strong>footer</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfaceAccessListFooter }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="exampleDBAccessListInterfaceFooter"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

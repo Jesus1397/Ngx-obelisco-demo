@@ -1,0 +1,50 @@
+<section class="section-example">
+  <app-viewer title="Solo título">
+    <div component class="list-group-container">
+      <o-access title="Acceso"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAccessTitleHtml}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con descripción">
+    <div component class="list-group-container">
+      <o-access title="Acceso" description="Descripción (Opcional)"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAccessDescriptionHtml}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Icono">
+    <div component class="list-group-container">
+      <o-access title="Acceso" icon="bx bxs-info-circle" route="/home" description="Descripción (Opcional)"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAccessIconHtml}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Tamaños">
+    <div component class="row">
+      <o-access title="Acceso" icon="bx bxs-info-circle" route="/home" description="Descripción (Opcional)"></o-access>
+      <div class="ml-4">
+        <o-access
+          title="Acceso"
+          icon="bx bxs-info-circle"
+          route="/home"
+          description="Descripción (Opcional)"
+          size="sm"
+        ></o-access>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAccessSizesHtml}}</code>
+    </pre>
+  </app-viewer>
+</section>

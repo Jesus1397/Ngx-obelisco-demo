@@ -1,0 +1,84 @@
+<section class="section-example">
+  <app-viewer title="Tipos">
+    <div component class="button-container">
+      <o-button></o-button>
+      <o-button type="secondary"></o-button>
+      <o-button type="success"></o-button>
+      <o-button type="danger"></o-button>
+      <o-button type="link"></o-button>
+      <o-button text="Enlace" link="https://www.google.com/"></o-button>
+    </div>
+    <div component class="button-container">
+      <o-button [isOutline]="true"></o-button>
+      <o-button type="secondary" [isOutline]="true"></o-button>
+      <o-button type="success" [isOutline]="true"></o-button>
+      <o-button type="danger" [isOutline]="true"></o-button>
+      <o-button type="link" [isOutline]="true"></o-button>
+      <o-button text="Enlace" [isOutline]="true" link="https://www.google.com/"></o-button>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+        <code appPrism language="html">{{ buttonTypes }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Tamaños">
+    <div component class="button-container">
+      <o-button size="sm"></o-button>
+      <o-button></o-button>
+      <o-button size="lg"></o-button>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+        <code appPrism language="html">{{ buttonSizes }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Expandible">
+    <div component class="w-50 mx-auto mb-5">
+      <o-button text="Expandible" [isExpandable]="true"></o-button>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+        <code appPrism language="html">{{ buttonBlock }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con ícono">
+    <div component class="button-container">
+      <o-button size="sm" icon="info" text="Botón"></o-button>
+      <o-button icon="bx bxs-info-circle" text="Botón"></o-button>
+      <o-button size="lg" icon="info" text="Botón"></o-button>
+    </div>
+    <div component class="button-container">
+      <o-button size="sm" icon="info" ariaLabel="Botón"></o-button>
+      <o-button icon="bx bxs-info-circle" ariaLabel="Botón"></o-button>
+      <o-button size="lg" icon="info" ariaLabel="Botón"></o-button>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+        <code appPrism language="html">{{ buttonIcon }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con spinner">
+    <div component class="button-container">
+      <o-button [spinner]="true" text="Botón"></o-button>
+      <o-button type="secondary" [spinner]="true" text="Botón"></o-button>
+      <o-button type="success" [spinner]="true" text="Botón"></o-button>
+      <o-button type="danger" [spinner]="true" text="Botón"></o-button>
+      <o-button type="link" [spinner]="true" text="Botón"></o-button>
+    </div>
+    <div component class="button-container">
+      <o-button [isOutline]="true" [spinner]="true" text="Botón"></o-button>
+      <o-button type="secondary" [isOutline]="true" [spinner]="true" text="Botón"></o-button>
+      <o-button type="success" [isOutline]="true" [spinner]="true" text="Botón"></o-button>
+      <o-button type="danger" [isOutline]="true" [spinner]="true" text="Botón"></o-button>
+      <o-button type="link" [isOutline]="true" [spinner]="true" text="Botón"></o-button>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+        <code appPrism language="html">{{ buttonSpinner }}</code>
+    </pre>
+  </app-viewer>
+</section>

@@ -1,0 +1,72 @@
+<section class="section-example">
+  <app-viewer title="Tipos" [isNavCode]="true">
+    <div class="mb-4" component>
+      <o-banner [content]="content"></o-banner>
+    </div>
+    <div class="mb-4" component>
+      <o-banner [content]="content" [isDark]="true"></o-banner>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ bannerTypesHTML }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ bannerTypesTS }}
+      </code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Con Botón" [isNavCode]="true">
+    <div class="mb-4" component>
+      <o-banner [content]="textButton" [icon]="icon">
+        <o-button #child size="sm" type="secondary" link="#"></o-button>
+      </o-banner>
+    </div>
+    <div class="mb-4" component>
+      <o-banner [content]="textButton" [isDark]="true" [icon]="icon">
+        <o-button #child size="sm" type="secondary" link="#"></o-button>
+      </o-banner>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ bannerButtonHTML }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ bannerButtonTS }}
+      </code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Con Botones" [isNavCode]="true">
+    <div class="mb-4" component>
+      <o-banner [content]="textButton" [icon]="iconCookie">
+        <o-button #child size="sm" type="secondary" link="#"></o-button>
+        <o-button #child size="sm" link="#"></o-button>
+      </o-banner>
+    </div>
+    <div class="mb-4" component>
+      <o-banner [content]="textButton" [icon]="iconCookie" [isDark]="true">
+        <o-button #child size="sm" type="secondary" link="#"></o-button>
+        <o-button #child size="sm" link="#"></o-button>
+      </o-banner>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ bannerButtonsHTML }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ bannerButtonTS }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

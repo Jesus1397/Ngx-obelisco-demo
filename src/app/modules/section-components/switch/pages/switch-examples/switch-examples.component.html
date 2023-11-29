@@ -1,0 +1,78 @@
+<section class="section-example">
+  <app-viewer title="Predeterminado" id="example-directive">
+    <div class="d-flex" component>
+      <o-switch></o-switch>
+      <o-switch [switchValue]="true"></o-switch>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleDefault }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con label" id="example-directive">
+    <div component class="d-flex">
+      <o-switch [id]="'example'" [labelOff]="'Apagado'" [labelOn]="'Prendido'"></o-switch>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleWithLabel }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Oscuro" id="example-directive">
+    <div class="d-flex" component>
+      <o-switch [isDark]="true"></o-switch>
+      <o-switch [switchValue]="true" [isDark]="true"></o-switch>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleDark }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Chico" id="example-directive">
+    <div class="d-flex" component>
+      <o-switch [isSmall]="true"></o-switch>
+      <o-switch [switchValue]="true" [isSmall]="true"></o-switch>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleSmall }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Valor fijo" id="example-directive">
+    <div class="d-flex" component>
+      <o-switch [isFixed]="true"></o-switch>
+      <o-switch [switchValue]="true" [isFixed]="true"></o-switch>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleChecked }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Deshabilitado" id="example-directive">
+    <div component class="d-flex">
+      <o-switch [isDisabled]="true" [labelOff]="'Apagado'"></o-switch>
+      <o-switch [isDisabled]="true" [labelOn]="'Prendido'" [switchValue]="true"></o-switch>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleDisabled }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

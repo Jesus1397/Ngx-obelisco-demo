@@ -1,0 +1,37 @@
+<section class="section-example">
+  <app-viewer
+    *ngFor="let tooltip of tooltipList; index as i"
+    [title]="tooltip.name"
+    [isNavCode]="!!tooltip.exampleTS"
+    [id]="'example-' + tooltip.name.toLowerCase()"
+  >
+    <div component class="d-flex justify-content-center">
+      <ng-container *ngFor="let direction of tooltip.direction; index as i">
+        <o-tooltip
+          [direction]="direction"
+          [description]="tooltip.text"
+          class="mx-2"
+          [classes]="tooltip.classes ? 'icon-box bg-light' : ''"
+        >
+          <button *ngIf="!tooltip.classes" type="button" class="btn btn-primary btn-icon">
+            <i class="bx bxs-info-circle"></i>
+            Botón
+          </button>
+          <i *ngIf="tooltip.classes" class="bx bxs-info-circle"></i>
+        </o-tooltip>
+      </ng-container>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ tooltip.exampleHTML }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ tooltip.exampleTS }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

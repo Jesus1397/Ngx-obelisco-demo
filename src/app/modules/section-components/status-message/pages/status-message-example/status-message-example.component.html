@@ -1,0 +1,57 @@
+<section class="section-example">
+  <app-viewer
+    *ngFor="let statusMessage of statusMessageList; index as i"
+    [title]="statusMessage.name"
+    [isNavCode]="!!statusMessage.exampleTS"
+    [id]="'example-' + statusMessage.name.toLowerCase()"
+  >
+    <div component>
+      <o-status-message
+        *ngIf="statusMessage.listContent; else noList"
+        [type]="statusMessage.type"
+        [title]="statusMessage.title"
+        [content]="statusMessage.content"
+        [listContent]="statusMessage.listContent"
+      >
+        <ng-container btn *ngIf="i !== 0; else onlyButton">
+          <o-button type="secondary"></o-button>
+          <o-button type="secondary" [isOutline]="true"></o-button>
+        </ng-container>
+
+        <ng-template btn #onlyButton>
+          <o-button type="secondary"></o-button>
+        </ng-template>
+      </o-status-message>
+
+      <ng-template #noList>
+        <o-status-message [type]="statusMessage.type" [title]="statusMessage.title" [content]="statusMessage.content">
+          <ng-container btn *ngIf="i === 4; else clasicButton">
+            <o-button
+              type="link"
+              [isOutline]="true"
+              text="Ir al sitio web"
+              link="https://buenosaires.gob.ar/"
+            ></o-button>
+          </ng-container>
+
+          <ng-template #clasicButton>
+            <o-button type="secondary"></o-button>
+          </ng-template>
+        </o-status-message>
+      </ng-template>
+    </div>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ statusMessage.exampleHTML }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ statusMessage.exampleTS }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

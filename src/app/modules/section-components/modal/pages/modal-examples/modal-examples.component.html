@@ -1,0 +1,52 @@
+<section class="section-example">
+  <app-viewer title="De confirmación">
+    <div component>
+      <o-button title="Ver modal" dataToggle="modal" dataTarget="exampleModal"></o-button>
+      <o-modal
+        dataTarget="exampleModal"
+        title="¡Importante!"
+        description="Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes."
+        [isBordered]="true"
+      >
+        <o-button title="Volver atrás" type="link" dataDismiss="modal"></o-button>
+        <o-button title="Continuar"></o-button>
+      </o-modal>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{exampleModalConfirmationHTML}}"></code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="De peligro">
+    <div component>
+      <o-button title="Ver modal" dataToggle="modal" dataTarget="dangerModal"></o-button>
+      <o-modal
+        dataTarget="dangerModal"
+        title="Eliminar documento"
+        description="El documento que seleccionaste será eliminado."
+        [isBordered]="true"
+      >
+        <o-button title="Cancelar" type="secondary" [isOutline]="true" dataDismiss="modal"></o-button>
+        <o-button title="Eliminar" type="danger"></o-button>
+      </o-modal>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{exampleModalDangerHTML}}"></code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="De reconocimiento">
+    <div component>
+      <o-button title="Ver modal" dataToggle="modal" dataTarget="recognitionModal"></o-button>
+      <o-modal dataTarget="recognitionModal" subtitle="CARGA EXITOSA" title="Los archivos se cargaron correctamente">
+        <o-button title="Aceptar"></o-button>
+      </o-modal>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{exampleModalRecognitionHTML}}"></code>
+    </pre>
+  </app-viewer>
+</section>

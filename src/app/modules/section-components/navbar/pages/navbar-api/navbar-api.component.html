@@ -1,0 +1,154 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Encabezado de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism language="javascript" code="import { ONavbarModule } from '@gcba/ngx-obelisco/navbar';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>ONavbar</h4>
+    <p>Selector: <strong>o-navbar</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>NavbarRouteBase</h4>
+    <p>
+      Interfaz base utilizada en <strong>NavbarRoute</strong>, <strong>NavbarRouteItem</strong>,
+      <strong>NavbarRouteAccount</strong>, <strong>NavbarRouteAccountItem</strong> y <strong>NavbarRouteLogin</strong>.
+    </p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ navbarRouteBaseInterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="navbarRouteBaseDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h4>NavbarRoute</h4>
+    <p>Permite establecer los valores de la propiedad <strong>routes</strong> y <strong>routesExtended</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ navbarRouteInterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="navbarRouteDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="navbarRouteItemDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h4>NavbarRouteAccount</h4>
+    <p>Permite establecer los valores de la propiedad <strong>routesAccount</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ navbarRouteAccountInterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="navbarRouteAccountDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="navbarRouteAccountItemDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h4>NavbarRouteLogin</h4>
+    <p>Permite establecer los valores de la propiedad <strong>routesLogin</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ navbarRouteLoginInterface }}</code>
+      </pre>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h4>SearchbarItem</h4>
+    <p>Permite establecer los valores de la propiedad <strong>searchbarItems</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ navbarSearchitemInterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="searchbarItemDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,89 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Colapsable de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism language="javascript" code="import { OCollapseComponent } from '@gcba/ngx-obelisco/collapse';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OCollapse</h4>
+    <p>Selector: <strong>o-collapse</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+
+    <div class="section-properties">
+      <h5>Métodos</h5>
+
+      <o-table [columns]="columns" [dataSource]="dataSourceOutput" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>Collapse</h4>
+    <p>Permite establecer los valores de la propiedad <strong>collapaseList</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ interfaceCollapse }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table [columns]="columns" [dataSource]="dataSourceCollapse" [isStriped]="true" [isBordered]="true"></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>CollapseItems</h4>
+    <p>Permite establecer los valores de la propiedad <strong>collapseItems</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ interfaceCollapseItems }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="dataSourceCollapseItems"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="section-type">
+    <h4>CollapseInputs</h4>
+    <p>Permite establecer los valores de la propiedad <strong>collapseInputs</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ interfaceCollapseInputs }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="dataSourceCollapseInputs"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

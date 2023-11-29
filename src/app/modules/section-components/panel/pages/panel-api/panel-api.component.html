@@ -1,0 +1,28 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Panel de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism code="import { OPanelModule } from '@gcba/ngx-obelisco/panel';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OPanelModule</h4>
+    <p>Selectores: <strong>o-panel</strong> & <strong>o-panel-small</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades de <strong>o-panel</strong></h5>
+
+      <o-table [columns]="columns" [dataSource]="dataSourcePanel" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+
+    <div class="section-properties">
+      <h5>Propiedades de <strong>o-panel-small</strong></h5>
+
+      <o-table [columns]="columns" [dataSource]="dataSourcePanelSmall" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+</section>

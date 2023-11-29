@@ -1,0 +1,85 @@
+<section class="section-example">
+  <app-viewer title="Selección única" [isNavCode]="true">
+    <o-collapse component [items]="collapseList" id="accordion1" dataParent="selectionUnique"> </o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{collapseUniqueHtml}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ collapseUniqueTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Selección múltiple" [isNavCode]="true">
+    <o-collapse component [items]="collapseList" id="accordionMultiple"> </o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ collapseMultipleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ collapseMultipleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con información" [isNavCode]="true">
+    <o-collapse component [items]="collapseListInfo" id="accordionInfo"> </o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ collapseMultipleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ collapseInfoTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con icono" [isNavCode]="true">
+    <o-collapse component [items]="collapseListIcon" id="accordion2"> </o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{collapseMultipleHtml}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ collapseIconTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con volanta y descripcion" [isNavCode]="true">
+    <o-collapse component [items]="collapseListCaptionDescription" id="accordion3"> </o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{collapseMultipleHtml}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ collapseCaptionDescriptionTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con lista seleccionable" [isNavCode]="true">
+    <o-collapse component [items]="collapseListSelectable" id="accordionList"> </o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ collapseMultipleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ collapseListTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="De color blanco" [isNavCode]="true">
+    <o-collapse component [items]="collapseList" id="accordionWhite" [isWhite]="true"> </o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ collapseWhiteHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ collapseMultipleTs }}</code>
+    </pre>
+  </app-viewer>
+</section>

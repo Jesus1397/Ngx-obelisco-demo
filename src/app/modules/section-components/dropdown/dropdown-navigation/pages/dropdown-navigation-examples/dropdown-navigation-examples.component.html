@@ -1,0 +1,84 @@
+<section class="section-example">
+  <app-viewer title="Con iconos" [isNavCode]="true">
+    <div component class="d-container-1">
+      <div class="mb-5">
+        <o-dropdown-navigation
+          dataTarget="dropdown1"
+          [dropNavItems]="dropdownItemsIcons"
+          title="Desplegable"
+          iconRight="expand_more"
+          [isAnimatedIconRight]="true"
+        ></o-dropdown-navigation>
+      </div>
+      <div class="mb-5">
+        <o-dropdown-navigation
+          dataTarget="dropdown2"
+          [dropNavItems]="dropdownItemsIcons"
+          title="Desplegable"
+          iconLeft="menu"
+        ></o-dropdown-navigation>
+      </div>
+      <div class="mb-5">
+        <o-dropdown-navigation
+          dataTarget="dropdown3"
+          [dropNavItems]="dropdownItemsIcons"
+          iconLeft="menu"
+        ></o-dropdown-navigation>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleIconsHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism>{{exampleIconsTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Disposición" [isNavCode]="true">
+    <div component class="d-container-2 mb-2">
+      <o-dropdown-navigation
+        dataTarget="dropdown4"
+        [dropNavItems]="dropdownItemsLeft"
+        title="Desplegable Izq."
+        iconRight="expand_more"
+        [isAnimatedIconRight]="true"
+      ></o-dropdown-navigation>
+      <o-dropdown-navigation
+        dataTarget="dropdown5"
+        [dropNavItems]="dropdownItemsRight"
+        iconLeft="expand_more"
+        title="Desplegable Der."
+        [isPositionRight]="true"
+        [isAnimatedIconRight]="true"
+      ></o-dropdown-navigation>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAlignHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism>{{exampleAlignTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con cascada" [isNavCode]="true">
+    <div component class="d-container-3 mb-2">
+      <o-dropdown-navigation
+        dataTarget="dropdown6"
+        [dropNavItems]="dropdownItemsWithSubitems"
+        title="Desplegable"
+      ></o-dropdown-navigation>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleCascadeHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism>{{exampleCascadeTS}}</code>
+    </pre>
+  </app-viewer>
+</section>

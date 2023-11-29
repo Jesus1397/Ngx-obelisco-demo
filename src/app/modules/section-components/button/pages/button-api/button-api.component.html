@@ -1,0 +1,49 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Botón de Obelisco</h2>
+    <pre class="code import">
+        <code appPrism language="javascript" code="import { OButtonComponent } from '@gcba/ngx-obelisco/button';"></code>
+      </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OButton</h4>
+    <p>Selector: <strong>o-button</strong></p>
+
+    <div class="section-properties mb-5">
+      <h5>Propiedades generales</h5>
+      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+    <div class="section-properties mb-5">
+      <h5>Propiedades en etiqueta &lt;a&gt;</h5>
+      <o-table [columns]="columns" [dataSource]="linkDataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+    <div class="section-properties mb-5">
+      <h5>Propiedades en etiqueta &lt;button&gt;</h5>
+      <o-table [columns]="columns" [dataSource]="buttonDataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <div class="section-type">
+    <h4>ButtonTypes</h4>
+    <p>Permite establecer los valores de la propiedad <strong>type</strong>.</p>
+
+    <div class="section-interface mb-5">
+      <pre class="code import">
+        <code appPrism>{{ types }}</code>
+      </pre>
+    </div>
+
+    <h4>Sizes</h4>
+    <p>Permite establecer el <strong>tamaño</strong> del botón</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism>{{ sizes }}</code>
+      </pre>
+    </div>
+  </div>
+</section>

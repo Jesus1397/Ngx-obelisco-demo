@@ -1,0 +1,31 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Mensaje de estado de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism code="import { OStatusMessageComponent } from '@gcba/ngx-obelisco/status-message';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OStatusMessage</h4>
+    <p>Selector: <strong>o-status-message</strong></p>
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>StatusMessageTypes</h4>
+    <p>Permite establecer los diferentes tipos de Mensaje de estado.</p>
+
+    <pre class="code import">
+      <code appPrism>{{ type }}</code>
+    </pre>
+  </div>
+</section>

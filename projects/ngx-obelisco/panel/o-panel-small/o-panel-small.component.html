@@ -1,0 +1,48 @@
+<div *ngIf="!isVertical" class="card card-simple panel-sm-horizontal">
+  <img
+    [src]="imageURL"
+    [alt]="imageAlt"
+    class="rounded-lg"
+    [width]="imageLg ? '154' : '104'"
+    [height]="imageLg ? '154' : '104'"
+  />
+  <div class="card-body">
+    <h3 class="card-title">{{ title }}</h3>
+    <p class="card-text">
+      {{ description }}
+    </p>
+  </div>
+</div>
+
+<div
+  *ngIf="isVertical"
+  class="card card-simple"
+  [ngClass]="{
+    'panel-list-link': isItemsListVertical,
+    'panel-sm': !isItemsListVertical,
+    'bg-white': isBgWhite,
+    'bg-light': isBgLight
+  }"
+>
+  <img
+    [src]="imageURL"
+    [alt]="imageAlt"
+    class="rounded-lg"
+    [width]="imageLg ? '154' : '104'"
+    [height]="imageLg ? '154' : '104'"
+  />
+  <div class="card-body">
+    <h3 class="card-title">{{ title }}</h3>
+    <p class="card-text">
+      {{ description }}
+    </p>
+  </div>
+
+  <div class="list-link" *ngIf="isItemsListVertical">
+    <ng-content select="[listLinkContent]"></ng-content>
+  </div>
+
+  <div class="panel-footer" *ngIf="!isItemsListVertical">
+    <ng-content select="[panelFooterContent]"></ng-content>
+  </div>
+</div>

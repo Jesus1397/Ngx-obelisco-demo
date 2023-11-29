@@ -1,0 +1,71 @@
+<section class="section-example">
+  <app-viewer title="Con secciones" [isNavCode]="true">
+    <div component class="navbarOne">
+      <o-navbar component id="navbarOne" [routes]="routes" [routesLogin]="routesLogin"></o-navbar>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{ navbarSectionsExampleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="javascript">{{ navbarSectionsExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con secciones extras" [isNavCode]="true">
+    <div component class="navbarTwo">
+      <o-navbar component id="navbarTwo" [routesExtended]="routesExtended" [routesLogin]="routesLogin"></o-navbar>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{ navbarSectionsExtendedExampleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="javascript">{{ navbarSectionsExtendedExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con secciones - Logueado" [isNavCode]="true">
+    <div component class="navbarThree">
+      <o-navbar component id="navbarThree" [routes]="routes" [routesAccount]="routesAccount"></o-navbar>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{ navbarLoginExampleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="javascript">{{ navbarLoginExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con secciones extras - Logueado" [isNavCode]="true">
+    <div component class="navbarFour">
+      <o-navbar component id="navbarFour" [routesExtended]="routesExtended" [routesAccount]="routesAccount"></o-navbar>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{ navbarExtendedLoginExampleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="javascript">{{ navbarExtendedLoginExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con buscador" [isNavCode]="true">
+    <div component class="navbarFive">
+      <o-navbar component id="navbarFive" [routes]="routes" [searchbarItems]="searchbarItems"></o-navbar>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{ navbarSearchbarExampleHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="javascript">{{ navbarSearchbarExampleTs }}</code>
+    </pre>
+  </app-viewer>
+</section>

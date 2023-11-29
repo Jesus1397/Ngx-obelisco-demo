@@ -1,0 +1,60 @@
+<section class="section-example">
+  <app-viewer title="Tipos">
+    <div component class="spinner-container">
+      <div oSpinner component></div>
+      <div oSpinner component type="primary"></div>
+      <div oSpinner component type="secondary"></div>
+      <div oSpinner component type="success"></div>
+      <div oSpinner component type="danger"></div>
+      <div oSpinner component type="light"></div>
+      <div oSpinner component type="dark"></div>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ exampleColors }}
+        </code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Tamaños">
+    <div component class="spinner-container">
+      <div oSpinner component size="sm"></div>
+      <div oSpinner component></div>
+      <div oSpinner component size="lg"></div>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ exampleSizes }}
+        </code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Expandible">
+    <div component class="spinner-container">
+      <div style="width: 64px">
+        <div oSpinner component [isExpandable]="true"></div>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ exampleBlock }}
+        </code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Con mensaje">
+    <div component class="d-flex flex-column align-items-center">
+      <div oSpinner component size="lg"></div>
+      <small class="mt-2">Cargando...</small>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ exampleMessage }}
+        </code>
+      </pre>
+  </app-viewer>
+</section>

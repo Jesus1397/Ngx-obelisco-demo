@@ -1,0 +1,135 @@
+<section class="section-example">
+  <app-viewer title="Normal" [isNavCode]="true">
+    <o-table
+      [isScrollable]="true"
+      component
+      [columns]="columnsTableExample"
+      [dataSource]="dataSourceTableExample"
+    ></o-table>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{ exampleNormalHTML }}"></code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ exampleNormalTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Bordes" [isNavCode]="true">
+    <o-table
+      [isScrollable]="true"
+      component
+      [columns]="columnsTableExample"
+      [dataSource]="dataSourceTableExample"
+      [isBordered]="true"
+    ></o-table>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{ exampleBorderedHTML }}"></code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ exampleNormalTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Intercalada" [isNavCode]="true">
+    <o-table
+      [isScrollable]="true"
+      component
+      [columns]="columnsTableExample"
+      [dataSource]="dataSourceTableExample"
+      [isStriped]="true"
+    ></o-table>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{ exampleStripedHTML }}"></code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ exampleNormalTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Resaltable" [isNavCode]="true">
+    <o-table
+      [isScrollable]="true"
+      component
+      [columns]="columnsTableExample"
+      [dataSource]="dataSourceTableExample"
+      [isHover]="true"
+    ></o-table>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{ exampleHoverHTML }}"></code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ exampleNormalTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Todo Junto" [isNavCode]="true">
+    <o-table
+      [isScrollable]="true"
+      component
+      [columns]="columnsTableExample"
+      [dataSource]="dataSourceTableExample"
+      [isStriped]="true"
+      [isBordered]="true"
+      [isHover]="true"
+    ></o-table>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{ exampleAllHTML }}"></code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ exampleNormalTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Seleccionable" [isNavCode]="true">
+    <o-table
+      [isScrollable]="true"
+      component
+      [columns]="columnsTableExample"
+      [dataSource]="dataSourceTableExample"
+      [isHover]="true"
+      [isSelectable]="true"
+      (dataSelectedChange)="dataSelected($event)"
+    ></o-table>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{ exampleSelectableHTML }}"></code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ exampleSelectableTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Responsive" [isNavCode]="true">
+    <div class="ngx__table-container" component>
+      <o-table
+        [isScrollable]="true"
+        component
+        [columns]="columnsTableExample"
+        [dataSource]="dataSourceTableExample"
+        [isHover]="true"
+        [isSelectable]="true"
+        [isScrollable]="true"
+        (dataSelectedChange)="dataSelected($event)"
+      ></o-table>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{ exampleResponsiveHTML }}"></code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ exampleSelectableTS }}</code>
+    </pre>
+  </app-viewer>
+</section>

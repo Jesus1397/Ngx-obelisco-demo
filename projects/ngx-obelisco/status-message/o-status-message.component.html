@@ -1,0 +1,12 @@
+<div class="status" [ngClass]="'status-' + type">
+  <h2 class="status-title">{{ title }}</h2>
+  <p class="status-text" *ngIf="!isTextArray; else isAarray" [innerHTML]="content"></p>
+  <ng-template #isAarray>
+    <p class="status-text" *ngFor="let item of textArray" [innerHTML]="item"></p>
+  </ng-template>
+
+  <ul class="status-list" *ngIf="isList">
+    <li *ngFor="let item of listContent" [innerHTML]="item"></li>
+  </ul>
+  <ng-content select="[btn]"></ng-content>
+</div>

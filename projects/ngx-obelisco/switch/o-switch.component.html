@@ -1,0 +1,12 @@
+<label
+  class="switch"
+  [class.switch-dark]="isDark"
+  [class.switch-sm]="isSmall"
+  [style.pointerEvents]="isFixed ? 'none' : null"
+>
+  <input type="checkbox" [attr.id]="id" [disabled]="isDisabled" [checked]="switchValue" (change)="onSwitchChange()" />
+  <span class="slider"></span>
+</label>
+<label *ngIf="labelOn || labelOff" [attr.for]="id" class="switch-label" [attr.disabled]="isDisabled ? true : null">
+  {{ switchValue ? labelOn : labelOff }}
+</label>

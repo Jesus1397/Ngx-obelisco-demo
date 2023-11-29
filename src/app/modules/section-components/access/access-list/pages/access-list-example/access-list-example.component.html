@@ -1,0 +1,43 @@
+<section class="section-example">
+  <app-viewer title="Simple" [isNavCode]="true">
+    <div component class="list-group-container">
+      <o-access-list [items]="accesListArrayFooter"></o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListHtml}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism>{{exampleAccessListTs}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con lista de accesos" [isNavCode]="true">
+    <div component class="list-group-container">
+      <o-access-list [items]="accesListArray"></o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListHtml}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism>{{exampleAccessListAccessTs}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con categorías" [isNavCode]="true">
+    <div component class="list-group-container">
+      <o-access-list [items]="accesListArrayCategory"></o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListHtml}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
+      <code appPrism>{{exampleAccessListCategoryTs}}</code>
+    </pre>
+  </app-viewer>
+</section>
