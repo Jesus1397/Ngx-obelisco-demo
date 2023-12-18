@@ -24,6 +24,8 @@ import { SwitchComponent } from './switch/switch.component';
 import { ListComponent } from './list/list.component';
 import { BannerComponent } from './banner/banner.component';
 import { ButtonComponent } from './button/button.component';
+import { HighlightedComponent } from './highlighted/highlighted.component';
+import { BlockComponent } from './block/block.component';
 
 const routes: Routes = [
   {
@@ -140,6 +142,16 @@ const routes: Routes = [
     path: 'button',
     component: ButtonComponent,
     loadChildren: () => import('./button/button.module').then((m) => m.ButtonModule)
+  },
+  {
+    path: 'highlighted',
+    component: HighlightedComponent,
+    loadChildren: () => import('./highlighted/highlighted.module').then((m) => m.HighlightedModule)
+  },
+  {
+    path: 'block',
+    component: BlockComponent,
+    loadChildren: () => import('./block/block.module').then((m) => m.BlockModule)
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];

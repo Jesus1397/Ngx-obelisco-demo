@@ -4,7 +4,7 @@ import { Sizes } from '@gcba/ngx-obelisco/core/models';
 @Component({
   selector: 'o-access',
   templateUrl: './o-access.component.html',
-  styleUrls: ['./o-access.component.scss']
+  styleUrls: ['./o-access.component.scss', '../../scss/deck.scss']
 })
 export class OAccessComponent implements AfterViewInit {
   @Input() public icon!: string;

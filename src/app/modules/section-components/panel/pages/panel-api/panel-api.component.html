@@ -11,18 +11,38 @@
 
   <div class="section-selector">
     <h4>OPanelModule</h4>
-    <p>Selectores: <strong>o-panel</strong> & <strong>o-panel-small</strong></p>
+    <p>Selector: <strong>o-panel-small</strong></p>
 
     <div class="section-properties">
-      <h5>Propiedades de <strong>o-panel</strong></h5>
-
-      <o-table [columns]="columns" [dataSource]="dataSourcePanel" [isStriped]="true" [isBordered]="true"></o-table>
-    </div>
-
-    <div class="section-properties">
-      <h5>Propiedades de <strong>o-panel-small</strong></h5>
+      <h5>Propiedades</h5>
 
       <o-table [columns]="columns" [dataSource]="dataSourcePanelSmall" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+
+    <div class="section-type">
+      <h4 class="mt-4">Media</h4>
+      <p>Permite establecer los valores de la propiedad <strong>image</strong>.</p>
+
+      <div class="section-interface">
+        <pre class="code import">
+          <code appPrism language="javascript">{{ interface }}</code>
+        </pre>
+        <div class="section-properties">
+          <h5>Propiedades</h5>
+          <o-table
+            [dataSource]="dataSourceInterface"
+            [columns]="columns"
+            [isBordered]="true"
+            [isStriped]="true"
+          ></o-table>
+        </div>
+        <div class="section-properties">
+          <h5>ImageMediaSizes</h5>
+          <pre class="code import">
+            <code appPrism language="javascript">{{ mediaTypes }}</code>
+          </pre>
+        </div>
+      </div>
     </div>
   </div>
 </section>

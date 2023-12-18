@@ -40,4 +40,11 @@ export class AppComponent {
       }
     })
     .sort((a, b) => a.title.localeCompare(b.title));
+
+  constructor() {
+    this.searchItemsList.push({ title: 'Inicio', route: '/home' });
+    this.searchItemsList.push({ title: 'Componentes', route: '/components' });
+    this.searchItemsList.push({ title: 'Comenzar', route: '/get-started' });
+    this.searchItemsList.sort((a, b) => a.title.localeCompare(b.title));
+  }
 }

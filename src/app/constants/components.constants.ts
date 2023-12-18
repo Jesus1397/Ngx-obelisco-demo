@@ -30,13 +30,15 @@ export enum ComponentEnum {
   list = 'Lista de pasos',
   listStep = 'Lista de pasos',
   banner = 'Banner',
-  button = 'Botón'
+  button = 'Botón',
+  highlighted = 'Destacado',
+  block = 'Bloque de trámite'
 }
 
 export const COMPONENTS_NAVIGATION = [
   {
     title: 'Accesos',
-    imageTop: 'assets/component-cards/Accesos.svg',
+    image: { src: 'assets/component-cards/Accesos.svg' },
     route: '/components/access',
     children: [
       {
@@ -51,68 +53,68 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Alerta',
-    imageTop: 'assets/component-cards/Alerta.svg',
+    image: { src: 'assets/component-cards/Alerta.svg' },
     route: '/components/alert'
   },
   {
     title: 'Miga de pan',
-    imageTop: 'assets/component-cards/MigasDePan.svg',
+    image: { src: 'assets/component-cards/MigasDePan.svg' },
     route: '/components/breadcrumb'
   },
   {
     title: 'Tarjetas',
-    imageTop: 'assets/component-cards/Tarjetas.svg',
+    image: { src: 'assets/component-cards/Tarjetas.svg' },
     route: '/components/card'
   },
   {
     title: 'Footer',
-    imageTop: 'assets/component-cards/Footer.svg',
+    image: { src: 'assets/component-cards/Footer.svg' },
     route: '/components/footer'
   },
   {
     title: 'Banner',
-    imageTop: 'assets/component-cards/BarraDeProgreso.svg',
+    image: { src: 'assets/component-cards/BarraDeProgreso.svg' },
     route: '/components/banner'
   },
   {
     title: 'Barra de progreso',
-    imageTop: 'assets/component-cards/BarraDeProgreso.svg',
+    image: { src: 'assets/component-cards/BarraDeProgreso.svg' },
     route: '/components/progress-bar'
   },
   {
     title: 'Botón',
-    imageTop: 'assets/component-cards/Switch.svg',
+    image: { src: 'assets/component-cards/Switch.svg' },
     route: '/components/button'
   },
   {
     title: 'Colapsable',
-    imageTop: 'assets/component-cards/Colapsables.svg',
+    image: { src: 'assets/component-cards/Colapsables.svg' },
     route: '/components/collapse'
   },
   {
     title: 'Modal',
-    imageTop: 'assets/component-cards/Modal.svg',
+    image: { src: 'assets/component-cards/Modal.svg' },
     route: '/components/modal'
   },
   {
     title: 'Paginación',
-    imageTop: 'assets/component-cards/Paginado.svg',
+    image: { src: 'assets/component-cards/Paginado.svg' },
     route: '/components/pagination'
   },
   {
     title: 'Tabla',
-    imageTop: 'assets/component-cards/Tabla.svg',
+    image: { src: 'assets/component-cards/Tabla.svg' },
     route: '/components/table'
   },
   {
     title: 'Galería',
-    imageTop: 'assets/component-cards/Galeria.svg',
+    image: { src: 'assets/component-cards/Galeria.svg' },
     route: '/components/gallery'
   },
   {
     title: 'Navegación',
     route: '/components/navigation',
-    imageTop: 'assets/component-cards/Navegacion.svg',
+    image: { src: 'assets/component-cards/Navegacion.svg' },
     children: [
       {
         title: 'Horizontal',
@@ -130,17 +132,17 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Panel',
-    imageTop: 'assets/component-cards/Panel.svg',
+    image: { src: 'assets/component-cards/' },
     route: '/components/panel'
   },
   {
     title: 'Pasos de un formulario',
-    imageTop: 'assets/component-cards/PasosDeUnFormulario.svg',
+    image: { src: 'assets/component-cards/PasosDeUnFormulario.svg' },
     route: '/components/steps-form'
   },
   {
     title: 'Desplegables',
-    imageTop: 'assets/component-cards/Desplegable.svg',
+    image: { src: 'assets/component-cards/Desplegable.svg' },
     route: '/components/dropdown',
     children: [
       {
@@ -155,32 +157,32 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Mensaje de estado',
-    imageTop: 'assets/component-cards/MensajeDeEstado.svg',
+    image: { src: 'assets/component-cards/MensajeDeEstado.svg' },
     route: '/components/status-message'
   },
   {
     title: 'Spinner',
-    imageTop: 'assets/component-cards/Spinner.svg',
+    image: { src: 'assets/component-cards/Spinner.svg' },
     route: '/components/spinner'
   },
   {
     title: 'Tooltip',
-    imageTop: 'assets/component-cards/Tooltip.svg',
+    image: { src: 'assets/component-cards/Tooltip.svg' },
     route: '/components/tooltip'
   },
   {
     title: 'Header',
-    imageTop: 'assets/component-cards/',
+    image: { src: 'assets/component-cards/' },
     route: '/components/navbar'
   },
   {
     title: 'Switch',
-    imageTop: 'assets/component-cards/Switch.svg',
+    image: { src: 'assets/component-cards/Switch.svg' },
     route: '/components/switch'
   },
   {
     title: 'Listas',
-    imageTop: 'assets/component-cards/BarraDeEstado.svg',
+    image: { src: 'assets/component-cards/BarraDeEstado.svg' },
     route: '/components/list',
     children: [
       {
@@ -188,6 +190,16 @@ export const COMPONENTS_NAVIGATION = [
         route: '/components/list/step-list'
       }
     ]
+  },
+  {
+    title: 'Destacado',
+    image: { src: 'assets/component-cards/Panel.svg' },
+    route: '/components/highlighted'
+  },
+  {
+    title: 'Bloque de trámite',
+    imageTop: 'assets/component-cards/',
+    route: '/components/block'
   }
 ];
 

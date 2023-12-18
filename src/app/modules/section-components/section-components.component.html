@@ -12,13 +12,15 @@
     </ng-container>
 
     <ng-template #componentTemplate>
-      <div class="card-deck">
-        <o-card-vertical
-          *ngFor="let component of componentsNavigation"
-          [title]="component.title"
-          [route]="component.route"
-          [imageSrc]="component.imageTop || ''"
-        ></o-card-vertical>
+      <div class="container mt-5">
+        <div class="card-deck max-cards-3 card-column">
+          <o-card-vertical
+            *ngFor="let component of componentsNavigation"
+            [title]="component.title"
+            [route]="component.route"
+            [image]="component.image || {}"
+          ></o-card-vertical>
+        </div>
       </div>
     </ng-template>
   </div>

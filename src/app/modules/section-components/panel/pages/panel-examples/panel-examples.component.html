@@ -1,150 +1,69 @@
 <section class="section-example">
-  <app-viewer title="Panel Grande - Sin fondo">
-    <o-panel
-      component
-      title="Nombre del titular"
-      description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-      imageURL="https://gcba.github.io/Obelisco/panel/larreta.jpg"
-    >
-      <button type="button" class="btn btn-lg btn-primary">Botón</button>
-      <button type="button" class="btn btn-lg btn-secondary">Botón</button>
-    </o-panel>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleWithoutBg }}
-      </code>
-    </pre>
-  </app-viewer>
-
-  <app-viewer title="Panel Grande - Con fondos">
-    <o-panel
-      component
-      title="Nombre del titular"
-      description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-      imageURL="https://gcba.github.io/Obelisco/panel/larreta.jpg"
-      [isBgWhite]="true"
-    >
-      <a class="btn btn-secondary btn-lg download-link" href="#" download="">Descargar</a>
-    </o-panel>
-    <br />
-    <o-panel
-      component
-      title="Nombre del titular"
-      description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-      imageURL="https://gcba.github.io/Obelisco/panel/larreta.jpg"
-      [isBgLight]="true"
-    >
-      <a class="btn btn-secondary btn-lg download-link" href="#" download="">Descargar</a>
-    </o-panel>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleWithBg }}
-      </code>
-    </pre>
-  </app-viewer>
-
-  <app-viewer title="Panel Grande - Con video">
-    <o-panel
-      component
-      title="Nombre del titular"
-      description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-      videoURL="https://gcba.github.io/Obelisco/panel/larreta.mp4"
-    >
-      <a href="#" target="_blank" rel="noreferrer">Enlace</a>
-    </o-panel>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleWithVideo }}
-      </code>
-    </pre>
-  </app-viewer>
-
-  <app-viewer title="Panel Grande - Vertical">
-    <div class="col-xl-6 col-lg-6 col-md-12" component>
-      <o-panel
-        title="Nombre del titular"
-        description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        videoURL="https://gcba.github.io/Obelisco/panel/larreta.mp4"
-        [isVertical]="true"
-      >
-        <button type="button" class="btn btn-lg btn-primary">Botón</button>
-      </o-panel>
-    </div>
-
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleVertical }}
-      </code>
-    </pre>
-  </app-viewer>
-
-  <app-viewer title="Panel Chico - Horizontal">
+  <app-viewer title="Horizontal" [isNavCode]="true">
     <div class="col-xl-6 col-lg-6 col-md-12" component>
       <o-panel-small
         title="Nombre del titular"
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        imageURL="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+        [image]="image"
       >
       </o-panel-small>
     </div>
-
     <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleSmallHorizontal }}
-      </code>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ horizontal }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleTs }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Panel Chico - Vertical">
+  <app-viewer title="Vertical" [isNavCode]="true">
     <div class="col-xl-6 col-lg-6 col-md-12" component>
       <o-panel-small
         title="Nombre del titular"
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        imageURL="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+        [image]="image"
         [isVertical]="true"
       >
       </o-panel-small>
     </div>
-
     <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleSmallVertical }}
-      </code>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ vertical }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleTs }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Panel Chico - Imagen grande">
+  <app-viewer title="Imagen grande" [isNavCode]="true">
     <div class="col-xl-6 col-lg-6 col-md-12" component>
       <o-panel-small
         title="Nombre del titular"
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        imageURL="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
         [isVertical]="true"
-        [imageLg]="true"
+        [image]="imageLarge"
       >
       </o-panel-small>
     </div>
-
     <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleSmallLarge }}
-      </code>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ vertical }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleImageLargeTs }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Panel Chico - Con fondos">
+  <app-viewer title="Con fondos" [isNavCode]="true">
     <div class="col-xl-6 col-lg-6 col-md-12" component>
       <o-panel-small
         title="Nombre del titular"
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        imageURL="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+        [image]="image"
         [isVertical]="true"
         [isBgWhite]="true"
       >
@@ -153,27 +72,28 @@
       <o-panel-small
         title="Nombre del titular"
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        imageURL="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+        [image]="image"
         [isVertical]="true"
         [isBgLight]="true"
       >
       </o-panel-small>
     </div>
-
     <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleSmallWithBg }}
-      </code>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ withBg }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleTs }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Panel Chico - Items horizontales">
+  <app-viewer title="Items horizontales" [isNavCode]="true">
     <div class="col-xl-6 col-lg-6 col-md-12" component>
       <o-panel-small
         title="Nombre del titular"
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        imageURL="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+        [image]="image"
         [isVertical]="true"
       >
         <ng-container panelFooterContent>
@@ -182,21 +102,22 @@
         </ng-container>
       </o-panel-small>
     </div>
-
     <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleSmallItemsHorizontal }}
-      </code>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ horizontalItems }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleTs }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Panel Chico - Items verticales">
+  <app-viewer title="Items verticales" [isNavCode]="true">
     <div class="col-xl-6 col-lg-6 col-md-12" component>
       <o-panel-small
         title="Nombre del titular"
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
-        imageURL="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+        [image]="image"
         [isVertical]="true"
         [isItemsListVertical]="true"
       >
@@ -210,12 +131,13 @@
         </ng-container>
       </o-panel-small>
     </div>
-
     <pre appClipboard component-html class="code">
-      <button class="btn btn-clipboard">Copiar</button>
-      <code appPrism language="html">
-        {{ exampleSmallItemsVertical }}
-      </code>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ verticalItems }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleTs }}</code>
     </pre>
   </app-viewer>
 </section>

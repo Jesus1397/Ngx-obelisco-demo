@@ -1,0 +1,57 @@
+<ng-template #highlightedContent>
+  <ng-container *ngIf="image">
+    <img [src]="image.src" [alt]="image.alt ? image.alt : ' '" class="card-img" />
+  </ng-container>
+  <ng-container *ngIf="video">
+    <p class="sr-only">{{ video.title }}</p>
+    <video class="card-img" controls="">
+      <source [src]="video.src" type="video/mp4" />
+      <ng-container *ngIf="video.track">
+        <track [src]="video.track" default="" kind="captions" srclang="es" />
+      </ng-container>
+      <p>
+        Su navegador no soporta vídeos HTML5. Puedes ver el video haciendo clic en
+        <a [href]="video.src">este enlace</a>.
+      </p>
+    </video>
+  </ng-container>
+  <ng-container *ngIf="iframe">
+    <iframe
+      [src]="sanitizeUrl(iframe.src ? iframe.src : '')"
+      class="card-img"
+      [title]="iframe.title ? iframe.title : ' '"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen=""
+    ></iframe>
+  </ng-container>
+  <div class="card-body">
+    <h2 class="card-title">{{ title }}</h2>
+    <ng-container *ngIf="description">
+      <p class="card-text" [innerHTML]="description"></p>
+    </ng-container>
+    <div class="panel-footer" *ngIf="hasChildren">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>
+
+<ng-container *ngIf="type === 'banner'">
+  <div class="panel-horizontal-content" [ngClass]="isBgLight ? 'bg-light' : null">
+    <div class="card card-simple panel-horizontal">
+      <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="type === 'grouping'">
+  <div class="card card-simple panel-vertical">
+    <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="type === 'lateral'">
+  <div class="card card-simple panel-lateral">
+    <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
+  </div>
+</ng-container>

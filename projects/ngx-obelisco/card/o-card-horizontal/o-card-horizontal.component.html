@@ -3,8 +3,8 @@
     #card
     class="card"
     [ngClass]="{
-      'card-lg': imageSize == 'lg',
-      'card-horizontal': iconLeft || imageSrc
+      'card-lg': image && image.size == 'lg',
+      'card-horizontal': iconLeft || image?.src
     }"
     [routerLink]="route"
   >
@@ -16,9 +16,9 @@
   <div
     class="card"
     [ngClass]="{
-      'card-lg': imageSize == 'lg',
-      'card-horizontal': iconLeft || imageSrc,
-      'card-simple': iconTop || isSimpleCard || imageSrc,
+      'card-lg': image && image.size == 'lg',
+      'card-horizontal': iconLeft || image?.src,
+      'card-simple': iconTop || isSimpleCard || image?.src,
       unbordered: iconLeft
     }"
   >
@@ -29,7 +29,13 @@
 <ng-template #cardContent>
   <i *ngIf="iconLeft && iconLeft.includes('bx')" [ngClass]="[iconLeft, 'card-icon-left']"></i>
   <span *ngIf="iconLeft && !iconLeft.includes('bx')" class="material-icons-round card-icon-left">{{ iconLeft }}</span>
-  <img *ngIf="!iconLeft && !iconTop && imageSrc" [src]="imageSrc" class="card-img-left" [alt]="alt" oDefaultImage />
+  <img
+    *ngIf="!iconLeft && !iconTop && image?.src"
+    [src]="image?.src"
+    class="card-img-left"
+    [alt]="image?.alt ? image?.alt : ' '"
+    oDefaultImage
+  />
   <div class="card-body">
     <i *ngIf="iconTop && iconTop.includes('bx')" [ngClass]="[iconTop, 'card-icon']"></i>
     <span *ngIf="iconTop && !iconTop.includes('bx')" class="material-icons-round card-icon">{{ iconTop }}</span>

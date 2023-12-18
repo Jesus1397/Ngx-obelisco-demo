@@ -1,0 +1,172 @@
+<section class="section-example">
+  <!-- Destacado horizontal (BANNER) -->
+  <app-viewer title="Horizontal con imagen" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description" [image]="picture">
+      <o-button #child link="#" size="lg"></o-button>
+      <o-button #child link="#" size="lg" type="secondary"></o-button>
+    </o-highlighted>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ bannerImageHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ imageTS }}</code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Horizontal con video" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description" [video]="video">
+      <o-button #child link="#" size="lg"></o-button>
+    </o-highlighted>
+    <o-highlighted component [title]="title" [description]="description" [iframe]="iframe">
+      <a #child class="external" href="#" target="_blank">Enlace externo</a>
+    </o-highlighted>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ bannerVideoHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ videoTS }}</code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Horizontal sin multimedia" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description">
+      <o-button #child size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download=""></o-button>
+    </o-highlighted>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ bannerHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ noMediaTS }}</code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Horizontal con fondo" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description" [image]="picture" [isBgLight]="true">
+      <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+    </o-highlighted>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ bannerBgHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ imageTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <!-- Destacado vertical (CONJUNTO) -->
+  <app-viewer title="Vertical con imagen" [isNavCode]="true">
+    <div class="container" component>
+      <div class="card-deck max-cards-2">
+        <o-highlighted type="grouping" [title]="title" [description]="description" [image]="picture">
+          <o-button #child link="#" size="lg"></o-button>
+        </o-highlighted>
+        <o-highlighted type="grouping" [title]="title" [description]="description" [image]="picture">
+          <o-button
+            #child
+            size="lg"
+            type="secondary"
+            link="#"
+            icon="file_download"
+            text="Descargar"
+            download=""
+          ></o-button>
+        </o-highlighted>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ groupingImageHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ imageTS }}</code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Vertical con video" [isNavCode]="true">
+    <div class="container" component>
+      <div class="card-deck max-cards-2">
+        <o-highlighted type="grouping" [title]="title" [description]="description" [video]="video">
+          <a #child class="external" href="#" target="_blank">Enlace externo</a>
+        </o-highlighted>
+        <o-highlighted type="grouping" [title]="title" [description]="description" [iframe]="iframe">
+          <a #child class="external" href="#" target="_blank">Enlace externo</a>
+        </o-highlighted>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ groupingVideoHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ videoTS }}</code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Vertical sin multimedia" [isNavCode]="true">
+    <div class="container" component>
+      <div class="card-deck max-cards-2">
+        <o-highlighted type="grouping" [title]="title" [description]="description">
+          <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        </o-highlighted>
+        <o-highlighted type="grouping" [title]="title" [description]="description">
+          <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        </o-highlighted>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ groupingHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ noMediaTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <!-- Destacado lateral -->
+  <app-viewer title="Lateral" [isNavCode]="true">
+    <div class="container__highlighted-lateral" component>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <o-button #child link="#" size="lg" [isExpandable]="true"></o-button>
+        </o-highlighted>
+      </div>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <o-button
+            #child
+            size="lg"
+            type="secondary"
+            link="#"
+            icon="file_download"
+            text="Descargar"
+            download=""
+            [isExpandable]="true"
+          ></o-button>
+        </o-highlighted>
+      </div>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <a #child class="external" href="#" target="_blank">Enlace externo</a>
+        </o-highlighted>
+      </div>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        </o-highlighted>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ lateralHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ noMediaTS }}</code>
+    </pre>
+  </app-viewer>
+</section>

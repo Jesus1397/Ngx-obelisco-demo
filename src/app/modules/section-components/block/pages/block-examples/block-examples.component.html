@@ -1,0 +1,53 @@
+<section class="section-example">
+  <app-viewer title="Con título">
+    <div class="block-wrapper" component>
+      <o-block title="Iniciá el trámite y completá todos los pasos">
+        <o-button button text="Iniciar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
+      </o-block>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ blockTitle }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con bajada">
+    <div class="block-wrapper" component>
+      <o-block
+        title="Iniciá el trámite y completá todos los pasos"
+        description="Si tenés un trámite iniciado podés continuarlo desde acá."
+      >
+        <o-button button text="Iniciar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
+      </o-block>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ blockDescription }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con barra de progreso">
+    <div class="block-wrapper" component>
+      <o-block title="Este es tu progreso en el trámite">
+        <o-progress-bar progressBar type="success" [currentStep]="4"></o-progress-bar>
+        <o-button button text="Continuar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
+      </o-block>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ blockProgressBar }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con fondo">
+    <div class="block-wrapper" component>
+      <o-block title="Iniciá el trámite y completá todos los pasos" [isBgLight]="true">
+        <o-button button text="Iniciar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
+      </o-block>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ blockBg }}</code>
+    </pre>
+  </app-viewer>
+</section>

@@ -90,13 +90,6 @@
       }
     }
 
-    .card-deck {
-      > * {
-        margin: 15px;
-        width: 340px;
-      }
-    }
-
     @media (max-width: 768px) {
       .component-description-content {
         width: 100%;

@@ -1,5 +1,5 @@
 <a *ngIf="!eventName" #card class="card" [routerLink]="route">
-  <img oDefaultImage *ngIf="imageSrc" [src]="imageSrc" class="card-img-top" [alt]="alt" />
+  <img oDefaultImage *ngIf="image" [src]="image.src" class="card-img-top" [alt]="image.alt ? image.alt : ' '" />
   <div class="card-body">
     <div *ngIf="tags" class="mb-2">
       <span *ngFor="let tag of tags" class="badge badge-{{ tag.type }}">{{ tag.name }}</span>
@@ -14,9 +14,9 @@
 
 <a *ngIf="eventName" #card class="card" [routerLink]="route">
   <div class="card-event-top">
-    <img oDefaultImage *ngIf="imageSrc" [src]="imageSrc" class="card-event-bg" [alt]="alt" />
+    <img oDefaultImage *ngIf="image" [src]="image.src" class="card-event-bg" [alt]="image.alt ? image.alt : ' '" />
     <div class="card-event-img">
-      <img oDefaultImage *ngIf="imageThumbSrc" [src]="imageThumbSrc" [alt]="altThumb" />
+      <img oDefaultImage *ngIf="imageThumb" [src]="imageThumb.src" [alt]="imageThumb.alt ? imageThumb.alt : ' '" />
     </div>
     <p class="card-event-name">{{ eventName }}</p>
   </div>

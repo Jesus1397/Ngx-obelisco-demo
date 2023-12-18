@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
-import { ImageSizes } from '@gcba/ngx-obelisco/core/models';
+import { ImageMediaSizes, Media } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-card-horizontal',
   templateUrl: './o-card-horizontal.component.html',
-  styleUrls: ['./o-card-horizontal.component.scss']
+  styleUrls: ['./o-card-horizontal.component.scss', '../../scss/deck.scss']
 })
 export class OCardHorizontalComponent implements AfterViewInit {
   @Input() public title!: string;
@@ -12,12 +12,10 @@ export class OCardHorizontalComponent implements AfterViewInit {
   @Input() public isInContainer: boolean = false;
   @Input() public link!: string;
   @Input() public route!: string;
-  @Input() public imageSize!: ImageSizes;
+  @Input() public image?: Media;
   @Input() public isSimpleCard: boolean = false;
   @Input() public iconTop!: string;
   @Input() public iconLeft!: string;
-  @Input() public imageSrc!: string;
-  @Input() public alt: string = 'descripción alternativa';
 
   @ViewChild('card') public card!: ElementRef;
 
@@ -28,4 +26,15 @@ export class OCardHorizontalComponent implements AfterViewInit {
       this.renderer.setAttribute(this.card.nativeElement, 'href', this.link);
     }
   }
+
+  sizeToPx = (size: ImageMediaSizes): number => {
+    switch (size) {
+      case 'lg':
+        return 96;
+      case 'md':
+        return 96;
+      case 'sm':
+        return 64;
+    }
+  };
 }

@@ -1,6 +1,6 @@
+import { MediaGallery } from '@gcba/ngx-obelisco/core/models';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Image } from '@gcba/ngx-obelisco/core/models';
 import { DefaultImageDirective } from '@gcba/ngx-obelisco/directives';
 
 @Component({
@@ -11,7 +11,7 @@ import { DefaultImageDirective } from '@gcba/ngx-obelisco/directives';
   styleUrls: ['./o-gallery.component.scss']
 })
 export class OGalleryComponent {
-  @Input() public galleryItems: Image[] = [];
+  @Input() public galleryItems: MediaGallery[] = [];
   @Input() public isInteractive: boolean = false;
   @Input() public dataTarget!: string;
 }

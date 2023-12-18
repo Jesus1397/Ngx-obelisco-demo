@@ -1,6 +1,6 @@
-export interface Image {
-  author: string;
-  title: string;
-  content: string;
-  src: string;
+import { Media } from './media.models';
+
+export interface MediaGallery extends Media {
+  author?: string;
+  content?: string;
 }

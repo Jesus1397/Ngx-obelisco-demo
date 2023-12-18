@@ -1,0 +1,16 @@
+<div
+  class="card card-block"
+  [ngStyle]="isPositionRelative ? null : { top: '48px' }"
+  [ngClass]="{ 'bg-light': isBgLight, 'position-sticky': !isPositionRelative }"
+>
+  <div class="card-body">
+    <ng-container *ngIf="title">
+      <h4 class="block-title">{{ title }}</h4>
+    </ng-container>
+    <ng-container *ngIf="description">
+      <p class="block-text">{{ description }}</p>
+    </ng-container>
+    <ng-content select="[progressBar]"></ng-content>
+    <ng-content select="[button]"></ng-content>
+  </div>
+</div>

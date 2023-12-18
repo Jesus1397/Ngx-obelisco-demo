@@ -8,7 +8,7 @@ const formattedExampleTsCode = (code: any) => `
     templateUrl: './app-example.component.html',
   })
   export class ExampleComponent {
-    public galleryItems: Image[] = ${codeFormattingArrayList(code)}
+    public galleryItems: MediaGallery[] = ${codeFormattingArrayList(code)}
     ];
   }`;
 
@@ -25,7 +25,7 @@ export const GALLERY_NAVIGATION = [
 
 export const GALLERY_DATA_SOURCE = [
   {
-    name: '@Input() <br /> galleryItems: Image[]',
+    name: '@Input() <br /> galleryItems: MediaGallery[]',
     description: 'Se utiliza para pasar una lista de imágenes que se mostrarán en la galería.'
   },
   {
@@ -108,29 +108,48 @@ export const IMAGES_LIST_7 = [
 ];
 
 export const GALLERY_INTERFACE_IMAGE_ITEM = `
-  interface Image {
-    author: string;
-    title: string;
-    content: string;
+  interface Media {
     src: string;
-  }`;
+    alt: string;
+    track: string;
+    title: string;
+    size: ImageMediaSizes;
+  }
+
+  interface MediaGallery extends Media {
+    author: string;
+    content: string;
+  }
+  `;
 
 export const GALLERY_INTERFACE_DATA_SOURCE = [
+  {
+    name: 'src: string',
+    description: 'Se utiliza para definir la ruta del elemento multimedia y url del iframe.'
+  },
+  {
+    name: 'alt: string',
+    description: 'Se utiliza para definir el texto alternativo de la imagen.'
+  },
+  {
+    name: 'track: string',
+    description: 'Se utiliza para definir la ruta al elemento con formato WebVTT (archivos .vtt) en el caso de video.'
+  },
+  {
+    name: 'title: string',
+    description: 'Se utiliza para definir el titulo del video e iframe.'
+  },
+  {
+    name: 'size: ImageMediaSizes',
+    description: 'Se utiliza para definir el tamaño de la imagen, en el caso de panel chico y tarjetas.'
+  },
   {
     name: 'author: string',
     description: 'Se utiliza para definir el autor de la imagen.'
   },
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir el título de la imagen.'
-  },
-  {
     name: 'content: string',
     description: 'Se utiliza para definir la descripción de la imagen.'
-  },
-  {
-    name: 'src: string',
-    description: 'Se utiliza para definir la url de la imagen.'
   }
 ];
 

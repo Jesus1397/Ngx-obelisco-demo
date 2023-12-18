@@ -39,7 +39,7 @@ export const DATA_SOURCE_STEPS_FORM_OUTPUT = [
 
 export const STEPS_FORM_EXAMPLE_DIRECTIVE_HTML = `
   <o-steps-form [steps]="steps" (stopSteps)="stopProgress($event)"></o-steps-form>
-  <br />
+
   <button oStepPrevious class="btn btn-sm btn-link mr-2">Anterior</button>
   <button oStepNext class="btn btn-sm btn-link">Siguiente</button>
 `;
@@ -65,7 +65,7 @@ export const STEPS_FORM_EXAMPLE_DIRECTIVE_TS = `
 
 export const STEPS_FORM_EXAMPLE_FUNCTIONALITY_HTML = `
   <o-steps-form [steps]="steps" (stopSteps)="stopProgress($event)"></o-steps-form>
-  <br />
+
   <button class="btn btn-sm btn-link mr-2" (click)="previousStep()">Anterior</button>
   <button class="btn btn-sm btn-link" (click)="nextStep()">Siguiente</button>
 `;

@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import {
-  PANEL_WITHOUT_BG,
-  PANEL_WITH_BG,
-  PANEL_WITH_VIDEO,
-  PANEL_VERTICAL,
   PANEL_SMALL_HORIZONTAL,
-  PANEL_SMALL_ITEMS_HORIZANTAL,
+  PANEL_SMALL_ITEMS_HORIZONTAL,
   PANEL_SMALL_ITEMS_VERTICAL,
   PANEL_SMALL_VERTICAL,
   PANEL_SMALL_WITH_BG,
-  PANEL_SMALL_LARGE
+  PANEL_IMAGE,
+  PANEL_IMAGE_LARGE,
+  PANEL_SMALL_TS,
+  PANEL_SMALL_LARGE_IMAGE_TS
 } from 'src/app/constants/panel.constants';
 
 @Component({
@@ -18,15 +17,14 @@ import {
   styleUrls: ['./panel-examples.component.scss']
 })
 export class PanelExamplesComponent {
-  public exampleWithoutBg = PANEL_WITHOUT_BG;
-  public exampleWithBg = PANEL_WITH_BG;
-  public exampleWithVideo = PANEL_WITH_VIDEO;
-  public exampleVertical = PANEL_VERTICAL;
+  public exampleTs = PANEL_SMALL_TS;
+  public exampleImageLargeTs = PANEL_SMALL_LARGE_IMAGE_TS;
+  public horizontal = PANEL_SMALL_HORIZONTAL;
+  public vertical = PANEL_SMALL_VERTICAL;
+  public withBg = PANEL_SMALL_WITH_BG;
+  public verticalItems = PANEL_SMALL_ITEMS_VERTICAL;
+  public horizontalItems = PANEL_SMALL_ITEMS_HORIZONTAL;
 
-  public exampleSmallHorizontal = PANEL_SMALL_HORIZONTAL;
-  public exampleSmallVertical = PANEL_SMALL_VERTICAL;
-  public exampleSmallLarge = PANEL_SMALL_LARGE;
-  public exampleSmallWithBg = PANEL_SMALL_WITH_BG;
-  public exampleSmallItemsVertical = PANEL_SMALL_ITEMS_VERTICAL;
-  public exampleSmallItemsHorizontal = PANEL_SMALL_ITEMS_HORIZANTAL;
+  public image = PANEL_IMAGE;
+  public imageLarge = PANEL_IMAGE_LARGE;
 }

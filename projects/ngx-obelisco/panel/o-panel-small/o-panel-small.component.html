@@ -1,10 +1,10 @@
-<div *ngIf="!isVertical" class="card card-simple panel-sm-horizontal">
+<ng-template #smallPanelContent>
   <img
-    [src]="imageURL"
-    [alt]="imageAlt"
+    [src]="image.src"
+    [alt]="image.alt"
     class="rounded-lg"
-    [width]="imageLg ? '154' : '104'"
-    [height]="imageLg ? '154' : '104'"
+    [width]="image.size ? sizeToPx(image.size) : sizeToPx('md')"
+    [height]="image.size ? sizeToPx(image.size) : sizeToPx('md')"
   />
   <div class="card-body">
     <h3 class="card-title">{{ title }}</h3>
@@ -12,6 +12,10 @@
       {{ description }}
     </p>
   </div>
+</ng-template>
+
+<div *ngIf="!isVertical" class="card card-simple panel-sm-horizontal">
+  <ng-container *ngTemplateOutlet="smallPanelContent"></ng-container>
 </div>
 
 <div
@@ -24,19 +28,7 @@
     'bg-light': isBgLight
   }"
 >
-  <img
-    [src]="imageURL"
-    [alt]="imageAlt"
-    class="rounded-lg"
-    [width]="imageLg ? '154' : '104'"
-    [height]="imageLg ? '154' : '104'"
-  />
-  <div class="card-body">
-    <h3 class="card-title">{{ title }}</h3>
-    <p class="card-text">
-      {{ description }}
-    </p>
-  </div>
+  <ng-container *ngTemplateOutlet="smallPanelContent"></ng-container>
 
   <div class="list-link" *ngIf="isItemsListVertical">
     <ng-content select="[listLinkContent]"></ng-content>

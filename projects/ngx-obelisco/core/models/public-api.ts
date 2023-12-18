@@ -14,3 +14,5 @@ export * from './tooltip.models';
 export * from './dropdown.models';
 export * from './navbar.models';
 export * from './list.models';
+export * from './highlighted.models';
+export * from './media.models';

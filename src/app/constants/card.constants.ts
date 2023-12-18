@@ -1,4 +1,4 @@
-import { Tags } from '@gcba/ngx-obelisco/core/models';
+import { ImageMediaSizes, Tags } from '@gcba/ngx-obelisco/core/models';
 
 export const CARD_NAVIGATION = [
   {
@@ -33,10 +33,6 @@ export const CARD_HORIZONTAL_DATA_SOURCE = [
     description: 'Especifica la ruta de navegación para la tarjeta.'
   },
   {
-    name: '@Input() <br/> imageSize: ImageSizes',
-    description: 'Establece la tarjeta de tamaño grande.'
-  },
-  {
     name: '@Input() <br/> isSimpleCard: boolean',
     description: 'Marca si la tarjeta es de tipo simple.'
   },
@@ -49,12 +45,8 @@ export const CARD_HORIZONTAL_DATA_SOURCE = [
     description: 'Define el ícono que se mostrará en la parte izquierda de la tarjeta.'
   },
   {
-    name: '@Input() <br/> imageSrc: string',
-    description: 'Establece la imagen que se mostrará en la parte izquierda de la tarjeta.'
-  },
-  {
-    name: '@Input() <br/> alt: string',
-    description: 'Proporciona una descripción alternativa para la imagen izquierda.'
+    name: '@Input() <br/> image: Media',
+    description: 'Define la imagen principal de la tarjeta.'
   }
 ];
 
@@ -84,26 +76,44 @@ export const CARD_VERTICAL_DATA_SOURCE = [
     description: 'Especifica la ruta de navegación para la tarjeta.'
   },
   {
-    name: '@Input() <br/> imageThumbSrc: string',
-    description: 'Define la imagen principal del evento.'
+    name: '@Input() <br/> imageThumb: Media',
+    description: 'Define la imagen miniatura para el evento.'
   },
   {
-    name: '@Input() <br/> altThumb: string',
-    description: 'Proporciona una descripción alternativa para la imagen del evento.'
-  },
-  {
-    name: '@Input() <br/> imageSrc: string',
-    description: 'Establece la imagen miniatura para el evento.'
-  },
-  {
-    name: '@Input() <br/> alt: string',
-    description: 'Proporciona una descripción alternativa para la imagen miniatura del evento.'
+    name: '@Input() <br/> image: Media',
+    description: 'Define la imagen principal de la tarjeta.'
   },
   {
     name: '@Input() <br/> tags: Tags[]',
     description: 'Define las etiquetas asociadas al evento o componente. Debe ser un arreglo de objetos Tags.'
   }
 ];
+
+export const CARD_IMAGE_LARGE_FIRST = {
+  src: '/assets/cards/ciudad.jpg',
+  alt: 'descripción de imagen',
+  size: 'lg' as ImageMediaSizes
+};
+export const CARD_IMAGE_LARGE = {
+  src: '/assets/cards/paseobajo-wide.png',
+  alt: 'descripción de imagen',
+  size: 'lg' as ImageMediaSizes
+};
+export const CARD_IMAGE = {
+  src: '/assets/cards/paseobajo-wide.png',
+  alt: 'descripción de imagen'
+};
+export const CARD_IMAGE_EVENT = {
+  src: '/assets/cards/evento.jpg',
+  alt: 'descripción de imagen'
+};
+export const CARD_IMAGE_EVENT_BG = {
+  src: '/assets/cards/evento-bg.jpg',
+  alt: 'descripción de imagen'
+};
+export const CARD_IMAGE_THUMBS = {
+  src: '/assets/cards/evento-thumb.jpg'
+};
 
 export const CARD_TAGS_INTERFACE = `
   interface Tags {
@@ -132,7 +142,11 @@ export const CARD_WITHOUT_CONTAINER_EXAMPLE_HTML = `
     title="Titulo de tarjeta"
     description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
     route="/components"
-    imageSrc="/assets/cards/ciudad.jpg"
+    image="{
+      src: '/assets/cards/ciudad.jpg',
+      alt: 'descripción de imagen',
+      size: 'lg' as ImageMediaSizes
+    }"
   ></o-card-horizontal>
 
   <o-card-horizontal
@@ -199,7 +213,10 @@ export const CARD_WITH_CONTAINER_IMG_ICON_EXAMPLE_HTML = `
     title="Titulo de tarjeta"
     description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
     route="/components"
-    imageSrc="/assets/cards/paseobajo-wide.png"
+    image="{
+      src: '/assets/cards/paseobajo-wide.png',
+      alt: 'descripción de imagen'
+    }"
   ></o-card-horizontal>
 
   <o-card-horizontal
@@ -207,15 +224,21 @@ export const CARD_WITH_CONTAINER_IMG_ICON_EXAMPLE_HTML = `
     title="Titulo de tarjeta"
     description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
     route="/components"
-    imageSrc="/assets/cards/paseobajo-wide.png"
-    imageSize="lg"
+    image="{
+      src: '/assets/cards/paseobajo-wide.png',
+      alt: 'descripción de imagen',
+      size: 'lg' as ImageMediaSizes
+    }"
   ></o-card-horizontal>
 
   <o-card-horizontal
     [isInContainer]="true"
     title="Titulo de tarjeta"
     route="/components"
-    imageSrc="/assets/cards/paseobajo-wide.png"
+    image="{
+      src: '/assets/cards/paseobajo-wide.png',
+      alt: 'descripción de imagen'
+    }"
   ></o-card-horizontal>
 
   <o-card-horizontal
@@ -223,7 +246,10 @@ export const CARD_WITH_CONTAINER_IMG_ICON_EXAMPLE_HTML = `
     title="Titulo de tarjeta"
     description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
     route="/components"
-    imageSrc="/assets/cards/paseobajo-wide.png"
+    image="{
+      src: '/assets/cards/paseobajo-wide.png',
+      alt: 'descripción de imagen'
+    }"
   ></o-card-horizontal>
 
   <o-card-horizontal
@@ -231,8 +257,11 @@ export const CARD_WITH_CONTAINER_IMG_ICON_EXAMPLE_HTML = `
     title="Titulo de tarjeta"
     description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
     route="/components"
-    imageSrc="/assets/cards/paseobajo-wide.png"
-    imageSize="lg"
+    image="{
+      src: '/assets/cards/paseobajo-wide.png',
+      alt: 'descripción de imagen',
+      size: 'lg' as ImageMediaSizes
+    }"
   ></o-card-horizontal>
 
   <o-card-horizontal
@@ -256,7 +285,10 @@ export const CARD_NOTICE_EXAMPLE_HTML = `
     title="Titulo de notica"
     description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
     route="/components"
-    imageSrc="/assets/cards/evento.jpg"
+    image="{
+      src: '/assets/cards/evento.jpg',
+      alt: 'descripción de imagen'
+    }"
     [tags]="cardTags"
   >
     <small>Fecha de publicación: 13/04/1997</small>
@@ -268,7 +300,10 @@ export const CARD_EVENT_SIMPLE_EXAMPLE_HTML = `
     title="Titulo de evento"
     description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
     route="/components"
-    imageSrc="/assets/cards/evento.jpg"
+    image="{
+      src: '/assets/cards/evento.jpg',
+      alt: 'descripción de imagen'
+    }"
   >
     <small>
       <i class="bx bx-calendar-event"></i>
@@ -285,8 +320,13 @@ export const CARD_EVENT_EXAMPLE_HTML = `
     title="Comienza una nueva edición de actividades en polideportivos"
     eventName="Actividades y clases en polideportivos"
     headline="18 de Enero al 1 de Febrero"
-    imageSrc="/assets/cards/evento-bg.jpg"
-    imageThumbSrc="/assets/cards/evento-thumb.jpg"
+    image="{
+      src: '/assets/cards/evento-bg.jpg',
+      alt: 'descripción de imagen'
+    }"
+    imageThumb="{
+      src: '/assets/cards/evento-thumb.jpg'
+    }"
   >
   </o-card-vertical>
 `;

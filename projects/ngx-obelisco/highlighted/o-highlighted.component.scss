@@ -1,0 +1,16 @@
+::ng-deep .card.panel-horizontal,
+.card.panel-vertical,
+.card.panel-lateral {
+  .card-body .panel-footer o-access {
+    width: 100%;
+  }
+}
+
+::ng-deep .card.panel-lateral {
+  .card-body .panel-footer {
+    o-button,
+    o-access {
+      width: 100%;
+    }
+  }
+}
