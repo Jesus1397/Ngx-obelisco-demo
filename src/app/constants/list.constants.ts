@@ -37,15 +37,15 @@ export const LIST_STEP = NAVIGATIONS_LIST.map((el) => {
 
 export const LIST_STEP_DATA_SOURCE = [
   {
-    name: '@Input() <br /> listStepItems: Step[]',
+    name: '@Input() <br /> steps: Step[]',
     description: 'Se utiliza para proporcionar un arreglo de objetos "Step" al componente.'
   },
   {
-    name: '@Input() <br /> isLight: boolean',
+    name: '@Input() <br /> isStepLight: boolean',
     description: 'Se utiliza para indicar si el estilo de los pasos debe ser "light" o no.'
   },
   {
-    name: '@Input() <br /> isNumered: boolean',
+    name: '@Input() <br /> isStepNumber: boolean',
     description: 'Se utiliza para determinar si se deben mostrar números en los pasos.'
   },
   {
@@ -57,7 +57,7 @@ export const LIST_STEP_DATA_SOURCE = [
 export const LIST_STEP_INTERFACE_STEP = `
   export interface Step {
     title: string;
-    content: string | string[];
+    description: string | string[];
   }`;
 
 export const LIST_STEP_STEP_INTERFACE_DATA_SOURCE = [
@@ -100,23 +100,23 @@ export const STEPS: Step[] = [
 ];
 
 export const LIST_STEP_EXAMPLE_HTML = `
-  <o-list-step [listStepItems]="listStepItems"></o-list-step>
+  <o-list-step [steps]="listStepItems"></o-list-step>
 `;
 
 export const LIST_STEP_LIGHT_EXAMPLE_HTML = `
-  <o-list-step [listStepItems]="listStepItems" [isStepLight]="true"></o-list-step>
+  <o-list-step [steps]="listStepItems" [isStepLight]="true"></o-list-step>
 `;
 
 export const LIST_STEP_NUMBER_EXAMPLE_HTML = `
-  <o-list-step [listStepItems]="listStepItems" [isStepNumber]="true"></o-list-step>
+  <o-list-step [steps]="listStepItems" [isStepNumber]="true"></o-list-step>
 `;
 
 export const LIST_STEP_LG_EXAMPLE_HTML = `
-  <o-list-step [listStepItems]="listStepItems" size="lg"></o-list-step>
+  <o-list-step [steps]="listStepItems" size="lg"></o-list-step>
 `;
 
 export const LIST_STEP_SM_EXAMPLE_HTML = `
-  <o-list-step [listStepItems]="listStepItems" size="sm"></o-list-step>
+  <o-list-step [steps]="listStepItems" size="sm"></o-list-step>
 `;
 
 export const LIST_STEP_EXAMPLE_TS = formattedExampleTsCode(STEPS);

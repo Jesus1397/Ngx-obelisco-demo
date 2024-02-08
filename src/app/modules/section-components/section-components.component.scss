@@ -2,7 +2,7 @@
   .section-components {
     display: flex;
     overflow: hidden;
-    height: 100vh;
+    height: calc(100vh - 80px);
 
     @media (max-width: 768px) {
       .sidebar {
@@ -19,7 +19,7 @@
       border-right: 1px solid #e5e5e5;
       height: fit-content;
       border-radius: 0.5rem;
-      height: calc(100vh);
+      height: calc(100vh - 80px);
       overflow: auto;
 
       &::-webkit-scrollbar {

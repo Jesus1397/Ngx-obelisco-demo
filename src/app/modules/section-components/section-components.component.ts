@@ -27,7 +27,8 @@ export class SectionComponentsComponent implements AfterViewInit, OnDestroy {
         next: (event: Event) => {
           event = event as RouterEvent;
           const url = event.url.split('/').splice(1);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          this.scrollToTop(); // Llama a la función para hacer scroll hacia arriba
 
           const fragment = url[2]?.split('#')[1];
 
@@ -90,5 +91,13 @@ export class SectionComponentsComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this.onDestroy$.next();
     this.onDestroy$.complete();
+  }
+
+  private scrollToTop(): void {
+    const contentDiv = document.querySelector('.component-description-content') as HTMLElement;
+    contentDiv.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 }

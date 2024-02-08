@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OPanelComponent } from './o-panel.component';
+import { MapExamplesComponent } from './map-examples.component';
 
-describe('OPanelComponent', () => {
-  let component: OPanelComponent;
-  let fixture: ComponentFixture<OPanelComponent>;
+describe('MapExamplesComponent', () => {
+  let component: MapExamplesComponent;
+  let fixture: ComponentFixture<MapExamplesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OPanelComponent]
+      declarations: [MapExamplesComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(OPanelComponent);
+    fixture = TestBed.createComponent(MapExamplesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

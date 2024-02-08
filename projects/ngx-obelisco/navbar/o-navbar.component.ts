@@ -1,5 +1,15 @@
 import { NavbarRoute, NavbarRouteAccount, NavbarRouteLogin, SearchbarItem } from '@gcba/ngx-obelisco/core/models';
-import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  Input,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -26,12 +36,16 @@ export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public placeholder: string = 'Buscar...';
   @ViewChild('navbarSearchResponsive', { static: false }) navbarSearchResponsive!: ElementRef;
   @ViewChild('searchResults', { static: false }) searchResults!: ElementRef;
+  @ViewChild('navbarContent') navbarContent!: ElementRef;
 
   term = '';
   isHover = false;
   noResults = false;
   filteredResults: SearchbarItem[] = [];
   selectedIndex: number = 0;
+  isMenuExpanded: boolean = false;
+
+  public loginClassMobile = { classMobile: '-mobile' };
 
   private clickOutsideListener = () => {};
 
@@ -84,11 +98,13 @@ export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   goTo(e: SearchbarItem) {
     this.router.navigate([e.route]);
     this.resetSearch();
+    this.closeDropdownMenu();
   }
 
   onEnter() {
     if (this.filteredResults.length > 0) {
       this.goTo(this.filteredResults[this.selectedIndex]);
+      this.closeDropdownMenu();
     }
   }
 
@@ -127,5 +143,24 @@ export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.clickOutsideListener) {
       this.clickOutsideListener();
     }
+  }
+
+  closeDropdownMenu() {
+    if (this.navbarContent) {
+      this.navbarContent.nativeElement.classList.remove('show');
+      this.isMenuExpanded = false;
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    const backdrop = event.target as HTMLElement;
+    if (backdrop && backdrop.classList.contains('header-backdrop')) {
+      this.closeDropdownMenu();
+    }
+  }
+
+  toggleMenu() {
+    this.isMenuExpanded = !this.isMenuExpanded;
   }
 }

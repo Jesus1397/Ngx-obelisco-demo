@@ -5,7 +5,7 @@
       <div
         class="card-access-body"
         [ngClass]="{
-          reverse: items.header!.iconPositionRight
+          reverse: items.header!.iconPositionLeft
         }"
       >
         <div>
@@ -87,9 +87,13 @@
           </ng-container>
         </div>
       </div>
-      <hr class="clearfix" />
+      <hr *ngIf="items.footer" class="clearfix" />
       <!-- Footer -->
-      <a *ngIf="items.footer!.route" [routerLink]="items.footer!.route" class="list-group-item card-item">
+      <a
+        *ngIf="items.footer && items.footer!.route"
+        [routerLink]="items.footer!.route"
+        class="list-group-item card-item"
+      >
         <span class="access-title">
           <ng-container *ngIf="items.footer!.icon">
             <i *ngIf="items.footer!.icon.includes('bx'); else materialIcon" class="{{ items.footer!.icon }}"></i>
@@ -100,7 +104,7 @@
           {{ items.footer!.title }}
         </span>
       </a>
-      <a *ngIf="items.footer!.link" [href]="items.footer!.link" class="list-group-item card-item">
+      <a *ngIf="items.footer && items.footer!.link" [href]="items.footer!.link" class="list-group-item card-item">
         <span class="access-title">
           <ng-container *ngIf="items.footer!.icon">
             <i *ngIf="items.footer!.icon.includes('bx'); else materialIcon" class="{{ items.footer!.icon }}"></i>

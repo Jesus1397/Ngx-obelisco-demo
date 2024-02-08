@@ -1,207 +1,171 @@
 <section class="section-example">
-  <app-viewer title="Horizontal - Sin contenedor">
-    <div component class="col-xl-5 col-lg-5 col-md-12 card-wrapper">
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
-        route="/components"
-        [image]="imageLargeFirst"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
-        route="/components"
-        iconTop="bx bx-news"
-        [isSimpleCard]="true"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
-        route="/components"
-        [isSimpleCard]="true"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        route="/components"
-        [isSimpleCard]="true"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
+  <app-viewer title="Horizontal - Temática">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
         description="Descripción de la tarjeta"
         route="/components"
-        iconLeft="bx bx-file"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        route="/components"
-        iconLeft="bx bx-file"
-      ></o-card-horizontal>
+        [image]="imageTheme"
+        [isThemeCard]="true"
+      ></o-card>
     </div>
     <pre appClipboard component-html class="code">
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardWithoutContainerHtml }}</code>
+      <code appPrism language="html">{{ cardThemeHtml }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Horizontal - Con contenedor">
-    <div component class="col-xl-5 col-lg-5 col-md-12 card-wrapper">
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima"
-        [isInContainer]="true"
+  <app-viewer title="Horizontal - Con ícono">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
         route="/components"
-        iconTop="bx bx-news"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima"
-        [isInContainer]="true"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
         route="/components"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        [isInContainer]="true"
-        route="/components"
-      ></o-card-horizontal>
+        icon="info"
+        [isHorizontal]="true"
+      ></o-card>
     </div>
     <pre appClipboard component-html class="code">
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardWithContainerHtml }}</code>
+      <code appPrism language="html">{{ cardIconHtml }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Horizontal - Contenedor con imagen o ícono horizontal">
-    <div component class="col-xl-5 col-lg-7 col-md-12 card-wrapper">
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
-        [isInContainer]="true"
+  <app-viewer title="Horizontal - Con imagen">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
         route="/components"
-        [image]="image"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
-        [isInContainer]="true"
+        [image]="imageHorizontal"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
         route="/components"
-        [image]="imageLarge"
-      ></o-card-horizontal>
-    </div>
-    <div component class="col-xl-5 col-lg-5 col-md-12 card-wrapper mt-5">
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        [isInContainer]="true"
-        route="/components"
-        [image]="image"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
-        [isInContainer]="true"
-        route="/components"
-        [image]="image"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de tarjeta"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
-        [isInContainer]="true"
-        route="/components"
-        [image]="imageLarge"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de acceso"
-        description="Descripción de acceso"
-        [isInContainer]="true"
-        route="/components"
-        iconLeft="bx bx-file"
-      ></o-card-horizontal>
-      <o-card-horizontal
-        component
-        title="Titulo de acceso"
-        [isInContainer]="true"
-        route="/components"
-        iconLeft="bx bx-file"
-      ></o-card-horizontal>
+        [image]="imageHorizontal"
+        [isHorizontal]="true"
+      ></o-card>
     </div>
     <pre appClipboard component-html class="code">
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardWithContainerImgIconHtml }}</code>
+      <code appPrism language="html">{{ cardImageHtml }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Vertical - Noticia" [isNavCode]="true">
-    <div component class="col-xl-4 col-lg-4 col-md-12 card-wrapper">
-      <o-card-vertical
-        component
-        title="Titulo de notica"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+  <app-viewer title="Horizontal - Solo texto">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
         route="/components"
-        [tags]="cardTags"
-        [image]="imageEvent"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [isHorizontal]="true"
+      ></o-card>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardTextHtml }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Vertical - Con ícono">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isBordered]="true"
       >
-        <small>Fecha de publicación: 13/04/1997</small>
-      </o-card-vertical>
+      </o-card>
+      <o-card title="Título de la tarjeta" description="Descripción de la tarjeta" route="/components" icon="info">
+      </o-card>
     </div>
     <pre appClipboard component-html class="code">
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardNoticeHtml }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="javascript">{{ cardNoticeTs }}</code>
+      <code appPrism language="html">{{ cardIconVerticalHtml }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Vertical - Evento simple">
-    <div component class="col-xl-4 col-lg-4 col-md-12 card-wrapper">
-      <o-card-vertical
-        component
-        title="Titulo de evento"
-        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+  <app-viewer title="Vertical - Con imagen">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
         route="/components"
-        [image]="imageEvent"
+        [image]="imageVertical"
+        [isBordered]="true"
       >
-        <small>
-          <i class="bx bx-calendar-event"></i>
-          Vie 21/1
-          <br />
-          <i class="bx bx-time-five"></i>
-          17 | 18 | 19 hs
-        </small>
-      </o-card-vertical>
+      </o-card>
     </div>
     <pre appClipboard component-html class="code">
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardEventSimpleHtml }}</code>
+      <code appPrism language="html">{{ cardImageVerticalHtml }}</code>
     </pre>
   </app-viewer>
 
-  <app-viewer title="Vertical - Evento">
-    <div component class="col-xl-4 col-lg-4 col-md-12 card-wrapper">
-      <o-card-vertical
-        component
-        eventName="Actividades y clases en polideportivos"
-        headline="18 de Enero al 1 de Febrero"
-        title="Comienza una nueva edición de actividades en polideportivos"
-        [image]="imageEventBg"
-        [imageThumb]="imageThumbs"
+  <app-viewer title="Vertical - Noticia">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageVertical"
+        [tags]="[{ name: 'etiqueta 1' }, { name: 'etiqueta 2' }]"
+        [isBordered]="true"
       >
-      </o-card-vertical>
+        <small #info>Fecha de publicación</small>
+      </o-card>
+      <o-card
+        title="Título de la tarjeta Noticias truncado con texto extendido que supera las tres líneas de longitud."
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageVertical"
+        [tags]="[{ name: 'etiqueta 1' }, { name: 'etiqueta 2' }]"
+        [isTitleTruncate]="true"
+        [isBordered]="true"
+      >
+        <small #info>Fecha de publicación</small>
+      </o-card>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardNewsHtml }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Vertical - Agenda">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageVertical"
+        headline="sobrelinea"
+        [isBordered]="true"
+      >
+        <div class="pt-2" #info>
+          <small><span class="material-icons-round">calendar_today</span> Lun 01/1</small>
+          <small><span class="material-icons-round">watch_later</span> 17 | 18 | 19 hs</small>
+        </div>
+      </o-card>
     </div>
     <pre appClipboard component-html class="code">
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>

@@ -14,12 +14,14 @@
     <ng-template #componentTemplate>
       <div class="container mt-5">
         <div class="card-deck max-cards-3 card-column">
-          <o-card-vertical
+          <o-card
             *ngFor="let component of componentsNavigation"
             [title]="component.title"
             [route]="component.route"
             [image]="component.image || {}"
-          ></o-card-vertical>
+            [isBordered]="true"
+          >
+          </o-card>
         </div>
       </div>
     </ng-template>

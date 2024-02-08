@@ -1,13 +1,16 @@
-.card-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
+.card-wrapper-horizontal {
+  width: 100%;
+  max-width: 526px;
+}
+.card-wrapper-vertical {
+  width: 100%;
+  max-width: 340px;
+}
 
-  & > * {
-    margin-bottom: 3rem;
-  }
-
-  & > *:last-child {
-    margin-bottom: 0;
+.card-wrapper-horizontal,
+.card-wrapper-vertical {
+  o-card:not(:first-child) {
+    margin-top: 1.5rem;
+    display: block;
   }
 }

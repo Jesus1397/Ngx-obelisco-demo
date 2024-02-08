@@ -25,7 +25,7 @@
     "@angular/platform-browser": "^14.0.7",
     "@angular/platform-browser-dynamic": "^14.0.7",
     "@angular/router": "^14.0.7",
-    "@gcba/obelisco": "1.56.0",
+    "@gcba/obelisco": "1.57.1",
     "@types/prismjs": "^1.26.0",
     "boxicons": "^2.1.4",
     "husky": "^8.0.1",

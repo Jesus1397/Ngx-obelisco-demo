@@ -134,7 +134,7 @@ export const ACCESS_LIST_HEADER_INTERFACE_DATA_SOURCE = [
     description: 'Se utiliza para definir '
   },
   {
-    name: 'iconPositionRight: boolean',
+    name: 'iconPositionLeft: boolean',
     description: 'Se utiliza para definir '
   },
   {
@@ -209,7 +209,7 @@ export const ACCESS_LIST_HEADER_INTERFACE = `
     title?: string;
     description?: string;
     icon?: string;
-    iconPositionRight?: boolean;
+    iconPositionLeft?: boolean;
     iconText?: string;
   }
 `;
@@ -331,7 +331,7 @@ export const ACCESS_LIST_FOOTER: AccessList = {
     title: 'Título del acceso',
     description: 'Descripción del acceso',
     icon: 'info',
-    iconPositionRight: true
+    iconPositionLeft: true
   },
   footer: {
     title: 'Acceso grande',
@@ -353,7 +353,7 @@ export class ExampleComponent {
       title: 'Título del acceso',
       description: 'Descripción del acceso',
       icon: 'info',
-      iconPositionRight: true
+      iconPositionLeft: true
     },
     footer: {
       title: 'Acceso grande',

@@ -8,7 +8,7 @@ export interface AccessHeader {
   title?: string;
   description?: string;
   icon?: string;
-  iconPositionRight?: boolean;
+  iconPositionLeft?: boolean;
   iconText?: string;
 }
 

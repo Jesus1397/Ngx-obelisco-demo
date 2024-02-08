@@ -8,6 +8,7 @@ export enum ComponentEnum {
   footer = 'Footer',
   progressBar = 'Barra de progreso',
   collapse = 'Colapsable',
+  map = 'Mapa',
   modal = 'Modal',
   pagination = 'Paginación',
   table = 'Tabla',
@@ -73,7 +74,7 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Banner',
-    image: { src: 'assets/component-cards/BarraDeProgreso.svg' },
+    image: { src: 'assets/component-cards/' },
     route: '/components/banner'
   },
   {
@@ -90,6 +91,11 @@ export const COMPONENTS_NAVIGATION = [
     title: 'Colapsable',
     image: { src: 'assets/component-cards/Colapsables.svg' },
     route: '/components/collapse'
+  },
+  {
+    title: 'Mapa',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/map'
   },
   {
     title: 'Modal',
@@ -198,7 +204,7 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Bloque de trámite',
-    imageTop: 'assets/component-cards/',
+    image: { src: 'assets/component-cards/' },
     route: '/components/block'
   }
 ];

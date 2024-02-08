@@ -33,7 +33,7 @@ export const MODAL_DATA_SOURCE = [
 ];
 
 export const MODAL_EXAMPLE_CONFIRMATION_HTML = `
-  <o-button title="Ver modal" dataToggle="modal" dataTarget="exampleModal"></o-button>
+  <o-button text="Ver modal" dataToggle="modal" dataTarget="exampleModal"></o-button>
   <o-modal
     dataTarget="exampleModal"
     title="¡Importante!"
@@ -41,28 +41,28 @@ export const MODAL_EXAMPLE_CONFIRMATION_HTML = `
     tené en cuenta haber realizado los pasos previos correspondientes."
     [isBordered]="true"
   >
-    <o-button title="Volver atrás" type="link" dataDismiss="modal"></o-button>
-    <o-button title="Continuar"></o-button>
+    <o-button text="Volver atrás" type="link" dataDismiss="modal"></o-button>
+    <o-button text="Continuar"></o-button>
   </o-modal>`;
 
 export const MODAL_EXAMPLE_DANGER_HTML = `
-  <o-button title="Ver modal" dataToggle="modal" dataTarget="dangerModal"></o-button>
+  <o-button text="Ver modal" dataToggle="modal" dataTarget="dangerModal"></o-button>
   <o-modal
     dataTarget="dangerModal"
     title="Eliminar documento"
     description="El documento que seleccionaste será eliminado."
     [isBordered]="true"
   >
-    <o-button title="Cancelar" type="secondary" [isOutline]="true" dataDismiss="modal"></o-button>
-    <o-button title="Eliminar" type="danger"></o-button>
+    <o-button text="Cancelar" type="secondary" [isOutline]="true" dataDismiss="modal"></o-button>
+    <o-button text="Eliminar" type="danger"></o-button>
   </o-modal>`;
 
 export const MODAL_EXAMPLE_RECOGNITION_HTML = `
-  <o-button title="Ver modal" dataToggle="modal" dataTarget="recognitionModal"></o-button>
+  <o-button text="Ver modal" dataToggle="modal" dataTarget="recognitionModal"></o-button>
   <o-modal
     dataTarget="recognitionModal"
     subtitle="CARGA EXITOSA"
     title="Los archivos se cargaron correctamente"
   >
-    <o-button title="Aceptar"></o-button>
+    <o-button text="Aceptar"></o-button>
   </o-modal>`;

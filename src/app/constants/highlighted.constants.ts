@@ -252,7 +252,7 @@ export const MEDIA_INTERFACE_DATA_SOURCE = [
   },
   {
     name: 'size: ImageMediaSizes',
-    description: 'Se utiliza para definir el tamaño de la imagen, en el caso de panel chico y tarjetas.'
+    description: 'Se utiliza para definir el tamaño de la imagen, en el caso de panel chico.'
   }
 ];
 

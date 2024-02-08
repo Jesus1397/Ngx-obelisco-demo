@@ -9,6 +9,7 @@ import { CollapseComponent } from './collapse/collapse.component';
 import { FooterComponent } from './footer/footer.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PanelComponent } from './panel/panel.component';
+import { MapComponent } from './map/map.component';
 import { ModalComponent } from './modal/modal.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
@@ -62,6 +63,11 @@ const routes: Routes = [
     path: 'collapse',
     component: CollapseComponent,
     loadChildren: () => import('./collapse/collapse.module').then((m) => m.CollapseModule)
+  },
+  {
+    path: 'map',
+    component: MapComponent,
+    loadChildren: () => import('./map/map.module').then((m) => m.MapModule)
   },
   {
     path: 'modal',

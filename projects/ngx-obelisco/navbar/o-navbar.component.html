@@ -7,15 +7,17 @@
     <a class="navbar-brand" [routerLink]="routeLogo">
       <img class="header-logo" [src]="src" [alt]="alt" />
     </a>
+    <!-- Login button Mobile ↓ -->
+    <ng-container *ngTemplateOutlet="loginButton; context: loginClassMobile"></ng-container>
     <!-- Menu button ↓ -->
     <ng-container [ngTemplateOutlet]="menuButton"></ng-container>
-    <div class="collapse navbar-collapse" [id]="id + 'navbarContent'">
+    <div #navbarContent class="collapse navbar-collapse" [id]="id + 'navbarContent'">
       <div class="navbar-content">
         <!-- Sections ↓ -->
         <ng-container [ngTemplateOutlet]="sections"></ng-container>
         <!-- Searchbar ↓ -->
         <ng-container [ngTemplateOutlet]="searchBar"></ng-container>
-        <!-- Login button ↓ -->
+        <!-- Login button Desktop ↓ -->
         <ng-container [ngTemplateOutlet]="loginButton"></ng-container>
         <!-- Account button Desktop ↓ -->
         <ng-container [ngTemplateOutlet]="accountButtonDesktop"></ng-container>
@@ -66,13 +68,22 @@
       <ul class="nav flex-column nav-pills nav-user">
         <ng-container *ngFor="let accountChild of routesAccount.children">
           <li class="nav-item">
-            <a class="nav-link nav-link-lg" [routerLink]="accountChild.route" *ngIf="!accountChild.isDangerTitle">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              [routerLink]="accountChild.route"
+              *ngIf="!accountChild.isDangerTitle"
+            >
               <span>{{ accountChild.title }}</span>
               <span class="item-notifications" *ngIf="accountChild.isWithNotification"></span>
             </a>
           </li>
           <li class="nav-item" *ngIf="accountChild.isDangerTitle">
-            <a class="nav-link nav-link-danger nav-link-lg" [routerLink]="accountChild.route">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-danger nav-link-lg"
+              [routerLink]="accountChild.route"
+            >
               <div class="nav-icon">
                 <span class="material-icons-round">logout</span>
                 <span>Cerrar sesión</span>
@@ -180,7 +191,12 @@
           </li>
           <li class="nav-item" *ngIf="!routeItem.children">
             <!-- Ruta con RouterLink -->
-            <a class="nav-link nav-link-lg" *ngIf="routeItem.route" [routerLink]="routeItem.route">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="routeItem.route"
+              [routerLink]="routeItem.route"
+            >
               <ng-container
                 [ngTemplateOutlet]="iconTemplate"
                 [ngTemplateOutletContext]="{ icon: routeItem!.iconLeft }"
@@ -192,7 +208,12 @@
               ></ng-container>
             </a>
             <!-- Ruta con Href -->
-            <a class="nav-link nav-link-lg" *ngIf="routeItem.link" [href]="routeItem.link">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="routeItem.link"
+              [href]="routeItem.link"
+            >
               <ng-container
                 [ngTemplateOutlet]="iconTemplate"
                 [ngTemplateOutletContext]="{ icon: routeItem!.iconLeft }"
@@ -217,7 +238,12 @@
       <ul class="nav nav-pills nav-sections">
         <ng-container *ngFor="let extendedItem of routesExtended; let i = index">
           <li class="nav-item" *ngIf="!extendedItem.children">
-            <a class="nav-link nav-link-lg" *ngIf="extendedItem.route" [routerLink]="extendedItem.route">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="extendedItem.route"
+              [routerLink]="extendedItem.route"
+            >
               <ng-container
                 [ngTemplateOutlet]="iconTemplate"
                 [ngTemplateOutletContext]="{ icon: extendedItem.iconLeft }"
@@ -228,7 +254,12 @@
                 [ngTemplateOutletContext]="{ icon: extendedItem.iconRight }"
               ></ng-container>
             </a>
-            <a class="nav-link nav-link-lg" *ngIf="extendedItem.link" [href]="extendedItem.link">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="extendedItem.link"
+              [href]="extendedItem.link"
+            >
               <ng-container
                 [ngTemplateOutlet]="iconTemplate"
                 [ngTemplateOutletContext]="{ icon: extendedItem.iconLeft }"
@@ -333,9 +364,9 @@
   </div>
 </ng-template>
 
-<ng-template #loginButton>
+<ng-template #loginButton let-classMobile="classMobile">
   <ng-container *ngIf="routesLogin">
-    <div class="navbar-login" *ngIf="!routesAccount">
+    <div class="navbar-login{{ classMobile }}" *ngIf="!routesAccount">
       <a class="btn btn-lg btn-icon btn-outline-link" [routerLink]="routesLogin.route" target="_blank">
         <ng-container
           [ngTemplateOutlet]="iconTemplateAccount"
@@ -454,8 +485,9 @@
     data-toggle="collapse"
     [attr.data-target]="'#' + id + 'navbarContent'"
     [attr.aria-controls]="id + 'navbarContent'"
-    aria-expanded="false"
+    [attr.aria-expanded]="isMenuExpanded ? 'true' : 'false'"
     aria-label="Menú"
+    (click)="toggleMenu()"
     *ngIf="routes || routesExtended"
   ></button>
 </ng-template>

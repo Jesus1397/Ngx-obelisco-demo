@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OCardVerticalComponent } from './o-card-vertical.component';
+import { MapApiComponent } from './map-api.component';
 
-describe('OCardVerticalComponent', () => {
-  let component: OCardVerticalComponent;
-  let fixture: ComponentFixture<OCardVerticalComponent>;
+describe('MapApiComponent', () => {
+  let component: MapApiComponent;
+  let fixture: ComponentFixture<MapApiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OCardVerticalComponent]
+      declarations: [MapApiComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(OCardVerticalComponent);
+    fixture = TestBed.createComponent(MapApiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
