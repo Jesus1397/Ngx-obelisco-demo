@@ -1,11 +1,11 @@
-<div class="card card-map">
+<div class="card card-map" [ngClass]="customClasses">
   <div class="card-body">
     <h3 class="card-title" *ngIf="title">{{ title }}</h3>
     <p class="card-text" *ngIf="description">{{ description }}</p>
     <div class="card-iframe">
       <iframe
         [src]="safeIframeUrl"
-        title="Mapa de como llegar"
+        [title]="iframe.title || 'Mapa de como llegar'"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen

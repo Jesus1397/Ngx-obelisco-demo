@@ -14,4 +14,6 @@ export class OGalleryComponent {
   @Input() public galleryItems: MediaGallery[] = [];
   @Input() public isInteractive: boolean = false;
   @Input() public dataTarget!: string;
+  @Input() public customClasses: string = '';
+  @Input() public customClassesInteractive: string = '';
 }

@@ -10,10 +10,11 @@ import { StatusMessageTypes } from '@gcba/ngx-obelisco/core/models';
   styleUrls: ['./o-status-message.component.scss']
 })
 export class OStatusMessageComponent {
-  @Input() type: StatusMessageTypes = 'success';
-  @Input() title!: string;
-  @Input() content!: string | string[];
-  @Input() listContent: string[] = [];
+  @Input() public type: StatusMessageTypes = 'success';
+  @Input() public title!: string;
+  @Input() public content!: string | string[];
+  @Input() public listContent: string[] = [];
+  @Input() public customClasses: string = '';
 
   get isTextArray(): boolean {
     return Array.isArray(this.content);

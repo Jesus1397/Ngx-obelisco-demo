@@ -23,6 +23,10 @@ export const BANNER_DATA_SOURCE = [
     name: '@Input() <br/> icon: string',
     description:
       'Se utiliza para definir el ícono del banner. Se debe utilizar íconos de boxicons o material icons round.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

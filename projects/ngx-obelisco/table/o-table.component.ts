@@ -30,6 +30,8 @@ export class OTableComponent implements OnInit, AfterViewInit {
   @Input() public isHover: boolean = false;
   @Input() public isSelectable: boolean = false;
   @Input() public isScrollable: boolean = false;
+  @Input() public customClasses: string = '';
+
   @Output() public dataSelectedChange = new EventEmitter<any>();
 
   private inputCheckArr: ElementRef[] = [];

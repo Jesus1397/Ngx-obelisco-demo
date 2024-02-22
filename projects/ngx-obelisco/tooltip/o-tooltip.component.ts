@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
-import { TooltipDirections, TooltipDirectionsEnum, TooltipPositions } from '@gcba/ngx-obelisco/core/models';
+import { TooltipDirections, EnumTooltipDirections, TooltipPositions } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-tooltip',
@@ -11,9 +11,9 @@ import { TooltipDirections, TooltipDirectionsEnum, TooltipPositions } from '@gcb
 })
 export class OTooltipComponent implements OnInit, AfterViewInit {
   // Definición de las propiedades de entrada del componente.
-  @Input() direction: TooltipDirections = TooltipDirectionsEnum.TOP;
-  @Input() description: string = 'Esta es la descripción de un tooltip.';
-  @Input() classes?: string;
+  @Input() public direction: TooltipDirections = EnumTooltipDirections.TOP;
+  @Input() public description: string = 'Esta es la descripción de un tooltip.';
+  @Input() public customClasses: string = '';
 
   // Propiedades para controlar la posición y dirección del tooltip.
   previousDirection!: TooltipDirections;
@@ -91,117 +91,117 @@ export class OTooltipComponent implements OnInit, AfterViewInit {
     const { top, left, right, bottom } = position;
 
     switch (this.direction) {
-      case TooltipDirectionsEnum.TOP:
+      case EnumTooltipDirections.TOP:
         if (top - window.pageYOffset <= this.breakzoneY) {
-          this.previousDirection = TooltipDirectionsEnum.TOP;
-          this.direction = TooltipDirectionsEnum.BOTTOM;
+          this.previousDirection = EnumTooltipDirections.TOP;
+          this.direction = EnumTooltipDirections.BOTTOM;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.BOTTOM;
-          this.direction = TooltipDirectionsEnum.TOP;
+          this.previousDirection = EnumTooltipDirections.BOTTOM;
+          this.direction = EnumTooltipDirections.TOP;
         }
         break;
 
-      case TooltipDirectionsEnum.BOTTOM:
+      case EnumTooltipDirections.BOTTOM:
         if (this.currentScreenY - (bottom - window.pageYOffset) <= this.breakzoneY) {
-          this.previousDirection = TooltipDirectionsEnum.BOTTOM;
-          this.direction = TooltipDirectionsEnum.TOP;
+          this.previousDirection = EnumTooltipDirections.BOTTOM;
+          this.direction = EnumTooltipDirections.TOP;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.TOP;
-          this.direction = TooltipDirectionsEnum.BOTTOM;
+          this.previousDirection = EnumTooltipDirections.TOP;
+          this.direction = EnumTooltipDirections.BOTTOM;
         }
         break;
 
-      case TooltipDirectionsEnum.TOP_LEFT:
+      case EnumTooltipDirections.TOP_LEFT:
         if (top - window.pageYOffset <= this.breakzoneY) {
-          this.previousDirection = TooltipDirectionsEnum.TOP_LEFT;
-          this.direction = TooltipDirectionsEnum.BOTTOM_LEFT;
+          this.previousDirection = EnumTooltipDirections.TOP_LEFT;
+          this.direction = EnumTooltipDirections.BOTTOM_LEFT;
         } else if (left < this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.TOP_LEFT;
-          this.direction = TooltipDirectionsEnum.TOP_RIGHT;
+          this.previousDirection = EnumTooltipDirections.TOP_LEFT;
+          this.direction = EnumTooltipDirections.TOP_RIGHT;
         }
         break;
 
-      case TooltipDirectionsEnum.BOTTOM_LEFT:
+      case EnumTooltipDirections.BOTTOM_LEFT:
         if (this.currentScreenY - (bottom - window.pageYOffset) <= this.breakzoneY) {
-          this.previousDirection = TooltipDirectionsEnum.BOTTOM_LEFT;
-          this.direction = TooltipDirectionsEnum.TOP_LEFT;
+          this.previousDirection = EnumTooltipDirections.BOTTOM_LEFT;
+          this.direction = EnumTooltipDirections.TOP_LEFT;
         }
         break;
 
-      case TooltipDirectionsEnum.TOP_RIGHT:
+      case EnumTooltipDirections.TOP_RIGHT:
         if (top - window.pageYOffset <= this.breakzoneY) {
-          this.previousDirection = TooltipDirectionsEnum.TOP_RIGHT;
-          this.direction = TooltipDirectionsEnum.BOTTOM_RIGHT;
+          this.previousDirection = EnumTooltipDirections.TOP_RIGHT;
+          this.direction = EnumTooltipDirections.BOTTOM_RIGHT;
         } else if (right > this.currentScreenX - this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.TOP_RIGHT;
-          this.direction = TooltipDirectionsEnum.TOP_LEFT;
+          this.previousDirection = EnumTooltipDirections.TOP_RIGHT;
+          this.direction = EnumTooltipDirections.TOP_LEFT;
         }
         break;
 
-      case TooltipDirectionsEnum.BOTTOM_RIGHT:
+      case EnumTooltipDirections.BOTTOM_RIGHT:
         if (this.currentScreenY - (bottom - window.pageYOffset) <= this.breakzoneY) {
-          this.previousDirection = TooltipDirectionsEnum.BOTTOM_RIGHT;
-          this.direction = TooltipDirectionsEnum.TOP_RIGHT;
+          this.previousDirection = EnumTooltipDirections.BOTTOM_RIGHT;
+          this.direction = EnumTooltipDirections.TOP_RIGHT;
         }
         break;
 
-      case TooltipDirectionsEnum.RIGHT:
+      case EnumTooltipDirections.RIGHT:
         if (right > this.currentScreenX - this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.RIGHT;
-          this.direction = TooltipDirectionsEnum.LEFT;
+          this.previousDirection = EnumTooltipDirections.RIGHT;
+          this.direction = EnumTooltipDirections.LEFT;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.LEFT;
-          this.direction = TooltipDirectionsEnum.RIGHT;
+          this.previousDirection = EnumTooltipDirections.LEFT;
+          this.direction = EnumTooltipDirections.RIGHT;
         }
         break;
 
-      case TooltipDirectionsEnum.RIGHT_TOP:
+      case EnumTooltipDirections.RIGHT_TOP:
         if (right > this.currentScreenX - this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.RIGHT_TOP;
-          this.direction = TooltipDirectionsEnum.LEFT_TOP;
+          this.previousDirection = EnumTooltipDirections.RIGHT_TOP;
+          this.direction = EnumTooltipDirections.LEFT_TOP;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.LEFT_TOP;
-          this.direction = TooltipDirectionsEnum.RIGHT_TOP;
+          this.previousDirection = EnumTooltipDirections.LEFT_TOP;
+          this.direction = EnumTooltipDirections.RIGHT_TOP;
         }
         break;
 
-      case TooltipDirectionsEnum.RIGHT_BOTTOM:
+      case EnumTooltipDirections.RIGHT_BOTTOM:
         if (right > this.currentScreenX - this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.RIGHT_BOTTOM;
-          this.direction = TooltipDirectionsEnum.LEFT_BOTTOM;
+          this.previousDirection = EnumTooltipDirections.RIGHT_BOTTOM;
+          this.direction = EnumTooltipDirections.LEFT_BOTTOM;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.LEFT_BOTTOM;
-          this.direction = TooltipDirectionsEnum.RIGHT_BOTTOM;
+          this.previousDirection = EnumTooltipDirections.LEFT_BOTTOM;
+          this.direction = EnumTooltipDirections.RIGHT_BOTTOM;
         }
         break;
 
-      case TooltipDirectionsEnum.LEFT:
+      case EnumTooltipDirections.LEFT:
         if (left < this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.LEFT;
-          this.direction = TooltipDirectionsEnum.RIGHT;
+          this.previousDirection = EnumTooltipDirections.LEFT;
+          this.direction = EnumTooltipDirections.RIGHT;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.RIGHT;
-          this.direction = TooltipDirectionsEnum.LEFT;
+          this.previousDirection = EnumTooltipDirections.RIGHT;
+          this.direction = EnumTooltipDirections.LEFT;
         }
         break;
 
-      case TooltipDirectionsEnum.LEFT_TOP:
+      case EnumTooltipDirections.LEFT_TOP:
         if (left < this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.LEFT_TOP;
-          this.direction = TooltipDirectionsEnum.RIGHT_TOP;
+          this.previousDirection = EnumTooltipDirections.LEFT_TOP;
+          this.direction = EnumTooltipDirections.RIGHT_TOP;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.RIGHT_TOP;
-          this.direction = TooltipDirectionsEnum.LEFT_TOP;
+          this.previousDirection = EnumTooltipDirections.RIGHT_TOP;
+          this.direction = EnumTooltipDirections.LEFT_TOP;
         }
         break;
 
-      case TooltipDirectionsEnum.LEFT_BOTTOM:
+      case EnumTooltipDirections.LEFT_BOTTOM:
         if (left < this.breakzoneX) {
-          this.previousDirection = TooltipDirectionsEnum.LEFT_BOTTOM;
-          this.direction = TooltipDirectionsEnum.RIGHT_BOTTOM;
+          this.previousDirection = EnumTooltipDirections.LEFT_BOTTOM;
+          this.direction = EnumTooltipDirections.RIGHT_BOTTOM;
         } else {
-          this.previousDirection = TooltipDirectionsEnum.RIGHT_BOTTOM;
-          this.direction = TooltipDirectionsEnum.LEFT_BOTTOM;
+          this.previousDirection = EnumTooltipDirections.RIGHT_BOTTOM;
+          this.direction = EnumTooltipDirections.LEFT_BOTTOM;
         }
         break;
     }

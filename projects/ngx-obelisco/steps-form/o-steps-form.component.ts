@@ -17,6 +17,7 @@ export class OStepsFormComponent extends AbstractStep implements OnInit, OnDestr
   public stepsForm: StepForm[] = [];
 
   @Input() public steps: string[] = [];
+  @Input() public customClasses: string = '';
 
   @Output() public override stopSteps = new EventEmitter<boolean>();
 

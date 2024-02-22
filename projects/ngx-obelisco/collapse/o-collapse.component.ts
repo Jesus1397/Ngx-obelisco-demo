@@ -14,6 +14,7 @@ export class OCollapseComponent implements OnChanges {
   @Input() public id!: string;
   @Input() public dataParent!: string;
   @Input() public isWhite: boolean = false;
+  @Input() public customClasses: string = '';
 
   @Output() public selectedItemChange: EventEmitter<CollapseInputs> = new EventEmitter<CollapseInputs>();
 

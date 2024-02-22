@@ -28,6 +28,7 @@ export class OCardComponent implements AfterViewInit, AfterContentInit {
   @Input() public route!: string;
   @Input() public image?: Media;
   @Input() public icon?: string;
+  @Input() public customClasses: string = '';
 
   @ViewChild('card', { read: ElementRef }) card: ElementRef | undefined;
 

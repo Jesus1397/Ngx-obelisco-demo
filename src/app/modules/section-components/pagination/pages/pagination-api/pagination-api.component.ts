@@ -23,6 +23,10 @@ export class PaginationApiComponent {
     {
       name: '@Input() <br/> isDiscriptiveType: boolean',
       description: 'Se utiliza para ocultar los botones de numeración.'
+    },
+    {
+      name: '@Input() <br /> customClasses: string',
+      description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
     }
   ];
 

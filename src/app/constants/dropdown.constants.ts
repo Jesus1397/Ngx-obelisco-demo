@@ -89,7 +89,7 @@ export const DROPDOWN_NAVIGATION_DATA_SOURCE = [
     description: 'Habilita animación para el ícono derecho.'
   },
   {
-    name: '@Input() dropNavItems: DropdownNavigationItem[]',
+    name: '@Input() children: DropdownNavigationItem[]',
     description: 'Asigna elementos de menú desplegable.'
   },
   {
@@ -99,6 +99,10 @@ export const DROPDOWN_NAVIGATION_DATA_SOURCE = [
   {
     name: '@Input() isBordered: boolean',
     description: 'Habilita el borde.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 
@@ -116,57 +120,62 @@ export const DROPDOWN_NAVIGATION_INTERFACE = `
     link?: string;
     isDisabled?: boolean;
     children?: DropdownNavigationItem[];
+    customClasses?: string;
   }
 `;
 
 export const DROPDOWN_NAVIGATION_DATA_SOURCE_INTERFACE = [
   {
-    name: '@Input() id: string',
+    name: 'id: string',
     description: 'Identificador único para el elemento.'
   },
   {
-    name: '@Input() text: string',
+    name: 'text: string',
     description: 'Texto descriptivo o título.'
   },
   {
-    name: '@Input() textRight: boolean',
+    name: 'textRight: boolean',
     description: 'Controla la alineación del texto a la derecha.'
   },
   {
-    name: '@Input() iconLeft: string',
+    name: 'iconLeft: string',
     description: 'Ícono que aparece en la parte izquierda.'
   },
   {
-    name: '@Input() iconRight: string',
+    name: 'iconRight: string',
     description: 'Ícono que aparece en la parte derecha.'
   },
   {
-    name: '@Input() isAnimatedIconLeft: string',
+    name: 'isAnimatedIconLeft: string',
     description: 'Habilita animación para el ícono izquierdo.'
   },
   {
-    name: '@Input() isAnimatedIconRight: string',
+    name: 'isAnimatedIconRight: string',
     description: 'Habilita animación para el ícono derecho.'
   },
   {
-    name: '@Input() textDanger: boolean',
+    name: 'textDanger: boolean',
     description: 'Indica si el texto tiene un significado de alerta o peligro.'
   },
   {
-    name: '@Input() route: string',
+    name: 'route: string',
     description: 'Ruta de navegación asociada al elemento.'
   },
   {
-    name: '@Input() link: string',
+    name: 'link: string',
     description: 'Enlace o URL relacionado con el elemento.'
   },
   {
-    name: '@Input() isDisabled: boolean',
+    name: 'isDisabled: boolean',
     description: 'Habilita o deshabilita la interacción con el elemento.'
   },
   {
-    name: '@Input() children: DropdownNavigationItem[]',
+    name: 'children: DropdownNavigationItem[]',
     description: 'Elementos secundarios que se despliegan en un menú.'
+  },
+  {
+    name: 'customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 
@@ -225,29 +234,34 @@ export const DROPDOWN_SELECTION_INTERFACE = `
     name?: string;
     value?: string;
     isDisabled?: boolean;
+    customClasses?: string;
   }
 `;
 
 export const DROPDOWN_SELECTION_DATA_SOURCE_INTERFACE = [
   {
-    name: '@Input() id: string',
+    name: 'id: string',
     description: 'Identificador único del elemento.'
   },
   {
-    name: '@Input() title: string',
+    name: 'title: string',
     description: 'Texto descriptivo o título.'
   },
   {
-    name: '@Input() name: string',
+    name: 'name: string',
     description: 'Nombre asociado al elemento.'
   },
   {
-    name: '@Input() value: string',
+    name: 'value: string',
     description: 'Valor o contenido del elemento.'
   },
   {
-    name: '@Input() isDisabled: boolean',
+    name: 'isDisabled: boolean',
     description: 'Habilita o deshabilita la interacción con el elemento.'
+  },
+  {
+    name: 'customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

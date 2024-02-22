@@ -14,6 +14,7 @@ export class OPanelSmallComponent {
   @Input() public isBgLight: boolean = false;
   @Input() public isVertical: boolean = false;
   @Input() public isItemsListVertical: boolean = false;
+  @Input() public customClasses: string = '';
 
   sizeToPx = (size: ImageMediaSizes): number => {
     switch (size) {

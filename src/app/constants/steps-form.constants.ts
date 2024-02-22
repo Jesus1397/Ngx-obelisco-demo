@@ -9,23 +9,14 @@ export const STEPS_FORM_NAVIGATION = [
   }
 ];
 
-export const STEPS_FORM_BEST_PRACTICES = [
-  '<strong>Respetar la progresión lineal.</strong> El indicador de paso está diseñado para complementar la navegación estándar Atrás/Siguiente en una secuencia lineal. Debe utilizarse cuando se pueda detectar la tasa de finalización del proceso.',
-  '<strong>Proporcionar la navegación por separado.</strong> En un formulario utilizar botones para avanzar y retroceder.',
-  '<strong>Usar etiquetas cortas o de una sola palabra.</strong> Utilice palabras/frases cortas y descriptivas.',
-  '<strong>Utilizar este componente a partir de 3 y hasta 5 pasos.</strong> De necesitar más pasos pensar en redefinir los formularios en menos pasos.',
-  '<strong>Utilizar un indicador de pasos para formularios muy breves, sin capítulos o secciones.</strong> Debe tener al menos tres secciones.'
-];
-
-export const STEPS_FORM_BAD_PRACTICES = [
-  '<strong>No utilizar el paso a paso en procesos de más de 6 pasos.</strong> Considerar simplificar el proceso o dividirlo en varias tareas.',
-  '<strong>Evitar la cantidad de pasos variables.</strong> Considerar otro enfoque si la cantidad de pasos puede cambiar debido a la entrada del usuario.'
-];
-
 export const DATA_SOURCE_STEPS_FORM_INPUT = [
   {
     name: '@Input() <br/> steps: string[]',
     description: 'Se utiliza para definir los pasos que se mostrarán en la barra de estado.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

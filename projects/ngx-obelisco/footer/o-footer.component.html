@@ -1,4 +1,4 @@
-<div *ngIf="indicatorText" class="footer-info">
+<div *ngIf="indicatorText" class="footer-info" [ngClass]="customClassesIndicator">
   <div class="container">
     <h4 class="footer-info-text">{{ indicatorText }}</h4>
     <div class="footer-info-actions">
@@ -6,7 +6,7 @@
     </div>
   </div>
 </div>
-<footer class="main-footer">
+<footer class="main-footer" [ngClass]="customClasses">
   <div class="container">
     <section *ngIf="!isPhoneSectionHidden">
       <ng-container *ngIf="!phoneCustomContent">

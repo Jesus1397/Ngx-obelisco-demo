@@ -1,11 +1,10 @@
 <ul
   class="list-steps"
-  [ngClass]="{
-    'list-steps-light': isStepLight,
-    'list-steps-numbers': isStepNumber,
-    'list-steps-lg': size === 'lg',
-    'list-steps-sm': size === 'sm'
-  }"
+  [class.list-steps-light]="isStepLight"
+  [class.list-steps-numbers]="isStepNumber"
+  [class.list-steps-lg]="size === 'lg'"
+  [class.list-steps-sm]="size === 'sm'"
+  [ngClass]="customClasses"
 >
   <li class="list-steps-item" *ngFor="let step of steps; let i = index">
     <h4 *ngIf="step.title">{{ step.title }}</h4>

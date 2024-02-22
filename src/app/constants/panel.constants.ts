@@ -51,6 +51,10 @@ export const PANEL_SMALL_DATA_SOURCE = [
     name: '@Input() <br/> isItemsListVertical: boolean',
     description:
       'Propiedad de entrada para indicar si la lista de elementos del panel pequeño es vertical. Por defecto es horizontal'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 
@@ -64,7 +68,7 @@ export const PANEL_SMALL_HORIZONTAL = `
 export const PANEL_SMALL_LARGE_IMAGE_TS = `
   import { Component } from '@angular/core';
   import { ImageMediaSizes } from '@gcba/ngx-obelisco/core/models';
-  
+
   @Component({
     selector: 'app-example',
     template: './app-example.component.html',

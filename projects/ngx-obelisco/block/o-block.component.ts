@@ -10,4 +10,5 @@ export class OBlockComponent {
   @Input() public description?: string;
   @Input() public isBgLight?: boolean = false;
   @Input() public isPositionRelative?: boolean = false;
+  @Input() public customClasses: string = '';
 }

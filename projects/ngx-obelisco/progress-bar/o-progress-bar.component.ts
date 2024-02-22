@@ -23,6 +23,7 @@ export class OProgressBarComponent extends AbstractStep implements OnInit, OnDes
   @Input() public type: ProgressBarTypes = 'info';
   @Input() public currentStep: number = 0;
   @Input() public totalSteps: number = 10;
+  @Input() public customClasses: string = '';
 
   @Output() public override stopSteps = new EventEmitter<boolean>();
 

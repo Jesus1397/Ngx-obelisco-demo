@@ -35,6 +35,15 @@ export const GALLERY_DATA_SOURCE = [
   {
     name: '@Input() <br /> dataTarget: string',
     description: 'Se utiliza para pasar el id del elemento que se mostrará en la galería.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+  },
+  {
+    name: '@Input() <br /> customClassesInteractive: string',
+    description:
+      'Se utiliza para aplicar clases personalizadas a la sección interactiva del componente para personalizar su apariencia.'
   }
 ];
 

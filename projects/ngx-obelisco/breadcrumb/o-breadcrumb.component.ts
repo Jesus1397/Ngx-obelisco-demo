@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Event, NavigationEnd, Router, RouterEvent, RouterModule } from '@angular/router';
 import { filter, startWith, Subject, takeUntil } from 'rxjs';
@@ -13,6 +13,8 @@ import { BreadcrumbRoute } from '@gcba/ngx-obelisco/core/models';
   styleUrls: ['./o-breadcrumb.component.scss']
 })
 export class OBreadcrumbComponent implements OnInit, OnDestroy {
+  @Input() public customClasses: string = '';
+
   public routes: BreadcrumbRoute[] = [];
 
   private defaultRoute!: string;
@@ -34,25 +36,26 @@ export class OBreadcrumbComponent implements OnInit, OnDestroy {
   }
 
   private getPaths(): void {
-    this.router.events
-      .pipe(
-        takeUntil(this.onDestroy$),
-        filter((event) => event instanceof NavigationEnd),
-        startWith(this.router)
-      )
-      .subscribe({
-        next: (event: any) => {
-          event = event as RouterEvent;
-          this.routes = [];
-          event.route
-            .split('/')
-            .forEach(
-              (item: string, index: number) =>
-                (item !== '' || isNaN(+item) || item.length > 2) &&
-                this.routes.push({ name: this.formatedName(item), route: this.formatedRoute(item, event.route) })
-            );
-        }
-      });
+    this.routes.length != 0 &&
+      this.router.events
+        .pipe(
+          takeUntil(this.onDestroy$),
+          filter((event) => event instanceof NavigationEnd),
+          startWith(this.router)
+        )
+        .subscribe({
+          next: (event: any) => {
+            event = event as RouterEvent;
+            this.routes = [];
+            event.route
+              .split('/')
+              .forEach(
+                (item: string, index: number) =>
+                  (item !== '' || isNaN(+item) || item.length > 2) &&
+                  this.routes.push({ name: this.formatedName(item), route: this.formatedRoute(item, event.route) })
+              );
+          }
+        });
   }
 
   private formatedName(path: string): string {

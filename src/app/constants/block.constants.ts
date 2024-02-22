@@ -17,7 +17,7 @@ export const BLOCK_EXAMPLE_TITLE = `
 `;
 
 export const BLOCK_EXAMPLE_DESCRIPTION = `
-  <o-block 
+  <o-block
     title="Iniciá el trámite y completá todos los pasos"
     description="Si tenés un trámite iniciado podés continuarlo desde acá."
   >
@@ -54,5 +54,9 @@ export const BLOCK_DATA_SOURCE = [
   {
     name: '@Input() <br/> isPositionRelative: boolean',
     description: 'Propiedad de entrada para indicar si la posición del bloque es relative. Por defecto es false.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];

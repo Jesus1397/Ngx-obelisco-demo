@@ -15,6 +15,7 @@ export class OHighlightedComponent implements AfterContentInit {
   @Input() public image?: Media;
   @Input() public video?: Media;
   @Input() public iframe?: Media;
+  @Input() public customClasses: string = '';
 
   @ContentChild('child', { read: ElementRef }) contentElementRef: ElementRef | undefined;
 

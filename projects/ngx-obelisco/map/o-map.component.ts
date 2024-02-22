@@ -8,9 +8,11 @@ import { Media } from '@gcba/ngx-obelisco/core/models';
   styleUrls: ['./o-map.component.scss']
 })
 export class OMapComponent implements OnInit {
-  @Input() title!: string;
-  @Input() description!: string;
-  @Input() iframe!: Media;
+  @Input() public title!: string;
+  @Input() public description!: string;
+  @Input() public iframe!: Media;
+  @Input() public customClasses: string = '';
+
   safeIframe!: SafeHtml;
   safeIframeUrl!: SafeResourceUrl;
 

@@ -9,6 +9,7 @@
     [attr.aria-controls]="hasChildren ? dataTarget : null"
     aria-haspopup="true"
     aria-expanded="false"
+    [ngClass]="customClasses"
   >
     <ng-container *ngIf="iconLeft">
       <i *ngIf="iconLeft.includes('bx')" class="{{ iconLeft }}" [class.btn-dropdown-icon]="isAnimatedIconLeft"></i>
@@ -43,6 +44,7 @@
         [class.disabled]="item.isDisabled"
         [class.item-danger]="item.isItemDanger"
         [routerLink]="item.route"
+        [ngClass]="item.customClasses"
       >
         <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: item.iconLeft }"></ng-container>
         <span class="item-text" [class.text-right]="item.textPosition == 'right'">{{ item.text }}</span>
@@ -55,6 +57,7 @@
         [class.item-danger]="item.isItemDanger"
         [href]="item.link"
         target="_blank"
+        [ngClass]="item.customClasses"
       >
         <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: item.iconLeft }"></ng-container>
         <span class="item-text" [class.text-right]="item.textPosition == 'right'">{{ item.text }}</span>
@@ -68,6 +71,7 @@
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
+          [ngClass]="item.customClasses"
         >
           <ng-container
             *ngTemplateOutlet="iconTemplate; context: { icon: item.iconLeft, animated: item.isAnimatedIconLeft }"
@@ -84,6 +88,7 @@
               class="dropdown-item sub-item"
               [class.item-danger]="subitem.isItemDanger"
               [routerLink]="subitem.route"
+              [ngClass]="subitem.customClasses"
             >
               <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: subitem.iconLeft }"></ng-container>
               <span class="item-text" [class.text-right]="subitem.textPosition == 'right'">{{ subitem.text }}</span>
@@ -95,6 +100,7 @@
               [class.item-danger]="subitem.isItemDanger"
               [href]="subitem.link"
               target="_blank"
+              [ngClass]="subitem.customClasses"
             >
               <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: subitem.iconLeft }"></ng-container>
               <span class="item-text" [class.text-right]="subitem.textPosition == 'right'">{{ subitem.text }}</span>

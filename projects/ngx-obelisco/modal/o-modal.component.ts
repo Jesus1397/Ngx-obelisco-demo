@@ -15,4 +15,5 @@ export class OModalComponent {
   @Input() public subtitle!: string;
   @Input() public description!: string;
   @Input() public isBordered: boolean = false;
+  @Input() public customClasses: string = '';
 }

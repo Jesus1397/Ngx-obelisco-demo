@@ -51,6 +51,10 @@ export const LIST_STEP_DATA_SOURCE = [
   {
     name: '@Input() <br /> size: Sizes',
     description: 'Se utiliza para definir el tamaño de los pasos en el componente.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

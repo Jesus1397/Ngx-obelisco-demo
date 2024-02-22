@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, Renderer2, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Access, AccessCategory, AccessList } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
@@ -8,6 +8,7 @@ import { Access, AccessCategory, AccessList } from '@gcba/ngx-obelisco/core/mode
 })
 export class OAccessListComponent implements OnChanges {
   @Input() public items!: AccessList;
+  @Input() public customClasses: string = '';
 
   public accessList: Access[] = [];
   public accessCategoryList: AccessCategory[] = [];

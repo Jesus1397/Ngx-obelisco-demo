@@ -114,6 +114,9 @@ export class OFooterComponent {
 
   @Input() public indicatorText!: string;
 
+  @Input() public customClasses: string = '';
+  @Input() public customClassesIndicator: string = '';
+
   get isPhoneContentArray(): boolean {
     return Array.isArray(this.phoneCustomContent.content);
   }

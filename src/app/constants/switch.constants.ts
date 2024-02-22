@@ -41,6 +41,15 @@ export const SWITCH_DATA_SOURCE = [
   {
     name: '@Input() <br/> switchValue: boolean',
     description: 'Se utiliza para establecer el estado inicial (encendido o apagado) del switch.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+  },
+  {
+    name: '@Input() <br /> customClassesLabel: string',
+    description:
+      'Se utiliza para aplicar clases personalizadas al label del componente para personalizar su apariencia.'
   }
 ];
 

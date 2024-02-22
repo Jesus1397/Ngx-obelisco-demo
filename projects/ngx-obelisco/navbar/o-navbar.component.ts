@@ -29,6 +29,7 @@ export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public routesAccount!: NavbarRouteAccount;
   @Input() public routesLogin!: NavbarRouteLogin;
   @Input() public idMain!: string;
+  @Input() public customClasses: string = '';
 
   //Searchbar
   @Input() public searchbarItems!: SearchbarItem[];

@@ -7,3 +7,9 @@ export interface Media {
   title?: string;
   size?: ImageMediaSizes;
 }
+
+export enum EnumImageMediaSizes {
+  Sm = 'sm',
+  Md = 'md',
+  Lg = 'lg'
+}

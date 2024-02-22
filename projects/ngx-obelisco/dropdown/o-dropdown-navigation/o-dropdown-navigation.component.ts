@@ -16,6 +16,7 @@ export class ODropdownNavigationComponent implements OnChanges {
   @Input() public dropNavItems!: DropdownNavigationItem[];
   @Input() public isPositionRight: boolean = false;
   @Input() public isBordered: boolean = true;
+  @Input() public customClasses: string = '';
 
   hasChildren: boolean = false;
 

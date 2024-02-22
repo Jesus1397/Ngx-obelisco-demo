@@ -37,7 +37,7 @@
 </ng-template>
 
 <ng-container *ngIf="type === 'banner'">
-  <div class="panel-horizontal-content" [ngClass]="isBgLight ? 'bg-light' : null">
+  <div class="panel-horizontal-content" [class.bg-light]="isBgLight" [ngClass]="customClasses">
     <div class="card card-simple panel-horizontal">
       <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
     </div>
@@ -45,13 +45,13 @@
 </ng-container>
 
 <ng-container *ngIf="type === 'grouping'">
-  <div class="card card-simple panel-vertical">
+  <div class="card card-simple panel-vertical" [ngClass]="customClasses">
     <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
   </div>
 </ng-container>
 
 <ng-container *ngIf="type === 'lateral'">
-  <div class="card card-simple panel-lateral">
+  <div class="card card-simple panel-lateral" [ngClass]="customClasses">
     <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
   </div>
 </ng-container>

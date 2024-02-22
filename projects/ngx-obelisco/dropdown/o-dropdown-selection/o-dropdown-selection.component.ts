@@ -17,6 +17,7 @@ export class ODropdownSelectionComponent {
   @Input() public dropSelectItems: DropdownSelectionItem[] = [];
   @Input() public isBordered: boolean = true;
   @Input() public size!: Sizes;
+  @Input() public customClasses: string = '';
 
   @Output() public selectedItemChange: EventEmitter<DropdownSelectionItem | DropdownSelectionItem[]> =
     new EventEmitter();

@@ -25,6 +25,8 @@ export class OTabsComponent implements AfterViewInit, OnDestroy {
   @Input() public isItemsRoundedLight: boolean = false;
   @Input() public size: Sizes = 'md';
   @Input() public isSlidered: boolean = false;
+  @Input() public customClasses: string = '';
+
   @ViewChild('tabContentContainer', { read: ViewContainerRef }) tabContentContainer!: ViewContainerRef;
   @ViewChild('tabsList') tabsListRef!: ElementRef;
 

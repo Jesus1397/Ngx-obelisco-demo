@@ -1,4 +1,4 @@
-<div class="gallery-grid" [ngClass]="['gallery-max-' + galleryItems.length]">
+<div class="gallery-grid" [ngClass]="['gallery-max-' + galleryItems.length, customClasses]">
   <ng-container *ngIf="isInteractive; else noInteractive">
     <a
       *ngFor="let image of galleryItems"
@@ -24,6 +24,7 @@
   data-backdrop="static"
   tabindex="-1"
   role="dialog"
+  [ngClass]="customClassesInteractive"
 >
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">

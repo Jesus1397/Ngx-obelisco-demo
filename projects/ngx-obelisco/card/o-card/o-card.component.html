@@ -19,6 +19,7 @@
           unbordered: !isBordered && isHorizontal
         }
   "
+  [class]="customClasses"
 >
   <ng-container *ngIf="isHorizontal">
     <ng-container *ngTemplateOutlet="cardIcon"></ng-container>

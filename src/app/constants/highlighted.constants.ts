@@ -35,9 +35,9 @@ export const HIGHLIGHTED_IFRAME = {
 
 //HIGHLIGHTED EXAMPLES
 export const HIGHLIGHTED_BANNER_IMAGE_HTML = `
-  <o-highlighted 
+  <o-highlighted
     [title]="title"
-    [description]="description" 
+    [description]="description"
     [image]="picture">
     <o-button #child link="#" size="lg"></o-button>
     <o-button #child link="#" size="lg" type="secondary"></o-button>
@@ -64,16 +64,16 @@ export const HIGHLIGHTED_IMAGE_TS = `
 `;
 
 export const HIGHLIGHTED_BANNER_VIDEO_HTML = `
-  <o-highlighted 
+  <o-highlighted
     [title]="title"
-    [description]="description" 
+    [description]="description"
     [video]="video">
     <o-button #child link="#" size="lg"></o-button>
   </o-highlighted>
 
-  <o-highlighted 
+  <o-highlighted
     [title]="title"
-    [description]="description" 
+    [description]="description"
     [iframe]="iframe">
     <a #child class="external" href="#" target="_blank">Enlace externo</a>
   </o-highlighted>
@@ -177,11 +177,11 @@ export const HIGHLIGHTED_LATERAL_HTML = `
   <o-highlighted type="lateral" [title]="title" [description]="description">
     <o-button #child size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download="" [isExpandable]="true"></o-button>
   </o-highlighted>
-  
+
   <o-highlighted type="lateral" [title]="title" [description]="description">
     <a #child class="external" href="#" target="_blank">Enlace externo</a>
   </o-highlighted>
-  
+
   <o-highlighted type="lateral" [title]="title" [description]="description">
     <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
   </o-highlighted>
@@ -216,6 +216,10 @@ export const HIGHLIGHTED_DATA_SOURCE = [
   {
     name: '@Input() <br/> isBgLight: boolean',
     description: 'Propiedad de entrada para indicar si el fondo del destacado es claro. Por defecto es false.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

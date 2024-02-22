@@ -63,6 +63,10 @@ export const NAVIGATION_VERTICAL_DATA_SOURCE = [
   {
     name: '@Input() <br/> navVertItems: NavVerticalItems[]',
     description: 'Se utiliza para definir los items del menú.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 
@@ -78,6 +82,10 @@ export const NAVIGATION_HORIZONTAL_DATA_SOURCE = [
   {
     name: '@Input() <br/> size: Sizes',
     description: 'Se utiliza para definir el tamaño del menú.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 
@@ -106,6 +114,10 @@ export const NAVIGATION_TABS_DATA_SOURCE = [
   {
     name: '@Input() <br/> isSlidered: boolean',
     description: 'Se utiliza para definir si las pestañas forman parte de un slider, por defecto es falso.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

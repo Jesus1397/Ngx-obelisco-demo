@@ -14,6 +14,7 @@ export class BreadcrumbExamplesComponent implements OnInit {
   ngOnInit(): void {
     this.breadcrumb.breadcrumb$.next({
       routes: [
+        { name: 'Inicio', route: '/custom' },
         { name: 'nivel 2', id: '15151' },
         { name: 'nivel 3', route: '/custom-routes' },
         { name: 'Página anterior', id: '525252525', route: '/custom' }

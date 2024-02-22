@@ -14,19 +14,18 @@
   </div>
 </ng-template>
 
-<div *ngIf="!isVertical" class="card card-simple panel-sm-horizontal">
+<div *ngIf="!isVertical" class="card card-simple panel-sm-horizontal" [ngClass]="customClasses">
   <ng-container *ngTemplateOutlet="smallPanelContent"></ng-container>
 </div>
 
 <div
   *ngIf="isVertical"
   class="card card-simple"
-  [ngClass]="{
-    'panel-list-link': isItemsListVertical,
-    'panel-sm': !isItemsListVertical,
-    'bg-white': isBgWhite,
-    'bg-light': isBgLight
-  }"
+  [class.panel-list-link]="isItemsListVertical"
+  [class.panel-sm]="!isItemsListVertical"
+  [class.bg-white]="isBgWhite"
+  [class.bg-light]="isBgLight"
+  [ngClass]="customClasses"
 >
   <ng-container *ngTemplateOutlet="smallPanelContent"></ng-container>
 

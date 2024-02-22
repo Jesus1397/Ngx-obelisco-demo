@@ -3,10 +3,12 @@ export interface Collapse {
   icon?: string;
   label?: string;
   title?: string;
-  titleh4?: string;
+  isTitleAlone?: boolean;
   subtitle?: string;
   content?: string | string[];
   children?: CollapseItems[] | CollapseInputs[];
+  customClassesHeader?: string;
+  customClassesContent?: string;
 }
 
 export interface CollapseItems {

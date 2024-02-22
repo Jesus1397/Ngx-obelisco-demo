@@ -52,8 +52,13 @@ export const BUTTON_GENERAL_DATA_SOURCE = [
   {
     name: '@Input() <br/> spinnerPositionRight: boolean',
     description: 'Se utiliza para definir la posición del spinner. Por defecto es false.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
+
 export const BUTTON_LINK_DATA_SOURCE = [
   {
     name: '@Input() <br/> route: string',
@@ -76,6 +81,7 @@ export const BUTTON_LINK_DATA_SOURCE = [
     description: 'Se utiliza para definir el atributo rel de la etiqueta &lt;a&gt;. Por defecto es "noreferrer".'
   }
 ];
+
 export const BUTTON_DATA_SOURCE = [
   {
     name: '@Input() <br/> isDisabled: boolean',

@@ -19,7 +19,7 @@ export interface TooltipPositions {
   bottom: number;
 }
 
-export enum TooltipDirectionsEnum {
+export enum EnumTooltipDirections {
   TOP = 'top',
   TOP_LEFT = 'top-left',
   TOP_RIGHT = 'top-right',

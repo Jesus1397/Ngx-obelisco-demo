@@ -10,6 +10,7 @@
     [attr.aria-controls]="dataTarget"
     aria-expanded="false"
     aria-label="Toggle"
+    [ngClass]="customClasses"
   >
     <ng-container *ngIf="iconLeft">
       <i *ngIf="iconLeft.includes('bx')" class="{{ iconLeft }}" [class.btn-dropdown-icon]="isAnimatedIconLeft"></i>
@@ -26,7 +27,6 @@
     <span class="btn-dropdown-text" *ngIf="!isSelectionMultiple">
       {{ selectedItem!.text ? selectedItem!.text : title }}</span
     >
-
     <ng-container *ngIf="iconRight">
       <i *ngIf="iconRight.includes('bx')" class="{{ iconRight }}" [class.btn-dropdown-icon]="isAnimatedIconRight"></i>
       <span
@@ -40,7 +40,7 @@
   <div class="dropdown-menu dropdown-body collapse" [id]="dataTarget">
     <ng-container *ngIf="!isSelectionMultiple">
       <div class="custom-control custom-radio" *ngFor="let item of dropSelectItems; let i = index">
-        <label class="btn btn-chip" [class.active]="i === activeIndex">
+        <label class="btn btn-chip" [class.active]="i === activeIndex" [ngClass]="item.customClasses">
           <input
             class="btn-check"
             type="radio"
@@ -60,6 +60,7 @@
         class="custom-control custom-checkbox"
         [class.disabled]="item.isDisabled"
         *ngFor="let item of dropSelectItems"
+        [ngClass]="item.customClasses"
       >
         <input
           class="custom-control-input"

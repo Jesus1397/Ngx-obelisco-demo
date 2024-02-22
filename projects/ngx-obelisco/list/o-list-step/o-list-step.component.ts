@@ -7,10 +7,11 @@ import { Sizes, Step } from '@gcba/ngx-obelisco/core/models';
   styleUrls: ['./o-list-step.component.scss']
 })
 export class OListStepComponent {
-  @Input() steps: Step[] = [];
-  @Input() isStepLight: boolean = false;
-  @Input() isStepNumber: boolean = false;
-  @Input() size!: Sizes;
+  @Input() public steps: Step[] = [];
+  @Input() public isStepLight: boolean = false;
+  @Input() public isStepNumber: boolean = false;
+  @Input() public size!: Sizes;
+  @Input() public customClasses: string = '';
 
   isTextArray(i: number): boolean {
     return Array.isArray(this.steps[i].description);

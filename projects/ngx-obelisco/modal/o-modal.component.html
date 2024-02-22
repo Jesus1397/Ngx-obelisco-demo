@@ -1,6 +1,6 @@
 <div class="modal fade" tabindex="-1" role="dialog" [attr.id]="dataTarget" [id]="'exampleModal'">
   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-    <div class="modal-content">
+    <div class="modal-content" [ngClass]="customClasses">
       <div class="modal-header" [ngClass]="{ unbordered: !isBordered }">
         <small *ngIf="subtitle">{{ subtitle }}</small>
         <h4 class="modal-title" *ngIf="title">{{ title }}</h4>

@@ -13,6 +13,7 @@ export class OAccessComponent implements AfterViewInit {
   @Input() public size: Sizes = 'md';
   @Input() public link!: string;
   @Input() public route!: string;
+  @Input() public customClasses: string = '';
 
   @ViewChild('access') public access!: ElementRef;
 

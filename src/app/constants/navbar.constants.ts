@@ -67,6 +67,10 @@ export const NAVBAR_DATA_SOURCE = [
     name: '@Input() <br /> placeholder: string',
     description:
       'Se utiliza para definir el texto de marcador de posición en el campo de búsqueda de la barra de navegación.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

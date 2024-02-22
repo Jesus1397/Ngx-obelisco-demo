@@ -13,6 +13,7 @@ export interface DropdownNavigationItem {
   link?: string;
   isDisabled?: boolean;
   children?: DropdownNavigationItem[];
+  customClasses?: string;
 }
 
 export interface DropdownSelectionItem {
@@ -21,4 +22,5 @@ export interface DropdownSelectionItem {
   name?: string;
   value?: string;
   isDisabled?: boolean;
+  customClasses?: string;
 }

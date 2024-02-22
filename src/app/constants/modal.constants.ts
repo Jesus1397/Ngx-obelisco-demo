@@ -29,6 +29,10 @@ export const MODAL_DATA_SOURCE = [
   {
     name: '@Input() <br/> isBordered: boolean',
     description: 'Se utiliza para mostrar la linea divisora entre el encabezado y cuerpo del componente.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

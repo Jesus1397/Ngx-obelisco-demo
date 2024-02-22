@@ -71,6 +71,15 @@ export const FOOTER_DATA_SOURCE = [
   {
     name: '@Input() <br /> indicatorText: string',
     description: 'Se utiliza para ingresar el texto del indicador en la sección.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+  },
+  {
+    name: '@Input() <br /> customClassesIndicator: string',
+    description:
+      'Se utiliza para aplicar clases personalizadas al Indicador componente para personalizar su apariencia.'
   }
 ];
 

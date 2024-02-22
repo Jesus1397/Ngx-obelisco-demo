@@ -8,6 +8,7 @@ import { NavVerticalItems } from '@gcba/ngx-obelisco/core/models';
 })
 export class ONavVerticalComponent {
   @Input() public navVertItems: NavVerticalItems[] = [];
+  @Input() public customClasses: string = '';
 
   public scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

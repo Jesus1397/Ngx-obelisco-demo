@@ -29,6 +29,10 @@ export const DATA_SOURCE_PROGRESS_BAR_INPUT = [
   {
     name: '@Input() <br /> totalStep: number',
     description: 'Se utiliza para definir el total de pasos.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

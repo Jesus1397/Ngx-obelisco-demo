@@ -16,6 +16,8 @@ export class OSwitchComponent {
   @Input() public isDisabled?: boolean = false;
   @Input() public isSmall?: boolean = false;
   @Input() public isFixed?: boolean = false;
+  @Input() public customClasses: string = '';
+  @Input() public customClassesLabel: string = '';
 
   private _switchValue: boolean = false;
 

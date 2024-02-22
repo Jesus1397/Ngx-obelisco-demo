@@ -12,6 +12,7 @@ export class OBannerComponent implements AfterContentInit {
   @Input() public isDark?: boolean = false;
   @Input() public content?: string;
   @Input() public icon?: string;
+  @Input() public customClasses: string = '';
 
   @ContentChild('child', { read: ElementRef }) contentElementRef: ElementRef | undefined;
 

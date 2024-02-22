@@ -1,8 +1,6 @@
 @import './media-query.scss';
 
 @mixin card-deck-4 {
-  o-card-horizontal,
-  o-card-vertical,
   o-access,
   o-highlighted,
   o-card,
@@ -17,8 +15,6 @@
 }
 
 @mixin card-deck-3 {
-  o-card-horizontal,
-  o-card-vertical,
   o-access,
   o-highlighted,
   o-card,
@@ -33,8 +29,6 @@
 }
 
 @mixin card-deck-2 {
-  o-card-horizontal,
-  o-card-vertical,
   o-access,
   o-highlighted,
   o-card,
@@ -49,8 +43,6 @@
 }
 
 @mixin card-deck-1 {
-  o-card-horizontal,
-  o-card-vertical,
   o-access,
   o-highlighted,
   o-card,
@@ -70,8 +62,6 @@
   }
 
   .card-deck {
-    o-card-horizontal,
-    o-card-vertical,
     o-access,
     o-highlighted,
     o-card {
@@ -79,6 +69,7 @@
         min-width: 100%;
         width: 100%;
         height: 100%;
+        margin: 0;
       }
       margin-right: 15px;
       margin-bottom: 0;
@@ -99,8 +90,6 @@
     }
 
     @include media-breakpoint-down(xs) {
-      o-card-horizontal,
-      o-card-vertical,
       o-access,
       o-highlighted,
       o-card,
@@ -130,8 +119,6 @@
   }
 
   .card-deck.card-column {
-    o-card-horizontal,
-    o-card-vertical,
     o-access,
     o-highlighted,
     o-card,
@@ -153,8 +140,6 @@
   }
 
   .card-deck.max-cards-3.card-column {
-    o-card-horizontal,
-    o-card-vertical,
     o-access,
     o-highlighted,
     o-card,
@@ -172,8 +157,6 @@
   }
 
   .card-deck.max-cards-2.card-column {
-    o-card-horizontal,
-    o-card-vertical,
     o-access,
     o-highlighted,
     o-card,
@@ -187,8 +170,6 @@
   }
 
   .card-deck.max-cards-1.card-column {
-    o-card-horizontal,
-    o-card-vertical,
     o-access,
     o-highlighted,
     o-card,
@@ -221,6 +202,7 @@
       min-width: 100%;
       margin-left: 0.938rem;
       margin-right: 0.938rem;
+      min-height: 100%;
     }
   }
 

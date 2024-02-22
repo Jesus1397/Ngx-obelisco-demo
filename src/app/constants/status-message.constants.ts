@@ -39,6 +39,10 @@ export const DATA_SOURCE_STATUS_MESSAGE = [
     name: '@Input() <br /> listContent: string[]',
     description:
       'Se utiliza para definir una lista de ítems que se mostrarán debajo del texto. <br /> Se puede armar con etiquetas html. <br /> No es obligatorio.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

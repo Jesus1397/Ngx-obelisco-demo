@@ -1,5 +1,4 @@
 import { AccessList } from '@gcba/ngx-obelisco/core/models';
-import { codeFormattingArrayList, codeFormattingObject } from '../core/helpers/codeFormatting.helper';
 
 //Routes
 const ACCESS_ROUTE = 'access';
@@ -56,6 +55,10 @@ export const ACCESS_SIMPLE_DATA_SOURCE = [
   {
     name: '@Input() <br />  route: string',
     description: 'Se utiliza para definir una ruta de navegación interna asociada con el componente.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 
@@ -102,6 +105,10 @@ export const ACCESS_LIST_DATA_SOURCE = [
   {
     name: '@Input() <br /> items: AccessList',
     description: 'Se utiliza para definir elementos del componente.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

@@ -9,7 +9,8 @@
         ' ' +
         (isExpandable ? 'btn-block' : '') +
         ' ' +
-        (icon || spinner ? 'btn-icon' : '').trim()
+        (icon || spinner ? 'btn-icon' : '').trim() +
+        customClasses
       "
       [attr.aria-label]="ariaLabel"
       [attr.download]="download"
@@ -30,7 +31,8 @@
         ' ' +
         (isExpandable ? 'btn-block' : '') +
         ' ' +
-        (icon || spinner ? 'btn-icon' : '').trim()
+        (icon || spinner ? 'btn-icon' : '').trim() +
+        customClasses
       "
       [attr.aria-label]="ariaLabel"
       [routerLink]="route"
@@ -51,7 +53,8 @@
       ' ' +
       (isExpandable ? 'btn-block' : '') +
       ' ' +
-      (icon || spinner ? 'btn-icon' : '').trim()
+      (icon || spinner ? 'btn-icon' : '').trim() +
+      customClasses
     "
     [attr.aria-label]="ariaLabel"
     [disabled]="isDisabled ? true : null"

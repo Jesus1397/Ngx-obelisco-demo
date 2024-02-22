@@ -11,7 +11,7 @@
           [direction]="direction"
           [description]="tooltip.text"
           class="mx-2"
-          [classes]="tooltip.classes ? 'icon-box bg-light' : ''"
+          [customClasses]="tooltip.classes ? 'icon-box bg-light' : ''"
         >
           <button *ngIf="!tooltip.classes" type="button" class="btn btn-primary btn-icon">
             <i class="bx bxs-info-circle"></i>

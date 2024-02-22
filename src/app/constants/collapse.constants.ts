@@ -59,7 +59,7 @@ export const COLLAPSE_INTERFACE = `
     icon?: string;
     label?: string;
     title?: string;
-    titleh4?: string;
+    isTitleAlone?: boolean;
     subtitle?: string;
     content?: string | string[];
     children?: CollapseItems[] | CollapseInputs[];
@@ -103,8 +103,8 @@ export const INTERFACE_COLLAPSE_DATA_SOURCE = [
     description: 'Define el título principal.'
   },
   {
-    name: 'titleh4: string;',
-    description: 'Define un título en etiquetas h4.'
+    name: 'isTitleAlone: boolean;',
+    description: 'Define un título sin estar dentro de la etiqueta span.'
   },
   {
     name: 'subtitle: string;',
@@ -117,6 +117,16 @@ export const INTERFACE_COLLAPSE_DATA_SOURCE = [
   {
     name: 'children: CollapseItems[] | CollapseInputs[];',
     description: 'Define una lista de elementos CollapseItems o CollapseInputs'
+  },
+  {
+    name: '@Input() <br /> customClassesHeader: string',
+    description:
+      'Se utiliza para aplicar clases personalizadas al header del componente para personalizar su apariencia.'
+  },
+  {
+    name: '@Input() <br /> customClassesContent: string',
+    description:
+      'Se utiliza para aplicar clases personalizadas al contenido del componente para personalizar su apariencia.'
   }
 ];
 
@@ -162,24 +172,16 @@ export const INTERFACE_COLLAPSE_INPUTS_DATA_SOURCE = [
   }
 ];
 
-export const COLLAPSE_ARRAY: Collapse[] = [
-  {
-    title: 'Título',
-    content: 'Esta es la descripción que se encuentra dentro de un colapsable.'
-  },
-  {
-    title: 'Título',
-    content: 'Esta es la descripción que se encuentra dentro de un colapsable.'
-  },
-  {
-    title: 'Título',
-    content: 'Esta es la descripción que se encuentra dentro de un colapsable.'
-  }
-];
+export const COLLAPSE_ITEM: Collapse = {
+  title: 'Título',
+  isTitleAlone: true,
+  content: 'Esta es la descripción que se encuentra dentro de un colapsable.'
+};
+export const COLLAPSE_ARRAY: Collapse[] = Array(3).fill(COLLAPSE_ITEM);
 
 export const COLLAPSE_INFORMATION: Collapse[] = [
   {
-    titleh4: '$450,00',
+    title: '$450,00',
     label: 'Total a pagar',
     children: [
       {
@@ -196,18 +198,18 @@ export const COLLAPSE_INFORMATION: Collapse[] = [
   }
 ];
 
-export const COLLAPSE_ICON_ARRAY = COLLAPSE_ARRAY.map((el) => {
-  return {
-    ...el,
-    icon: 'bx bx-sm bxs-user-circle'
-  };
-});
+export const COLLAPSE_ICON_ITEM: Collapse = {
+  title: 'Título',
+  content: 'Esta es la descripción que se encuentra dentro de un colapsable.',
+  icon: 'bx bxs-user-circle'
+};
+export const COLLAPSE_ICON_ARRAY: Collapse[] = Array(3).fill(COLLAPSE_ICON_ITEM);
 
 export const COLLAPSE_CAPTION_DESCRIPTION: Collapse[] = [
   {
-    icon: 'bx bx-sm bxs-user-circle',
+    icon: 'bx bxs-user-circle',
     label: 'Volanta',
-    titleh4: 'Título',
+    title: 'Título',
     subtitle: 'Descripción',
     content: 'Esta es la descripción que se encuentra dentro de un colapsable.'
   }
@@ -215,7 +217,7 @@ export const COLLAPSE_CAPTION_DESCRIPTION: Collapse[] = [
 
 export const COLLAPSE_LIST: Collapse[] = [
   {
-    titleh4: 'Tarjeta de crédito / débito',
+    title: 'Tarjeta de crédito / débito',
     subtitle: 'VISA, MasterCard, AMEX, CABAL, Maestro',
     children: [
       {
@@ -235,7 +237,7 @@ export const COLLAPSE_LIST: Collapse[] = [
         value: true
       },
       {
-        icon: 'info',
+        icon: 'bx bxs-info-circle',
         title: 'Nueva tarjeta de crédito',
         id: 'new_card',
         name: 'credit_card',
@@ -270,7 +272,7 @@ export const COLLAPSE_INFO_EXAMPLE_TS = `
   export class ExampleComponent {
     public items: Collapse[] = [
       {
-        titleh4: '$450,00',
+        title: '$450,00',
         label: 'Total a pagar',
         children: [
           {
@@ -299,7 +301,7 @@ export const COLLAPSE_LIST_EXAMPLE_TS = `
   export class ExampleComponent {
     public items: Collapse[] = [
       {
-        titleh4: 'Tarjeta de crédito / débito',
+        title: 'Tarjeta de crédito / débito',
         subtitle: 'VISA, MasterCard, AMEX, CABAL, Maestro',
         children: [
           {
@@ -319,7 +321,7 @@ export const COLLAPSE_LIST_EXAMPLE_TS = `
             value: true
           },
           {
-            icon: 'info',
+            icon: 'bx bxs-info-circle',
             title: 'Nueva tarjeta de crédito',
             id: 'new_card',
             name: 'credit_card',

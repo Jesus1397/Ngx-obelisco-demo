@@ -1,7 +1,9 @@
 <div
   class="card card-block"
   [ngStyle]="isPositionRelative ? null : { top: '48px' }"
-  [ngClass]="{ 'bg-light': isBgLight, 'position-sticky': !isPositionRelative }"
+  [class.bg-light]="isBgLight"
+  [class.position-sticky]="!isPositionRelative"
+  [class]="customClasses"
 >
   <div class="card-body">
     <ng-container *ngIf="title">

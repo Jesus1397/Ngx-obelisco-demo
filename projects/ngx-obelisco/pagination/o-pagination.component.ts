@@ -10,6 +10,7 @@ export class OPaginationComponent implements OnInit {
   @Input() public ariaLabel!: string;
   @Input() public currentPage: number = 1;
   @Input() public isDiscriptiveType: boolean = false;
+  @Input() public customClasses: string = '';
   @Output() public currentPageChange: EventEmitter<number> = new EventEmitter<number>();
 
   public pagesArr: number[] = [];

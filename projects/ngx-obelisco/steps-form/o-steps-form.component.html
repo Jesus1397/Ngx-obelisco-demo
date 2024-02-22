@@ -1,4 +1,4 @@
-<div class="stepper">
+<div class="stepper" [ngClass]="customClasses">
   <p class="step-title">{{ actualStep.name }}</p>
   <p class="step-next" *ngIf="!isLastStep; else lastStep">Paso siguiente: {{ nextStepName }}</p>
   <ng-template #lastStep><p class="step-next">Ultimo paso</p></ng-template>

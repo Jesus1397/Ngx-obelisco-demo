@@ -19,6 +19,10 @@ export const DATA_SOURCE_BREADCRUMB_INTERFACE = [
     name: 'defaultRoute',
     description:
       'Se utiliza para agregar una route generica al breadcrumb. Para que lo puedan utilizar las <strong>routes</strong>'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 
@@ -66,6 +70,7 @@ export const BREADCRUMB_EXAMPLE_TS = `
     ngOnInit() {
       this.breadcrumbService.breadcrumb$.next({
         routes: [
+          { name: 'Inicio', route: '/custom' },
           { name: 'nivel 2', id: '15151' },
           { name: 'nivel 3', route: '/custom-routes' },
           { name: 'Página anterior', id: '525252525', route: '/custom' }

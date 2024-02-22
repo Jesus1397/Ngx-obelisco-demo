@@ -39,6 +39,10 @@ export const TABLE_DATA_SOURCE = [
   {
     name: '@Input() <br/> isResponsive: boolean',
     description: 'Se utiliza para definir si la tabla debe ajustarse de manera responsiva.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
 

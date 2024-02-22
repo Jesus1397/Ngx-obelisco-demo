@@ -30,6 +30,7 @@ export class OButtonComponent {
   @Input() public dataTarget?: string;
   @Input() public dataToggle?: string;
   @Input() public dataDismiss?: string;
+  @Input() public customClasses: string = '';
 
   getSpinnerType(): string {
     const spinnerTypeMappings = {

@@ -1,6 +1,8 @@
-<nav aria-label="breadcrumb">
+<nav aria-label="Navegación secundaria" [ngClass]="customClasses">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a [routerLink]="['/']">Inicio</a></li>
+    <li class="breadcrumb-item" *ngIf="routes.length == 0">
+      <a href="https://buenosaires.gob.ar/inicio/">Inicio</a>
+    </li>
     <li class="breadcrumb-item" *ngFor="let route of routes; index as i">
       <a [routerLink]="[route.route]">
         {{ route.name }}

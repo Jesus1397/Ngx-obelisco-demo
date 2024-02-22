@@ -27,7 +27,7 @@ export const MAP_HTML = `
 
 export const MAP_IFRAME = {
   src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.561313314447!2d-58.40988132452283!3d-34.64052465944252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0de7f4d675%3A0xfc2ef5324296a64!2sUspallata%203160%2C%20C1437JCL%20CABA!5e0!3m2!1ses!2sar!4v1704218461718!5m2!1ses!2sar',
-  title: 'Mapa buenos aires'
+  title: 'Mapa de Buenos Aires'
 };
 
 export const MAP_TS = `
@@ -40,7 +40,7 @@ export const MAP_TS = `
   export class ExampleComponent {
     public iframe: Media = {
       src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.561313314447!2d-58.40988132452283!3d-34.64052465944252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0de7f4d675%3A0xfc2ef5324296a64!2sUspallata%203160%2C%20C1437JCL%20CABA!5e0!3m2!1ses!2sar!4v1704218461718!5m2!1ses!2sar',
-      title: 'Mapa buenos aires'
+      title: 'Mapa de Buenos Aires'
     };
   }
 `;
@@ -57,5 +57,9 @@ export const MAP_DATA_SOURCE = [
   {
     name: '@Input() <br/> iframe: Media',
     description: 'Propiedad para agregar el iframe del mapa.'
+  },
+  {
+    name: '@Input() <br /> customClasses: string',
+    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
   }
 ];
