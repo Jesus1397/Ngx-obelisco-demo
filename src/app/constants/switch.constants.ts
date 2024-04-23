@@ -1,3 +1,5 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
 export const SWITCH_NAVIGATION = [
   {
     title: 'Api',
@@ -9,54 +11,71 @@ export const SWITCH_NAVIGATION = [
   }
 ];
 
-export const SWITCH_DATA_SOURCE = [
+export const SWITCH_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> id: string',
-    description: 'Se utiliza para identificar de manera única el elemento en el código.'
+    name: { data: '@Input() <br/> id: string', customClasses: '' },
+    description: { data: 'Se utiliza para identificar de manera única el elemento en el código.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> labelOn: string',
-    description: 'Se utiliza para establecer el texto cuando el switch está en posición de encendido.'
+    name: { data: '@Input() <br/> labelOn: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para establecer el texto cuando el switch está en posición de encendido.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> labelOff: string',
-    description: 'Se utiliza para determinar si se aplica un estilo oscuro al switch.'
+    name: { data: '@Input() <br/> labelOff: string', customClasses: '' },
+    description: { data: 'Se utiliza para determinar si se aplica un estilo oscuro al switch.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isDark: boolean',
-    description: 'Se utiliza para controlar si el switch se muestra en un tamaño pequeño.'
+    name: { data: '@Input() <br/> isDark: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para controlar si el switch se muestra en un tamaño pequeño.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isSmall: boolean',
-    description: 'Se utiliza para controlar si el switch se muestra en un tamaño pequeño.'
+    name: { data: '@Input() <br/> isSmall: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para controlar si el switch se muestra en un tamaño pequeño.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isDisabled: boolean',
-    description: ' Se utiliza para desactivar la capacidad de interactuar con el switch.'
+    name: { data: '@Input() <br/> isDisabled: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para desactivar la capacidad de interactuar con el switch.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isFixed: boolean',
-    description: 'Se utiliza para mantener el switch en una posición fija y evitar cambios.'
+    name: { data: '@Input() <br/> isFixed: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para mantener el switch en una posición fija y evitar cambios.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> switchValue: boolean',
-    description: 'Se utiliza para establecer el estado inicial (encendido o apagado) del switch.'
+    name: { data: '@Input() <br/> switchValue: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para establecer el estado inicial (encendido o apagado) del switch.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClassesLabel: string',
-    description:
-      'Se utiliza para aplicar clases personalizadas al label del componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClassesLabel: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al label del componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const SWITCH_DATA_SOURCE_OUTPUT = [
+export const SWITCH_DATA_SOURCE_OUTPUT: DataSource[] = [
   {
-    name: '@Output() <br /> switchValueChange: EventEmitter&lt;boolean&gt;',
-    description: 'Se utiliza para notificar cuando se produce un cambio en el estado del switch.'
+    name: { data: '@Output() <br /> switchValueChange: EventEmitter<boolean>', customClasses: '' },
+    description: {
+      data: 'Se utiliza para notificar cuando se produce un cambio en el estado del switch.',
+      customClasses: ''
+    }
   }
 ];
 

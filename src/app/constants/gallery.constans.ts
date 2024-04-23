@@ -1,3 +1,4 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCode = (code: any) => `
@@ -23,27 +24,35 @@ export const GALLERY_NAVIGATION = [
   }
 ];
 
-export const GALLERY_DATA_SOURCE = [
+export const GALLERY_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br /> galleryItems: MediaGallery[]',
-    description: 'Se utiliza para pasar una lista de imágenes que se mostrarán en la galería.'
+    name: { data: '@Input() <br /> galleryItems: MediaGallery[]', customClasses: '' },
+    description: {
+      data: 'Se utiliza para pasar una lista de imágenes que se mostrarán en la galería.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> isInteractive: boolean ',
-    description: 'Se utiliza para habilitar o deshabilitar la interacción con la galería.'
+    name: { data: '@Input() <br /> isInteractive: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para habilitar o deshabilitar la interacción con la galería.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> dataTarget: string',
-    description: 'Se utiliza para pasar el id del elemento que se mostrará en la galería.'
+    name: { data: '@Input() <br /> dataTarget: string', customClasses: '' },
+    description: { data: 'Se utiliza para pasar el id del elemento que se mostrará en la galería.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClassesInteractive: string',
-    description:
-      'Se utiliza para aplicar clases personalizadas a la sección interactiva del componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClassesInteractive: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas a la sección interactiva del componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
@@ -118,47 +127,32 @@ export const IMAGES_LIST_7 = [
 
 export const GALLERY_INTERFACE_IMAGE_ITEM = `
   interface Media {
-    src: string;
-    alt: string;
-    track: string;
-    title: string;
-    size: ImageMediaSizes;
+w    src: string;
   }
 
   interface MediaGallery extends Media {
     author: string;
     content: string;
+    title: string;
   }
   `;
 
-export const GALLERY_INTERFACE_DATA_SOURCE = [
+export const GALLERY_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'src: string',
-    description: 'Se utiliza para definir la ruta del elemento multimedia y url del iframe.'
+    name: { data: 'src: string' },
+    description: { data: 'Se utiliza para definir la url del elemento multimedia.' }
   },
   {
-    name: 'alt: string',
-    description: 'Se utiliza para definir el texto alternativo de la imagen.'
+    name: { data: 'author: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir el autor de la imagen.', customClasses: '' }
   },
   {
-    name: 'track: string',
-    description: 'Se utiliza para definir la ruta al elemento con formato WebVTT (archivos .vtt) en el caso de video.'
+    name: { data: 'content: string' },
+    description: { data: 'Se utiliza para definir la descripción de la imagen.' }
   },
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir el titulo del video e iframe.'
-  },
-  {
-    name: 'size: ImageMediaSizes',
-    description: 'Se utiliza para definir el tamaño de la imagen, en el caso de panel chico y tarjetas.'
-  },
-  {
-    name: 'author: string',
-    description: 'Se utiliza para definir el autor de la imagen.'
-  },
-  {
-    name: 'content: string',
-    description: 'Se utiliza para definir la descripción de la imagen.'
+    name: { data: 'title: string' },
+    description: { data: 'Se utiliza para definir el título.' }
   }
 ];
 

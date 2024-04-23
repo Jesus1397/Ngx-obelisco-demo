@@ -1,0 +1,189 @@
+$my-font: Nunito, sans-serif;
+$my-font-size: 17px;
+$light: #f5f9fc;
+$white: #fff;
+$blue: #007bc7;
+$disabled: #9eaab8;
+
+::ng-deep o-datepicker {
+  padding: 0.5rem 0.25rem;
+  font-family: $my-font;
+  font-weight: 600;
+
+  ngb-datepicker {
+    background-color: $white;
+  }
+
+  .ngb-dp-month:first-child .ngb-dp-week,
+  .ngb-dp-month:last-child .ngb-dp-week {
+    padding: 0;
+  }
+
+  .ngb-dp-arrow {
+    display: none;
+  }
+
+  .ngb-dp-navigation-select {
+    border: none;
+    margin-bottom: 1rem;
+    .form-select {
+      border: none;
+      color: #38485c;
+      font-size: 21px;
+      margin-top: 8px;
+      cursor: pointer;
+      padding-left: 0;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgba(150, 150, 150, 0.9);
+      }
+
+      &::-webkit-scrollbar-thumb:active {
+        background: rgba(150, 150, 150, 0.9);
+      }
+
+      ~ .form-select {
+        width: 100px;
+        min-width: 100px;
+        max-width: 100px;
+        text-align: center;
+      }
+    }
+  }
+
+  ngb-datepicker-month {
+    font-size: $my-font-size;
+    color: #505e70;
+
+    .ngb-dp-day,
+    .ngb-dp-weekday {
+      width: 40px;
+      height: 40px;
+      max-height: 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.25rem 0;
+      padding: 0;
+    }
+
+    .ngb-dp-week {
+      gap: 8px;
+      padding: 0.25rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      border-radius: 0px;
+
+      &.ngb-dp-weekdays {
+        justify-content: space-between;
+        padding: 0.25rem 0;
+        .ngb-dp-weekday {
+          font-weight: 700;
+          font-size: $my-font-size;
+          font-style: normal;
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: $white;
+        margin: 0.25rem 0;
+      }
+
+      &.ngb-dp-week:nth-child(odd) {
+        background-color: $light;
+      }
+
+      .custom-day {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+
+        &.has-task {
+          color: $white;
+          background-color: #38485c;
+        }
+
+        &:hover,
+        &.focused,
+        &.bg-primary {
+          background-color: $blue;
+          color: $white;
+        }
+
+        &.bg-primary {
+          background-color: $blue !important;
+        }
+
+        &.hidden {
+          color: $disabled;
+        }
+
+        &.focused {
+          box-shadow: 0 0 0 0.125rem #005387;
+        }
+
+        &.disabled-weekend,
+        &.disabled,
+        &.disabled.bg-primary {
+          cursor: not-allowed;
+          background: transparent;
+          color: $disabled;
+          &:hover,
+          &.focused {
+            background-color: transparent;
+            color: $disabled;
+            border-radius: 0;
+          }
+        }
+      }
+
+      .ngb-dp-day.ngb-dp-today:focus {
+        outline: none;
+        .custom-day {
+          box-shadow: 0 0 0 0.125rem #005387;
+        }
+      }
+    }
+  }
+
+  .form-inline,
+  .form-group,
+  .input-group {
+    display: flex;
+    flex-direction: row;
+
+    .form-control {
+      height: 40px;
+      min-height: 40px;
+      max-height: 40px;
+      margin-right: 8px;
+    }
+
+    input {
+      width: 275px;
+      min-width: 275px;
+      max-width: 275px;
+    }
+  }
+}

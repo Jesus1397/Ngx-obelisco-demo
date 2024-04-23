@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, AfterViewInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ButtonTypes, Sizes } from '@gcba/ngx-obelisco/core/models';
 import { RouterModule } from '@angular/router';
 

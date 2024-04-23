@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
 import { COLUMNS } from 'src/app/constants/components.constants';
 
 @Component({
@@ -7,33 +8,36 @@ import { COLUMNS } from 'src/app/constants/components.constants';
   styleUrls: ['./pagination-api.component.scss']
 })
 export class PaginationApiComponent {
-  public dataSourcePaginationProperties = [
+  dataSourcePaginationProperties: DataSource[] = [
     {
-      name: '@Input() <br/> totalPages: number',
-      description: 'Se utiliza para establecer el número total de páginas.'
+      name: { data: '@Input() <br/> totalPages: number', customClasses: '' },
+      description: { data: 'Se utiliza para establecer el número total de páginas.', customClasses: '' }
     },
     {
-      name: '@Input() <br/> ariaLabel: string',
-      description: 'Se utiliza para establecer el texto de la etiqueta aria-label.'
+      name: { data: '@Input() <br/> ariaLabel: string', customClasses: '' },
+      description: { data: 'Se utiliza para establecer el texto de la etiqueta aria-label.', customClasses: '' }
     },
     {
-      name: '@Input() <br/> currentPage: number',
-      description: 'Se utiliza para establecer la página actual. Por defecto es 1.'
+      name: { data: '@Input() <br/> currentPage: number', customClasses: '' },
+      description: { data: 'Se utiliza para establecer la página actual. Por defecto es 1.', customClasses: '' }
     },
     {
-      name: '@Input() <br/> isDiscriptiveType: boolean',
-      description: 'Se utiliza para ocultar los botones de numeración.'
+      name: { data: '@Input() <br/> isDiscriptiveType: boolean', customClasses: '' },
+      description: { data: 'Se utiliza para ocultar los botones de numeración.', customClasses: '' }
     },
     {
-      name: '@Input() <br /> customClasses: string',
-      description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+      name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+      description: {
+        data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+        customClasses: ''
+      }
     }
   ];
 
-  public dataSourcePaginationMethods = [
+  dataSourcePaginationMethods: DataSource[] = [
     {
-      name: '@Output() <br/> currentPageChange: EventEmitter&lt;number&gt;',
-      description: 'Se utiliza para obtener la página actual.'
+      name: { data: '@Output() <br/> currentPageChange: EventEmitter&lt;number&gt;', customClasses: '' },
+      description: { data: 'Se utiliza para obtener la página actual.', customClasses: '' }
     }
   ];
 

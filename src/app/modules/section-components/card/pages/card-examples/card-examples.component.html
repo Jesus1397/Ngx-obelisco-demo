@@ -172,4 +172,78 @@
       <code appPrism language="html">{{ cardEventHtml }}</code>
     </pre>
   </app-viewer>
+
+  <app-viewer title="Disposición - Tres columnas">
+    <div component class="card-deck card-column max-cards-3">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardLayoutThree }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Disposición - Dos columnas">
+    <div component class="card-deck card-column max-cards-2">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardLayoutTwo }}</code>
+    </pre>
+  </app-viewer>
 </section>

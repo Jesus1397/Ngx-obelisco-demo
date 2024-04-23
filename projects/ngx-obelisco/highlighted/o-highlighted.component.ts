@@ -1,5 +1,5 @@
 import { AfterContentInit, Component, ContentChild, ElementRef, Input } from '@angular/core';
-import { HighlightedType, Media } from '@gcba/ngx-obelisco/core/models';
+import { HighlightedType, MediaIframe, MediaVideo, MediaImage } from '@gcba/ngx-obelisco/core/models';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -12,9 +12,9 @@ export class OHighlightedComponent implements AfterContentInit {
   @Input() public description?: string;
   @Input() public isBgLight?: boolean = false;
   @Input() public type?: HighlightedType = 'banner';
-  @Input() public image?: Media;
-  @Input() public video?: Media;
-  @Input() public iframe?: Media;
+  @Input() public image?: MediaImage;
+  @Input() public video?: MediaVideo;
+  @Input() public iframe?: MediaIframe;
   @Input() public customClasses: string = '';
 
   @ContentChild('child', { read: ElementRef }) contentElementRef: ElementRef | undefined;

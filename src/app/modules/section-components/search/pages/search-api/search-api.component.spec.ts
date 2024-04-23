@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OTooltipComponent } from './o-tooltip.component';
+import { SearchApiComponent } from './search-api.component';
 
-describe('OTooltipComponent', () => {
-  let component: OTooltipComponent;
-  let fixture: ComponentFixture<OTooltipComponent>;
+describe('SearchApiComponent', () => {
+  let component: SearchApiComponent;
+  let fixture: ComponentFixture<SearchApiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OTooltipComponent]
+      declarations: [SearchApiComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(OTooltipComponent);
+    fixture = TestBed.createComponent(SearchApiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

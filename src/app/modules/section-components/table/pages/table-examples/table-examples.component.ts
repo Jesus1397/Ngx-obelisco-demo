@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
+import { Column, DataSource } from '@gcba/ngx-obelisco/core/models';
 import {
-  COLUMNS_TABLE_EXAMPLE,
-  DATA_SOURCE_TABLE_EXAMPLE,
-  TABLE_EXAMPLE_ALL_HTML,
   TABLE_EXAMPLE_BORDERED_HTML,
-  TABLE_EXAMPLE_HOVER_HTML,
   TABLE_EXAMPLE_NORMAL_HTML,
   TABLE_EXAMPLE_NORMAL_TS,
-  TABLE_EXAMPLE_RESPONSIVE_HTML,
   TABLE_EXAMPLE_SELECTABLE_HTML,
   TABLE_EXAMPLE_SELECTABLE_TS,
   TABLE_EXAMPLE_STRIPED_HTML
@@ -19,19 +15,165 @@ import {
   styleUrls: ['./table-examples.component.scss']
 })
 export class TableExamplesComponent {
-  public dataSourceTableExample = DATA_SOURCE_TABLE_EXAMPLE;
-  public columnsTableExample = COLUMNS_TABLE_EXAMPLE;
   public exampleNormalHTML = TABLE_EXAMPLE_NORMAL_HTML;
   public exampleNormalTS = TABLE_EXAMPLE_NORMAL_TS;
   public exampleBorderedHTML = TABLE_EXAMPLE_BORDERED_HTML;
   public exampleStripedHTML = TABLE_EXAMPLE_STRIPED_HTML;
-  public exampleHoverHTML = TABLE_EXAMPLE_HOVER_HTML;
-  public exampleAllHTML = TABLE_EXAMPLE_ALL_HTML;
   public exampleSelectableHTML = TABLE_EXAMPLE_SELECTABLE_HTML;
-  public exampleResponsiveHTML = TABLE_EXAMPLE_RESPONSIVE_HTML;
   public exampleSelectableTS = TABLE_EXAMPLE_SELECTABLE_TS;
 
-  public dataSelected(event: any[]): void {
-    console.log(event);
+  public outputData: any;
+
+  onDataSelectedChange(data: any[]): void {
+    console.log('Datos seleccionados:', data);
+    this.outputData = data;
   }
+
+  columns: Column[] = [
+    { key: 'number', value: 'Número', customClasses: 'tb-number' },
+    { key: 'text', value: 'Texto', customClasses: 'tb-text' },
+    { key: 'link', value: 'Enlace', customClasses: 'tb-link' },
+    { key: 'button', value: 'Botón', customClasses: 'tb-button' },
+    { key: 'tag', value: 'Etiqueta', customClasses: 'tb-tag' },
+    { key: 'icon', value: 'Bóton con ícono', customClasses: 'tb-button ' }
+  ];
+
+  dataSource: DataSource[] = [
+    {
+      number: { data: '1', customClasses: 'text-right' },
+      text: { data: 'Juan' },
+      link: {
+        data: '<a href="#" target="_blank" rel="noreferrer">Enlace</a>'
+      },
+      button: {
+        data: `
+          <button type="button" class="btn btn-primary btn-icon">
+            <i class="bx bxs-info-circle"></i>
+            botón
+          </button>`
+      },
+      tag: {
+        data: `<span class="badge badge-secondary">Etiqueta 1</span>`
+      },
+      icon: {
+        data: `
+          <div class="actions-table">
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">edit</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">visibility</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">file_download</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">delete</span>
+            </button>
+          </div>`
+      }
+    },
+    {
+      number: { data: '2', customClasses: 'text-right' },
+      text: { data: 'Maria' },
+      link: {
+        data: '<a href="#" target="_blank" rel="noreferrer">Enlace</a>'
+      },
+      button: {
+        data: `
+          <button type="button" class="btn btn-primary btn-icon">
+            <i class="bx bxs-info-circle"></i>
+            botón
+          </button>`
+      },
+      tag: {
+        data: `<span class="badge badge-secondary">Etiqueta 1</span>`
+      },
+      icon: {
+        data: `
+          <div class="actions-table">
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">edit</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">visibility</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">file_download</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">delete</span>
+            </button>
+          </div>`
+      }
+    },
+    {
+      number: { data: '3', customClasses: 'text-right' },
+      text: { data: 'Esther' },
+      link: {
+        data: '<a href="#" target="_blank" rel="noreferrer">Enlace</a>'
+      },
+      button: {
+        data: `
+          <button type="button" class="btn btn-primary btn-icon">
+            <i class="bx bxs-info-circle"></i>
+            botón
+          </button>`
+      },
+      tag: {
+        data: `<span class="badge badge-secondary">Etiqueta 1</span>`
+      },
+      icon: {
+        data: `
+          <div class="actions-table">
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">edit</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">visibility</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">file_download</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">delete</span>
+            </button>
+          </div>`
+      }
+    },
+    {
+      number: { data: '4', customClasses: 'text-right' },
+      text: { data: 'José' },
+      link: {
+        data: '<a href="#" target="_blank" rel="noreferrer">Enlace</a>'
+      },
+      button: {
+        data: `
+          <button type="button" class="btn btn-primary btn-icon">
+            <i class="bx bxs-info-circle"></i>
+            botón
+          </button>`
+      },
+      tag: {
+        data: `<span class="badge badge-secondary">Etiqueta 1</span>`
+      },
+      icon: {
+        data: `
+          <div class="actions-table">
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">edit</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">visibility</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">file_download</span>
+            </button>
+            <button class="btn button-actions-table">
+              <span class="material-icons-round">delete</span>
+            </button>
+          </div>`
+      }
+    }
+  ];
 }

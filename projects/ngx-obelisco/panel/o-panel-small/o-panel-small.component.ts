@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Media, ImageMediaSizes } from '@gcba/ngx-obelisco/core/models';
+import { MediaPanel, MediaSizes } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-panel-small',
@@ -9,14 +9,14 @@ import { Media, ImageMediaSizes } from '@gcba/ngx-obelisco/core/models';
 export class OPanelSmallComponent {
   @Input() public title!: string;
   @Input() public description!: string;
-  @Input() public image!: Media;
+  @Input() public image!: MediaPanel;
   @Input() public isBgWhite: boolean = false;
   @Input() public isBgLight: boolean = false;
   @Input() public isVertical: boolean = false;
   @Input() public isItemsListVertical: boolean = false;
   @Input() public customClasses: string = '';
 
-  sizeToPx = (size: ImageMediaSizes): number => {
+  sizeToPx = (size: MediaSizes): number => {
     switch (size) {
       case 'lg':
         return 154;

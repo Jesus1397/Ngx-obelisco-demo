@@ -1,0 +1,124 @@
+<section class="section-example">
+  <app-viewer title="Sin eventos">
+    <o-calendar component [date]="{ month: 10, year: 2024 }" customClasses="mx-auto"></o-calendar>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ calendarNoEvents }}</code>
+    </pre>
+  </app-viewer>
+
+  <h3 class="font-weight-bold">Con eventos</h3>
+
+  <app-viewer title="Predeterminado" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarDefault"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ calendarDefaultHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ calendarDefaultTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con enlace" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarLink"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ calendarLinkHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ calendarLinkTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con 2 referencias" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarTwoReferences"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ calendarTwoReferencesHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ calendarTwoReferencesTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con colapsable" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarCollapse"
+      [isCollapsed]="true"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ calendarCollapseHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ calendarCollapseTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con referencias cromáticas" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarCromaticRef"
+      [isCollapsed]="true"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ calendarCromaticRefHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ calendarCromaticRefTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Disposición" [isNavCode]="true">
+    <div component class="calendar-deck">
+      <o-calendar [date]="{ month: 1, year: 2024 }" [activeDays]="calendarDeck['JANUARY']"></o-calendar>
+      <o-calendar [date]="{ month: 2, year: 2024 }" [activeDays]="calendarDeck['FEBRUARY']"></o-calendar>
+      <o-calendar [date]="{ month: 3, year: 2024 }" [activeDays]="calendarDeck['MARCH']"></o-calendar>
+      <o-calendar [date]="{ month: 4, year: 2024 }" [activeDays]="calendarDeck['APRIL']"></o-calendar>
+      <o-calendar [date]="{ month: 5, year: 2024 }" [activeDays]="calendarDeck['MAY']"></o-calendar>
+      <o-calendar [date]="{ month: 6, year: 2024 }" [activeDays]="calendarDeck['JUNE']"></o-calendar>
+      <o-calendar [date]="{ month: 7, year: 2024 }" [activeDays]="calendarDeck['JULY']"></o-calendar>
+      <o-calendar [date]="{ month: 8, year: 2024 }" [activeDays]="calendarDeck['AUGUST']"></o-calendar>
+      <o-calendar [date]="{ month: 9, year: 2024 }" [activeDays]="calendarDeck['SEPTEMBER']"></o-calendar>
+      <o-calendar [date]="{ month: 10, year: 2024 }" [activeDays]="calendarDeck['OCTOBER']"></o-calendar>
+      <o-calendar [date]="{ month: 11, year: 2024 }" [activeDays]="calendarDeck['NOVEMBER']"></o-calendar>
+      <o-calendar [date]="{ month: 12, year: 2024 }" [activeDays]="calendarDeck['DECEMBER']"></o-calendar>
+    </div>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ calendarDeckHtml }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ calendarDeckTs }}</code>
+    </pre>
+  </app-viewer>
+</section>

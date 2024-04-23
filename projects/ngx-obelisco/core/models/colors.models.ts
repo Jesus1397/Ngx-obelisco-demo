@@ -12,6 +12,22 @@ export type TagTypes = 'primary' | 'success' | 'danger' | 'info' | 'secondary';
 
 export type ButtonTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'link';
 
+export type CromaticTypes =
+  | 'sky'
+  | 'lavender'
+  | 'coral'
+  | 'avocado'
+  | 'citrus'
+  | 'lime'
+  | 'pistachio'
+  | 'berries'
+  | 'musket'
+  | 'blackberry'
+  | 'aqua'
+  | 'strawberry';
+
+export type ActiveDayTypes = CromaticTypes | 'secondary' | 'gray';
+
 export enum EnumTypes {
   Primary = 'primary',
   Success = 'success',

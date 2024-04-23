@@ -10,7 +10,9 @@ import {
   CARD_THEME_IMAGE,
   CARD_VERTICAL_ICON_HTML,
   CARD_VERTICAL_IMAGE,
-  CARD_VERTICAL_IMAGE_HTML
+  CARD_VERTICAL_IMAGE_HTML,
+  CARD_LAYOUT_TWO,
+  CARD_LAYOUT_THREE
 } from 'src/app/constants/card.constants';
 
 @Component({
@@ -32,4 +34,7 @@ export class CardExamplesComponent {
   public cardImageVerticalHtml = CARD_VERTICAL_IMAGE_HTML;
   public cardNewsHtml = CARD_NEWS_HTML;
   public cardEventHtml = CARD_EVENT_HTML;
+
+  public cardLayoutThree = CARD_LAYOUT_THREE;
+  public cardLayoutTwo = CARD_LAYOUT_TWO;
 }

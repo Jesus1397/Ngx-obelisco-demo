@@ -10,8 +10,9 @@ import { OTableComponent } from '@gcba/ngx-obelisco/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
-import { OTooltipComponent } from '@gcba/ngx-obelisco/tooltip';
+import { OTooltipModule } from '@gcba/ngx-obelisco/tooltip';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
+import { OButtonComponent } from '@gcba/ngx-obelisco/button';
 
 @NgModule({
   declarations: [TooltipComponent, TooltipApiComponent, TooltipExamplesComponent],
@@ -23,8 +24,9 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     ViewerComponent,
     ClipboardDirective,
     PrismDirective,
-    OTooltipComponent,
-    TabsLinkComponent
+    OTooltipModule,
+    TabsLinkComponent,
+    OButtonComponent
   ]
 })
 export class TooltipModule {}

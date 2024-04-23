@@ -1,3 +1,5 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
 export const PROGRESS_BAR_NAVIGATION = [
   {
     title: 'Api',
@@ -13,34 +15,42 @@ export const PROGRESS_BAR_TYPES = `
   type ProgressBarTypes = 'info' | 'success';
 `;
 
-export const DATA_SOURCE_PROGRESS_BAR_INPUT = [
+export const DATA_SOURCE_PROGRESS_BAR_INPUT: DataSource[] = [
   {
-    name: '@Input() <br /> isSteps: boolean',
-    description: 'Se utiliza para definir si mostrar el paso actual y el total de pasos o no. Por defecto es false.'
+    name: { data: '@Input() <br /> isSteps: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir si mostrar el paso actual y el total de pasos o no. Por defecto es false.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> type: ProgressBarTypes',
-    description: 'Se utiliza para definir el tipo de la barra de progreso.'
+    name: { data: '@Input() <br /> type: ProgressBarTypes', customClasses: '' },
+    description: { data: 'Se utiliza para definir el tipo de la barra de progreso.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> currentStep: number',
-    description: 'Se utiliza para definir el paso actual.'
+    name: { data: '@Input() <br /> currentStep: number', customClasses: '' },
+    description: { data: 'Se utiliza para definir el paso actual.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> totalStep: number',
-    description: 'Se utiliza para definir el total de pasos.'
+    name: { data: '@Input() <br /> totalStep: number', customClasses: '' },
+    description: { data: 'Se utiliza para definir el total de pasos.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const DATA_SOURCE_PROGRESS_BAR_OUTPUT = [
+export const DATA_SOURCE_PROGRESS_BAR_OUTPUT: DataSource[] = [
   {
-    name: '@Output() <br /> stopProgress: EventEmitter&lt;boolean&gt;',
-    description:
-      'Se utiliza para detener el proceso. <br/> Ocurrirá cuando se llegue al último paso y la barra de progreso se complete. <br/> El valor emitido será true.'
+    name: { data: '@Output() <br /> stopProgress: EventEmitter<boolean>', customClasses: '' },
+    description: {
+      data: 'Se utiliza para detener el proceso. <br/> Ocurrirá cuando se llegue al último paso y la barra de progreso se complete. <br/> El valor emitido será true.',
+      customClasses: ''
+    }
   }
 ];
 

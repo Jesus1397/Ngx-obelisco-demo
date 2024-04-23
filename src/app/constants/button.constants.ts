@@ -1,3 +1,5 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
 export const BUTTON_NAVIGATION = [
   {
     title: 'Api',
@@ -10,94 +12,125 @@ export const BUTTON_NAVIGATION = [
 ];
 
 /* BUTTON-API */
-export const BUTTON_GENERAL_DATA_SOURCE = [
+export const BUTTON_GENERAL_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> type: ButtonTypes',
-    description: 'Se utiliza para establecer el tipo de botón. Por defecto es primary.'
+    name: { data: '@Input() <br/> type: ButtonTypes', customClasses: '' },
+    description: { data: 'Se utiliza para establecer el tipo de botón. Por defecto es primary.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isOutline: boolean',
-    description: 'Se utiliza para definir si es un botón con borde. Por defecto es false.'
+    name: { data: '@Input() <br/> isOutline: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si es un botón con borde. Por defecto es false.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> text: string',
-    description:
-      'Se utiliza para definir el texto del botón. En el caso de que no presente ícono o spinner, por defecto es "Botón".'
+    name: { data: '@Input() <br/> text: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el texto del botón. En el caso de que no presente ícono o spinner, por defecto es "Botón".',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> size: Sizes',
-    description: 'Se utiliza para establecer el tamaño del botón. Por defecto es mediano.'
+    name: { data: '@Input() <br/> size: Sizes', customClasses: '' },
+    description: { data: 'Se utiliza para establecer el tamaño del botón. Por defecto es mediano.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isExpandable: boolean',
-    description: 'Se utiliza para definir si es un botón expandible. Por defecto es false.'
+    name: { data: '@Input() <br/> isExpandable: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si es un botón expandible. Por defecto es false.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> icon: string',
-    description:
-      'Se utiliza para definir el ícono del botón. Se debe utilizar íconos de boxicons o material icons round.'
+    name: { data: '@Input() <br/> icon: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el ícono del botón. Se debe utilizar íconos de boxicons o material icons round.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> ariaLabel: string',
-    description: 'Se utiliza para definir el atributo aria-label, en el caso de que el botón no posea texto.'
+    name: { data: '@Input() <br/> ariaLabel: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el atributo aria-label, en el caso de que el botón no posea texto.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> spinner: boolean',
-    description: 'Se utiliza para definir si el botón tiene un spinner.'
+    name: { data: '@Input() <br/> spinner: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si el botón tiene un spinner.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> iconPositionRight: boolean',
-    description: 'Se utiliza para definir la posición del ícono. Por defecto es false.'
+    name: { data: '@Input() <br/> iconPositionRight: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir la posición del ícono. Por defecto es false.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> spinnerPositionRight: boolean',
-    description: 'Se utiliza para definir la posición del spinner. Por defecto es false.'
+    name: { data: '@Input() <br/> spinnerPositionRight: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir la posición del spinner. Por defecto es false.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const BUTTON_LINK_DATA_SOURCE = [
+export const BUTTON_LINK_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> route: string',
-    description: 'Se utiliza para definir la ruta de la etiqueta &lt;a&gt;, mediante el routerLink de Angular.'
+    name: { data: '@Input() <br/> route: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir la ruta de la etiqueta &lt;a&gt;, mediante el routerLink de Angular.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> link: string',
-    description: 'Se utiliza para definir el link de la etiqueta &lt;a&gt;, mediante el href de HTML.'
+    name: { data: '@Input() <br/> link: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el link de la etiqueta &lt;a&gt;, mediante el href de HTML.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> target: string',
-    description: 'Se utiliza para definir el atributo target de la etiqueta &lt;a&gt;. Por defecto es "_blank".'
+    name: { data: '@Input() <br/> target: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el atributo target de la etiqueta &lt;a&gt;. Por defecto es "_blank".',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> download: string',
-    description: 'Se utiliza para definir el atributo download de la etiqueta &lt;a&gt;.'
+    name: { data: '@Input() <br/> download: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir el atributo download de la etiqueta &lt;a&gt;.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> rel: string',
-    description: 'Se utiliza para definir el atributo rel de la etiqueta &lt;a&gt;. Por defecto es "noreferrer".'
+    name: { data: '@Input() <br/> rel: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el atributo rel de la etiqueta &lt;a&gt;. Por defecto es "noreferrer".',
+      customClasses: ''
+    }
   }
 ];
 
-export const BUTTON_DATA_SOURCE = [
+export const BUTTON_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> isDisabled: boolean',
-    description: 'Se utiliza para definir tiene el atributo "disabled".'
+    name: { data: '@Input() <br/> isDisabled: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir tiene el atributo "disabled".', customClasses: '' }
   },
   {
-    name: '@Input() <br/> dataTarget: string',
-    description: 'Se utiliza para definir el atributo "data-target" de la etiqueta &lt;button&gt;.'
+    name: { data: '@Input() <br/> dataTarget: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el atributo "data-target" de la etiqueta &lt;button&gt;.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> dataToggle: string',
-    description: 'Se utiliza para definir el atributo "data-toggle" de la etiqueta &lt;button&gt;.'
+    name: { data: '@Input() <br/> dataToggle: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el atributo "data-toggle" de la etiqueta &lt;button&gt;.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> dataDismiss: string',
-    description: 'Se utiliza para definir el atributo "data-dismiss" de la etiqueta &lt;button&gt;.'
+    name: { data: '@Input() <br/> dataDismiss: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el atributo "data-dismiss" de la etiqueta &lt;button&gt;.',
+      customClasses: ''
+    }
   }
 ];
 
@@ -107,20 +140,33 @@ export const BUTTON_TYPES = `
 
 /* BUTTON-EXAMPLES */
 export const BUTTON_EXAMPLE_TYPES = `
-  <o-button></o-button>
-  <o-button type="secondary"></o-button>
-  <o-button type="success"></o-button>
-  <o-button type="danger"></o-button>
-  <o-button type="link"></o-button>
+  <o-button (click)="alert()"></o-button>
+  <o-button type="secondary" (click)="alert()"></o-button>
+  <o-button type="success" (click)="alert()"></o-button>
+  <o-button type="danger" (click)="alert()"></o-button>
+  <o-button type="link" (click)="alert()"></o-button>
   <o-button text="Enlace" link="https://www.google.com/"></o-button>
 
-  <o-button [isOutline]="true"></o-button>
-  <o-button type="secondary" [isOutline]="true"></o-button>
-  <o-button type="success" [isOutline]="true"></o-button>
-  <o-button type="danger" [isOutline]="true"></o-button>
-  <o-button type="link" [isOutline]="true"></o-button>
+  <o-button [isOutline]="true" (click)="alert()"></o-button>
+  <o-button type="secondary" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button type="success" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button type="danger" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button type="link" [isOutline]="true" (click)="alert()"></o-button>
   <o-button text="Enlace" [isOutline]="true" link="https://www.google.com/"></o-button>
 `;
+export const BUTTON_EXAMPLE_TYPES_TS = `
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+
+export class ExampleComponent {
+  public alert() {
+    alert('Botón');
+  }
+}`;
 
 export const BUTTON_EXAMPLE_SIZES = `
   <o-button size="sm"></o-button>

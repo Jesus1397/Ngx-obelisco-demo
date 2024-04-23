@@ -1,4 +1,4 @@
-import { Collapse } from '@gcba/ngx-obelisco/core/models';
+import { Collapse, DataSource } from '@gcba/ngx-obelisco/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCode = (code: any) => `
@@ -24,32 +24,38 @@ export const COLLAPSE_NAVIGATION = [
   }
 ];
 
-export const COLLAPSE_DATA_SOURCE = [
+export const COLLAPSE_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> id: string',
-    description:
-      'Se utiliza para asignar el ID del colapsable y que sea de selección única, sino por defecto es múltiple.'
+    name: { data: '@Input() <br/> id: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para asignar el ID del colapsable y que sea de selección única, sino por defecto es múltiple.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> items: Collapse[]',
-    description: 'Se utiliza para definir la lista colapsables del componente.'
+    name: { data: '@Input() <br/> items: Collapse[]', customClasses: '' },
+    description: { data: 'Se utiliza para definir la lista colapsables del componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> dataParent: string',
-    description:
-      'Se utiliza para agregar un identificador para el comportamiento de los colapsables sean de selección unica.'
+    name: { data: '@Input() <br/> dataParent: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para agregar un identificador para el comportamiento de los colapsables sean de selección unica.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> isWhite: boolean',
-    description: 'Se utiliza para definir si el colapsable es de color blanco.'
+    name: { data: '@Input() <br/> isWhite: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si el colapsable es de color blanco.', customClasses: '' }
   }
 ];
 
-export const COLLAPSE_DATA_SOURCE_OUTPUT = [
+export const COLLAPSE_DATA_SOURCE_OUTPUT: DataSource[] = [
   {
-    name: '@Output() <br/> selectedItemChange: EventEmitter&lt;CollapseInputs&gt;',
-    description:
-      'Esto define un evento de salida (@Output) llamado selectedItemChange que emite instancias de CollapseInputs cuando cambia, lo que permite a otros componentes reaccionar a cambios en la selección del elemento.'
+    name: { data: '@Output() <br/> selectedItemChange: EventEmitter&lt;CollapseInputs&gt;', customClasses: '' },
+    description: {
+      data: 'Esto define un evento de salida (@Output) llamado selectedItemChange que emite instancias de CollapseInputs cuando cambia, lo que permite a otros componentes reaccionar a cambios en la selección del elemento.',
+      customClasses: ''
+    }
   }
 ];
 
@@ -84,91 +90,94 @@ export const COLLAPSE_INPUTS_INTERFACE = `
     value?: boolean;
   }
 `;
-
-export const INTERFACE_COLLAPSE_DATA_SOURCE = [
+export const INTERFACE_COLLAPSE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'id: string;',
-    description: 'Proporciona un identificador único para el elemento.'
+    name: { data: 'id: string;', customClasses: '' },
+    description: { data: 'Proporciona un identificador único para el elemento.', customClasses: '' }
   },
   {
-    name: 'icon: string;',
-    description: 'Define el ícono del colapsable.'
+    name: { data: 'icon: string;', customClasses: '' },
+    description: { data: 'Define el ícono del colapsable.', customClasses: '' }
   },
   {
-    name: 'label: string;',
-    description: 'Define un breve texto o leyenda.'
+    name: { data: 'label: string;', customClasses: '' },
+    description: { data: 'Define un breve texto o leyenda.', customClasses: '' }
   },
   {
-    name: 'title: string;',
-    description: 'Define el título principal.'
+    name: { data: 'title: string;', customClasses: '' },
+    description: { data: 'Define el título principal.', customClasses: '' }
   },
   {
-    name: 'isTitleAlone: boolean;',
-    description: 'Define un título sin estar dentro de la etiqueta span.'
+    name: { data: 'isTitleAlone: boolean;', customClasses: '' },
+    description: { data: 'Define un título sin estar dentro de la etiqueta span.', customClasses: '' }
   },
   {
-    name: 'subtitle: string;',
-    description: 'Define el subtítulo.'
+    name: { data: 'subtitle: string;', customClasses: '' },
+    description: { data: 'Define el subtítulo.', customClasses: '' }
   },
   {
-    name: 'content: string | string[];',
-    description: 'Proporciona una descripción detallada.'
+    name: { data: 'content: string | string[];', customClasses: '' },
+    description: { data: 'Proporciona una descripción detallada.', customClasses: '' }
   },
   {
-    name: 'children: CollapseItems[] | CollapseInputs[];',
-    description: 'Define una lista de elementos CollapseItems o CollapseInputs'
+    name: { data: 'children: CollapseItems[] | CollapseInputs[];', customClasses: '' },
+    description: { data: 'Define una lista de elementos CollapseItems o CollapseInputs', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClassesHeader: string',
-    description:
-      'Se utiliza para aplicar clases personalizadas al header del componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClassesHeader: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al header del componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClassesContent: string',
-    description:
-      'Se utiliza para aplicar clases personalizadas al contenido del componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClassesContent: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al contenido del componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const INTERFACE_COLLAPSE_ITEMS_DATA_SOURCE = [
+export const INTERFACE_COLLAPSE_ITEMS_DATA_SOURCE: DataSource[] = [
   {
-    name: 'label: string;',
-    description: 'Define el texto del ítem colapsable.'
+    name: { data: 'label: string;', customClasses: '' },
+    description: { data: 'Define el texto del ítem colapsable.', customClasses: '' }
   },
   {
-    name: 'title: string;',
-    description: 'Define el título del ítem colapsable.'
+    name: { data: 'title: string;', customClasses: '' },
+    description: { data: 'Define el título del ítem colapsable.', customClasses: '' }
   },
   {
-    name: 'subtitle: string;',
-    description: 'Define el subtítulo del ítem colapsable.'
+    name: { data: 'subtitle: string;', customClasses: '' },
+    description: { data: 'Define el subtítulo del ítem colapsable.', customClasses: '' }
   }
 ];
 
-export const INTERFACE_COLLAPSE_INPUTS_DATA_SOURCE = [
+export const INTERFACE_COLLAPSE_INPUTS_DATA_SOURCE: DataSource[] = [
   {
-    name: 'id: string;',
-    description: 'Proporciona un identificador único para el input colapsable.'
+    name: { data: 'id: string;', customClasses: '' },
+    description: { data: 'Proporciona un identificador único para el input colapsable.', customClasses: '' }
   },
   {
-    name: 'icon: string;',
-    description: 'Define el ícono para el input colapsable.'
+    name: { data: 'icon: string;', customClasses: '' },
+    description: { data: 'Define el ícono para el input colapsable.', customClasses: '' }
   },
   {
-    name: 'title: string;',
-    description: 'Define el título para el input colapsable.'
+    name: { data: 'title: string;', customClasses: '' },
+    description: { data: 'Define el título para el input colapsable.', customClasses: '' }
   },
   {
-    name: 'subtitle: string;',
-    description: 'Define el subtítulo para el input colapsable.'
+    name: { data: 'subtitle: string;', customClasses: '' },
+    description: { data: 'Define el subtítulo para el input colapsable.', customClasses: '' }
   },
   {
-    name: 'name: string;',
-    description: 'Proporciona un nombre para el input colapsable.'
+    name: { data: 'name: string;', customClasses: '' },
+    description: { data: 'Proporciona un nombre para el input colapsable.', customClasses: '' }
   },
   {
-    name: 'value: boolean;',
-    description: 'Define el valor del elemento.'
+    name: { data: 'value: boolean;', customClasses: '' },
+    description: { data: 'Define el valor del elemento.', customClasses: '' }
   }
 ];
 

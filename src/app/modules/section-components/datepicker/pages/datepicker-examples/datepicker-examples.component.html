@@ -1,0 +1,227 @@
+<section class="section-example">
+  <app-viewer title="Fijo" [isNavCode]="true">
+    <div class="row" component>
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+        <o-datepicker (dateSelected)="onDateSelected($event)" (taskSelected)="onTaskSelected($event)"></o-datepicker>
+      </div>
+      <div class="col-lg-6 col-md-12 text-center mt-4">
+        <p>Fecha seleccionada:</p>
+        <p>{{ selectedDate.day }} - {{ selectedDate.month }} - {{ selectedDate.year }}</p>
+        <hr />
+        <ng-container *ngIf="selectedTasks.length > 0">
+          <p>Tareas:</p>
+          <p *ngFor="let item of selectedTasks">{{ item.title }}</p>
+        </ng-container>
+        <ng-container *ngIf="selectedTasks.length == 0">
+          <p>No hay tareas...</p>
+        </ng-container>
+      </div>
+    </div>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{datepickerExample}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ datepickerExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="PopUp" [isNavCode]="true">
+    <div class="row" component>
+      <div class="col-6">
+        <o-datepicker
+          [isPopUp]="true"
+          (dateSelected)="onDateSelected($event)"
+          (taskSelected)="onTaskSelected($event)"
+        ></o-datepicker>
+      </div>
+      <div class="col-lg-6 col-md-12 text-center mt-4">
+        <p>Fecha seleccionada:</p>
+        <p>{{ selectedDate.day }} - {{ selectedDate.month }} - {{ selectedDate.year }}</p>
+        <hr />
+        <ng-container *ngIf="selectedTasks.length > 0">
+          <p>Tareas:</p>
+          <p *ngFor="let item of selectedTasks">{{ item.title }}</p>
+        </ng-container>
+        <ng-container *ngIf="selectedTasks.length == 0">
+          <p>No hay tareas...</p>
+        </ng-container>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{datepickerExamplePopup}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ datepickerExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Fecha de inicio" [isNavCode]="true">
+    <div class="row" component>
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+        <o-datepicker
+          (dateSelected)="onDateSelected($event)"
+          (taskSelected)="onTaskSelected($event)"
+          [startDate]="{ day: 10, month: 3, year: 2024 }"
+        ></o-datepicker>
+      </div>
+      <div class="col-lg-6 col-md-12 text-center mt-4">
+        <p>Fecha seleccionada:</p>
+        <p>{{ selectedDate.day }} - {{ selectedDate.month }} - {{ selectedDate.year }}</p>
+        <hr />
+        <ng-container *ngIf="selectedTasks.length > 0">
+          <p>Tareas:</p>
+          <p *ngFor="let item of selectedTasks">{{ item.title }}</p>
+        </ng-container>
+        <ng-container *ngIf="selectedTasks.length == 0">
+          <p>No hay tareas...</p>
+        </ng-container>
+      </div>
+    </div>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{datepickerExample}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ datepickerExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Deshabilitar fines de semanas" [isNavCode]="true">
+    <div class="row" component>
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+        <o-datepicker
+          (dateSelected)="onDateSelected($event)"
+          (taskSelected)="onTaskSelected($event)"
+          [disabledWeekends]="true"
+        ></o-datepicker>
+      </div>
+      <div class="col-lg-6 col-md-12 text-center mt-4">
+        <p>Fecha seleccionada:</p>
+        <p>{{ selectedDate.day }} - {{ selectedDate.month }} - {{ selectedDate.year }}</p>
+        <hr />
+        <ng-container *ngIf="selectedTasks.length > 0">
+          <p>Tareas:</p>
+          <p *ngFor="let item of selectedTasks">{{ item.title }}</p>
+        </ng-container>
+        <ng-container *ngIf="selectedTasks.length == 0">
+          <p>No hay tareas...</p>
+        </ng-container>
+      </div>
+    </div>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{datepickerExample}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ datepickerExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Deshabilitar dias a elección" [isNavCode]="true">
+    <div class="row" component>
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+        <o-datepicker
+          (dateSelected)="onDateSelected($event)"
+          (taskSelected)="onTaskSelected($event)"
+          [disabledDates]="disabledDates"
+          [disabledWeekends]="true"
+        ></o-datepicker>
+      </div>
+      <div class="col-lg-6 col-md-12 text-center mt-4">
+        <p>Fecha seleccionada:</p>
+        <p>{{ selectedDate.day }} - {{ selectedDate.month }} - {{ selectedDate.year }}</p>
+        <hr />
+        <ng-container *ngIf="selectedTasks.length > 0">
+          <p>Tareas:</p>
+          <p *ngFor="let item of selectedTasks">{{ item.title }}</p>
+        </ng-container>
+        <ng-container *ngIf="selectedTasks.length == 0">
+          <p>No hay tareas...</p>
+        </ng-container>
+      </div>
+    </div>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{datepickerExample}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ datepickerExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Día de la semana" [isNavCode]="true">
+    <div component class="row">
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+        <o-datepicker
+          [firstDayOfWeek]="3"
+          (dateSelected)="onDateSelected($event)"
+          (taskSelected)="onTaskSelected($event)"
+        ></o-datepicker>
+      </div>
+      <div class="col-lg-6 col-md-12 text-center mt-4">
+        <p>Fecha seleccionada:</p>
+        <p>{{ selectedDate.day }} - {{ selectedDate.month }} - {{ selectedDate.year }}</p>
+        <hr />
+        <ng-container *ngIf="selectedTasks.length > 0">
+          <p>Tareas:</p>
+          <p *ngFor="let item of selectedTasks">{{ item.title }}</p>
+        </ng-container>
+        <ng-container *ngIf="selectedTasks.length == 0">
+          <p>No hay tareas...</p>
+        </ng-container>
+      </div>
+    </div>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{datepickerExampleWeekFirstday}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ datepickerExampleTs }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Dias de otros meses" [isNavCode]="true">
+    <div component class="row">
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+        <o-datepicker
+          outsideDays="visible"
+          (dateSelected)="onDateSelected($event)"
+          (taskSelected)="onTaskSelected($event)"
+        ></o-datepicker>
+      </div>
+      <div class="col-lg-6 col-md-12 text-center mt-4">
+        <p>Fecha seleccionada:</p>
+        <p>{{ selectedDate.day }} - {{ selectedDate.month }} - {{ selectedDate.year }}</p>
+        <hr />
+        <ng-container *ngIf="selectedTasks.length > 0">
+          <p>Tareas:</p>
+          <p *ngFor="let item of selectedTasks">{{ item.title }}</p>
+        </ng-container>
+        <ng-container *ngIf="selectedTasks.length == 0">
+          <p>No hay tareas...</p>
+        </ng-container>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{datepickerExampleOthersday}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ datepickerExampleTs }}</code>
+    </pre>
+  </app-viewer>
+</section>

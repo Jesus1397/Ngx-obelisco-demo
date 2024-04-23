@@ -33,7 +33,9 @@ export enum ComponentEnum {
   banner = 'Banner',
   button = 'Botón',
   highlighted = 'Destacado',
-  block = 'Bloque de trámite'
+  block = 'Bloque de trámite',
+  search = 'Buscador'
+  // datePicker = 'Datepicker'
 }
 
 export const COMPONENTS_NAVIGATION = [
@@ -206,7 +208,22 @@ export const COMPONENTS_NAVIGATION = [
     title: 'Bloque de trámite',
     image: { src: 'assets/component-cards/' },
     route: '/components/block'
+  },
+  {
+    title: 'Buscador',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/search'
+  },
+  {
+    title: 'Calendario',
+    image: { src: 'assets/component-cards/Calendar.svg' },
+    route: '/components/calendar'
   }
+  // {
+  //   title: 'Datepicker',
+  //   image: { src: 'assets/component-cards/' },
+  //   route: '/components/datepicker'
+  // }
 ];
 
 export const COLUMNS = [

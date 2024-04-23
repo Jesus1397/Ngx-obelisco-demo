@@ -1,6 +1,6 @@
 <section class="section-example">
   <app-viewer title="Solo título">
-    <div component class="list-group-container">
+    <div component class="access-deck access-column max-cards-3">
       <o-access title="Acceso"></o-access>
     </div>
     <pre appClipboard component-html class="code">
@@ -10,7 +10,7 @@
   </app-viewer>
 
   <app-viewer title="Con descripción">
-    <div component class="list-group-container">
+    <div component class="access-deck access-column max-cards-3">
       <o-access title="Acceso" description="Descripción (Opcional)"></o-access>
     </div>
     <pre appClipboard component-html class="code">
@@ -20,7 +20,7 @@
   </app-viewer>
 
   <app-viewer title="Con Icono">
-    <div component class="list-group-container">
+    <div component class="access-deck access-column max-cards-3">
       <o-access title="Acceso" icon="bx bxs-info-circle" route="/home" description="Descripción (Opcional)"></o-access>
     </div>
     <pre appClipboard component-html class="code">
@@ -45,6 +45,57 @@
     <pre appClipboard component-html class="code">
       <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
       <code appPrism language="html">{{exampleAccessSizesHtml}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Disposición Horizontal - Cuatro columnas">
+    <div component class="access-deck access-column max-cards-4">
+      <o-access title="Acceso" size="sm"></o-access>
+      <o-access title="Acceso" size="sm"></o-access>
+      <o-access title="Acceso" size="sm"></o-access>
+      <o-access title="Acceso" size="sm"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ layoutFour }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Disposición Horizontal - Tres columnas">
+    <div component class="access-deck access-column max-cards-3">
+      <o-access title="Acceso" size="sm"></o-access>
+      <o-access title="Acceso" size="sm"></o-access>
+      <o-access title="Acceso" size="sm"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+        <code appPrism language="html">{{ layoutThree }}</code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Disposición Horizontal - Dos columnas">
+    <div component class="access-deck access-column max-cards-2">
+      <o-access title="Acceso" size="sm"></o-access>
+      <o-access title="Acceso" size="sm"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ layoutTwo }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Disposición Vertical - 1 columna">
+    <div component style="max-width: 280px">
+      <div class="access-deck max-cards-1">
+        <o-access title="Acceso" size="sm"></o-access>
+        <o-access title="Acceso" size="sm"></o-access>
+        <o-access title="Acceso" size="sm"></o-access>
+        <o-access title="Acceso" size="sm"></o-access>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ layoutOne }}</code>
     </pre>
   </app-viewer>
 </section>

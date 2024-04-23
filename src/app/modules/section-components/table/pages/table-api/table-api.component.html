@@ -33,12 +33,49 @@
 
     <div class="section-interface">
       <pre class="code import">
-        <code appPrism code="{{exampleIterfaceColumn}}"></code>
+        <code appPrism code="{{exampleColumnInterface}}"></code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table [dataSource]="dsColumnInterface" [columns]="columns" [isBordered]="true" [isStriped]="true"></o-table>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <h4>DataSource</h4>
+    <p>Permite establecer los valores de la propiedad <strong>dataSource</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism code="{{exampleDataSourceInterface}}"></code>
       </pre>
       <div class="section-properties">
         <h5>Propiedades</h5>
         <o-table
-          [dataSource]="dataSourceInterface"
+          [dataSource]="dsDataSourceInterface"
+          [columns]="columns"
+          [isBordered]="true"
+          [isStriped]="true"
+        ></o-table>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <h4>TableCheckbox</h4>
+    <p>Permite establecer los valores de la propiedad <strong>checkbox</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism code="{{exampleTableCheckboxInterface}}"></code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [dataSource]="dsTableCheckboxInterface"
           [columns]="columns"
           [isBordered]="true"
           [isStriped]="true"

@@ -1,4 +1,4 @@
-import { AccessList } from '@gcba/ngx-obelisco/core/models';
+import { AccessList, DataSource } from '@gcba/ngx-obelisco/core/models';
 
 //Routes
 const ACCESS_ROUTE = 'access';
@@ -31,34 +31,49 @@ export const ACCESS_LIST = ACCESS_NAVIGATION.map((el) => {
 });
 
 // ACCESS SIMPLE ------------------------------------------
-export const ACCESS_SIMPLE_DATA_SOURCE = [
+export const ACCESS_SIMPLE_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br /> icon: string',
-    description: 'Se utiliza para especificar el ícono que se mostrará en el componente.'
+    name: { data: '@Input() <br /> icon: string', customClasses: '' },
+    description: { data: 'Se utiliza para especificar el ícono que se mostrará en el componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> title: string',
-    description: 'Se utiliza para establecer el título o encabezado del componente.'
+    name: { data: '@Input() <br /> title: string', customClasses: '' },
+    description: { data: 'Se utiliza para establecer el título o encabezado del componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br />  description: string',
-    description: 'Se utiliza para proporcionar una descripción o texto descriptivo del componente.'
+    name: { data: '@Input() <br />  description: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para proporcionar una descripción o texto descriptivo del componente.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br />  size: Sizes',
-    description: 'Se utiliza para definir el tamaño del componente. Debe ser un valor de la enumeración "Sizes".'
+    name: { data: '@Input() <br />  size: Sizes', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el tamaño del componente. Debe ser un valor de la enumeración "Sizes".',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br />  link: string',
-    description: 'Se utiliza para especificar un enlace o URL relacionado con el componente.'
+    name: { data: '@Input() <br />  link: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para especificar un enlace o URL relacionado con el componente.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br />  route: string',
-    description: 'Se utiliza para definir una ruta de navegación interna asociada con el componente.'
+    name: { data: '@Input() <br />  route: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir una ruta de navegación interna asociada con el componente.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
@@ -100,106 +115,139 @@ export const ACCESS_SIMPLE_SIZES_HTML = `
   ></o-access>
 `;
 
+export const ACCESS_LAYOUT_FOUR = `
+<div class="access-deck access-column max-cards-4">
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+</div>
+`;
+export const ACCESS_LAYOUT_THREE = `
+<div class="access-deck access-column max-cards-3">
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+</div>
+`;
+export const ACCESS_LAYOUT_TWO = `
+<div class="access-deck access-column max-cards-2">
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+</div>
+`;
+export const ACCESS_LAYOUT_ONE = `
+<div class="access-deck max-cards-1">
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+  <o-access title="Acceso" size="sm"></o-access>
+</div>
+`;
+
 // ACCESS LIST ----------------------------------------------
-export const ACCESS_LIST_DATA_SOURCE = [
+export const ACCESS_LIST_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br /> items: AccessList',
-    description: 'Se utiliza para definir elementos del componente.'
+    name: { data: '@Input() <br /> items: AccessList', customClasses: '' },
+    description: { data: 'Se utiliza para definir elementos del componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const ACCESS_LIST_INTERFACE_DATA_SOURCE = [
+export const ACCESS_LIST_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'header: AccessHeader',
-    description: 'Se utiliza para definir '
+    name: { data: 'header: AccessHeader', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'children: Access[] | AccessCategory[]',
-    description: 'Se utiliza para definir '
+    name: { data: 'children: Access[] | AccessCategory[]', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'footer: AccessFootter',
-    description: 'Se utiliza para definir '
+    name: { data: 'footer: AccessFootter', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   }
 ];
 
-export const ACCESS_LIST_HEADER_INTERFACE_DATA_SOURCE = [
+export const ACCESS_LIST_HEADER_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'title: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'description: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'description: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'icon: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'icon: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'iconPositionLeft: boolean',
-    description: 'Se utiliza para definir '
+    name: { data: 'iconPositionLeft: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'iconText: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'iconText: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   }
 ];
 
-export const ACCESS_LIST_ACCESS_INTERFACE_DATA_SOURCE = [
+export const ACCESS_LIST_ACCESS_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'title: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'description: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'description: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'icon: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'icon: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'link: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'link: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'route: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'route: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   }
 ];
 
-export const ACCESS_LIST_ACCESSCATEGORY_INTERFACE_DATA_SOURCE = [
+export const ACCESS_LIST_ACCESSCATEGORY_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'title: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'children: Access[]',
-    description: 'Se utiliza para definir '
+    name: { data: 'children: Access[]', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   }
 ];
 
-export const ACCESS_LIST_FOOTER_INTERFACE_DATA_SOURCE = [
+export const ACCESS_LIST_FOOTER_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'title: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'icon: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'icon: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'link: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'link: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   },
   {
-    name: 'route: string',
-    description: 'Se utiliza para definir '
+    name: { data: 'route: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir', customClasses: '' }
   }
 ];
 

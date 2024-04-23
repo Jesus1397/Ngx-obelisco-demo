@@ -1,3 +1,5 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
 export const BANNER_NAVIGATION = [
   {
     title: 'Api',
@@ -10,23 +12,31 @@ export const BANNER_NAVIGATION = [
 ];
 
 /* BANNER-API */
-export const BANNER_DATA_SOURCE = [
+export const BANNER_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> isDark: boolean',
-    description: 'Se utiliza para establecer el color de fondo del banner. Por defecto es false.'
+    name: { data: '@Input() <br/> isDark: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para establecer el color de fondo del banner. Por defecto es false.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> content: string',
-    description: 'Se utiliza para establecer el contenido del banner.'
+    name: { data: '@Input() <br/> content: string', customClasses: '' },
+    description: { data: 'Se utiliza para establecer el contenido del banner.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> icon: string',
-    description:
-      'Se utiliza para definir el ícono del banner. Se debe utilizar íconos de boxicons o material icons round.'
+    name: { data: '@Input() <br/> icon: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el ícono del banner. Se debe utilizar íconos de boxicons o material icons round.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 

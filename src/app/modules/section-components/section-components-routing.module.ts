@@ -27,6 +27,9 @@ import { BannerComponent } from './banner/banner.component';
 import { ButtonComponent } from './button/button.component';
 import { HighlightedComponent } from './highlighted/highlighted.component';
 import { BlockComponent } from './block/block.component';
+import { SearchComponent } from './search/search.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
   {
@@ -158,6 +161,21 @@ const routes: Routes = [
     path: 'block',
     component: BlockComponent,
     loadChildren: () => import('./block/block.module').then((m) => m.BlockModule)
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
+    loadChildren: () => import('./search/search.module').then((m) => m.SearchModule)
+  },
+  // {
+  //   path: 'datepicker',
+  //   component: DatepickerComponent,
+  //   loadChildren: () => import('./datepicker/datepicker.module').then((m) => m.DatepickerModule)
+  // },
+  {
+    path: 'calendar',
+    component: CalendarComponent,
+    loadChildren: () => import('./calendar/calendar.module').then((m) => m.CalendarModule)
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];

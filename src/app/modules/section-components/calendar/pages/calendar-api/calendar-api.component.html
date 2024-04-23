@@ -1,0 +1,77 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Calendario de Obelisco</h2>
+    <pre class="code import">
+          <code appPrism language="javascript" code="import { OCalendarComponent } from '@gcba/ngx-obelisco/calendar';"></code>
+        </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OCalendar</h4>
+    <p>Selector: <strong>o-calendar</strong></p>
+
+    <div class="section-properties mb-5">
+      <h5>Propiedades generales</h5>
+      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type mb-5">
+    <h4>CalendarDate</h4>
+    <p>Permite establecer los valores de las referencias del mes y año.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ calendarDateInterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="calendarDateDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-type">
+    <h4>ActiveDay</h4>
+    <p>Permite establecer los valores de las referencias de los días.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ activedayInterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [columns]="columns"
+          [dataSource]="activedayDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>ActiveDayTypes</h4>
+    <p>Permite establecer los valores de la propiedad <strong>type</strong>.</p>
+
+    <div class="section-interface mb-5">
+      <pre class="code import">
+          <code appPrism>{{ activedayTypes }}</code>
+        </pre>
+    </div>
+  </div>
+</section>

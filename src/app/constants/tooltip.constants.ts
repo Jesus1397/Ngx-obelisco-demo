@@ -1,10 +1,10 @@
-import { TooltipDirections } from '@gcba/ngx-obelisco/core/models';
+import { DataSource, TooltipDirections } from '@gcba/ngx-obelisco/core/models';
 
 interface Tooltip {
   name: string;
   direction: TooltipDirections[];
   text: string;
-  classes?: boolean;
+  customClasses?: boolean;
   exampleHTML?: string;
   exampleTS?: string;
 }
@@ -19,65 +19,66 @@ export const TOOLTIP_NAVIGATION = [
     route: '/components/tooltip/examples'
   }
 ];
-
-export const DATA_SOURCE_TOOLTIP = [
+export const DATA_SOURCE_TOOLTIP: DataSource[] = [
   {
-    name: '@Input() <br /> direction: TooltipDirections',
-    description: 'Se utiliza para definir la dirección del Tooltip.'
+    name: { data: '@Input() <br /> direction: TooltipDirections', customClasses: '' },
+    description: { data: 'Se utiliza para definir la dirección del Tooltip.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> description: string',
-    description: 'Se utiliza para definir el contenido.'
+    name: { data: '@Input() <br /> description: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir el contenido.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClasses: string;',
-    description:
-      'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia. Acepta una cadena de texto con clases CSS. "icon-box" crea una caja para un icono y "bg-light" establece su color de fondo.'
+    name: { data: "@Input() <br /> trigger: 'mouseenter' | 'click'", customClasses: '' },
+    description: { data: 'Se utiliza para definir el evento activador del tooltip.', customClasses: '' }
   }
 ];
 
 export const TOOLTIP_DIRECTIONS = `
   direction TooltipDirections =
     | 'top'
-    | 'top-right'
-    | 'top-left'
     | 'bottom'
-    | 'bottom-right'
-    | 'bottom-left'
     | 'left'
-    | 'left-top'
-    | 'left-bottom'
     | 'right'
-    | 'right-top'
-    | 'right-bottom';
+    | 'top-start'
+    | 'top-end'
+    | 'bottom-start'
+    | 'bottom-end'
+    | 'right-start'
+    | 'right-end'
+    | 'left-start'
+    | 'left-end';
 `;
 
 export const TOOLTIP_LIST: Tooltip[] = [
   {
     name: 'ARRIBA',
-    direction: ['top-left', 'top', 'top-right'],
+    direction: ['top-start', 'top', 'top-end'],
     text: 'Esta es la descripción de un tooltip.',
     exampleHTML: `
-    <o-tooltip direction="top-left" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="top-start"
+      customClasses="mx-2"
+      text="Top-start"
+    ></o-button>
 
-    <o-tooltip direction="top" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="top"
+      customClasses="mx-2"
+      text="Top"
+    ></o-button>
 
-    <o-tooltip direction="top-right" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="top-end"
+      customClasses="mx-2"
+      text="Top-end"
+    ></o-button>
     `,
     exampleTS: `
       import { Component } from '@angular/core';
@@ -93,29 +94,32 @@ export const TOOLTIP_LIST: Tooltip[] = [
   },
   {
     name: 'DERECHA',
-    direction: ['right-bottom', 'right', 'right-top'],
+    direction: ['right-start', 'right', 'right-end'],
     text: 'Esta es la descripción de un tooltip.',
     exampleHTML: `
-    <o-tooltip direction="right-bottom" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="right-start"
+      customClasses="mx-2"
+      text="Right-start"
+    ></o-button>
 
-    <o-tooltip direction="right" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="right"
+      customClasses="mx-2"
+      text="Right"
+    ></o-button>
 
-    <o-tooltip direction="right-top" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="right-end"
+      customClasses="mx-2"
+      text="Right-end"
+    ></o-button>
     `,
     exampleTS: `
       import { Component } from '@angular/core';
@@ -131,29 +135,32 @@ export const TOOLTIP_LIST: Tooltip[] = [
   },
   {
     name: 'IZQUIERDA',
-    direction: ['left-bottom', 'left', 'left-top'],
+    direction: ['left-start', 'left', 'left-end'],
     text: 'Esta es la descripción de un tooltip.',
     exampleHTML: `
-    <o-tooltip direction="left-bottom" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="left-start"
+      customClasses="mx-2"
+      text="Left-start"
+    ></o-button>
 
-    <o-tooltip direction="left" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="left"
+      customClasses="mx-2"
+      text="Left"
+    ></o-button>
 
-    <o-tooltip direction="left-top" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="left-end"
+      customClasses="mx-2"
+      text="Left-end"
+    ></o-button>
     `,
     exampleTS: `
       import { Component } from '@angular/core';
@@ -169,29 +176,32 @@ export const TOOLTIP_LIST: Tooltip[] = [
   },
   {
     name: 'INFERIOR',
-    direction: ['bottom-left', 'bottom', 'bottom-right'],
+    direction: ['bottom-start', 'bottom', 'bottom-end'],
     text: 'Esta es la descripción de un tooltip.',
     exampleHTML: `
-    <o-tooltip direction="bottom-left" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="bottom-start"
+      customClasses="mx-2"
+      text="Bottom-start"
+    ></o-button>
 
-    <o-tooltip direction="bottom" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="bottom"
+      customClasses="mx-2"
+      text="Bottom"
+    ></o-button>
 
-    <o-tooltip direction="bottom-right" [description]="description">
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        Botón
-      </button>
-    </o-tooltip>
+    <o-button
+      oTooltip
+      [description]="text"
+      direction="bottom-end"
+      customClasses="mx-2"
+      text="Bottom-end"
+    ></o-button>
     `,
     exampleTS: `
       import { Component } from '@angular/core';
@@ -209,19 +219,37 @@ export const TOOLTIP_LIST: Tooltip[] = [
     name: 'ICONOS',
     direction: ['left', 'top', 'right'],
     text: 'Esta es la descripción de un tooltip.',
-    classes: true,
+    customClasses: true,
     exampleHTML: `
-    <o-tooltip direction="left" [description]="description" classes="icon-box bg-light">
-      <i class="bx bxs-info-circle"></i>
-    </o-tooltip>
+    <span
+      *ngIf="tooltip.classes"
+      oTooltip
+      [description]="text"
+      direction="left"
+      class="icon-box bg-light mx-2"
+    >
+      <span class="material-icons-round">help</span>
+    </span>
 
-    <o-tooltip direction="top" [description]="description" classes="icon-box bg-light">
-      <i class="bx bxs-info-circle"></i>
-    </o-tooltip>
+    <span
+      *ngIf="tooltip.classes"
+      oTooltip
+      [description]="text"
+      direction="top"
+      class="icon-box bg-light mx-2"
+    >
+      <span class="material-icons-round">help</span>
+    </span>
 
-    <o-tooltip direction="right" [description]="description" classes="icon-box bg-light">
-      <i class="bx bxs-info-circle"></i>
-    </o-tooltip>
+    <span
+      *ngIf="tooltip.classes"
+      oTooltip
+      [description]="text"
+      direction="right"
+      class="icon-box bg-light mx-2"
+    >
+      <span class="material-icons-round">help</span>
+    </span>
     `,
     exampleTS: `
       import { Component } from '@angular/core';

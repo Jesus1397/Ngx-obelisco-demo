@@ -3,9 +3,12 @@ import { COLUMNS } from 'src/app/constants/components.constants';
 import {
   HIGHLIGHTED_DATA_SOURCE,
   HIGHLIGHTED_TYPES,
-  IMAGE_MEDIA_TYPES,
-  MEDIA_INTERFACE,
-  MEDIA_INTERFACE_DATA_SOURCE
+  MEDIAIMAGE_INTERFACE,
+  MEDIAIFRAME_INTERFACE,
+  MEDIAVIDEO_INTERFACE,
+  MEDIAIMAGE_DATA_SOURCE,
+  MEDIAIFRAME_DATA_SOURCE,
+  MEDIAVIDEO_DATA_SOURCE
 } from 'src/app/constants/highlighted.constants';
 
 @Component({
@@ -17,7 +20,10 @@ export class HighlightedApiComponent {
   public columns = COLUMNS;
   public highlightedSource = HIGHLIGHTED_DATA_SOURCE;
   public types = HIGHLIGHTED_TYPES;
-  public interface = MEDIA_INTERFACE;
-  public dataSourceInterface = MEDIA_INTERFACE_DATA_SOURCE;
-  public mediaTypes = IMAGE_MEDIA_TYPES;
+  public interfaceImage = MEDIAIMAGE_INTERFACE;
+  public interfaceVideo = MEDIAVIDEO_INTERFACE;
+  public interfaceIframe = MEDIAIFRAME_INTERFACE;
+  public dataSourceInterfaceImage = MEDIAIMAGE_DATA_SOURCE;
+  public dataSourceInterfaceVideo = MEDIAVIDEO_DATA_SOURCE;
+  public dataSourceInterfaceIframe = MEDIAIFRAME_DATA_SOURCE;
 }

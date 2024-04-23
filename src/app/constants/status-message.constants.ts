@@ -1,4 +1,4 @@
-import { StatusMessageTypes } from '@gcba/ngx-obelisco/core/models';
+import { DataSource, StatusMessageTypes } from '@gcba/ngx-obelisco/core/models';
 
 interface StatusMessage {
   name: string;
@@ -21,28 +21,35 @@ export const STATUS_MESSAGE_NAVIGATION = [
   }
 ];
 
-export const DATA_SOURCE_STATUS_MESSAGE = [
+export const DATA_SOURCE_STATUS_MESSAGE: DataSource[] = [
   {
-    name: '@Input() <br /> type: StatusMessageTypes',
-    description: 'Se utiliza para definir el tipo de mensaje que se quiere mostrar.'
+    name: { data: '@Input() <br /> type: StatusMessageTypes', customClasses: '' },
+    description: { data: 'Se utiliza para definir el tipo de mensaje que se quiere mostrar.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> title: string',
-    description: 'Se utiliza para definir el título del mensaje.'
+    name: { data: '@Input() <br /> title: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir el título del mensaje.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> content: string | string[]',
-    description:
-      'Se utiliza para definir el texto del mensaje.<br /> Puede ser un string o un array de strings. Si es un array, se mostrará como dos párrafos separados.'
+    name: { data: '@Input() <br /> content: string | string[]', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el texto del mensaje. Puede ser un string o un array de strings. Si es un array, se mostrará como dos párrafos separados.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> listContent: string[]',
-    description:
-      'Se utiliza para definir una lista de ítems que se mostrarán debajo del texto. <br /> Se puede armar con etiquetas html. <br /> No es obligatorio.'
+    name: { data: '@Input() <br /> listContent: string[]', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir una lista de ítems que se mostrarán debajo del texto. Se puede armar con etiquetas html. No es obligatorio.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 

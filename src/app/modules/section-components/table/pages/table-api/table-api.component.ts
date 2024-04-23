@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { COLUMNS } from 'src/app/constants/components.constants';
 import {
-  TABLA_DATA_SOURCE_INTERFACE,
+  TABLA_COLUMN_INTERFACE,
+  TABLA_DATASOURCE_INTERFACE,
   TABLA_INTERFACE_COLUMN,
+  TABLA_INTERFACE_DATASOURCE,
+  TABLA_INTERFACE_TABLECHECKBOX,
+  TABLA_TABLECHECKBOX_INTERFACE,
   TABLE_DATA_SOURCE,
   TABLE_DATA_SOURCE_METHODS
 } from 'src/app/constants/table.constants';
@@ -14,8 +18,14 @@ import {
 })
 export class TableApiComponent {
   public dataSource = TABLE_DATA_SOURCE;
-  public dataSourceInterface = TABLA_DATA_SOURCE_INTERFACE;
   public columns = COLUMNS;
+
   public dataSourceMethods = TABLE_DATA_SOURCE_METHODS;
-  public exampleIterfaceColumn = TABLA_INTERFACE_COLUMN;
+  public dsColumnInterface = TABLA_COLUMN_INTERFACE;
+  public dsDataSourceInterface = TABLA_DATASOURCE_INTERFACE;
+  public dsTableCheckboxInterface = TABLA_TABLECHECKBOX_INTERFACE;
+
+  public exampleColumnInterface = TABLA_INTERFACE_COLUMN;
+  public exampleDataSourceInterface = TABLA_INTERFACE_DATASOURCE;
+  public exampleTableCheckboxInterface = TABLA_INTERFACE_TABLECHECKBOX;
 }

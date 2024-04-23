@@ -1,3 +1,5 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
 export const MODAL_NAVIGATION = [
   {
     title: 'Api',
@@ -9,30 +11,36 @@ export const MODAL_NAVIGATION = [
   }
 ];
 
-export const MODAL_DATA_SOURCE = [
+export const MODAL_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> dataTarget: string',
-    description: 'Se utiliza para identificar el componente.'
+    name: { data: '@Input() <br/> dataTarget: string', customClasses: '' },
+    description: { data: 'Se utiliza para identificar el componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> title: string',
-    description: 'Se utiliza para mostrar el título del componente.'
+    name: { data: '@Input() <br/> title: string', customClasses: '' },
+    description: { data: 'Se utiliza para mostrar el título del componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> description: string',
-    description: 'Se utiliza para mostrar la descripción del componente.'
+    name: { data: '@Input() <br/> description: string', customClasses: '' },
+    description: { data: 'Se utiliza para mostrar la descripción del componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> subtitle: string',
-    description: 'Se utiliza para mostrar el subtitulo del componente.'
+    name: { data: '@Input() <br/> subtitle: string', customClasses: '' },
+    description: { data: 'Se utiliza para mostrar el subtitulo del componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isBordered: boolean',
-    description: 'Se utiliza para mostrar la linea divisora entre el encabezado y cuerpo del componente.'
+    name: { data: '@Input() <br/> isBordered: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para mostrar la linea divisora entre el encabezado y cuerpo del componente.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 

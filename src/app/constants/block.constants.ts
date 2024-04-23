@@ -1,3 +1,5 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
 export const BLOCK_NAVIGATION = [
   {
     title: 'Api',
@@ -38,25 +40,34 @@ export const BLOCK_EXAMPLE_BACKGROUND = `
 `;
 
 //BLOCK API
-export const BLOCK_DATA_SOURCE = [
+export const BLOCK_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> title: string',
-    description: 'Establece el título del bloque.'
+    name: { data: '@Input() <br/> title: string', customClasses: '' },
+    description: { data: 'Establece el título del bloque.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> description: string',
-    description: 'Define el contenido de texto principal del bloque.'
+    name: { data: '@Input() <br/> description: string', customClasses: '' },
+    description: { data: 'Define el contenido de texto principal del bloque.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isBgLight: boolean',
-    description: 'Propiedad de entrada para indicar si el fondo del bloque es claro. Por defecto es false.'
+    name: { data: '@Input() <br/> isBgLight: boolean', customClasses: '' },
+    description: {
+      data: 'Propiedad de entrada para indicar si el fondo del bloque es claro. Por defecto es false.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> isPositionRelative: boolean',
-    description: 'Propiedad de entrada para indicar si la posición del bloque es relative. Por defecto es false.'
+    name: { data: '@Input() <br/> isPositionRelative: boolean', customClasses: '' },
+    description: {
+      data: 'Propiedad de entrada para indicar si la posición del bloque es relative. Por defecto es false.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];

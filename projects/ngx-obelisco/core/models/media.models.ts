@@ -1,15 +1,26 @@
-export type ImageMediaSizes = 'sm' | 'md' | 'lg';
+export type MediaSizes = 'sm' | 'md' | 'lg';
 
 export interface Media {
   src?: string;
-  alt?: string;
-  track?: string;
-  title?: string;
-  size?: ImageMediaSizes;
 }
 
-export enum EnumImageMediaSizes {
+export enum EnumMediaSizes {
   Sm = 'sm',
   Md = 'md',
   Lg = 'lg'
+}
+
+export interface MediaImage extends Media {
+  alt?: string;
+}
+export interface MediaVideo extends Media {
+  track?: string;
+  title?: string;
+}
+export interface MediaIframe extends Media {
+  title?: string;
+}
+export interface MediaPanel extends Media {
+  size?: MediaSizes;
+  alt?: string;
 }

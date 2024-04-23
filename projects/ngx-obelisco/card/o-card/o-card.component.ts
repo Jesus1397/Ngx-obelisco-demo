@@ -8,7 +8,7 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
-import { Media, Tags } from '@gcba/ngx-obelisco/core/models';
+import { MediaImage, Tags } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-card',
@@ -26,7 +26,7 @@ export class OCardComponent implements AfterViewInit, AfterContentInit {
   @Input() public tags?: Tags[];
   @Input() public link!: string;
   @Input() public route!: string;
-  @Input() public image?: Media;
+  @Input() public image?: MediaImage;
   @Input() public icon?: string;
   @Input() public customClasses: string = '';
 

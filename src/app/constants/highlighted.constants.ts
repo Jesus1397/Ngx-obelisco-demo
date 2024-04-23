@@ -1,3 +1,7 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
+import { MediaIframe, MediaVideo, MediaImage } from '@gcba/ngx-obelisco/core/models';
+
 export const HIGHLIGHTED_NAVIGATION = [
   {
     title: 'Api',
@@ -17,18 +21,18 @@ export const HIGHLIGHTED_DESCRIPTION =
 export const HIGHLIGHTED_DESCRIPTION_SM =
   'Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces.';
 
-export const HIGHLIGHTED_PICTURE = {
+export const HIGHLIGHTED_PICTURE: MediaImage = {
   src: 'https://gcba.github.io/Obelisco/panel/destacado.jpeg',
   alt: 'descripción de imagen'
 };
 
-export const HIGHLIGHTED_VIDEO = {
+export const HIGHLIGHTED_VIDEO: MediaVideo = {
   src: 'https://gcba.github.io/Obelisco/panel/videoBuenosAires.mp4',
-  track: 'assets/panel/videoBuenosAires.vtt',
-  title: 'Buenos Aires se escribe en plural'
+  title: 'Buenos Aires se escribe en plural',
+  track: 'assets/panel/videoBuenosAires.vtt'
 };
 
-export const HIGHLIGHTED_IFRAME = {
+export const HIGHLIGHTED_IFRAME: MediaIframe = {
   src: 'https://www.youtube.com/embed/sXE613Oaxvc?si=iWSX1erqQxXOLojw',
   title: 'Buenos Aires se escribe en plural'
 };
@@ -56,7 +60,7 @@ export const HIGHLIGHTED_IMAGE_TS = `
 
     public description: string = 'Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces. Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces';
 
-    public picture: Media = {
+    public picture: MediaImage = {
       src: 'https://gcba.github.io/Obelisco/panel/destacado.jpeg',
       alt: 'descripción de imagen'
     };
@@ -91,12 +95,13 @@ export const HIGHLIGHTED_VIDEO_TS = `
 
     public description: string = 'Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces. Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces';
 
-    public video: Media = {
+    public video: MediaVideo = {
       src: 'https://gcba.github.io/Obelisco/panel/videoBuenosAires.mp4',
+      title: 'Buenos Aires se escribe en plural',
       track: 'https://gcba.github.io/Obelisco/panel/videoBuenosAires.vtt'
     };
 
-    public iframe: Media = {
+    public iframe: MediaIframe = {
       src: 'https://www.youtube.com/embed/sXE613Oaxvc?si=iWSX1erqQxXOLojw',
       title: 'Buenos Aires se escribe en plural'
     };
@@ -123,6 +128,7 @@ export const HIGHLIGHTED_BANNER_NO_MEDIA_TS = `
     public description: string = 'Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces. Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces';
   }
 `;
+
 export const HIGHLIGHTED_BANNER_BG_HTML = `
   <o-highlighted [title]="title" [description]="description" [image]="picture" [isBgLight]="true">
     <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm">
@@ -188,38 +194,44 @@ export const HIGHLIGHTED_LATERAL_HTML = `
 `;
 
 //HIGHLIGHTED API
-export const HIGHLIGHTED_DATA_SOURCE = [
+export const HIGHLIGHTED_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> type: HighlightedType',
-    description: 'Se utiliza para establecer el tipo de destacado. Por defecto es banner.'
+    name: { data: '@Input() <br/> type: HighlightedType', customClasses: '' },
+    description: { data: 'Se utiliza para establecer el tipo de destacado. Por defecto es banner.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> title: string',
-    description: 'Establece el título del destacado.'
+    name: { data: '@Input() <br/> title: string', customClasses: '' },
+    description: { data: 'Establece el título del destacado.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> description: string',
-    description: 'Define el contenido de texto principal del destacado.'
+    name: { data: '@Input() <br/> description: string', customClasses: '' },
+    description: { data: 'Define el contenido de texto principal del destacado.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> image: Media',
-    description: 'Define la imagen principal del destacado.'
+    name: { data: '@Input() <br/> image: MediaImage' },
+    description: { data: 'Define la imagen principal del destacado.' }
   },
   {
-    name: '@Input() <br/> video: Media',
-    description: 'Define el video principal del destacado.'
+    name: { data: '@Input() <br/> video: MediaVideo' },
+    description: { data: 'Define el video principal del destacado.' }
   },
   {
-    name: '@Input() <br/> iframe: Media',
-    description: 'Define el iframe principal del destacado.'
+    name: { data: '@Input() <br/> iframe: MediaIframe' },
+    description: { data: 'Define el iframe principal del destacado.' }
   },
   {
-    name: '@Input() <br/> isBgLight: boolean',
-    description: 'Propiedad de entrada para indicar si el fondo del destacado es claro. Por defecto es false.'
+    name: { data: '@Input() <br/> isBgLight: boolean', customClasses: '' },
+    description: {
+      data: 'Propiedad de entrada para indicar si el fondo del destacado es claro. Por defecto es false.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
@@ -227,39 +239,67 @@ export const HIGHLIGHTED_TYPES = `
   type HighlightedType = 'banner' | 'grouping' | 'lateral';
 `;
 
-export const MEDIA_INTERFACE = `
+export const MEDIAIMAGE_INTERFACE = `
   interface Media {
     src: string;
+  }
+  interface MediaImage extends Media {
     alt: string;
-    track: string;
-    title: string;
-    size: ImageMediaSizes;
   }
 `;
 
-export const MEDIA_INTERFACE_DATA_SOURCE = [
+export const MEDIAVIDEO_INTERFACE = `
+  interface Media {
+    src: string;
+  }
+  interface MediaVideo extends Media {
+    track: string;
+    title: string;
+  }
+`;
+
+export const MEDIAIFRAME_INTERFACE = `
+  interface Media {
+    src: string;
+  }
+  interface MediaIframe extends Media {
+    title: string;
+  }
+`;
+
+export const MEDIAIMAGE_DATA_SOURCE = [
   {
-    name: 'src: string',
-    description: 'Se utiliza para definir la ruta del elemento multimedia y url del iframe.'
+    name: { data: 'src: string' },
+    description: { data: 'Se utiliza para definir la url del elemento multimedia.' }
   },
   {
-    name: 'alt: string',
-    description: 'Se utiliza para definir el texto alternativo de la imagen.'
-  },
-  {
-    name: 'track: string',
-    description: 'Se utiliza para definir la ruta al elemento con formato WebVTT (archivos .vtt) en el caso de video.'
-  },
-  {
-    name: 'title: string',
-    description: 'Se utiliza para definir el titulo del video e iframe.'
-  },
-  {
-    name: 'size: ImageMediaSizes',
-    description: 'Se utiliza para definir el tamaño de la imagen, en el caso de panel chico.'
+    name: { data: 'alt: string' },
+    description: { data: 'Se utiliza para definir el texto alternativo de la imagen.' }
   }
 ];
 
-export const IMAGE_MEDIA_TYPES = `
-  export type ImageMediaSizes = 'sm' | 'md' | 'lg';
-`;
+export const MEDIAVIDEO_DATA_SOURCE = [
+  {
+    name: { data: 'src: string' },
+    description: { data: 'Se utiliza para definir la url del elemento multimedia.' }
+  },
+  {
+    name: { data: 'track: string' },
+    description: { data: 'Se utiliza para definir la ruta al elemento con formato WebVTT (archivos .vtt).' }
+  },
+  {
+    name: { data: 'title: string' },
+    description: { data: 'Se utiliza para definir el título del video.' }
+  }
+];
+
+export const MEDIAIFRAME_DATA_SOURCE = [
+  {
+    name: { data: 'src: string' },
+    description: { data: 'Se utiliza para definir la url del elemento multimedia.' }
+  },
+  {
+    name: { data: 'title: string' },
+    description: { data: 'Se utiliza para definir el título del iframe.' }
+  }
+];

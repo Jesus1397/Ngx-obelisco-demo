@@ -52,27 +52,21 @@
   </div>
 
   <div class="section-type">
-    <h4 class="mt-4">Media</h4>
+    <h4>MediaImage</h4>
     <p>Permite establecer los valores de la propiedad <strong>image</strong>.</p>
 
     <div class="section-interface">
       <pre class="code import">
-        <code appPrism language="javascript">{{ interface }}</code>
+        <code appPrism language="javascript">{{ mediaImageInterface }}</code>
       </pre>
       <div class="section-properties">
         <h5>Propiedades</h5>
         <o-table
-          [dataSource]="dataSourceInterface"
+          [dataSource]="mediaImagedataSourceInterface"
           [columns]="columns"
           [isBordered]="true"
           [isStriped]="true"
         ></o-table>
-      </div>
-      <div class="section-properties">
-        <h5>ImageMediaSizes</h5>
-        <pre class="code import">
-          <code appPrism language="javascript">{{ mediaTypes }}</code>
-        </pre>
       </div>
     </div>
   </div>

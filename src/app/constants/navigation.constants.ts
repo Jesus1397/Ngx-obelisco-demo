@@ -1,4 +1,4 @@
-import { TabsProps } from '@gcba/ngx-obelisco/core/models';
+import { DataSource, TabsProps } from '@gcba/ngx-obelisco/core/models';
 import { ExampleTabsOneComponent } from '../modules/section-components/navigation/tabs/pages/navigation-tabs-examples/routes-tabs/example-tabs-one/example-tabs-one.component';
 import { ExampleTabsTwoComponent } from '../modules/section-components/navigation/tabs/pages/navigation-tabs-examples/routes-tabs/example-tabs-two/example-tabs-two.component';
 import { ExampleTabsThreeComponent } from '../modules/section-components/navigation/tabs/pages/navigation-tabs-examples/routes-tabs/example-tabs-three/example-tabs-three.component';
@@ -59,115 +59,150 @@ export const NAVIGATIONS_NAVIGATION = [
   }
 ];
 
-export const NAVIGATION_VERTICAL_DATA_SOURCE = [
+export const NAVIGATION_VERTICAL_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> navVertItems: NavVerticalItems[]',
-    description: 'Se utiliza para definir los items del menú.'
+    name: { data: '@Input() <br/> navVertItems: NavVerticalItems[]', customClasses: '' },
+    description: { data: 'Se utiliza para definir los items del menú.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const NAVIGATION_HORIZONTAL_DATA_SOURCE = [
+export const NAVIGATION_HORIZONTAL_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> navHorItems: NavHorizontalItems[]',
-    description: 'Se utiliza para definir los items del menú.'
+    name: { data: '@Input() <br/> navHorItems: NavHorizontalItems[]', customClasses: '' },
+    description: { data: 'Se utiliza para definir los items del menú.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isBordered: boolean',
-    description: 'Se utiliza para definir si el menú tendrá borde.'
+    name: { data: '@Input() <br/> isBordered: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si el menú tendrá borde.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> size: Sizes',
-    description: 'Se utiliza para definir el tamaño del menú.'
+    name: { data: '@Input() <br/> size: Sizes', customClasses: '' },
+    description: { data: 'Se utiliza para definir el tamaño del menú.', customClasses: '' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const NAVIGATION_TABS_DATA_SOURCE = [
+export const NAVIGATION_TABS_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> navTabsItems: TabsProps[]',
-    description: 'Se utiliza para definir los items del componente.'
+    name: { data: '@Input() <br/> navTabsItems: TabsProps[]', customClasses: '' },
+    description: { data: 'Se utiliza para definir los items del componente.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isFixedWidth: boolean',
-    description: 'Se utiliza para definir si la pestaña tiene un ancho fijo, por defecto es falso.'
+    name: { data: '@Input() <br/> isFixedWidth: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir si la pestaña tiene un ancho fijo, por defecto es falso.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> isItemsRounded: boolean',
-    description: 'Se utiliza para definir el color de la pestaña en un tono de gris, por defecto es falso.'
+    name: { data: '@Input() <br/> isItemsRounded: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el color de la pestaña en un tono de gris, por defecto es falso.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> isItemsRoundedLight: boolean',
-    description:
-      'Se utiliza para definir el color de pestaña activa en blanco como variacion de navBox, por defecto es falso.'
+    name: { data: '@Input() <br/> isItemsRoundedLight: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el color de pestaña activa en blanco como variacion de navBox, por defecto es falso.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br/> size: Sizes',
-    description: 'Se utiliza para definir el tamaño de las pestañas.'
+    name: { data: '@Input() <br/> size: Sizes', customClasses: '' },
+    description: { data: 'Se utiliza para definir el tamaño de las pestañas.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isSlidered: boolean',
-    description: 'Se utiliza para definir si las pestañas forman parte de un slider, por defecto es falso.'
+    name: { data: '@Input() <br/> isSlidered: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir si las pestañas forman parte de un slider, por defecto es falso.',
+      customClasses: ''
+    }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
   }
 ];
 
-export const NAVIGATION_HORIZONTAL_INTERFACE_DATA_SOURCE = [
+export const NAVIGATION_HORIZONTAL_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir el título de la navegacion.'
+    name: { data: 'title: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir el título de la navegacion.', customClasses: '' }
   },
   {
-    name: 'link: string',
-    description: 'Se utiliza para definir el link de la navegacion. <br/> Mediante href de HTML.'
+    name: { data: 'link: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el link de la navegacion. <br/> Mediante href de HTML.',
+      customClasses: ''
+    }
   },
   {
-    name: 'route: string',
-    description: 'Se utiliza para definir la ruta de la navegacion. <br/> Mediante routerLink de Angular.'
+    name: { data: 'route: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir la ruta de la navegacion. <br/> Mediante routerLink de Angular.',
+      customClasses: ''
+    }
   },
   {
-    name: 'isDisabled: boolean',
-    description: 'Se utiliza para definir si el item estará deshabilitado.'
+    name: { data: 'isDisabled: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si el item estará deshabilitado.', customClasses: '' }
   },
   {
-    name: 'icon: string',
-    description: 'Se utiliza para definir el icono del item. <br /> Se debe utilizar clases de boxicons.'
+    name: { data: 'icon: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el icono del item. <br /> Se debe utilizar clases de boxicons.',
+      customClasses: ''
+    }
   }
 ];
 
-export const NAVIGATION_HORIZONTAL_PROPS_DATA_SOURCE = [
+export const NAVIGATION_HORIZONTAL_PROPS_DATA_SOURCE: DataSource[] = [
   {
-    name: 'title: string',
-    description: 'Se utiliza para definir el título de la pestaña.'
+    name: { data: 'title: string', customClasses: '' },
+    description: { data: 'Se utiliza para definir el título de la pestaña.', customClasses: '' }
   },
   {
-    name: 'isActive: boolean',
-    description: 'Se utiliza para definir si la pestaña esta activa por defecto.'
+    name: { data: 'isActive: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si la pestaña esta activa por defecto.', customClasses: '' }
   },
   {
-    name: 'iconRight: boolean',
-    description: 'Se utiliza para definir si el icono va a la derecha o a la izquierda.'
+    name: { data: 'iconRight: boolean', customClasses: '' },
+    description: { data: 'Se utiliza para definir si el icono va a la derecha o a la izquierda.', customClasses: '' }
   },
   {
-    name: 'child: any',
-    description: 'Se utiliza para definir asignar el componente que va enlazado a la pestaña.'
+    name: { data: 'child: any', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir asignar el componente que va enlazado a la pestaña.',
+      customClasses: ''
+    }
   }
 ];
 
-export const NAVIGATION_VERTICAL_INTERFACE_DATA_SOURCE = NAVIGATION_HORIZONTAL_INTERFACE_DATA_SOURCE.concat({
-  name: 'children: NavVerticalItems[]',
-  description:
-    'Se utiliza para definir los niveles, se arman de la misma manera que el nivel 1. <br/> Se pueden anidar hasta 3 niveles.'
-}).filter((_, i) => i !== 1);
+export const NAVIGATION_VERTICAL_INTERFACE_DATA_SOURCE: DataSource[] =
+  NAVIGATION_HORIZONTAL_INTERFACE_DATA_SOURCE.concat({
+    name: { data: 'children: NavVerticalItems[]', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir los niveles, se arman de la misma manera que el nivel 1. <br/> Se pueden anidar hasta 3 niveles.',
+      customClasses: ''
+    }
+  }).filter((_, i) => i !== 1);
 
 export const NAVIGATION_HORIZONTAL = NAVIGATIONS_NAVIGATION.map((el) => {
   return {

@@ -1,3 +1,7 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
+import { MediaIframe } from '@gcba/ngx-obelisco/core/models';
+
 export const MAP_NAVIGATION = [
   {
     title: 'Api',
@@ -25,7 +29,7 @@ export const MAP_HTML = `
   </o-map>
 `;
 
-export const MAP_IFRAME = {
+export const MAP_IFRAME: MediaIframe = {
   src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.561313314447!2d-58.40988132452283!3d-34.64052465944252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0de7f4d675%3A0xfc2ef5324296a64!2sUspallata%203160%2C%20C1437JCL%20CABA!5e0!3m2!1ses!2sar!4v1704218461718!5m2!1ses!2sar',
   title: 'Mapa de Buenos Aires'
 };
@@ -38,28 +42,51 @@ export const MAP_TS = `
     template: './app-example.component.html',
   })
   export class ExampleComponent {
-    public iframe: Media = {
+    public iframe: MediaIframe = {
       src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.561313314447!2d-58.40988132452283!3d-34.64052465944252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0de7f4d675%3A0xfc2ef5324296a64!2sUspallata%203160%2C%20C1437JCL%20CABA!5e0!3m2!1ses!2sar!4v1704218461718!5m2!1ses!2sar',
       title: 'Mapa de Buenos Aires'
     };
   }
 `;
 
-export const MAP_DATA_SOURCE = [
+export const MAP_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> title: string',
-    description: 'Establece el título del destacado.'
+    name: { data: '@Input() <br/> title: string', customClasses: '' },
+    description: { data: 'Establece el título del destacado.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> description: string',
-    description: 'Define la dirección del mapa.'
+    name: { data: '@Input() <br/> description: string', customClasses: '' },
+    description: { data: 'Define la dirección del mapa.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> iframe: Media',
-    description: 'Propiedad para agregar el iframe del mapa.'
+    name: { data: '@Input() <br/> iframe: MediaIframe' },
+    description: { data: 'Propiedad para agregar el iframe del mapa.' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
+      customClasses: ''
+    }
+  }
+];
+
+export const MEDIAIFRAME_MAP_INTERFACE = `
+  interface Media {
+    src: string;
+  }
+
+  interface MediaIframe extends Media {
+    title: string;
+  }
+`;
+export const MEDIAIFRAME_MAP_DATA_SOURCE = [
+  {
+    name: { data: 'src: string' },
+    description: { data: 'Se utiliza para definir la url del elemento multimedia.' }
+  },
+  {
+    name: { data: 'title: string' },
+    description: { data: 'Se utiliza para definir el título del iframe.' }
   }
 ];

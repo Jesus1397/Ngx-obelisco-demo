@@ -1,35 +1,34 @@
 export type TooltipDirections =
   | 'top'
-  | 'top-right'
-  | 'top-left'
   | 'bottom'
-  | 'bottom-right'
-  | 'bottom-left'
   | 'left'
-  | 'left-top'
-  | 'left-bottom'
   | 'right'
-  | 'right-top'
-  | 'right-bottom';
-
-export interface TooltipPositions {
-  top: number;
-  left: number;
-  right: number;
-  bottom: number;
-}
+  | 'top-start'
+  | 'top-end'
+  | 'bottom-start'
+  | 'bottom-end'
+  | 'right-start'
+  | 'right-end'
+  | 'left-start'
+  | 'left-end'
+  | 'auto'
+  | 'auto-start'
+  | 'auto-end';
 
 export enum EnumTooltipDirections {
   TOP = 'top',
-  TOP_LEFT = 'top-left',
-  TOP_RIGHT = 'top-right',
+  TOP_START = 'top-start',
+  TOP_END = 'top-end',
   BOTTOM = 'bottom',
-  BOTTOM_LEFT = 'bottom-left',
-  BOTTOM_RIGHT = 'bottom-right',
+  BOTTOM_START = 'bottom-start',
+  BOTTOM_END = 'bottom-end',
   RIGHT = 'right',
-  RIGHT_TOP = 'right-top',
-  RIGHT_BOTTOM = 'right-bottom',
+  RIGHT_START = 'right-start',
+  RIGHT_END = 'right-end',
   LEFT = 'left',
-  LEFT_TOP = 'left-top',
-  LEFT_BOTTOM = 'left-bottom'
+  LEFT_START = 'left-start',
+  LEFT_END = 'left-end',
+  AUTO = 'auto',
+  AUTO_START = 'auto-start',
+  AUTO_END = 'auto-end'
 }

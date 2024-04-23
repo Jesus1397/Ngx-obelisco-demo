@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
-import { Media } from '@gcba/ngx-obelisco/core/models';
+import { MediaIframe } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-map',
@@ -10,7 +10,7 @@ import { Media } from '@gcba/ngx-obelisco/core/models';
 export class OMapComponent implements OnInit {
   @Input() public title!: string;
   @Input() public description!: string;
-  @Input() public iframe!: Media;
+  @Input() public iframe!: MediaIframe;
   @Input() public customClasses: string = '';
 
   safeIframe!: SafeHtml;

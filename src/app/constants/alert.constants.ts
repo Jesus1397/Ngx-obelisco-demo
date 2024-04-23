@@ -1,3 +1,5 @@
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
+
 export const ALERT_NAVIGATION = [
   {
     title: 'Api',
@@ -8,15 +10,17 @@ export const ALERT_NAVIGATION = [
     route: '/components/alert/examples'
   }
 ];
-
-export const ALERT_DATA_SOURCE = [
+export const ALERT_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> type: AlertTypes',
-    description: 'Se utiliza para establecer el tipo de la alerta. Por defecto es danger.'
+    name: { data: '@Input() <br/> type: AlertTypes', customClasses: '' },
+    description: { data: 'Se utiliza para establecer el tipo de la alerta. Por defecto es danger.', customClasses: '' }
   },
   {
-    name: '@Input() <br/> isDismissible: boolean',
-    description: 'Se utiliza para definir si se mostrará el componente con cierre. Por defecto es false.'
+    name: { data: '@Input() <br/> isDismissible: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir si se mostrará el componente con cierre. Por defecto es false.',
+      customClasses: ''
+    }
   }
 ];
 

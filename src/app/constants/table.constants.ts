@@ -1,4 +1,4 @@
-import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
+import { DataSource } from '@gcba/ngx-obelisco/core/models';
 
 export const TABLE_NAVIGATION = [
   {
@@ -11,57 +11,105 @@ export const TABLE_NAVIGATION = [
   }
 ];
 
-export const TABLE_DATA_SOURCE = [
+export const TABLE_DATA_SOURCE: DataSource[] = [
   {
-    name: '@Input() <br/> columns: Column[]',
-    description: 'Se utiliza para definir las columnas que se mostrarán en la tabla.'
+    name: { data: '@Input() <br/> id: string' },
+    description: { data: 'Se utiliza para definir el identificador de la tabla.' }
   },
   {
-    name: '@Input() <br/> dataSource: any[]',
-    description: 'Se utiliza para definir los datos que se mostrarán en la tabla.'
+    name: { data: '@Input() <br/> columns: Column[]' },
+    description: { data: 'Se utiliza para definir las columnas que se mostrarán en la tabla.' }
   },
   {
-    name: '@Input() <br/> isBordered: boolean',
-    description: 'Se utiliza para definir si la tabla tendrá bordes.'
+    name: { data: '@Input() <br/> dataSource: DataSource[]' },
+    description: { data: 'Se utiliza para definir los datos que se mostrarán en la tabla.' }
   },
   {
-    name: '@Input() <br/> isStriped: boolean',
-    description: 'Se utiliza para definir si la tabla tendrá rayas.'
+    name: { data: '@Input() <br/> isBordered: boolean' },
+    description: { data: 'Se utiliza para definir si la tabla tendrá bordes.' }
   },
   {
-    name: '@Input() <br/> isHover: boolean',
-    description: 'Se utiliza para definir si la tabla tendrá efecto hover.'
+    name: { data: '@Input() <br/> isStriped: boolean' },
+    description: { data: 'Se utiliza para definir si la tabla tendrá rayas.' }
   },
   {
-    name: '@Input() <br/> isSelectable: boolean',
-    description: 'Se utiliza para definir si la tabla tendrá filas seleccionables.'
+    name: { data: '@Input() <br/> isScrollable: boolean' },
+    description: { data: 'Se utiliza para habilitar el desplazamiento horizontal de la tabla.' }
   },
   {
-    name: '@Input() <br/> isResponsive: boolean',
-    description: 'Se utiliza para definir si la tabla debe ajustarse de manera responsiva.'
+    name: { data: '@Input() <br /> customClasses: string' },
+    description: { data: 'Se utiliza para aplicar clases personalizadas al componente.' }
   },
   {
-    name: '@Input() <br /> customClasses: string',
-    description: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.'
+    name: { data: '@Input() <br/> checkbox: TableCheckbox' },
+    description: { data: 'Se utiliza para habilitar las casillas de verificación en la tabla.' }
   }
 ];
 
-export const TABLA_DATA_SOURCE_INTERFACE = [
+export const TABLE_DATA_SOURCE_METHODS: DataSource[] = [
   {
-    name: 'key: string',
-    description:
-      'Se utiliza para definir el nombre de la propiedad del objeto. <br /> Que tiene que ser igual al que se especifica en el dataSource.'
-  },
-  {
-    name: 'value: string',
-    description: 'Se utiliza para definir el nombre de la columna.'
+    name: { data: '@Output() <br/> dataSelectedChange: EventEmitter&lt;DataSource[]&gt' },
+    description: { data: 'Se utiliza para obtener el elemento seleccionado.' }
   }
 ];
 
-export const TABLE_DATA_SOURCE_METHODS = [
+export const TABLA_COLUMN_INTERFACE: DataSource[] = [
   {
-    name: '@Output() <br/> dataSelectedChange: EventEmitter&lt;any&gt;',
-    description: 'Se utiliza para obtener el elemento seleccionado.'
+    name: { data: 'key' },
+    description: {
+      data: 'Se utiliza para definir el nombre de la propiedad del objeto. <br /> Que tiene que ser igual al que se especifica en el dataSource.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: 'value' },
+    description: {
+      data: 'Se utiliza para definir el nombre de la columna.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: 'customClasses' },
+    description: {
+      data: 'Se utiliza para definir clases para personalizar la columna.',
+      customClasses: ''
+    }
+  }
+];
+
+export const TABLA_DATASOURCE_INTERFACE: DataSource[] = [
+  {
+    name: { data: '[key: string]: <br/>{ data: string; customClasses?: string } ' },
+    description: {
+      data: 'Se utiliza para definir el esquema de datos para el origen de datos de la tabla. Cada clave representa una columna en la tabla, y su valor es un objeto que contiene los datos de la columna y opcionalmente clases personalizadas para esa columna.'
+    }
+  }
+];
+
+export const TABLA_TABLECHECKBOX_INTERFACE: DataSource[] = [
+  {
+    name: { data: 'title: string' },
+    description: {
+      data: 'Se utiliza para definir el título de la casilla de verificación que permite seleccionar todas las filas de la tabla.'
+    }
+  },
+  {
+    name: { data: 'customClassesTh: string' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al encabezado de la columna de la casilla de verificación.'
+    }
+  },
+  {
+    name: { data: 'customClassesLabel: string' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas a la etiqueta de la casilla de verificación.'
+    }
+  },
+  {
+    name: { data: 'isAllSelectable: string' },
+    description: {
+      data: 'Se utiliza para definir si todas las filas de la tabla son seleccionables cuando se selecciona la casilla de verificación "Seleccionar todo".'
+    }
   }
 ];
 
@@ -69,95 +117,38 @@ export const TABLA_INTERFACE_COLUMN = `
   interface Column {
     key: string;
     value: string;
-  }`;
-
-const formattedTableExampleTsCode = (code: any, codeColumn: any) => `
-  import { Component  } from '@angular/core';
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public dataSource = ${codeFormattingArrayList(code)}
-    ];
-
-    public columns = ${codeFormattingArrayList(codeColumn)}
-    ];
-  }`;
-
-const formattedTableSelectableExampleTsCode = (code: any) => `
-  import { Component  } from '@angular/core';
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public dataSource = ${codeFormattingArrayList(code)}
-    ];
-
-    public columns = ${codeFormattingArrayList(code)}
-    ];
-
-    public dataSelected(event: any[]): void {
-      console.log(event);
-    }
-  }`;
-
-export const DATA_SOURCE_TABLE_EXAMPLE = [
-  {
-    id: 1,
-    header: 'Juan',
-    description: 'Alberto'
-  },
-  {
-    id: 2,
-    header: 'María',
-    description: 'Julia'
-  },
-  {
-    id: 3,
-    header: 'Esther',
-    description: 'Fermin'
-  },
-  {
-    id: 4,
-    header: 'José',
-    description: 'Juana'
+    customClasses: string;
   }
-];
+`;
 
-export const COLUMNS_TABLE_EXAMPLE = [
-  {
-    key: 'id',
-    value: 'ID'
-  },
-  {
-    key: 'header',
-    value: 'Encabezado'
-  },
-  {
-    key: 'description',
-    value: 'Descripción'
-  },
-  {
-    key: 'header',
-    value: 'Encabezado'
-  },
-  {
-    key: 'description',
-    value: 'Descripción'
+export const TABLA_INTERFACE_DATASOURCE = `
+  interface DataSource {
+    [key: string]: { data: string; customClasses?: string };
   }
-];
+`;
 
-export const TABLE_EXAMPLE_NORMAL_HTML = `<o-table [columns]="columns" [dataSource]="dataSource"></o-table>`;
+export const TABLA_INTERFACE_TABLECHECKBOX = `
+  interface TableCheckbox {
+    title?: string;
+    customClassesTh?: string;
+    customClassesLabel?: string;
+    isAllSelectable?: boolean;
+  }
+`;
 
-export const TABLE_EXAMPLE_NORMAL_TS = formattedTableExampleTsCode(DATA_SOURCE_TABLE_EXAMPLE, COLUMNS_TABLE_EXAMPLE);
+export const TABLE_EXAMPLE_NORMAL_HTML = `
+  <o-table
+    [columns]="columns"
+    [dataSource]="dataSource"
+    [isScrollable]="true"
+  ></o-table>`;
 
 export const TABLE_EXAMPLE_BORDERED_HTML = `
   <o-table
     [columns]="columns"
     [dataSource]="dataSource"
     [isBordered]="true"
+    [isScrollable]="true"
   ></o-table>`;
 
 export const TABLE_EXAMPLE_STRIPED_HTML = `
@@ -165,41 +156,181 @@ export const TABLE_EXAMPLE_STRIPED_HTML = `
     [columns]="columns"
     [dataSource]="dataSource"
     [isStriped]="true"
-  ></o-table>`;
-
-export const TABLE_EXAMPLE_HOVER_HTML = `
-  <o-table
-    [columns]="columns"
-    [dataSource]="dataSource"
-    [isHover]="true"
-  ></o-table>`;
-
-export const TABLE_EXAMPLE_ALL_HTML = `
-  <o-table
-    [columns]="columns"
-    [dataSource]="dataSource"
-    [isStriped]="true"
-    [isBordered]="true"
-    [isHover]="true"
+    [isScrollable]="true"
   ></o-table>`;
 
 export const TABLE_EXAMPLE_SELECTABLE_HTML = `
   <o-table
+    id="table-checkbox-test"
     [columns]="columns"
     [dataSource]="dataSource"
-    [isHover]="true"
-    [isSelectable]="true"
-    (dataSelectedChange)="dataSelected($event)"
+    [checkbox]="{
+      title: 'Checkbox',
+      isAllSelectable: true
+    }"
+    [isScrollable]="true"
+    (dataSelectedChange)="onDataSelectedChange($event)"
   ></o-table>`;
+export const TABLE_EXAMPLE_NORMAL_TS = `
+  import { Component, OnInit } from '@angular/core';
+  import { Column, DataSource } from '@gcba/ngx-obelisco/core/models';
 
-export const TABLE_EXAMPLE_RESPONSIVE_HTML = `
-  <o-table
-    [columns]="columns"
-    [dataSource]="dataSource"
-    [isHover]="true"
-    [isSelectable]="true"
-    [isResponsive]="true"
-    (dataSelectedChange)="dataSelected($event)"
-  ></o-table>`;
+  @Component({
+    selector: 'app-example',
+    templateUrl: './app-example.component.html',
+  })
+  export class ExampleComponent {
+    columns: Column[] = [
+      { key: 'number', value: 'Número', customClasses: 'tb-number' },
+      { key: 'text', value: 'Texto', customClasses: 'tb-text' },
+      { key: 'link', value: 'Enlace', customClasses: 'tb-link' },
+      { key: 'button', value: 'Botón', customClasses: 'tb-button' },
+      { key: 'tag', value: 'Etiqueta', customClasses: 'tb-tag' },
+      { key: 'icon', value: 'Bóton con ícono', customClasses: 'tb-button ' }
+    ];
 
-export const TABLE_EXAMPLE_SELECTABLE_TS = formattedTableSelectableExampleTsCode(DATA_SOURCE_TABLE_EXAMPLE);
+    dataSource: DataSource[] = [
+      {
+        number: { data: '1', customClasses: 'text-right' },
+        text: { data: 'Juan' },
+        link: { data: this.linkHtml },
+        button: { data: this.buttonHtml },
+        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+        icon: { data: this.iconsHtml }
+      },
+      {
+        number: { data: '2', customClasses: 'text-right' },
+        text: { data: 'Maria' },
+        link: { data: this.linkHtml },
+        button: { data: this.buttonHtml },
+        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+        icon: { data: this.iconsHtml }
+      },
+      {
+        number: { data: '3', customClasses: 'text-right' },
+        text: { data: 'Esther' },
+        link: { data: this.linkHtml },
+        button: { data: this.buttonHtml },
+        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+        icon: { data: this.iconsHtml }
+      },
+      {
+        number: { data: '4', customClasses: 'text-right' },
+        text: { data: 'José' },
+        link: { data: this.linkHtml },
+        button: { data: this.buttonHtml },
+        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+        icon: { data: this.iconsHtml }
+      }
+    ];
+
+    // Definición de partes comunes
+    linkHtml = '<a href="#" target="_blank" rel="noreferrer">Enlace</a>';
+
+    buttonHtml = \`
+      <button type="button" class="btn btn-primary btn-icon">
+        <i class="bx bxs-info-circle"></i>
+        botón
+      </button>\`;
+
+    iconsHtml = \`
+      <div class="actions-table">
+        <button class="btn button-actions-table">
+          <span class="material-icons-round">edit</span>
+        </button>
+        <button class="btn button-actions-table">
+          <span class="material-icons-round">visibility</span>
+        </button>
+        <button class="btn button-actions-table">
+          <span class="material-icons-round">file_download</span>
+        </button>
+        <button class="btn button-actions-table">
+          <span class="material-icons-round">delete</span>
+        </button>
+      </div>\`;
+  }
+  `;
+
+export const TABLE_EXAMPLE_SELECTABLE_TS = `
+import { Component, OnInit } from '@angular/core';
+import { Column, DataSource } from '@gcba/ngx-obelisco/core/models';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  columns: Column[] = [
+    { key: 'number', value: 'Número', customClasses: 'tb-number' },
+    { key: 'text', value: 'Texto', customClasses: 'tb-text' },
+    { key: 'link', value: 'Enlace', customClasses: 'tb-link' },
+    { key: 'button', value: 'Botón', customClasses: 'tb-button' },
+    { key: 'tag', value: 'Etiqueta', customClasses: 'tb-tag' },
+    { key: 'icon', value: 'Bóton con ícono', customClasses: 'tb-button ' }
+  ];
+
+  dataSource: DataSource[] = [
+    {
+      number: { data: '1', customClasses: 'text-right' },
+      text: { data: 'Juan' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    },
+    {
+      number: { data: '2', customClasses: 'text-right' },
+      text: { data: 'Maria' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    },
+    {
+      number: { data: '3', customClasses: 'text-right' },
+      text: { data: 'Esther' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    },
+    {
+      number: { data: '4', customClasses: 'text-right' },
+      text: { data: 'José' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    }
+  ];
+
+  onDataSelectedChange(data: any[]): void {
+    console.log('Datos seleccionados:', data);
+  }
+
+  // Definición de partes comunes
+  linkHtml = '<a href="#" target="_blank" rel="noreferrer">Enlace</a>';
+
+  buttonHtml = \`
+    <button type="button" class="btn btn-primary btn-icon">
+      <i class="bx bxs-info-circle"></i>
+      botón
+    </button>\`;
+
+  iconsHtml = \`
+    <div class="actions-table">
+      <button class="btn button-actions-table">
+        <span class="material-icons-round">edit</span>
+      </button>
+      <button class="btn button-actions-table">
+        <span class="material-icons-round">visibility</span>
+      </button>
+      <button class="btn button-actions-table">
+        <span class="material-icons-round">file_download</span>
+      </button>
+      <button class="btn button-actions-table">
+        <span class="material-icons-round">delete</span>
+      </button>
+    </div>\`;
+}
+`;

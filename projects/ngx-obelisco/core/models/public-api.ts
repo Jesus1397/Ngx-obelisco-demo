@@ -16,3 +16,5 @@ export * from './navbar.models';
 export * from './list.models';
 export * from './highlighted.models';
 export * from './media.models';
+export * from './datepicker.models';
+export * from './calendar.models';

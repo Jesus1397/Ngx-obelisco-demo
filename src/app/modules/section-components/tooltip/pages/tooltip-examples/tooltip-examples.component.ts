@@ -7,5 +7,7 @@ import { TOOLTIP_LIST } from 'src/app/constants/tooltip.constants';
   styleUrls: ['./tooltip-examples.component.scss']
 })
 export class TooltipExamplesComponent {
+  text: string = 'Helpful Message';
+
   public tooltipList = TOOLTIP_LIST;
 }

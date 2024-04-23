@@ -11,7 +11,8 @@ import {
   ViewChildren,
   Renderer2
 } from '@angular/core';
-import { Column } from '@gcba/ngx-obelisco/core/models';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Column, DataSource, TableCheckbox } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-table',
@@ -23,30 +24,30 @@ import { Column } from '@gcba/ngx-obelisco/core/models';
 export class OTableComponent implements OnInit, AfterViewInit {
   public isValidateComponent: boolean = false;
 
+  @Input() public id: string = 'o-table';
   @Input() public columns: Column[] = [];
-  @Input() public dataSource: any[] = [];
+  @Input() public dataSource: DataSource[] = [];
   @Input() public isBordered: boolean = false;
   @Input() public isStriped: boolean = false;
-  @Input() public isHover: boolean = false;
-  @Input() public isSelectable: boolean = false;
   @Input() public isScrollable: boolean = false;
   @Input() public customClasses: string = '';
+  @Input() public checkbox!: TableCheckbox;
 
-  @Output() public dataSelectedChange = new EventEmitter<any>();
+  @Output() public dataSelectedChange = new EventEmitter<DataSource[]>();
 
   private inputCheckArr: ElementRef[] = [];
-  private DataSelectedArr: any[] = [];
+  private dataSelected: DataSource[] = [];
 
-  @ViewChildren('checkbox') public checkbox!: QueryList<ElementRef>;
+  @ViewChildren('checkbox') public checkboxRef!: QueryList<ElementRef>;
 
-  constructor(private readonly renderer: Renderer2) {}
+  constructor(private readonly renderer: Renderer2, private sanitizer: DomSanitizer) {}
 
   public ngOnInit(): void {
     this.componentValidations();
   }
 
   public ngAfterViewInit(): void {
-    this.checkbox.map((e) => {
+    this.checkboxRef.map((e) => {
       this.inputCheckArr.push(e.nativeElement);
     });
   }
@@ -85,25 +86,42 @@ export class OTableComponent implements OnInit, AfterViewInit {
     });
   }
 
-  public allSelected($event: any): void {
-    if (!$event.checked) {
-      this.checkbox.map((e) => this.renderer.setProperty(e.nativeElement, 'checked', false));
-      this.DataSelectedArr = [];
-    } else {
-      this.checkbox.map((e) => this.renderer.setProperty(e.nativeElement, 'checked', true));
-      this.DataSelectedArr = this.dataSource;
-    }
-
-    this.dataSelectedChange.emit(this.DataSelectedArr);
+  sanitizeHTML(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
-  public selectedRow($event: any): void {
-    const index = this.inputCheckArr.indexOf($event);
-    if ($event.checked) {
-      this.DataSelectedArr.push(this.dataSource[index]);
-    } else {
-      this.DataSelectedArr = this.DataSelectedArr.filter((_, i) => i !== index);
+  public onHeaderCheckboxChange(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    if (target) {
+      const isChecked = target.checked;
+      this.checkboxRef.toArray().forEach((checkbox: ElementRef) => {
+        (checkbox.nativeElement as HTMLInputElement).checked = isChecked;
+      });
+
+      if (isChecked) {
+        this.dataSelected = [...this.dataSource];
+      } else {
+        this.dataSelected = [];
+      }
+
+      this.dataSelectedChange.emit(this.dataSelected);
     }
-    this.dataSelectedChange.emit(this.DataSelectedArr);
+  }
+
+  public onCheckboxChange(data: DataSource, event: any): void {
+    if (event && event.target && typeof event.target.checked === 'boolean') {
+      const isChecked: boolean = event.target.checked;
+
+      if (isChecked) {
+        this.dataSelected.push(data);
+      } else {
+        const index = this.dataSelected.findIndex((item) => item === data);
+        if (index !== -1) {
+          this.dataSelected.splice(index, 1);
+        }
+      }
+
+      this.dataSelectedChange.emit(this.dataSelected);
+    }
   }
 }

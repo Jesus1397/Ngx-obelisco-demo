@@ -1,0 +1,62 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Datepicker de Obelisco</h2>
+    <pre class="code import">
+        <code appPrism language="javascript" code="import { ODatepickerModule } from '@gcba/ngx-obelisco/datepicker';"></code>
+      </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>ODatepicker</h4>
+    <p>Selector: <strong>o-datepicker</strong></p>
+
+    <div class="section-properties mb-5">
+      <h5>Propiedades</h5>
+      <o-table [columns]="columns" [dataSource]="datepickerDataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+    <div class="section-properties mb-5">
+      <h5>Métodos</h5>
+      <o-table
+        [columns]="columns"
+        [dataSource]="datepickerOutputDataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <div class="section-type">
+    <h4>DatepickerDate</h4>
+    <p>
+      Permite establecer los valores de la propiedad <strong>minDate</strong>, <strong>maxDate</strong> y
+      <strong>startDate</strong>.
+    </p>
+
+    <div class="section-interface mb-5">
+      <pre class="code import">
+        <code appPrism>{{ ngbdatastructDataInterface }}</code>
+      </pre>
+    </div>
+
+    <h4>DatePickerItem</h4>
+    <p>Permite establecer los valores del servicio <strong>TasksService</strong>.</p>
+
+    <div class="section-interface mb-5">
+      <pre class="code import">
+        <code appPrism>{{ datepickertaskInterface }}</code>
+      </pre>
+    </div>
+
+    <h4>DatePickerTask</h4>
+    <p>Permite establecer los valores de la propiedad <strong>task</strong>.</p>
+
+    <div class="section-interface mb-5">
+      <pre class="code import">
+        <code appPrism>{{ taskInterface }}</code>
+      </pre>
+    </div>
+  </div>
+</section>
