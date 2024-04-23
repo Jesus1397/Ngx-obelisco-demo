@@ -32,32 +32,35 @@
     oDefaultImage
   />
   <div class="card-body">
-    <ng-container *ngIf="!isHorizontal">
-      <ng-container *ngTemplateOutlet="cardIcon"></ng-container>
-    </ng-container>
-    <ng-container *ngIf="headline">
-      <p class="card-headline">{{ headline }}</p>
-    </ng-container>
-    <ng-container *ngIf="tags">
-      <div class="card-badges">
-        <span *ngFor="let tag of tags" class="badge badge-{{ !tag.type ? 'secondary' : tag.type }}">{{
-          tag.name
-        }}</span>
+    <ng-container *ngIf="!oCustomContent">
+      <ng-container *ngIf="!isHorizontal">
+        <ng-container *ngTemplateOutlet="cardIcon"></ng-container>
+      </ng-container>
+      <ng-container *ngIf="headline">
+        <p class="card-headline">{{ headline }}</p>
+      </ng-container>
+      <ng-container *ngIf="tags">
+        <div class="card-badges">
+          <span *ngFor="let tag of tags" class="badge badge-{{ !tag.type ? 'secondary' : tag.type }}">{{
+            tag.name
+          }}</span>
+        </div>
+      </ng-container>
+      <h3 *ngIf="title" class="card-title">
+        <ng-container *ngIf="isBordered; else cardUnbordered">
+          <a #card [routerLink]="route" [class.card-title-link]="true" [class.ellipsis-3]="isTitleTruncate">
+            {{ title }}
+          </a>
+        </ng-container>
+        <ng-template #cardUnbordered>
+          <a #card [routerLink]="route" [class.ellipsis-3]="isTitleTruncate">{{ title }}</a>
+        </ng-template>
+      </h3>
+      <p *ngIf="description" class="card-text">{{ description }}</p>
+      <div class="card-info" *ngIf="hasInfo">
+        <ng-content></ng-content>
       </div>
     </ng-container>
-    <h3 *ngIf="title" class="card-title">
-      <ng-container *ngIf="isBordered; else cardUnbordered">
-        <a #card [routerLink]="route" [class.card-title-link]="true" [class.ellipsis-3]="isTitleTruncate">
-          {{ title }}
-        </a>
-      </ng-container>
-      <ng-template #cardUnbordered>
-        <a #card [routerLink]="route" [class.ellipsis-3]="isTitleTruncate">{{ title }}</a>
-      </ng-template>
-    </h3>
-    <p *ngIf="description" class="card-text">{{ description }}</p>
-    <div class="card-info" *ngIf="hasInfo">
-      <ng-content></ng-content>
-    </div>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
   </div>
 </div>

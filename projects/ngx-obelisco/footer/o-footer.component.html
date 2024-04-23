@@ -7,92 +7,97 @@
   </div>
 </div>
 <footer class="main-footer" [ngClass]="customClasses">
-  <div class="container">
-    <section *ngIf="!isPhoneSectionHidden">
-      <ng-container *ngIf="!phoneCustomContent">
-        <h4>Teléfonos útiles</h4>
-        <ul class="list-inline">
-          <li class="list-inline-item phone-items" *ngFor="let phone of phoneCustomItems">
-            <a [href]="'tel:' + phone.number">{{ phone.title }}</a>
-          </li>
-        </ul>
-        <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles"> Ver todos los teléfonos </a>
-      </ng-container>
-      <ng-container *ngIf="phoneCustomContent">
-        <h4 [innerHTML]="phoneCustomContent.title"></h4>
-        <p class="mb-0" *ngIf="!isPhoneContentArray; else isAarray" [innerHTML]="phoneCustomContent.content"></p>
-        <ng-template #isAarray>
-          <p class="mb-0" *ngFor="let item of phoneContentArray" [innerHTML]="item"></p>
-        </ng-template>
-      </ng-container>
-    </section>
-    <section *ngIf="!isNetworkSectionHidden">
-      <ng-container *ngIf="!networkCustomContent">
-        <h4>Redes de la ciudad</h4>
-        <ul class="list-inline">
-          <li class="list-inline-item redes-items" *ngFor="let network of networkCustomItems">
-            <a [href]="network.src" target="_blank"><i class="bx {{ network.icon }}"></i>{{ network.title }}</a>
-          </li>
-        </ul>
-      </ng-container>
-      <ng-container *ngIf="networkCustomContent">
-        <h4 [innerHTML]="networkCustomContent.title"></h4>
-        <p class="mb-0" *ngIf="!isNetworkContentArray; else isAarray" [innerHTML]="networkCustomContent.content"></p>
-        <ng-template #isAarray>
-          <p class="mb-0" *ngFor="let item of networkContentArray" [innerHTML]="item"></p>
-        </ng-template>
-      </ng-container>
-    </section>
-  </div>
-  <hr class="divider" *ngIf="!isPhoneSectionHidden || !isNetworkSectionHidden" />
-  <div class="container">
-    <section class="footer-legal-section">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-5 col-xl-4 footer-content-img">
-          <img
-            oDefaultImage
-            class="d-lg-none"
-            src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba-sm.svg"
-            alt="Ciudad de Buenos Aires"
-            height="48"
-          />
-          <img
-            oDefaultImage
-            class="d-none d-lg-inline"
-            src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba.svg"
-            alt="Ciudad de Buenos Aires"
-            height="40"
-          />
-          <img
-            oDefaultImage
-            class="img-vamos-ba"
-            src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/vamos-ba.svg"
-            alt="Vamos Buenos Aires"
-          />
+  <ng-container *ngIf="!oCustomContent">
+    <div class="container">
+      <section *ngIf="!isPhoneSectionHidden">
+        <ng-container *ngIf="!phoneCustomContent">
+          <h4>Teléfonos útiles</h4>
+          <ul class="list-inline">
+            <li class="list-inline-item phone-items" *ngFor="let phone of phoneCustomItems">
+              <a [href]="'tel:' + phone.number">{{ phone.title }}</a>
+            </li>
+          </ul>
+          <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles"> Ver todos los teléfonos </a>
+        </ng-container>
+        <ng-container *ngIf="phoneCustomContent">
+          <h4 [innerHTML]="phoneCustomContent.title"></h4>
+          <p class="mb-0" *ngIf="!isPhoneContentArray; else isAarray" [innerHTML]="phoneCustomContent.content"></p>
+          <ng-template #isAarray>
+            <p class="mb-0" *ngFor="let item of phoneContentArray" [innerHTML]="item"></p>
+          </ng-template>
+        </ng-container>
+      </section>
+      <section *ngIf="!isNetworkSectionHidden">
+        <ng-container *ngIf="!networkCustomContent">
+          <h4>Redes de la ciudad</h4>
+          <ul class="list-inline">
+            <li class="list-inline-item redes-items" *ngFor="let network of networkCustomItems">
+              <a [href]="network.src" target="_blank"><i class="bx {{ network.icon }}"></i>{{ network.title }}</a>
+            </li>
+          </ul>
+        </ng-container>
+        <ng-container *ngIf="networkCustomContent">
+          <h4 [innerHTML]="networkCustomContent.title"></h4>
+          <p class="mb-0" *ngIf="!isNetworkContentArray; else isAarray" [innerHTML]="networkCustomContent.content"></p>
+          <ng-template #isAarray>
+            <p class="mb-0" *ngFor="let item of networkContentArray" [innerHTML]="item"></p>
+          </ng-template>
+        </ng-container>
+      </section>
+    </div>
+    <hr class="divider" *ngIf="!isPhoneSectionHidden || !isNetworkSectionHidden" />
+    <div class="container">
+      <section class="footer-legal-section">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-5 col-xl-4 footer-content-img">
+            <img
+              oDefaultImage
+              class="d-lg-none"
+              src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba-sm.svg"
+              alt="Ciudad de Buenos Aires"
+              height="48"
+            />
+            <img
+              oDefaultImage
+              class="d-none d-lg-inline"
+              src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba.svg"
+              alt="Ciudad de Buenos Aires"
+              height="40"
+            />
+            <img
+              oDefaultImage
+              class="img-vamos-ba"
+              src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/vamos-ba.svg"
+              alt="Vamos Buenos Aires"
+            />
+          </div>
+          <div class="col-12" *ngIf="!isLinkSectionHideen">
+            <ng-container *ngIf="!linkCustomContent">
+              <ul class="list-inline">
+                <li class="list-inline-item" *ngFor="let link of linkCustomItems">
+                  <a [href]="link.src">{{ link.title }}</a>
+                </li>
+              </ul>
+            </ng-container>
+            <ng-container *ngIf="linkCustomContent">
+              <h4 [innerHTML]="linkCustomContent.title"></h4>
+              <p class="mb-0" *ngIf="!isLinkContentArray; else isAarray" [innerHTML]="linkCustomContent.content"></p>
+              <ng-template #isAarray>
+                <p class="mb-0" *ngFor="let item of linkContentArray" [innerHTML]="item"></p>
+              </ng-template>
+            </ng-container>
+          </div>
         </div>
-        <div class="col-12" *ngIf="!isLinkSectionHideen">
-          <ng-container *ngIf="!linkCustomContent">
-            <ul class="list-inline">
-              <li class="list-inline-item" *ngFor="let link of linkCustomItems">
-                <a [href]="link.src">{{ link.title }}</a>
-              </li>
-            </ul>
-          </ng-container>
-          <ng-container *ngIf="linkCustomContent">
-            <h4 [innerHTML]="linkCustomContent.title"></h4>
-            <p class="mb-0" *ngIf="!isLinkContentArray; else isAarray" [innerHTML]="linkCustomContent.content"></p>
-            <ng-template #isAarray>
-              <p class="mb-0" *ngFor="let item of linkContentArray" [innerHTML]="item"></p>
-            </ng-template>
-          </ng-container>
+      </section>
+      <section>
+        <div class="footer-license-text">
+          Los contenidos de buenosaires.gob.ar están licenciados bajo Creative Commons Reconocimiento 2.5 Argentina
+          License.
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="footer-license-text">
-        Los contenidos de buenosaires.gob.ar están licenciados bajo Creative Commons Reconocimiento 2.5 Argentina
-        License.
-      </div>
-    </section>
+      </section>
+    </div>
+  </ng-container>
+  <div class="container" *ngIf="oCustomContent">
+    <ng-container [ngTemplateOutlet]="oCustomContent.template"></ng-container>
   </div>
 </footer>

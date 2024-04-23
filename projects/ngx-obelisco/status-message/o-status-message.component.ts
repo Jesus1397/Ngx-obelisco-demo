@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, ContentChild, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StatusMessageTypes } from '@gcba/ngx-obelisco/core/models';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 
 @Component({
   selector: 'o-status-message',
@@ -15,6 +16,8 @@ export class OStatusMessageComponent {
   @Input() public content!: string | string[];
   @Input() public listContent: string[] = [];
   @Input() public customClasses: string = '';
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 
   get isTextArray(): boolean {
     return Array.isArray(this.content);

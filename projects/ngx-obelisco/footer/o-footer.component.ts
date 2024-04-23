@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ContentChild, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CustomContent, Link, Network, Phone } from '@gcba/ngx-obelisco/core/models';
-import { DefaultImageDirective } from '@gcba/ngx-obelisco/directives';
+import { ODefaultImageDirective, OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 
 const PHONE_LIST = [
   {
@@ -95,7 +95,7 @@ const LINK_LIST: Link[] = [
 @Component({
   selector: 'o-footer',
   standalone: true,
-  imports: [CommonModule, RouterModule, DefaultImageDirective],
+  imports: [CommonModule, RouterModule, ODefaultImageDirective],
   templateUrl: './o-footer.component.html',
   styleUrls: ['./o-footer.component.scss']
 })
@@ -140,4 +140,6 @@ export class OFooterComponent {
   get linkContentArray(): string[] {
     return Array.isArray(this.linkCustomContent.content) ? this.linkCustomContent.content : [];
   }
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 }

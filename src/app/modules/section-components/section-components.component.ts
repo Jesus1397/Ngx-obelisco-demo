@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, Renderer2, ViewChild } from '@angular/core';
 import { Event, NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { filter, Subject, takeUntil } from 'rxjs';
-import { ComponentEnum, COMPONENTS_NAVIGATION } from '../../constants/components.constants';
+import { ComponentEnum, COMPONENTS_NAVIGATION, OTHERS_NAVIGATION } from '../../constants/components.constants';
 
 @Component({
   selector: 'app-section-components',
@@ -11,6 +11,7 @@ import { ComponentEnum, COMPONENTS_NAVIGATION } from '../../constants/components
 export class SectionComponentsComponent implements AfterViewInit, OnDestroy {
   public title: string = 'Componentes';
   public componentsNavigation = COMPONENTS_NAVIGATION;
+  public othersNavigation = OTHERS_NAVIGATION;
   public isComponentTemplate = true;
   private readonly onDestroy$ = new Subject<void>();
 

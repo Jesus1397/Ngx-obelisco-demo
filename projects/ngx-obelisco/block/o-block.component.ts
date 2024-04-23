@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, ContentChild, Input } from '@angular/core';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 
 @Component({
   selector: 'o-block',
@@ -11,4 +12,6 @@ export class OBlockComponent {
   @Input() public isBgLight?: boolean = false;
   @Input() public isPositionRelative?: boolean = false;
   @Input() public customClasses: string = '';
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 }

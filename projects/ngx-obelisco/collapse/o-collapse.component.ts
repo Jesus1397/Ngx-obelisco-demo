@@ -1,29 +1,35 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
-import { Collapse, CollapseInputs } from '@gcba/ngx-obelisco/core/models';
+import { CollapseInputs, Collapse, CollapseItems } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-collapse',
   templateUrl: './o-collapse.component.html',
-  imports: [CommonModule],
-  styleUrls: ['./o-collapse.component.scss'],
-  standalone: true
+  styleUrls: ['./o-collapse.component.scss']
 })
 export class OCollapseComponent implements OnChanges {
-  @Input() public items: Collapse[] = [];
-  @Input() public id!: string;
+  @Input() public identifier: string = 'collapse';
   @Input() public dataParent!: string;
-  @Input() public isWhite: boolean = false;
-  @Input() public customClasses: string = '';
+  @Input() public icon?: string;
+  @Input() public label?: string;
+  @Input() public title?: string;
+  @Input() public isTitleAlone?: boolean;
+  @Input() public subtitle?: string;
+  @Input() public content?: string | string[];
+  @Input() public children?: CollapseItems[] | CollapseInputs[];
+  @Input() public customClassesHeader?: string;
+  @Input() public customClassesContent?: string;
+  @Input() public isWhite?: boolean = false;
+
+  isCollapsed = true;
 
   @Output() public selectedItemChange: EventEmitter<CollapseInputs> = new EventEmitter<CollapseInputs>();
 
-  isTextArray(i: number): boolean {
-    return Array.isArray(this.items[i].content);
+  isTextArray(): boolean {
+    return Array.isArray(this.content);
   }
 
-  textArray(i: number): string[] {
-    const description = this.items[i].content!;
+  textArray(): string[] {
+    const description = this.content!;
     return Array.isArray(description) ? description : [description];
   }
 
@@ -34,20 +40,18 @@ export class OCollapseComponent implements OnChanges {
     this.itemInputList = [];
     this.itemInfoList = [];
 
-    for (const item of this.items) {
-      if (item.children && item.children.length > 0) {
-        let hasInputChild = false;
-        for (const child of item.children) {
-          if ('value' in child && child.value !== undefined) {
-            this.itemInputList.push(child as CollapseInputs);
-            hasInputChild = true;
-          }
+    if (this.children && this.children.length > 0) {
+      let hasInputChild = false;
+      for (const child of this.children) {
+        if ('value' in child && child.value !== undefined) {
+          this.itemInputList.push(child as CollapseInputs);
+          hasInputChild = true;
         }
+      }
 
-        if (!hasInputChild) {
-          for (const child of item.children) {
-            this.itemInfoList.push(child as CollapseInputs);
-          }
+      if (!hasInputChild) {
+        for (const child of this.children) {
+          this.itemInfoList.push(child as CollapseInputs);
         }
       }
     }
@@ -56,5 +60,9 @@ export class OCollapseComponent implements OnChanges {
   public toggleValue(child: CollapseInputs) {
     child.value = true;
     this.selectedItemChange.emit(child);
+  }
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
   }
 }

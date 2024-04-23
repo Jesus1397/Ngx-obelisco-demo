@@ -96,7 +96,7 @@
         [image]="image"
         [isVertical]="true"
       >
-        <ng-container panelFooterContent>
+        <ng-container #panelFooterContent>
           <button type="button" class="btn btn-secondary btn-sm card-link">Acción 1</button>
           <button type="button" class="btn btn-link btn-sm card-link">Acción 2</button>
         </ng-container>
@@ -119,9 +119,8 @@
         description="Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco."
         [image]="image"
         [isVertical]="true"
-        [isItemsListVertical]="true"
       >
-        <ng-container listLinkContent>
+        <ng-container #listLinkContent>
           <h4 class="list-link-item-title">Nombre del archivo</h4>
           <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
           <h4 class="list-link-item-title">Nombre del archivo</h4>

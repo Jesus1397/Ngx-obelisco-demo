@@ -1,12 +1,13 @@
 <div class="banner" [class.banner-dark]="isDark" [ngClass]="customClasses">
-  <div class="banner-content">
+  <div class="banner-content" *ngIf="!oCustomContent">
     <i *ngIf="icon && icon?.includes('bx')" class="{{ icon }}"></i>
     <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round">{{ icon }}</span>
     <ng-container *ngIf="content">
       <p class="banner-text" [innerHTML]="content"></p>
     </ng-container>
-    <div class="banner-actions" *ngIf="hasButton">
+    <div class="banner-actions" *ngIf="children">
       <ng-content></ng-content>
     </div>
   </div>
+  <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
 </div>

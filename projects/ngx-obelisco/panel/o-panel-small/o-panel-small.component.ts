@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, ContentChild, ElementRef, Input } from '@angular/core';
 import { MediaPanel, MediaSizes } from '@gcba/ngx-obelisco/core/models';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 
 @Component({
   selector: 'o-panel-small',
@@ -13,7 +14,6 @@ export class OPanelSmallComponent {
   @Input() public isBgWhite: boolean = false;
   @Input() public isBgLight: boolean = false;
   @Input() public isVertical: boolean = false;
-  @Input() public isItemsListVertical: boolean = false;
   @Input() public customClasses: string = '';
 
   sizeToPx = (size: MediaSizes): number => {
@@ -26,4 +26,8 @@ export class OPanelSmallComponent {
         return 104;
     }
   };
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
+  @ContentChild('listLinkContent', { static: true }) listLinkContent?: ElementRef<any>;
+  @ContentChild('panelFooterContent', { static: true }) panelFooterContent?: ElementRef<any>;
 }

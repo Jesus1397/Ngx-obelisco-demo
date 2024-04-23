@@ -1,26 +1,22 @@
-import { Component, Input, AfterContentInit, ElementRef, ContentChild } from '@angular/core';
+import { Component, Input, ContentChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 
 @Component({
   selector: 'o-banner',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, OCustomContentDirective],
   templateUrl: './o-banner.component.html',
   styleUrls: ['./o-banner.component.scss']
 })
-export class OBannerComponent implements AfterContentInit {
+export class OBannerComponent {
   @Input() public isDark?: boolean = false;
   @Input() public content?: string;
   @Input() public icon?: string;
   @Input() public customClasses: string = '';
 
-  @ContentChild('child', { read: ElementRef }) contentElementRef: ElementRef | undefined;
-
-  hasButton: boolean = false;
+  @ContentChild('children', { static: true }) children?: ElementRef<any>;
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 
   constructor() {}
-
-  ngAfterContentInit() {
-    this.contentElementRef && (this.hasButton = true);
-  }
 }

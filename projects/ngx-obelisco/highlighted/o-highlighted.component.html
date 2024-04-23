@@ -26,13 +26,16 @@
     ></iframe>
   </ng-container>
   <div class="card-body">
-    <h2 class="card-title">{{ title }}</h2>
-    <ng-container *ngIf="description">
-      <p class="card-text" [innerHTML]="description"></p>
+    <ng-container *ngIf="!oCustomContent">
+      <h2 class="card-title">{{ title }}</h2>
+      <ng-container *ngIf="description">
+        <p class="card-text" [innerHTML]="description"></p>
+      </ng-container>
+      <div class="panel-footer" *ngIf="children">
+        <ng-content></ng-content>
+      </div>
     </ng-container>
-    <div class="panel-footer" *ngIf="hasChildren">
-      <ng-content></ng-content>
-    </div>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
   </div>
 </ng-template>
 

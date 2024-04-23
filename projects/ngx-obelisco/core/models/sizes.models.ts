@@ -5,3 +5,12 @@ export enum EnumSizes {
   Md = 'md',
   Lg = 'lg'
 }
+
+export type ModalSizes = Sizes | 'xl';
+
+export enum EnumModalSizes {
+  Sm = 'sm',
+  Md = 'md',
+  Lg = 'lg',
+  Xl = 'xl'
+}

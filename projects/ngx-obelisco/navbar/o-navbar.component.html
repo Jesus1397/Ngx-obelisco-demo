@@ -3,30 +3,35 @@
     Ir al contenido principal
   </a>
   <div class="container header-container">
-    <!-- Logo ↓ -->
-    <a class="navbar-brand" [routerLink]="routeLogo">
-      <img class="header-logo" [src]="src" [alt]="alt" />
-    </a>
-    <!-- Login button Mobile ↓ -->
-    <ng-container *ngTemplateOutlet="loginButton; context: loginClassMobile"></ng-container>
-    <!-- Menu button ↓ -->
-    <ng-container [ngTemplateOutlet]="menuButton"></ng-container>
-    <div #navbarContent class="collapse navbar-collapse" [id]="id + 'navbarContent'">
-      <div class="navbar-content">
-        <!-- Sections ↓ -->
-        <ng-container [ngTemplateOutlet]="sections"></ng-container>
-        <!-- Searchbar ↓ -->
-        <ng-container [ngTemplateOutlet]="searchBar"></ng-container>
-        <!-- Login button Desktop ↓ -->
-        <ng-container [ngTemplateOutlet]="loginButton"></ng-container>
-        <!-- Account button Desktop ↓ -->
-        <ng-container [ngTemplateOutlet]="accountButtonDesktop"></ng-container>
+    <ng-container *ngIf="!oCustomContent">
+      <!-- Logo ↓ -->
+      <a class="navbar-brand" [routerLink]="routeLogo">
+        <img class="header-logo" [src]="src" [alt]="alt" />
+      </a>
+      <!-- Login button Mobile ↓ -->
+      <ng-container *ngTemplateOutlet="loginButton; context: loginClassMobile"></ng-container>
+      <!-- Menu button ↓ -->
+      <ng-container [ngTemplateOutlet]="menuButton"></ng-container>
+      <div #navbarContent class="collapse navbar-collapse" [id]="id + 'navbarContent'">
+        <div class="navbar-content">
+          <!-- Sections ↓ -->
+          <ng-container [ngTemplateOutlet]="sections"></ng-container>
+          <!-- Searchbar ↓ -->
+          <ng-container [ngTemplateOutlet]="searchBar"></ng-container>
+          <!-- Login button Desktop ↓ -->
+          <ng-container [ngTemplateOutlet]="loginButton"></ng-container>
+          <!-- Account button Desktop ↓ -->
+          <ng-container [ngTemplateOutlet]="accountButtonDesktop"></ng-container>
+        </div>
+        <!-- Sections extended ↓ -->
+        <ng-container [ngTemplateOutlet]="sectionsExtended"></ng-container>
+        <!-- Account button Mobile ↓ -->
+        <ng-container [ngTemplateOutlet]="accountButtonMobile"></ng-container>
       </div>
-      <!-- Sections extended ↓ -->
-      <ng-container [ngTemplateOutlet]="sectionsExtended"></ng-container>
-      <!-- Account button Mobile ↓ -->
-      <ng-container [ngTemplateOutlet]="accountButtonMobile"></ng-container>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template">
+      <ng-content></ng-content>
+    </ng-container>
   </div>
   <div class="header-backdrop"></div>
 </header>

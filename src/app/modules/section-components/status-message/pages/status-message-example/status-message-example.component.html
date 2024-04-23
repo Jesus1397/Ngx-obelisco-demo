@@ -13,19 +13,19 @@
         [content]="statusMessage.content"
         [listContent]="statusMessage.listContent"
       >
-        <ng-container btn *ngIf="i !== 0; else onlyButton">
+        <ng-container *ngIf="i !== 0; else onlyButton">
           <o-button type="secondary"></o-button>
           <o-button type="secondary" [isOutline]="true"></o-button>
         </ng-container>
 
-        <ng-template btn #onlyButton>
+        <ng-template #onlyButton>
           <o-button type="secondary"></o-button>
         </ng-template>
       </o-status-message>
 
       <ng-template #noList>
         <o-status-message [type]="statusMessage.type" [title]="statusMessage.title" [content]="statusMessage.content">
-          <ng-container btn *ngIf="i === 4; else clasicButton">
+          <ng-container *ngIf="i === 4; else clasicButton">
             <o-button
               type="link"
               [isOutline]="true"

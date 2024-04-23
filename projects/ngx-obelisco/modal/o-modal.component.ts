@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ContentChild, Input } from '@angular/core';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { ModalSizes } from '@gcba/ngx-obelisco/core/models';
 
 @Component({
   selector: 'o-modal',
@@ -15,5 +17,9 @@ export class OModalComponent {
   @Input() public subtitle!: string;
   @Input() public description!: string;
   @Input() public isBordered: boolean = false;
+  @Input() public size: ModalSizes = 'sm';
+  @Input() public isScrollable: boolean = false;
   @Input() public customClasses: string = '';
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 }

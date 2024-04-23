@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ContentChild, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
 import { MediaIframe } from '@gcba/ngx-obelisco/core/models';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 
 @Component({
   selector: 'o-map',
@@ -15,6 +16,8 @@ export class OMapComponent implements OnInit {
 
   safeIframe!: SafeHtml;
   safeIframeUrl!: SafeResourceUrl;
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 
   constructor(private sanitizer: DomSanitizer) {}
 

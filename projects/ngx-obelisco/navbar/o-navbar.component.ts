@@ -1,7 +1,9 @@
 import { NavbarRoute, NavbarRouteAccount, NavbarRouteLogin, SearchbarItem } from '@gcba/ngx-obelisco/core/models';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 import {
   AfterViewInit,
   Component,
+  ContentChild,
   ElementRef,
   HostListener,
   Input,
@@ -51,6 +53,8 @@ export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   private clickOutsideListener = () => {};
 
   constructor(private router: Router, private elementRef: ElementRef, private renderer: Renderer2) {}
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 
   //Searchbar logic
   ngOnInit() {

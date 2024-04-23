@@ -43,8 +43,8 @@ export const HIGHLIGHTED_BANNER_IMAGE_HTML = `
     [title]="title"
     [description]="description"
     [image]="picture">
-    <o-button #child link="#" size="lg"></o-button>
-    <o-button #child link="#" size="lg" type="secondary"></o-button>
+    <o-button #children link="#" size="lg"></o-button>
+    <o-button #children link="#" size="lg" type="secondary"></o-button>
   </o-highlighted>
 `;
 
@@ -72,14 +72,14 @@ export const HIGHLIGHTED_BANNER_VIDEO_HTML = `
     [title]="title"
     [description]="description"
     [video]="video">
-    <o-button #child link="#" size="lg"></o-button>
+    <o-button #children link="#" size="lg"></o-button>
   </o-highlighted>
 
   <o-highlighted
     [title]="title"
     [description]="description"
     [iframe]="iframe">
-    <a #child class="external" href="#" target="_blank">Enlace externo</a>
+    <a #children class="external" href="#" target="_blank">Enlace externo</a>
   </o-highlighted>
 `;
 
@@ -110,7 +110,7 @@ export const HIGHLIGHTED_VIDEO_TS = `
 
 export const HIGHLIGHTED_BANNER_NO_MEDIA_HTML = `
   <o-highlighted [title]="title" [description]="description">
-    <o-button #child size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download="">
+    <o-button #children size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download="">
     </o-button>
   </o-highlighted>
 `;
@@ -131,7 +131,7 @@ export const HIGHLIGHTED_BANNER_NO_MEDIA_TS = `
 
 export const HIGHLIGHTED_BANNER_BG_HTML = `
   <o-highlighted [title]="title" [description]="description" [image]="picture" [isBgLight]="true">
-    <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm">
+    <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm">
     </o-access>
   </o-highlighted>
 `;
@@ -140,10 +140,10 @@ export const HIGHLIGHTED_GROUPING_IMAGE_HTML = `
   <div class="container">
     <div class="card-deck max-cards-2">
       <o-highlighted type="grouping" [title]="title" [description]="description" [image]="picture">
-        <o-button #child link="#" size="lg"></o-button>
+        <o-button #children link="#" size="lg"></o-button>
       </o-highlighted>
       <o-highlighted type="grouping" [title]="title" [description]="description" [image]="picture">
-        <o-button #child size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download=""></o-button>
+        <o-button #children size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download=""></o-button>
       </o-highlighted>
     </div>
   </div>
@@ -153,10 +153,10 @@ export const HIGHLIGHTED_GROUPING_VIDEO_HTML = `
   <div class="container">
     <div class="card-deck max-cards-2">
       <o-highlighted type="grouping" [title]="title" [description]="description" [video]="video">
-        <a #child class="external" href="#" target="_blank">Enlace externo</a>
+        <a #children class="external" href="#" target="_blank">Enlace externo</a>
       </o-highlighted>
       <o-highlighted type="grouping" [title]="title" [description]="description" [iframe]="iframe">
-        <a #child class="external" href="#" target="_blank">Enlace externo</a>
+        <a #children class="external" href="#" target="_blank">Enlace externo</a>
       </o-highlighted>
     </div>
   </div>
@@ -166,10 +166,10 @@ export const HIGHLIGHTED_GROUPING_NO_MEDIA_HTML = `
   <div class="container">
     <div class="card-deck max-cards-2">
       <o-highlighted type="grouping" [title]="title" [description]="description">
-        <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
       </o-highlighted>
       <o-highlighted type="grouping" [title]="title" [description]="description">
-        <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
       </o-highlighted>
     </div>
   </div>
@@ -177,19 +177,19 @@ export const HIGHLIGHTED_GROUPING_NO_MEDIA_HTML = `
 
 export const HIGHLIGHTED_LATERAL_HTML = `
   <o-highlighted type="lateral" [title]="title" [description]="description">
-    <o-button #child link="#" size="lg" [isExpandable]="true"></o-button>
+    <o-button #children link="#" size="lg" [isExpandable]="true"></o-button>
   </o-highlighted>
 
   <o-highlighted type="lateral" [title]="title" [description]="description">
-    <o-button #child size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download="" [isExpandable]="true"></o-button>
+    <o-button #children size="lg" type="secondary" link="#" icon="file_download" text="Descargar" download="" [isExpandable]="true"></o-button>
   </o-highlighted>
 
   <o-highlighted type="lateral" [title]="title" [description]="description">
-    <a #child class="external" href="#" target="_blank">Enlace externo</a>
+    <a #children class="external" href="#" target="_blank">Enlace externo</a>
   </o-highlighted>
 
   <o-highlighted type="lateral" [title]="title" [description]="description">
-    <o-access #child title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+    <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
   </o-highlighted>
 `;
 

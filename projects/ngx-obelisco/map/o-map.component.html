@@ -1,20 +1,23 @@
 <div class="card card-map" [ngClass]="customClasses">
   <div class="card-body">
-    <h3 class="card-title" *ngIf="title">{{ title }}</h3>
-    <p class="card-text" *ngIf="description">{{ description }}</p>
-    <div class="card-iframe">
-      <iframe
-        [src]="safeIframeUrl"
-        [title]="iframe.title || 'Mapa de como llegar'"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        loading="lazy"
-        tabindex="-1"
-        referrerpolicy="no-referrer-when-downgrade"
-        style="border: 0px"
-      ></iframe>
-    </div>
-    <ng-content #button></ng-content>
+    <ng-container *ngIf="!oCustomContent">
+      <h3 class="card-title" *ngIf="title">{{ title }}</h3>
+      <p class="card-text" *ngIf="description">{{ description }}</p>
+      <div class="card-iframe">
+        <iframe
+          [src]="safeIframeUrl"
+          [title]="iframe.title || 'Mapa de como llegar'"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+          tabindex="-1"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="border: 0px"
+        ></iframe>
+      </div>
+      <ng-content></ng-content>
+    </ng-container>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
   </div>
 </div>

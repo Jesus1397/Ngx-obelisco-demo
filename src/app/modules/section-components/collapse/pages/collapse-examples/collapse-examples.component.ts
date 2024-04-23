@@ -1,18 +1,11 @@
 import { Component } from '@angular/core';
 import {
-  COLLAPSE_ARRAY,
-  COLLAPSE_CAPTION_DESCRIPTION,
-  COLLAPSE_CAPTION_DESCRIPTION_EXAMPLE_TS,
   COLLAPSE_EXAMPLE_HTML,
-  COLLAPSE_EXAMPLE_TS,
-  COLLAPSE_ICON_ARRAY,
-  COLLAPSE_ICON_EXAMPLE_TS,
-  COLLAPSE_INFORMATION,
-  COLLAPSE_INFO_EXAMPLE_TS,
-  COLLAPSE_LIST,
-  COLLAPSE_LIST_EXAMPLE_TS,
+  COLLAPSE_ICON_EXAMPLE_HTML,
+  COLLAPSE_INFO_EXAMPLE_HTML,
+  COLLAPSE_LABEL_EXAMPLE_HTML,
+  COLLAPSE_LIST_EXAMPLE_HTML,
   COLLAPSE_MULTIPLE_EXAMPLE_HTML,
-  COLLAPSE_MULTIPLE_EXAMPLE_TS,
   COLLAPSE_WHITE_EXAMPLE_HTML
 } from 'src/app/constants/collapse.constants';
 
@@ -22,20 +15,11 @@ import {
   styleUrls: ['./collapse-examples.component.scss']
 })
 export class CollapseExamplesComponent {
-  collapseList = COLLAPSE_ARRAY;
-  collapseListIcon = COLLAPSE_ICON_ARRAY;
-  collapseListCaptionDescription = COLLAPSE_CAPTION_DESCRIPTION;
-  collapseListInfo = COLLAPSE_INFORMATION;
-  collapseListSelectable = COLLAPSE_LIST;
-
   collapseUniqueHtml = COLLAPSE_EXAMPLE_HTML;
   collapseMultipleHtml = COLLAPSE_MULTIPLE_EXAMPLE_HTML;
+  collapseInfoExampleHtml = COLLAPSE_INFO_EXAMPLE_HTML;
+  collapseIconExampleHtml = COLLAPSE_ICON_EXAMPLE_HTML;
+  collapseLabelExampleHtml = COLLAPSE_LABEL_EXAMPLE_HTML;
+  collapseListExampleHtml = COLLAPSE_LIST_EXAMPLE_HTML;
   collapseWhiteHtml = COLLAPSE_WHITE_EXAMPLE_HTML;
-
-  collapseUniqueTs = COLLAPSE_EXAMPLE_TS;
-  collapseMultipleTs = COLLAPSE_MULTIPLE_EXAMPLE_TS;
-  collapseInfoTs = COLLAPSE_INFO_EXAMPLE_TS;
-  collapseIconTs = COLLAPSE_ICON_EXAMPLE_TS;
-  collapseCaptionDescriptionTs = COLLAPSE_CAPTION_DESCRIPTION_EXAMPLE_TS;
-  collapseListTs = COLLAPSE_LIST_EXAMPLE_TS;
 }

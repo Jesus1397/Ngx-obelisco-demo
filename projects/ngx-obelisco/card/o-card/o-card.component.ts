@@ -9,6 +9,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { MediaImage, Tags } from '@gcba/ngx-obelisco/core/models';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
 
 @Component({
   selector: 'o-card',
@@ -34,6 +35,7 @@ export class OCardComponent implements AfterViewInit, AfterContentInit {
 
   @ContentChild('info', { read: ElementRef }) contentElementRef: ElementRef | undefined;
   hasInfo: boolean = false;
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 
   constructor(private readonly renderer: Renderer2) {}
 

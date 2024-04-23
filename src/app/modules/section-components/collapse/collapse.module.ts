@@ -10,8 +10,8 @@ import { ONavModule } from '@gcba/ngx-obelisco/nav';
 import { CollapseComponent } from './collapse.component';
 import { CollapseExamplesComponent } from './pages/collapse-examples/collapse-examples.component';
 import { CollapseApiComponent } from './pages/collapse-api/collapse-api.component';
-import { OCollapseComponent } from '@gcba/ngx-obelisco/collapse';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
+import { OCollapseModule } from '@gcba/ngx-obelisco/collapse/o-collapse.module';
 
 @NgModule({
   declarations: [CollapseComponent, CollapseExamplesComponent, CollapseApiComponent],
@@ -20,7 +20,7 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     CollapseRoutingModule,
     ONavModule,
     OTableComponent,
-    OCollapseComponent,
+    OCollapseModule,
     ViewerComponent,
     ClipboardDirective,
     PrismDirective,

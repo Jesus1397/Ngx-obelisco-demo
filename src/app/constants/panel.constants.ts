@@ -57,13 +57,6 @@ export const PANEL_SMALL_DATA_SOURCE: DataSource[] = [
     }
   },
   {
-    name: { data: '@Input() <br/> isItemsListVertical: boolean', customClasses: '' },
-    description: {
-      data: 'Propiedad de entrada para indicar si la lista de elementos del panel pequeño es vertical. Por defecto es horizontal',
-      customClasses: ''
-    }
-  },
-  {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
@@ -153,9 +146,8 @@ export const PANEL_SMALL_ITEMS_VERTICAL = `
     [title]="title"
     [description]="description"
     [image]="image"
-    [isVertical]="true"
-    [isItemsListVertical]="true">
-    <ng-container listLinkContent>
+    [isVertical]="true">
+    <ng-container #listLinkContent>
       <h4 class="list-link-item-title">Nombre del archivo</h4>
       <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
       <h4 class="list-link-item-title">Nombre del archivo</h4>
@@ -172,7 +164,7 @@ export const PANEL_SMALL_ITEMS_HORIZONTAL = `
     [description]="description"
     [image]="image"
     [isVertical]="true">
-    <ng-container panelFooterContent>
+    <ng-container #panelFooterContent>
       <button type="button" class="btn btn-secondary btn-sm card-link">Acción 1</button>
       <button type="button" class="btn btn-link btn-sm card-link">Acción 2</button>
     </ng-container>

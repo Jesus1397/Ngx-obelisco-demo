@@ -1,4 +1,4 @@
-import { Step } from './../../../projects/ngx-obelisco/core/models/list.models';
+import { Step } from '@gcba/ngx-obelisco/core/models';
 
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 import { DataSource } from '@gcba/ngx-obelisco/core/models';

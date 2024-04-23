@@ -30,6 +30,8 @@ import { BlockComponent } from './block/block.component';
 import { SearchComponent } from './search/search.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CustomContentComponent } from './custom-content/custom-content.component';
+import { DefaultImageComponent } from './default-image/default-image.component';
 
 const routes: Routes = [
   {
@@ -176,6 +178,16 @@ const routes: Routes = [
     path: 'calendar',
     component: CalendarComponent,
     loadChildren: () => import('./calendar/calendar.module').then((m) => m.CalendarModule)
+  },
+  {
+    path: 'custom-content',
+    component: CustomContentComponent,
+    loadChildren: () => import('./custom-content/custom-content.module').then((m) => m.CustomContentModule)
+  },
+  {
+    path: 'default-image',
+    component: DefaultImageComponent,
+    loadChildren: () => import('./default-image/default-image.module').then((m) => m.DefaultImageModule)
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];

@@ -34,7 +34,9 @@ export enum ComponentEnum {
   button = 'Botón',
   highlighted = 'Destacado',
   block = 'Bloque de trámite',
-  search = 'Buscador'
+  search = 'Buscador',
+  customContent = 'Contenido personalizable',
+  defaultImage = 'Imagen por defecto'
   // datePicker = 'Datepicker'
 }
 
@@ -224,6 +226,19 @@ export const COMPONENTS_NAVIGATION = [
   //   image: { src: 'assets/component-cards/' },
   //   route: '/components/datepicker'
   // }
+];
+
+export const OTHERS_NAVIGATION = [
+  {
+    title: 'Contenido personalizable',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/custom-content'
+  },
+  {
+    title: 'Imagen por defecto',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/default-image'
+  }
 ];
 
 export const COLUMNS = [

@@ -5,9 +5,11 @@ import { OCardModule } from '@gcba/ngx-obelisco/card';
 import { ONavModule } from '@gcba/ngx-obelisco/nav';
 
 import { SectionComponentsComponent } from './section-components.component';
+import { DefaultImageComponent } from './default-image/default-image.component';
+import { TabsLinkComponent } from '../../components/tabs-link/tabs-link.component';
 
 @NgModule({
-  declarations: [SectionComponentsComponent],
-  imports: [CommonModule, SectionComponentsRoutingModule, ONavModule, OCardModule]
+  declarations: [SectionComponentsComponent, DefaultImageComponent],
+  imports: [CommonModule, SectionComponentsRoutingModule, ONavModule, OCardModule, TabsLinkComponent]
 })
 export class SectionComponentsModule {}
