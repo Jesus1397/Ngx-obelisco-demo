@@ -1,4 +1,4 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from 'ngx-obelisco-example/core/models';
 
 //Routes
 export const SEARCH_NAVIGATION = [
@@ -62,7 +62,7 @@ export const SEARCH_EXAMPLE_HTML = `
 
 export const SEARCH_EXAMPLE_TS = `
   import { Component  } from '@angular/core';
-  import { SearchbarItem } from '@gcba/ngx-obelisco/core/models';
+  import { SearchbarItem } from 'ngx-obelisco-example/core/models';
 
   @Component({
     selector: 'app-example',

@@ -1,4 +1,4 @@
-import { Collapse, DataSource } from '@gcba/ngx-obelisco/core/models';
+import { Collapse, DataSource } from 'ngx-obelisco-example/core/models';
 
 export const COLLAPSE_NAVIGATION = [
   {

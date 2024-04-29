@@ -1,7 +1,7 @@
 import { Component, ContentChild, ElementRef, Input } from '@angular/core';
-import { HighlightedType, MediaIframe, MediaVideo, MediaImage } from '@gcba/ngx-obelisco/core/models';
+import { HighlightedType, MediaIframe, MediaVideo, MediaImage } from 'ngx-obelisco-example/core/models';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-highlighted',

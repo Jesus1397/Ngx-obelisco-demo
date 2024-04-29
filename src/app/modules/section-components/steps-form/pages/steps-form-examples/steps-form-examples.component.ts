@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { StepService } from '@gcba/ngx-obelisco/core/services';
+import { StepService } from 'ngx-obelisco-example/core/services';
 import {
   STEPS_FORM_EXAMPLE_DIRECTIVE_HTML,
   STEPS_FORM_EXAMPLE_DIRECTIVE_TS,

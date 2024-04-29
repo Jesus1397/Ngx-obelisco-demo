@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Sizes, Step } from '@gcba/ngx-obelisco/core/models';
+import { Sizes, Step } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'o-list-step',

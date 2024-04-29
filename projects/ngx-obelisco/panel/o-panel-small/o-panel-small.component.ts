@@ -1,6 +1,6 @@
 import { Component, ContentChild, ElementRef, Input } from '@angular/core';
-import { MediaPanel, MediaSizes } from '@gcba/ngx-obelisco/core/models';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { MediaPanel, MediaSizes } from 'ngx-obelisco-example/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-panel-small',

@@ -6,14 +6,14 @@ import { CalendarExamplesComponent } from './pages/calendar-examples/calendar-ex
 import { CalendarRoutingModule } from './calendar-routing.module';
 import { CalendarComponent } from './calendar.component';
 
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
-import { OCalendarComponent } from '@gcba/ngx-obelisco/calendar';
+import { ONavModule } from 'ngx-obelisco-example/nav';
+import { OCalendarComponent } from 'ngx-obelisco-example/calendar';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
-import { OTableComponent } from '@gcba/ngx-obelisco/table';
+import { OTableComponent } from 'ngx-obelisco-example/table';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
-import { OButtonComponent } from '@gcba/ngx-obelisco/button';
+import { OButtonComponent } from 'ngx-obelisco-example/button';
 
 @NgModule({
   declarations: [CalendarApiComponent, CalendarExamplesComponent, CalendarComponent],

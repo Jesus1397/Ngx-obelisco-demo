@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarRoute, NavbarRouteAccount, NavbarRouteLogin, SearchbarItem } from '@gcba/ngx-obelisco/core/models';
+import { NavbarRoute, NavbarRouteAccount, NavbarRouteLogin, SearchbarItem } from 'ngx-obelisco-example/core/models';
 import {
   NAVBAR_EXTENDED_LOGIN_EXAMPLE_HTML,
   NAVBAR_EXTENDED_LOGIN_EXAMPLE_TS,

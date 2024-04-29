@@ -1,5 +1,5 @@
 import { OnInit, Directive, ElementRef, Input, Renderer2 } from '@angular/core';
-import { AlertTypes } from '@gcba/ngx-obelisco/core/models';
+import { AlertTypes } from 'ngx-obelisco-example/core/models';
 
 @Directive({
   selector: 'div[oAlert]',

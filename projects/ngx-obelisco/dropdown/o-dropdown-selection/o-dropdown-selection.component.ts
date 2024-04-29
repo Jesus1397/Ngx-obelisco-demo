@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DropdownSelectionItem, Sizes } from '@gcba/ngx-obelisco/core/models';
+import { DropdownSelectionItem, Sizes } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'o-dropdown-selection',

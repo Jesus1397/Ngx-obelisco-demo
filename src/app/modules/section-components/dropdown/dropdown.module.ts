@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DropdownRoutingModule } from './dropdown-routing.module';
 import { DropdownComponent } from './dropdown.component';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
+import { ONavModule } from 'ngx-obelisco-example/nav';
 
 @NgModule({
   declarations: [DropdownComponent],

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   public exampleComment = `// Instalación con npm`;
-  public exampleInstall = `npm install @gcba/ngx-obelisco`;
+  public exampleInstall = `npm install ngx-obelisco-example`;
 }

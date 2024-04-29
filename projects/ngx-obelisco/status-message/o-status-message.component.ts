@@ -1,7 +1,7 @@
 import { Component, ContentChild, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StatusMessageTypes } from '@gcba/ngx-obelisco/core/models';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { StatusMessageTypes } from 'ngx-obelisco-example/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-status-message',

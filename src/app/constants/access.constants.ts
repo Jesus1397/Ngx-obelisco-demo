@@ -1,4 +1,4 @@
-import { AccessList, DataSource } from '@gcba/ngx-obelisco/core/models';
+import { AccessList, DataSource } from 'ngx-obelisco-example/core/models';
 
 //Routes
 const ACCESS_ROUTE = 'access';

@@ -1,4 +1,4 @@
-import { DatePickerItem } from '@gcba/ngx-obelisco/core/models';
+import { DatePickerItem } from 'ngx-obelisco-example/core/models';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 

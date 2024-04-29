@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { SearchbarItem } from '@gcba/ngx-obelisco/core/models';
+import { SearchbarItem } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'o-search',

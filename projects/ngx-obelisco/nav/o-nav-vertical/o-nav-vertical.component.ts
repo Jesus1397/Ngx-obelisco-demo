@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NavVerticalItems } from '@gcba/ngx-obelisco/core/models';
+import { NavVerticalItems } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'o-nav-vertical',

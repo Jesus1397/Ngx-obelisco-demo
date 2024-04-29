@@ -1,6 +1,6 @@
 import { OnInit, Directive, ElementRef, Input, Renderer2 } from '@angular/core';
-import { SpinnerTypes } from '@gcba/ngx-obelisco/core/models';
-import { Sizes } from '@gcba/ngx-obelisco/core/models';
+import { SpinnerTypes } from 'ngx-obelisco-example/core/models';
+import { Sizes } from 'ngx-obelisco-example/core/models';
 
 @Directive({
   selector: 'div[oSpinner]',

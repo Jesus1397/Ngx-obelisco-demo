@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { AbstractStep } from '@gcba/ngx-obelisco/core/abstracts';
-import { StepForm } from '@gcba/ngx-obelisco/core/models';
-import { StepService } from '@gcba/ngx-obelisco/core/services';
+import { AbstractStep } from 'ngx-obelisco-example/core/abstracts';
+import { StepForm } from 'ngx-obelisco-example/core/models';
+import { StepService } from 'ngx-obelisco-example/core/services';
 
 @Component({
   selector: 'o-steps-form',

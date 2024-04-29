@@ -1,6 +1,6 @@
 # NgxObelisco
 
-[![Versión de Obelisco en npm](https://img.shields.io/npm/v/@gcba/ngx-obelisco?label=NgxObelisco%20en%20npm&logo=npm)](https://www.npmjs.com/package/@gcba/ngx-obelisco)
+[![Versión de Obelisco en npm](https://img.shields.io/npm/v/ngx-obelisco-example?label=NgxObelisco%20en%20npm&logo=npm)](https://www.npmjs.com/package/ngx-obelisco-example)
 ![Deploy](https://github.com/gcba/ngx-obelisco/workflows/Build%20and%20Deploy/badge.svg?branch=main)
 
 NgxObelisco es una libreria de Angular basado en el sistema de diseño Obelisco y en componentes para los productos digitales de la ciudad de Buenos Aires.
@@ -9,7 +9,7 @@ NgxObelisco es una libreria de Angular basado en el sistema de diseño Obelisco 
 
 ## Cómo usarlo
 
-NgxObelisco se distribuye por medio del [paquete publicado en npm](https://www.npmjs.com/package/@gcba/ngx-obelisco).
+NgxObelisco se distribuye por medio del [paquete publicado en npm](https://www.npmjs.com/package/ngx-obelisco-example).
 Es recomendable usar este sistema para definir la versión a usar y poder actualizarla fácilmente.
 
 ### Instalación
@@ -17,7 +17,7 @@ Es recomendable usar este sistema para definir la versión a usar y poder actual
 Para instalarlo en un proyecto que ya usa npm, hay que ejecutar:
 
 ```js
-npm install @gcba/ngx-obelisco
+npm install ngx-obelisco-example
 ```
 
 ## Cómo importarlo
@@ -65,7 +65,7 @@ Para importar el scss, podemos hacerlo en el archivo angular.json de la siguient
 ```json
 "styles": [
   "src/styles.scss",
-  "node_modules/@gcba/ngx-obelisco/scss/obelisco.scss"
+  "node_modules/ngx-obelisco-example/scss/obelisco.scss"
 ]
 ```
 

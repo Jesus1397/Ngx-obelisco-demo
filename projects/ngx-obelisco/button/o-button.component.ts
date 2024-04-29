@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ButtonTypes, Sizes } from '@gcba/ngx-obelisco/core/models';
+import { ButtonTypes, Sizes } from 'ngx-obelisco-example/core/models';
 import { RouterModule } from '@angular/router';
 
 @Component({

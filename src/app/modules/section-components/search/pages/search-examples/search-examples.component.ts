@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SearchbarItem } from '@gcba/ngx-obelisco/core/models';
+import { SearchbarItem } from 'ngx-obelisco-example/core/models';
 import { SEARCH_EXAMPLE_HTML, SEARCH_EXAMPLE_TS } from 'src/app/constants/search.constants';
 
 @Component({

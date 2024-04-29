@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, ContentChild, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CustomContent, Link, Network, Phone } from '@gcba/ngx-obelisco/core/models';
-import { ODefaultImageDirective, OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { CustomContent, Link, Network, Phone } from 'ngx-obelisco-example/core/models';
+import { ODefaultImageDirective, OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 const PHONE_LIST = [
   {

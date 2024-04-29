@@ -6,15 +6,15 @@ import { BlockComponent } from './block.component';
 import { BlockApiComponent } from './pages/block-api/block-api.component';
 import { BlockExamplesComponent } from './pages/block-examples/block-examples.component';
 
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
+import { ONavModule } from 'ngx-obelisco-example/nav';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
-import { OTableComponent } from '@gcba/ngx-obelisco/table';
+import { OTableComponent } from 'ngx-obelisco-example/table';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
-import { OProgressBarComponent } from '@gcba/ngx-obelisco/progress-bar';
-import { OBlockModule } from '@gcba/ngx-obelisco/block';
-import { OButtonComponent } from '@gcba/ngx-obelisco/button';
+import { OProgressBarComponent } from 'ngx-obelisco-example/progress-bar';
+import { OBlockModule } from 'ngx-obelisco-example/block';
+import { OButtonComponent } from 'ngx-obelisco-example/button';
 
 @NgModule({
   declarations: [BlockComponent, BlockApiComponent, BlockExamplesComponent],

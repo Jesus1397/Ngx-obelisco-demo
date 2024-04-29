@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { OAlertDirective } from '@gcba/ngx-obelisco/alert';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
-import { OTableComponent } from '@gcba/ngx-obelisco/table';
+import { OAlertDirective } from 'ngx-obelisco-example/alert';
+import { ONavModule } from 'ngx-obelisco-example/nav';
+import { OTableComponent } from 'ngx-obelisco-example/table';
 import { AlertRoutingModule } from './alert-routing.module';
 
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';

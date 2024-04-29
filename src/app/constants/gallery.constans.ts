@@ -1,4 +1,4 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from 'ngx-obelisco-example/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCode = (code: any) => `

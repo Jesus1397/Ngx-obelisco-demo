@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Injectable, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { NgbDatepickerI18n, NgbCalendar, NgbDateStruct, NgbDate } from '@ng-bootstrap/ng-bootstrap';
-import { TasksService } from '@gcba/ngx-obelisco/core/services';
+import { TasksService } from 'ngx-obelisco-example/core/services';
 import { I18N_VALUES } from './i18n.constans';
 import { Subject, takeUntil } from 'rxjs';
-import { DatePickerTask, DatepickerDate } from '@gcba/ngx-obelisco/core/models';
+import { DatePickerTask, DatepickerDate } from 'ngx-obelisco-example/core/models';
 
 const NOW = new Date();
 

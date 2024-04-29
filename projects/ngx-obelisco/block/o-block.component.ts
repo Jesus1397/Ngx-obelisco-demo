@@ -1,5 +1,5 @@
 import { Component, ContentChild, Input } from '@angular/core';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-block',

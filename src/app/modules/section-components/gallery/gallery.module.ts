@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { OGalleryComponent } from '@gcba/ngx-obelisco/gallery';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
-import { OTableComponent } from '@gcba/ngx-obelisco/table';
+import { OGalleryComponent } from 'ngx-obelisco-example/gallery';
+import { ONavModule } from 'ngx-obelisco-example/nav';
+import { OTableComponent } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';

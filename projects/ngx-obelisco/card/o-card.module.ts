@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
-import { ODefaultImageDirective } from '@gcba/ngx-obelisco/directives';
+import { ODefaultImageDirective } from 'ngx-obelisco-example/directives';
 
 import { OCardComponent } from './o-card/o-card.component';
 

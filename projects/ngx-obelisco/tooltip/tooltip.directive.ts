@@ -1,6 +1,6 @@
 import { Directive, ElementRef, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import tippy from 'tippy.js';
-import { TooltipDirections } from '@gcba/ngx-obelisco/core/models';
+import { TooltipDirections } from 'ngx-obelisco-example/core/models';
 
 @Directive({
   selector: '[oTooltip]'

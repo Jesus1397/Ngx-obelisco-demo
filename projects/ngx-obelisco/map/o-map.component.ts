@@ -1,7 +1,7 @@
 import { Component, ContentChild, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
-import { MediaIframe } from '@gcba/ngx-obelisco/core/models';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { MediaIframe } from 'ngx-obelisco-example/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-map',

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ContentChild, Input } from '@angular/core';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
-import { ModalSizes } from '@gcba/ngx-obelisco/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
+import { ModalSizes } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'o-modal',

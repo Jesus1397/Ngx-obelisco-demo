@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { StepService } from '@gcba/ngx-obelisco/core/services';
+import { StepService } from 'ngx-obelisco-example/core/services';
 import {
   PROGRESS_BAR_EXAMPLE_DIRECTIVE,
   PROGRESS_BAR_EXAMPLE_FUNCIONALITY_HTML,

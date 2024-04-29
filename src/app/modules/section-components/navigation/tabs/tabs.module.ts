@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { TabsRoutingModule } from './tabs-routing.module';
 import { TabsComponent } from './tabs.component';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
+import { ONavModule } from 'ngx-obelisco-example/nav';
 import { NavigationTabsApiComponent } from './pages/navigation-tabs-api/navigation-tabs-api.component';
 import { NavigationTabsExamplesComponent } from './pages/navigation-tabs-examples/navigation-tabs-examples.component';
-import { OTableComponent } from '@gcba/ngx-obelisco/table';
+import { OTableComponent } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';

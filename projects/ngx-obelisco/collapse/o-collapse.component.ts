@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
-import { CollapseInputs, Collapse, CollapseItems } from '@gcba/ngx-obelisco/core/models';
+import { CollapseInputs, Collapse, CollapseItems } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'o-collapse',

@@ -1,7 +1,7 @@
-import { MediaGallery } from '@gcba/ngx-obelisco/core/models';
+import { MediaGallery } from 'ngx-obelisco-example/core/models';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ODefaultImageDirective } from '@gcba/ngx-obelisco/directives';
+import { ODefaultImageDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-gallery',

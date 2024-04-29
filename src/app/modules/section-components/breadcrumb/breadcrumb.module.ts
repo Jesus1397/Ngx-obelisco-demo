@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { OBreadcrumbComponent } from '@gcba/ngx-obelisco/breadcrumb';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
-import { OTableComponent } from '@gcba/ngx-obelisco/table';
+import { OBreadcrumbComponent } from 'ngx-obelisco-example/breadcrumb';
+import { ONavModule } from 'ngx-obelisco-example/nav';
+import { OTableComponent } from 'ngx-obelisco-example/table';
 
 import { BreadcrumbRoutingModule } from './breadcrumb-routing.module';
 import { BreadcrumbComponent } from './breadcrumb.component';

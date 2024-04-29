@@ -17,8 +17,8 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "paths": {
-      "@gcba/ngx-obelisco": ["projects/ngx-obelisco/index.ts"],
-      "@gcba/ngx-obelisco/*": ["projects/ngx-obelisco/*"]
+      "ngx-obelisco-example": ["projects/ngx-obelisco/index.ts"],
+      "ngx-obelisco-example/*": ["projects/ngx-obelisco/*"]
     },
     "importHelpers": true,
     "target": "es2017",

@@ -1,5 +1,5 @@
-import { NavbarRoute, NavbarRouteAccount, NavbarRouteLogin, SearchbarItem } from '@gcba/ngx-obelisco/core/models';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { NavbarRoute, NavbarRouteAccount, NavbarRouteLogin, SearchbarItem } from 'ngx-obelisco-example/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 import {
   AfterViewInit,
   Component,

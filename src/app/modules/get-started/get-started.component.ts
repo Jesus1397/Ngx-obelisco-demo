@@ -7,7 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class GetStartedComponent {
   public ngxObelisco = `
-  npm install @gcba/ngx-obelisco
+  npm install ngx-obelisco-example
   `;
 
   public boxicons = `
@@ -74,7 +74,7 @@ export class GetStartedComponent {
   public stylesImport = `
   "styles": [
     "src/styles.scss",
-    "node_modules/@gcba/ngx-obelisco/scss/obelisco.scss"
+    "node_modules/ngx-obelisco-example/scss/obelisco.scss"
   ]`;
 
   currentSection = 'section1';

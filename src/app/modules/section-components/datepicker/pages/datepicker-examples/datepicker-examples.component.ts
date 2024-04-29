@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatePickerTask, DatepickerDate } from '@gcba/ngx-obelisco/core/models';
-import { TasksService } from '@gcba/ngx-obelisco/core/services';
+import { DatePickerTask, DatepickerDate } from 'ngx-obelisco-example/core/models';
+import { TasksService } from 'ngx-obelisco-example/core/services';
 import {
   DATEPICKER_EXAMPLE,
   DATEPICKER_EXAMPLE_POPUP,

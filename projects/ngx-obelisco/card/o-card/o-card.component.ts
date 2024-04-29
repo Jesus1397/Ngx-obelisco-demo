@@ -8,8 +8,8 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
-import { MediaImage, Tags } from '@gcba/ngx-obelisco/core/models';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+import { MediaImage, Tags } from 'ngx-obelisco-example/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-card',

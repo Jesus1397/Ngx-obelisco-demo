@@ -5,12 +5,12 @@ import { ListStepRoutingModule } from './list-step-routing.module';
 import { ListStepComponent } from './list-step.component';
 import { ListStepApiComponent } from './pages/list-step-api/list-step-api.component';
 import { ListStepExamplesComponent } from './pages/list-step-examples/list-step-examples.component';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
-import { OTableComponent } from '@gcba/ngx-obelisco/table';
+import { ONavModule } from 'ngx-obelisco-example/nav';
+import { OTableComponent } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
-import { OListModule } from '@gcba/ngx-obelisco/list';
+import { OListModule } from 'ngx-obelisco-example/list';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from 'ngx-obelisco-example/core/models';
 
 export const PROGRESS_BAR_NAVIGATION = [
   {

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { AbstractStep } from '@gcba/ngx-obelisco/core/abstracts';
-import { ProgressBarTypes } from '@gcba/ngx-obelisco/core/models';
-import { StepService } from '@gcba/ngx-obelisco/core/services';
+import { AbstractStep } from 'ngx-obelisco-example/core/abstracts';
+import { ProgressBarTypes } from 'ngx-obelisco-example/core/models';
+import { StepService } from 'ngx-obelisco-example/core/services';
 
 const MAX_WIDTH: number = 100;
 const INICIAL_STEP: number = 0;

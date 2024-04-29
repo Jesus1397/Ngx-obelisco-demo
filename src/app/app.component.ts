@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { COMPONENTS_NAVIGATION } from './constants/components.constants';
-import { NavbarRoute } from '@gcba/ngx-obelisco/core/models';
+import { NavbarRoute } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'app-root',
