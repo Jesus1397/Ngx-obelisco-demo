@@ -279,13 +279,27 @@ export const COLLAPSE_LABEL_EXAMPLE_HTML = `
 export const COLLAPSE_LIST_EXAMPLE_HTML = `
   <o-collapse
     identifier="collapseList"
-    icon="bx bxs-user-circle"
-    label="Volanta"
-    title="Título"
-    subtitle="Descripción"
-    content="Esta es la descripción que se encuentra dentro de un colapsable."
+    title="Tarjeta de crédito / débito"
+    subtitle="VISA, MasterCard, AMEX, CABAL, Maestro"
+    [children]="[
+      {
+        icon: 'bx bxl-visa',
+        title: 'Visa Débito ****1234',
+        subtitle: 'Heraldo Paez',
+        id: 'visa',
+        name: 'credit_card',
+        value: false
+      },
+      {
+        icon: 'bx bxl-mastercard',
+        title: 'MasterCard Crédito ****5678',
+        subtitle: 'Heraldo Paez',
+        id: 'master',
+        name: 'credit_card',
+        value: true
+      }
+    ]"
   >
-  </o-collapse>
 `;
 
 export const COLLAPSE_WHITE_EXAMPLE_HTML = `

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AlertApiComponent } from './alert-api.component';
 
-describe('AlertApiComponent', () => {
+describe('AlertaApiComponent', () => {
   let component: AlertApiComponent;
   let fixture: ComponentFixture<AlertApiComponent>;
 

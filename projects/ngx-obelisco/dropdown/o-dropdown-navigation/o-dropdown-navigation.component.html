@@ -10,6 +10,7 @@
     aria-haspopup="true"
     aria-expanded="false"
     [ngClass]="customClasses"
+    [attr.aria-label]="ariaLabel"
   >
     <ng-container *ngIf="iconLeft">
       <i *ngIf="iconLeft.includes('bx')" class="{{ iconLeft }}" [class.btn-dropdown-icon]="isAnimatedIconLeft"></i>

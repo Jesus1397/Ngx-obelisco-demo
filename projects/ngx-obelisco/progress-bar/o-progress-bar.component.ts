@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { AbstractStep } from 'ngx-obelisco-example/core/abstracts';
@@ -10,8 +9,6 @@ const INICIAL_STEP: number = 0;
 
 @Component({
   selector: 'o-progress-bar',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './o-progress-bar.component.html',
   styleUrls: ['./o-progress-bar.component.scss']
 })

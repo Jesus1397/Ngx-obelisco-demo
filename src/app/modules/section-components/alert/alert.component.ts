@@ -7,5 +7,7 @@ import { ALERT_NAVIGATION } from 'src/app/constants/alert.constants';
   styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent {
+  constructor() {}
+
   public alertNavigation = ALERT_NAVIGATION;
 }

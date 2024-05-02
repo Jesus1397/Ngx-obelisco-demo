@@ -1,11 +1,8 @@
 import { Component, Input, ContentChild, ElementRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-banner',
-  standalone: true,
-  imports: [CommonModule, OCustomContentDirective],
   templateUrl: './o-banner.component.html',
   styleUrls: ['./o-banner.component.scss']
 })

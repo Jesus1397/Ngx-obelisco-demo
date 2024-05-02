@@ -1,6 +1,4 @@
-import { CommonModule } from '@angular/common';
 import { Component, ContentChild, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CustomContent, Link, Network, Phone } from 'ngx-obelisco-example/core/models';
 import { ODefaultImageDirective, OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
@@ -94,8 +92,6 @@ const LINK_LIST: Link[] = [
 
 @Component({
   selector: 'o-footer',
-  standalone: true,
-  imports: [CommonModule, RouterModule, ODefaultImageDirective],
   templateUrl: './o-footer.component.html',
   styleUrls: ['./o-footer.component.scss']
 })

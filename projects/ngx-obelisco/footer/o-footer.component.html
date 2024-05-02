@@ -1,6 +1,7 @@
+<h2 class="sr-only">Navegación de pie de página</h2>
 <div *ngIf="indicatorText" class="footer-info" [ngClass]="customClassesIndicator">
   <div class="container">
-    <h4 class="footer-info-text">{{ indicatorText }}</h4>
+    <h3 class="footer-info-text">{{ indicatorText }}</h3>
     <div class="footer-info-actions">
       <ng-content></ng-content>
     </div>
@@ -11,7 +12,7 @@
     <div class="container">
       <section *ngIf="!isPhoneSectionHidden">
         <ng-container *ngIf="!phoneCustomContent">
-          <h4>Teléfonos útiles</h4>
+          <h3>Teléfonos útiles</h3>
           <ul class="list-inline">
             <li class="list-inline-item phone-items" *ngFor="let phone of phoneCustomItems">
               <a [href]="'tel:' + phone.number">{{ phone.title }}</a>
@@ -20,7 +21,7 @@
           <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles"> Ver todos los teléfonos </a>
         </ng-container>
         <ng-container *ngIf="phoneCustomContent">
-          <h4 [innerHTML]="phoneCustomContent.title"></h4>
+          <h3 [innerHTML]="phoneCustomContent.title"></h3>
           <p class="mb-0" *ngIf="!isPhoneContentArray; else isAarray" [innerHTML]="phoneCustomContent.content"></p>
           <ng-template #isAarray>
             <p class="mb-0" *ngFor="let item of phoneContentArray" [innerHTML]="item"></p>
@@ -29,7 +30,7 @@
       </section>
       <section *ngIf="!isNetworkSectionHidden">
         <ng-container *ngIf="!networkCustomContent">
-          <h4>Redes de la ciudad</h4>
+          <h3>Redes de la ciudad</h3>
           <ul class="list-inline">
             <li class="list-inline-item redes-items" *ngFor="let network of networkCustomItems">
               <a [href]="network.src" target="_blank"><i class="bx {{ network.icon }}"></i>{{ network.title }}</a>
@@ -37,7 +38,7 @@
           </ul>
         </ng-container>
         <ng-container *ngIf="networkCustomContent">
-          <h4 [innerHTML]="networkCustomContent.title"></h4>
+          <h3 [innerHTML]="networkCustomContent.title"></h3>
           <p class="mb-0" *ngIf="!isNetworkContentArray; else isAarray" [innerHTML]="networkCustomContent.content"></p>
           <ng-template #isAarray>
             <p class="mb-0" *ngFor="let item of networkContentArray" [innerHTML]="item"></p>
@@ -48,27 +49,28 @@
     <hr class="divider" *ngIf="!isPhoneSectionHidden || !isNetworkSectionHidden" />
     <div class="container">
       <section class="footer-legal-section">
+        <h3 class="sr-only">Información gubernamental</h3>
         <div class="row align-items-center">
           <div class="col-12 col-md-5 col-xl-4 footer-content-img">
             <img
               oDefaultImage
               class="d-lg-none"
               src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba-sm.svg"
-              alt="Ciudad de Buenos Aires"
+              alt="Logo de Ciudad de Buenos Aires"
               height="48"
             />
             <img
               oDefaultImage
               class="d-none d-lg-inline"
               src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba.svg"
-              alt="Ciudad de Buenos Aires"
+              alt="Logo de Ciudad de Buenos Aires"
               height="40"
             />
             <img
               oDefaultImage
               class="img-vamos-ba"
               src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/vamos-ba.svg"
-              alt="Vamos Buenos Aires"
+              alt="Logo de Vamos Buenos Aires"
             />
           </div>
           <div class="col-12" *ngIf="!isLinkSectionHideen">
@@ -80,7 +82,7 @@
               </ul>
             </ng-container>
             <ng-container *ngIf="linkCustomContent">
-              <h4 [innerHTML]="linkCustomContent.title"></h4>
+              <h3 [innerHTML]="linkCustomContent.title"></h3>
               <p class="mb-0" *ngIf="!isLinkContentArray; else isAarray" [innerHTML]="linkCustomContent.content"></p>
               <ng-template #isAarray>
                 <p class="mb-0" *ngFor="let item of linkContentArray" [innerHTML]="item"></p>

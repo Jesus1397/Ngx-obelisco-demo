@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './custom-content-api.component.html',
   styleUrls: ['./custom-content-api.component.scss']
 })
-export class CustomContentApiComponent {}
+export class CustomContentApiComponent {
+  public customExample = `
+  <o-alert>
+    <div *oCustomContent>
+      <p>Contenido personalizado</p>
+    </div>
+  </o-alert>`;
+}

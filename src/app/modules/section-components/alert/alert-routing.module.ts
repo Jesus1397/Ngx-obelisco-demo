@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AlertApiComponent } from './pages/alert-api/alert-api.component';
 import { AlertExamplesComponent } from './pages/alert-examples/alert-examples.component';
+import { AlertApiComponent } from './pages/alert-api/alert-api.component';
 
 const routes: Routes = [
   { path: 'api', component: AlertApiComponent },

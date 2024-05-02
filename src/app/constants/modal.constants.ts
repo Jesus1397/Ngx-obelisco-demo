@@ -76,5 +76,5 @@ export const MODAL_EXAMPLE_RECOGNITION_HTML = `
     subtitle="CARGA EXITOSA"
     title="Los archivos se cargaron correctamente"
   >
-    <o-button text="Aceptar"></o-button>
+    <o-button text="Aceptar" dataDismiss="modal"></o-button>
   </o-modal>`;

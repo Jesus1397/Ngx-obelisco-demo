@@ -2,7 +2,7 @@
   <div class="section-title">
     <h2>Referencia de API para el componente Alerta de Obelisco</h2>
     <pre class="code import">
-      <code appPrism language="javascript" code="import { OAlertDirective } from 'ngx-obelisco-example/alert';"></code>
+      <code appPrism language="javascript" code="import { OAlertModule } from 'ngx-obelisco-example/alert';"></code>
     </pre>
   </div>
 
@@ -11,7 +11,7 @@
 
   <div class="section-selector">
     <h4>OAlert</h4>
-    <p>Selector: <strong>oAlert</strong></p>
+    <p>Selector: <strong>o-alert</strong></p>
 
     <div class="section-properties">
       <h5>Propiedades</h5>
@@ -30,6 +30,23 @@
       <pre class="code import">
         <code appPrism>{{ types  }}</code>
       </pre>
+    </div>
+  </div>
+
+  <div class="section-type">
+    <h4>AlertList</h4>
+    <p>Permite establecer los valores de la propiedad <strong>listContent</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism>{{ listInterface }}</code>
+      </pre>
+    </div>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table [columns]="columns" [dataSource]="listInterfaceData" [isStriped]="true" [isBordered]="true"></o-table>
     </div>
   </div>
 </section>

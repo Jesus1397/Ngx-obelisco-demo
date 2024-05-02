@@ -17,9 +17,7 @@ import { Column, DataSource, TableCheckbox } from 'ngx-obelisco-example/core/mod
 @Component({
   selector: 'o-table',
   templateUrl: './o-table.component.html',
-  styleUrls: ['./o-table.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+  styleUrls: ['./o-table.component.scss']
 })
 export class OTableComponent implements OnInit, AfterViewInit {
   public isValidateComponent: boolean = false;

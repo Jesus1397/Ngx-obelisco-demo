@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ODatepickerComponent } from './o-datepicker.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { OButtonComponent } from 'ngx-obelisco-example/button';
+import { OButtonModule } from 'ngx-obelisco-example/button';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, NgbModule, OButtonComponent],
+  imports: [CommonModule, FormsModule, NgbModule, OButtonModule],
   declarations: [ODatepickerComponent],
   exports: [ODatepickerComponent],
   bootstrap: [ODatepickerComponent]

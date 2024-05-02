@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { OSpinnerDirective } from 'ngx-obelisco-example/spinner';
+import { OSpinnerModule } from 'ngx-obelisco-example/spinner';
 import { ONavModule } from 'ngx-obelisco-example/nav';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 import { SpinnerRoutingModule } from './spinner.routing.module';
 
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
@@ -19,11 +19,11 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     CommonModule,
     SpinnerRoutingModule,
     ONavModule,
-    OTableComponent,
+    OTableModule,
     ViewerComponent,
     ClipboardDirective,
     PrismDirective,
-    OSpinnerDirective,
+    OSpinnerModule,
     TabsLinkComponent
   ]
 })

@@ -7,13 +7,13 @@ import { HighlightedRoutingModule } from './highlighted-routing.module';
 import { HighlightedComponent } from './highlighted.component';
 import { HighlightedApiComponent } from './pages/highlighted-api/highlighted-api.component';
 import { HighlightedExamplesComponent } from './pages/highlighted-examples/highlighted-examples.component';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 import { OHighlightedModule } from 'ngx-obelisco-example/highlighted/o-highlighted.module';
-import { OButtonComponent } from 'ngx-obelisco-example/button';
+import { OButtonModule } from 'ngx-obelisco-example/button';
 import { OAccessModule } from 'ngx-obelisco-example/access';
 
 @NgModule({
@@ -23,13 +23,13 @@ import { OAccessModule } from 'ngx-obelisco-example/access';
     HighlightedRoutingModule,
     ONavModule,
     CommonModule,
-    OTableComponent,
+    OTableModule,
     ViewerComponent,
     ClipboardDirective,
     PrismDirective,
     TabsLinkComponent,
     OHighlightedModule,
-    OButtonComponent,
+    OButtonModule,
     OAccessModule
   ]
 })

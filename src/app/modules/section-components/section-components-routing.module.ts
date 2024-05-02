@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AccessComponent } from './access/access.component';
-import { AlertComponent } from './alert/alert.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { CardComponent } from './card/card.component';
 import { CollapseComponent } from './collapse/collapse.component';
@@ -32,6 +31,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CustomContentComponent } from './custom-content/custom-content.component';
 import { DefaultImageComponent } from './default-image/default-image.component';
+import { AlertComponent } from './alert/alert.component';
 
 const routes: Routes = [
   {

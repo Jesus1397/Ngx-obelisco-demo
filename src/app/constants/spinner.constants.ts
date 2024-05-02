@@ -37,28 +37,28 @@ export const SPINNER_COLORS = `
 `;
 
 export const SPINNER_EXAMPLE_COLORS = `
-  <div oSpinner></div>
-  <div oSpinner type="primary"></div>
-  <div oSpinner type="secondary"></div>
-  <div oSpinner type="success"></div>
-  <div oSpinner type="danger"></div>
-  <div oSpinner type="light"></div>
-  <div oSpinner type="dark"></div>
+  <o-spinner></o-spinner>
+  <o-spinner type="primary"></o-spinner>
+  <o-spinner type="secondary"></o-spinner>
+  <o-spinner type="success"></o-spinner>
+  <o-spinner type="danger"></o-spinner>
+  <o-spinner type="light"></o-spinner>
+  <o-spinner type="dark"></o-spinner>
 `;
 
 export const SPINNER_EXAMPLE_SIZES = `
-  <div oSpinner size="sm"></div>
-  <div oSpinner></div>
-  <div oSpinner size="lg"></div>
+  <o-spinner size="sm"></o-spinner>
+  <o-spinner></o-spinner>
+  <o-spinner size="lg"></o-spinner>
 `;
 
 export const SPINNER_EXAMPLE_BLOCK = `
-  <div style="width: 64px;">
-    <div oSpinner [isExpandable]="true"></div>
+  <div style="width: 64px">
+    <o-spinner [isExpandable]="true"></o-spinner>
   </div>
 `;
 
 export const SPINNER_EXAMPLE_MESSAGE = `
-  <div oSpinner size="lg"></div>
+  <o-spinner size="lg"></o-spinner>
   <small class="mt-2">Cargando...</small>
 `;

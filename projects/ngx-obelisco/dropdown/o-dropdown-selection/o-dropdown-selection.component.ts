@@ -18,6 +18,7 @@ export class ODropdownSelectionComponent {
   @Input() public isBordered: boolean = true;
   @Input() public size!: Sizes;
   @Input() public customClasses: string = '';
+  @Input() public ariaLabel!: string;
 
   @Output() public selectedItemChange: EventEmitter<DropdownSelectionItem | DropdownSelectionItem[]> =
     new EventEmitter();

@@ -8,7 +8,7 @@ import { CardApiComponent } from './pages/card-api/card-api.component';
 import { CardExamplesComponent } from './pages/card-examples/card-examples.component';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { OCardModule } from 'ngx-obelisco-example/card';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
@@ -23,7 +23,7 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     OCardModule,
     ClipboardDirective,
     PrismDirective,
-    OTableComponent,
+    OTableModule,
     TabsLinkComponent
   ]
 })

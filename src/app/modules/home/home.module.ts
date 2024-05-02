@@ -4,10 +4,10 @@ import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive'
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ODatepickerModule } from 'ngx-obelisco-example/datepicker';
-import { OButtonComponent } from 'ngx-obelisco-example/button';
+import { OButtonModule } from 'ngx-obelisco-example/button';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, HomeRoutingModule, PrismDirective, ODatepickerModule, OButtonComponent]
+  imports: [CommonModule, HomeRoutingModule, PrismDirective, ODatepickerModule, OButtonModule]
 })
 export class HomeModule {}

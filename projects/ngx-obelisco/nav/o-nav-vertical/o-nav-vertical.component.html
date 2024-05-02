@@ -11,13 +11,13 @@
         [routerLink]="item.route"
         (click)="scrollToTop()"
       >
-        <div *ngIf="i === 0 && item.icon; else simpleTitle" class="nav-icon">
-          <i [class]="item.icon"></i>
+        <div class="nav-icon">
+          <ng-container *ngIf="item.icon">
+            <i *ngIf="item.icon.includes('bx')" [ngClass]="item.icon"></i>
+            <span *ngIf="!item.icon.includes('bx')" class="material-icons-round">{{ item.icon }}</span>
+          </ng-container>
           <span>{{ item.title }}</span>
         </div>
-        <ng-template #simpleTitle>
-          <span>{{ item.title }}</span>
-        </ng-template>
       </a>
       <ng-template #templateChild>
         <a
@@ -29,13 +29,13 @@
           [class.disabled]="item.isDisabled"
           (click)="scrollToTop()"
         >
-          <div *ngIf="i === 0 && item.icon; else simpleTitle" class="nav-icon">
-            <i [class]="item.icon"></i>
+          <div class="nav-icon">
+            <ng-container *ngIf="item.icon">
+              <i *ngIf="item.icon.includes('bx')" [ngClass]="item.icon"></i>
+              <span *ngIf="!item.icon.includes('bx')" class="material-icons-round">{{ item.icon }}</span>
+            </ng-container>
             <span>{{ item.title }}</span>
           </div>
-          <ng-template #simpleTitle>
-            <span>{{ item.title }}</span>
-          </ng-template>
         </a>
       </ng-template>
       <ul *ngFor="let secondItem of item.children; index as j" class="nav flex-column nav-pills">
@@ -50,13 +50,14 @@
             [class.disabled]="item.isDisabled"
             (click)="scrollToTop()"
           >
-            <div *ngIf="j === 0 && secondItem.icon; else simpleTitle" class="nav-icon">
-              <i [class]="secondItem.icon"></i>
-              <span>{{ secondItem.title }}</span>
+            <div class="nav-icon">
+              <ng-container *ngIf="secondItem.icon">
+                <i *ngIf="secondItem.icon.includes('bx')" [ngClass]="secondItem.icon"></i>
+                <span *ngIf="!secondItem.icon.includes('bx')" class="material-icons-round">{{ secondItem.icon }}</span>
+              </ng-container>
+              <i class="bx bxs-info-circle"></i>
+              <span>{{ secondItem.title }} </span>
             </div>
-            <ng-template #simpleTitle>
-              <span>{{ secondItem.title }}</span>
-            </ng-template>
           </a>
           <ng-template #templateChild>
             <a
@@ -68,13 +69,15 @@
               [class.disabled]="item.isDisabled"
               (click)="scrollToTop()"
             >
-              <div *ngIf="j === 0 && secondItem.icon; else simpleTitle" class="nav-icon">
-                <i [class]="secondItem.icon"></i>
-                <span>{{ secondItem.title }}</span>
+              <div class="nav-icon">
+                <ng-container *ngIf="secondItem.icon">
+                  <i *ngIf="secondItem.icon.includes('bx')" [ngClass]="secondItem.icon"></i>
+                  <span *ngIf="!secondItem.icon.includes('bx')" class="material-icons-round">{{
+                    secondItem.icon
+                  }}</span>
+                </ng-container>
+                <span>{{ secondItem.title }} </span>
               </div>
-              <ng-template #simpleTitle>
-                <span>{{ secondItem.title }}</span>
-              </ng-template>
             </a>
           </ng-template>
           <ul *ngFor="let thirdItem of secondItem.children; index as z" class="nav flex-column nav-pills">
@@ -88,13 +91,15 @@
                 [class.disabled]="item.isDisabled"
                 (click)="scrollToTop()"
               >
-                <div *ngIf="z === 0 && thirdItem.icon; else simpleTitle" class="nav-icon">
-                  <i [class]="thirdItem.icon"></i>
+                <div class="nav-icon">
+                  <ng-container *ngIf="thirdItem.icon">
+                    <i *ngIf="thirdItem.icon.includes('bx')" [ngClass]="thirdItem.icon"></i>
+                    <span *ngIf="!thirdItem.icon.includes('bx')" class="material-icons-round">{{
+                      thirdItem.icon
+                    }}</span>
+                  </ng-container>
                   <span>{{ thirdItem.title }}</span>
                 </div>
-                <ng-template #simpleTitle>
-                  <span>{{ thirdItem.title }}</span>
-                </ng-template>
               </a>
             </li>
           </ul>

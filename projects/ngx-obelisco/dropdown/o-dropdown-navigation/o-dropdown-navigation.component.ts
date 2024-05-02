@@ -17,6 +17,7 @@ export class ODropdownNavigationComponent implements OnChanges {
   @Input() public isPositionRight: boolean = false;
   @Input() public isBordered: boolean = true;
   @Input() public customClasses: string = '';
+  @Input() public ariaLabel!: string;
 
   hasChildren: boolean = false;
 

@@ -235,16 +235,16 @@ export const TABLE_EXAMPLE_NORMAL_TS = `
 
     iconsHtml = \`
       <div class="actions-table">
-        <button class="btn button-actions-table">
+        <button class="btn button-actions-table" aria-label="Editar">
           <span class="material-icons-round">edit</span>
         </button>
-        <button class="btn button-actions-table">
+        <button class="btn button-actions-table" aria-label="Visualizar">
           <span class="material-icons-round">visibility</span>
         </button>
-        <button class="btn button-actions-table">
+        <button class="btn button-actions-table" aria-label="Descargar">
           <span class="material-icons-round">file_download</span>
         </button>
-        <button class="btn button-actions-table">
+        <button class="btn button-actions-table" aria-label="Eliminar">
           <span class="material-icons-round">delete</span>
         </button>
       </div>\`;
@@ -319,16 +319,16 @@ export class ExampleComponent {
 
   iconsHtml = \`
     <div class="actions-table">
-      <button class="btn button-actions-table">
+      <button class="btn button-actions-table" aria-label="Editar">
         <span class="material-icons-round">edit</span>
       </button>
-      <button class="btn button-actions-table">
+      <button class="btn button-actions-table" aria-label="Visualizar">
         <span class="material-icons-round">visibility</span>
       </button>
-      <button class="btn button-actions-table">
+      <button class="btn button-actions-table" aria-label="Descargar">
         <span class="material-icons-round">file_download</span>
       </button>
-      <button class="btn button-actions-table">
+      <button class="btn button-actions-table" aria-label="Eliminar">
         <span class="material-icons-round">delete</span>
       </button>
     </div>\`;

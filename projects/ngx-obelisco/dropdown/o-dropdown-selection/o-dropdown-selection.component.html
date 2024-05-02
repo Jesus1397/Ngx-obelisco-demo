@@ -9,7 +9,7 @@
     [attr.data-target]="'#' + dataTarget"
     [attr.aria-controls]="dataTarget"
     aria-expanded="false"
-    aria-label="Toggle"
+    [attr.aria-label]="ariaLabel"
     [ngClass]="customClasses"
   >
     <ng-container *ngIf="iconLeft">

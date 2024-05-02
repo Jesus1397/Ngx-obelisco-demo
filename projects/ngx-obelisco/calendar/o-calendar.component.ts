@@ -1,11 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActiveDay, CalendarDate } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'o-calendar',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './o-calendar.component.html',
   styleUrls: ['./o-calendar.component.scss']
 })

@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { OBreadcrumbComponent } from 'ngx-obelisco-example/breadcrumb';
+import { OBreadcrumbModule } from 'ngx-obelisco-example/breadcrumb';
 import { ONavModule } from 'ngx-obelisco-example/nav';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 
 import { BreadcrumbRoutingModule } from './breadcrumb-routing.module';
 import { BreadcrumbComponent } from './breadcrumb.component';
@@ -20,10 +20,10 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     BreadcrumbRoutingModule,
     ONavModule,
     ViewerComponent,
-    OBreadcrumbComponent,
+    OBreadcrumbModule,
     ClipboardDirective,
     PrismDirective,
-    OTableComponent,
+    OTableModule,
     TabsLinkComponent
   ]
 })

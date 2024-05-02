@@ -8,9 +8,7 @@ import { StepService } from 'ngx-obelisco-example/core/services';
 @Component({
   selector: 'o-steps-form',
   templateUrl: './o-steps-form.component.html',
-  styleUrls: ['./o-steps-form.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+  styleUrls: ['./o-steps-form.component.scss']
 })
 export class OStepsFormComponent extends AbstractStep implements OnInit, OnDestroy {
   public actualStep!: StepForm;

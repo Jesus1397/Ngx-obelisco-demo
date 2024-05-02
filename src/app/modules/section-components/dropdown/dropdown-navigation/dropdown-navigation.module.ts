@@ -9,7 +9,7 @@ import { DropdownNavigationApiComponent } from './pages/dropdown-navigation-api/
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ODropdownModule } from 'ngx-obelisco-example/dropdown';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 
 @NgModule({
   declarations: [DropdownNavigationComponent, DropdownNavigationExamplesComponent, DropdownNavigationApiComponent],
@@ -20,7 +20,7 @@ import { OTableComponent } from 'ngx-obelisco-example/table';
     ViewerComponent,
     ODropdownModule,
     PrismDirective,
-    OTableComponent
+    OTableModule
   ]
 })
 export class DropdownNavigationModule {}

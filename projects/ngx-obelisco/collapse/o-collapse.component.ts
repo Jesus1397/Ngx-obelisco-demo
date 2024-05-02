@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
+import { Component, ContentChild, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { CollapseInputs, Collapse, CollapseItems } from 'ngx-obelisco-example/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
   selector: 'o-collapse',
@@ -23,6 +24,8 @@ export class OCollapseComponent implements OnChanges {
   isCollapsed = true;
 
   @Output() public selectedItemChange: EventEmitter<CollapseInputs> = new EventEmitter<CollapseInputs>();
+
+  @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 
   isTextArray(): boolean {
     return Array.isArray(this.content);

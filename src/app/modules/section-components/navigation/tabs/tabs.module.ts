@@ -6,7 +6,7 @@ import { TabsComponent } from './tabs.component';
 import { ONavModule } from 'ngx-obelisco-example/nav';
 import { NavigationTabsApiComponent } from './pages/navigation-tabs-api/navigation-tabs-api.component';
 import { NavigationTabsExamplesComponent } from './pages/navigation-tabs-examples/navigation-tabs-examples.component';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
@@ -28,7 +28,7 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     CommonModule,
     TabsRoutingModule,
     ONavModule,
-    OTableComponent,
+    OTableModule,
     ViewerComponent,
     ClipboardDirective,
     PrismDirective,

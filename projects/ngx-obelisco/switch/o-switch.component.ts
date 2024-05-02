@@ -1,10 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'o-switch',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './o-switch.component.html',
   styleUrls: ['./o-switch.component.scss']
 })
@@ -34,12 +31,10 @@ export class OSwitchComponent {
 
   public onSwitchChange(): void {
     if (this.isFixed) {
-      console.log('Is Fixed');
       return;
     }
 
     this.switchValue = !this.switchValue;
     this.switchValueChange.emit(this.switchValue);
-    console.log(`El switch cambió a: ${this.switchValue}`);
   }
 }

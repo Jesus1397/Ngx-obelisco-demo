@@ -69,7 +69,7 @@
 <ng-template #accountButtonMobile>
   <div class="navbar-user-mobile" *ngIf="routesAccount">
     <nav>
-      <h3 class="navbar-user-mobile-title">{{ routesAccount.title }}</h3>
+      <p class="navbar-user-mobile-title">{{ routesAccount.title }}</p>
       <ul class="nav flex-column nav-pills nav-user">
         <ng-container *ngFor="let accountChild of routesAccount.children">
           <li class="nav-item">
@@ -104,7 +104,7 @@
 <ng-template #sections>
   <div class="navbar-sections" *ngIf="routes">
     <nav>
-      <h3 class="navbar-sections-title">Secciones</h3>
+      <p class="navbar-sections-title">Secciones</p>
       <ul class="nav nav-pills nav-sections">
         <ng-container *ngFor="let routeItem of routes">
           <li class="dropdown" *ngIf="routeItem.children">
@@ -239,7 +239,7 @@
 <ng-template #sectionsExtended>
   <div class="navbar-content-extended" *ngIf="routesExtended">
     <nav>
-      <h3 class="navbar-sections-title">Secciones</h3>
+      <p class="navbar-sections-title">Secciones</p>
       <ul class="nav nav-pills nav-sections">
         <ng-container *ngFor="let extendedItem of routesExtended; let i = index">
           <li class="nav-item" *ngIf="!extendedItem.children">

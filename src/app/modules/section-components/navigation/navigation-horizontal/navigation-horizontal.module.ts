@@ -6,7 +6,7 @@ import { NavigationHorizontalComponent } from './navigation-horizontal.component
 import { NavigationHorizontalApiComponent } from './pages/navigation-horizontal-api/navigation-horizontal-api.component';
 import { NavigationHorizontalExamplesComponent } from './pages/navigation-horizontal-examples/navigation-horizontal-examples.component';
 import { ONavModule } from 'ngx-obelisco-example/nav';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
@@ -22,7 +22,7 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     CommonModule,
     NavigationHorizontalRoutingModule,
     ONavModule,
-    OTableComponent,
+    OTableModule,
     ViewerComponent,
     ClipboardDirective,
     PrismDirective,

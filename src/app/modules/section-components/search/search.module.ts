@@ -10,7 +10,7 @@ import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
 import { ONavModule } from 'ngx-obelisco-example/nav';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 import { OSearchModule } from 'ngx-obelisco-example/search';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { OSearchModule } from 'ngx-obelisco-example/search';
     CommonModule,
     SearchRoutingModule,
     ONavModule,
-    OTableComponent,
+    OTableModule,
     ViewerComponent,
     PrismDirective,
     ClipboardDirective,

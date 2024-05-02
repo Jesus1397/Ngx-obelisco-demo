@@ -12,21 +12,53 @@
     <h4>OCustomContentDirective</h4>
     <p>Directiva estructural: <strong>*oCustomContent</strong></p>
     <p>
-      La directiva OCustomContentDirective permite definir contenido personalizado de manera dinámica dentro de los
+      La directiva <code>OCustomContent</code> permite definir contenido personalizado de manera dinámica dentro de los
       componentes:
     </p>
+
+    <br />
+
+    <h4>Uso:</h4>
+    <p>Agrega el atributo <code>OCustomContent</code> a la etiqueta HTML. Por ejemplo:</p>
+
+    <pre class="code">
+      <code appPrism language="html">{{customExample}}</code>
+    </pre>
+
+    <br />
+
+    <h4>Reglas y Consideraciones:</h4>
     <ul>
-      <li>Banner</li>
-      <li>Bloque de trámite</li>
-      <li>Colapsable</li>
-      <li>Destacado</li>
-      <li>Footer</li>
-      <li>Header</li>
-      <li>Mapa</li>
-      <li>Mensaje de estado</li>
-      <li>Modal</li>
-      <li>Panel</li>
-      <li>Tarjetas</li>
+      <li>
+        La directiva <code>OCustomContent</code> debe usarse en elementos que admitan contenido dinámico, como
+        <code>&lt;div&gt;</code>, <code>&lt;ng-container&gt;</code>, etc.
+      </li>
+      <li>
+        La directiva debe estar disponible en el módulo de Angular donde se utilizará. Asegúrate de importar y declarar
+        la directiva en el módulo correspondiente.
+      </li>
+    </ul>
+
+    <br />
+
+    <h4>Componentes con Directiva OCustomContent Integrada:</h4>
+    <ul class="d-flex flex-column flex-md-row">
+      <div>
+        <li>Alerta</li>
+        <li>Banner</li>
+        <li>Bloque de trámite</li>
+        <li>Colapsable</li>
+        <li>Destacado</li>
+        <li>Footer</li>
+      </div>
+      <div class="ml-md-5 ml-0">
+        <li>Header</li>
+        <li>Mapa</li>
+        <li>Mensaje de estado</li>
+        <li>Modal</li>
+        <li>Panel</li>
+        <li>Tarjetas</li>
+      </div>
     </ul>
   </div>
 </section>

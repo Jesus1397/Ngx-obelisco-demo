@@ -78,7 +78,7 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Banner',
-    image: { src: 'assets/component-cards/' },
+    image: { src: 'assets/component-cards/banner.jpg' },
     route: '/components/banner'
   },
   {
@@ -88,7 +88,7 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Botón',
-    image: { src: 'assets/component-cards/Switch.svg' },
+    image: { src: 'assets/component-cards/boton.jpg' },
     route: '/components/button'
   },
   {
@@ -98,7 +98,7 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Mapa',
-    image: { src: 'assets/component-cards/' },
+    image: { src: 'assets/component-cards/mapa.jpg' },
     route: '/components/map'
   },
   {
@@ -182,7 +182,7 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Header',
-    image: { src: 'assets/component-cards/' },
+    image: { src: 'assets/component-cards/header.jpg' },
     route: '/components/navbar'
   },
   {
@@ -208,12 +208,12 @@ export const COMPONENTS_NAVIGATION = [
   },
   {
     title: 'Bloque de trámite',
-    image: { src: 'assets/component-cards/' },
+    image: { src: 'assets/component-cards/bloque.jpg' },
     route: '/components/block'
   },
   {
     title: 'Buscador',
-    image: { src: 'assets/component-cards/' },
+    image: { src: 'assets/component-cards/buscador.jpg' },
     route: '/components/search'
   },
   {

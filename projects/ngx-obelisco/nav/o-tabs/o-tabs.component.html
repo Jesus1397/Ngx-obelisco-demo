@@ -1,4 +1,9 @@
-<nav [class.tabs-slider]="true" [class.px-0]="!isSlidered" [ngClass]="customClasses">
+<nav
+  [class.tabs-slider]="true"
+  [class.px-0]="!isSlidered"
+  [ngClass]="customClasses"
+  aria-label="Navegación por pestañas"
+>
   <ul
     #tabsList
     class="nav nav-pills tabs"

@@ -8,7 +8,7 @@ import { DropdownSelectionApiComponent } from './pages/dropdown-selection-api/dr
 import { DropdownSelectionExamplesComponent } from './pages/dropdown-selection-examples/dropdown-selection-examples.component';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ODropdownModule } from 'ngx-obelisco-example/dropdown';
-import { OTableComponent } from 'ngx-obelisco-example/table';
+import { OTableModule } from 'ngx-obelisco-example/table';
 import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive'
     TabsLinkComponent,
     ViewerComponent,
     ODropdownModule,
-    OTableComponent,
+    OTableModule,
     PrismDirective
   ]
 })
