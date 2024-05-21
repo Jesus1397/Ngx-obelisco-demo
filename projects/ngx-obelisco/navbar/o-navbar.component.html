@@ -5,8 +5,14 @@
   <div class="container header-container">
     <ng-container *ngIf="!oCustomContent">
       <!-- Logo ↓ -->
-      <a class="navbar-brand" [routerLink]="routeLogo">
-        <img class="header-logo" [src]="src" [alt]="alt" />
+      <a class="navbar-brand" [routerLink]="logo.route" *ngIf="logo">
+        <img
+          [ngClass]="logo.customClasses ? logo.customClasses : 'header-logo'"
+          [src]="logo.src"
+          [alt]="logo.alt"
+          [width]="logo.width"
+          [height]="logo.height"
+        />
       </a>
       <!-- Login button Mobile ↓ -->
       <ng-container *ngTemplateOutlet="loginButton; context: loginClassMobile"></ng-container>

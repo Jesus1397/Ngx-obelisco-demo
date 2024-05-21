@@ -6,9 +6,9 @@ export type StatusMessageTypes = Types | 'institutional';
 
 export type SpinnerTypes = Types | 'secondary' | 'dark' | 'light';
 
-export type ProgressBarTypes = 'info' | 'success';
+export type BadgeTypes = Types | 'secondary';
 
-export type TagTypes = 'primary' | 'success' | 'danger' | 'info' | 'secondary';
+export type ProgressBarTypes = 'info' | 'success';
 
 export type ButtonTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'link';
 
@@ -65,7 +65,7 @@ export enum EnumProgressBarTypes {
   Success = 'success'
 }
 
-export enum EnumTagTypes {
+export enum EnumBadgeTypes {
   Primary = 'primary',
   Success = 'success',
   Danger = 'danger',

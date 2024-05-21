@@ -11,6 +11,7 @@ export class TooltipDirective implements OnInit, OnDestroy {
   @Input() public trigger: 'mouseenter' | 'click' = 'mouseenter';
 
   private tippyInstance: any;
+  private isTooltipVisible: boolean = false;
 
   constructor(private elementRef: ElementRef) {}
 
@@ -57,5 +58,24 @@ export class TooltipDirective implements OnInit, OnDestroy {
       theme: 'custom-theme',
       trigger: this.trigger
     });
+  }
+
+  @HostListener('focusout')
+  closeTooltip(): void {
+    if (this.tippyInstance) {
+      this.tippyInstance.hide();
+    }
+  }
+
+  @HostListener('keydown.enter')
+  toggleTooltip(): void {
+    if (this.tippyInstance) {
+      if (this.isTooltipVisible) {
+        this.tippyInstance.hide();
+      } else {
+        this.tippyInstance.show();
+      }
+      this.isTooltipVisible = !this.isTooltipVisible;
+    }
   }
 }

@@ -140,19 +140,19 @@ export const BUTTON_TYPES = `
 
 /* BUTTON-EXAMPLES */
 export const BUTTON_EXAMPLE_TYPES = `
-  <o-button (click)="alert()"></o-button>
-  <o-button type="secondary" (click)="alert()"></o-button>
-  <o-button type="success" (click)="alert()"></o-button>
-  <o-button type="danger" (click)="alert()"></o-button>
-  <o-button type="link" (click)="alert()"></o-button>
-  <o-button text="Enlace" link="https://www.google.com/"></o-button>
+  <o-button text="Botón" (click)="alert()"></o-button>
+  <o-button text="Botón" type="secondary" (click)="alert()"></o-button>
+  <o-button text="Botón" type="success" (click)="alert()"></o-button>
+  <o-button text="Botón" type="danger" (click)="alert()"></o-button>
+  <o-button text="Botón" type="link" (click)="alert()"></o-button>
+  <o-button text="Botón" text="Enlace" link="https://www.google.com/"></o-button>
 
-  <o-button [isOutline]="true" (click)="alert()"></o-button>
-  <o-button type="secondary" [isOutline]="true" (click)="alert()"></o-button>
-  <o-button type="success" [isOutline]="true" (click)="alert()"></o-button>
-  <o-button type="danger" [isOutline]="true" (click)="alert()"></o-button>
-  <o-button type="link" [isOutline]="true" (click)="alert()"></o-button>
-  <o-button text="Enlace" [isOutline]="true" link="https://www.google.com/"></o-button>
+  <o-button text="Botón" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button text="Botón" type="secondary" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button text="Botón" type="success" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button text="Botón" type="danger" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button text="Botón" type="link" [isOutline]="true" (click)="alert()"></o-button>
+  <o-button text="Botón" text="Enlace" [isOutline]="true" link="https://www.google.com/"></o-button>
 `;
 export const BUTTON_EXAMPLE_TYPES_TS = `
 import { Component } from '@angular/core';
@@ -169,9 +169,9 @@ export class ExampleComponent {
 }`;
 
 export const BUTTON_EXAMPLE_SIZES = `
-  <o-button size="sm"></o-button>
-  <o-button></o-button>
-  <o-button size="lg"></o-button>
+  <o-button text="Botón" size="sm"></o-button>
+  <o-button text="Botón"></o-button>
+  <o-button text="Botón" size="lg"></o-button>
 `;
 
 export const BUTTON_EXAMPLE_BLOCK = `

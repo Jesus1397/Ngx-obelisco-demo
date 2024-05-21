@@ -36,7 +36,9 @@ export enum ComponentEnum {
   block = 'Bloque de trámite',
   search = 'Buscador',
   customContent = 'Contenido personalizable',
-  defaultImage = 'Imagen por defecto'
+  defaultImage = 'Imagen por defecto',
+  badge = 'Etiqueta',
+  calendar = 'Calendario'
   // datePicker = 'Datepicker'
 }
 
@@ -220,6 +222,11 @@ export const COMPONENTS_NAVIGATION = [
     title: 'Calendario',
     image: { src: 'assets/component-cards/Calendar.svg' },
     route: '/components/calendar'
+  },
+  {
+    title: 'Etiqueta',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/badge'
   }
   // {
   //   title: 'Datepicker',

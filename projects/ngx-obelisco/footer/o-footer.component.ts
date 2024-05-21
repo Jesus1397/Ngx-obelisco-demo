@@ -1,6 +1,6 @@
 import { Component, ContentChild, Input } from '@angular/core';
 import { CustomContent, Link, Network, Phone } from 'ngx-obelisco-example/core/models';
-import { ODefaultImageDirective, OCustomContentDirective } from 'ngx-obelisco-example/directives';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 const PHONE_LIST = [
   {

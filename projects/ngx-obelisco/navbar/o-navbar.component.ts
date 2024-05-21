@@ -1,4 +1,10 @@
-import { NavbarRoute, NavbarRouteAccount, NavbarRouteLogin, SearchbarItem } from 'ngx-obelisco-example/core/models';
+import {
+  MediaHeader,
+  NavbarRoute,
+  NavbarRouteAccount,
+  NavbarRouteLogin,
+  SearchbarItem
+} from 'ngx-obelisco-example/core/models';
 import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 import {
   AfterViewInit,
@@ -22,9 +28,11 @@ import { Router } from '@angular/router';
 export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   // Navbar
   @Input() public id: string = 'ONavbar';
-  @Input() public routeLogo: string = '/';
-  @Input() public src: string = 'https://buenosaires.gob.ar/assets/img/logos/LogoBA.svg';
-  @Input() public alt: string = 'Gobierno de la Ciudad de Buenos Aires - Inicio';
+  @Input() public logo: MediaHeader = {
+    route: '/',
+    src: 'https://buenosaires.gob.ar/assets/img/logos/LogoBA.svg',
+    alt: 'Gobierno de la Ciudad de Buenos Aires - Inicio'
+  };
   @Input() public isRouteExact: boolean = false;
   @Input() public routes!: NavbarRoute[];
   @Input() public routesExtended!: NavbarRoute[];

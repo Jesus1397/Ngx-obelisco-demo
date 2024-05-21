@@ -8,7 +8,7 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
-import { MediaImage, Tags } from 'ngx-obelisco-example/core/models';
+import { MediaImage, CardBadge } from 'ngx-obelisco-example/core/models';
 import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
@@ -24,7 +24,7 @@ export class OCardComponent implements AfterViewInit, AfterContentInit {
   @Input() public title!: string;
   @Input() public description!: string;
   @Input() public headline?: string;
-  @Input() public tags?: Tags[];
+  @Input() public cardBadges?: CardBadge[];
   @Input() public link!: string;
   @Input() public route!: string;
   @Input() public image?: MediaImage;

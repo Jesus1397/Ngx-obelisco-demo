@@ -1,8 +1,8 @@
 {
   "name": "ngx-obelisco-example",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Componentes funcionales y reutilizables para Angular.",
-  "author": "User example xd",
+  "author": "Dirección General de Experiencia Digital",
   "homepage": "https://gcba.github.io/ngx-obelisco/",
   "peerDependencies": {
     "@angular/common": "^14.0.7",
@@ -11,8 +11,7 @@
     "@ngneat/helipopper": "^5.1.5"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@gcba/obelisco": "latest"
+    "tslib": "^2.3.0"
   },
   "repository": {
     "type": "git",

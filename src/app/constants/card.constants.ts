@@ -64,35 +64,31 @@ export const CARD_DATA_SOURCE: DataSource[] = [
     description: { data: 'Establece el titular del evento o componente.', customClasses: '' }
   },
   {
-    name: { data: '@Input() <br/> tags: Tags[]', customClasses: '' },
+    name: { data: '@Input() <br/> cardBadges: CardBadge[]', customClasses: '' },
     description: {
-      data: 'Define las etiquetas del componente. Debe ser un arreglo de objetos Tags. Por defecto type es "secondary".',
+      data: 'Define las etiquetas del componente. Debe ser un arreglo de objetos CardBadge. Por defecto type es "secondary".',
       customClasses: ''
     }
   }
 ];
 
-export const CARD_TAGS_INTERFACE = `
-  interface Tags {
-    name: string;
-    type?: TagTypes;
+export const CARD_BADGES_INTERFACE = `
+  interface CardBadge {
+    content: string;
+    type?: BadgeTypes;
   }
 `;
 
-export const CARD_TAGS_DATA_SOURCE: DataSource[] = [
+export const CARD_BADGE_DATA_SOURCE: DataSource[] = [
   {
-    name: { data: 'name: string', customClasses: '' },
+    name: { data: 'content: string', customClasses: '' },
     description: { data: 'Se utiliza para definir el texto de la etiqueta.', customClasses: '' }
   },
   {
-    name: { data: 'type: TagTypes', customClasses: '' },
+    name: { data: 'type: BadgeTypes', customClasses: '' },
     description: { data: 'Se utiliza para definir el tipo de etiqueta.', customClasses: '' }
   }
 ];
-
-export const TAG_TYPES_INTERFACE = `
-  type TagTypes = 'primary' | 'success' | 'danger' | 'info' | 'secondary';
-`;
 
 export const MEDIAIMAGE_CARDS_INTERFACE = `
   interface Media {
@@ -239,7 +235,7 @@ export const CARD_NEWS_HTML = `
       src: '/assets/cards/img-top.jpg',
       alt: 'descripción de imagen'
     }"
-    [tags]="[{name: 'etiqueta 1'}, {name: 'etiqueta 2'}]"
+    [cardBadges]="[{content: 'etiqueta 1'}, {content: 'etiqueta 2'}]"
     [isBordered]="true"
   >
     <small #info>Fecha de publicación</small>
@@ -252,7 +248,7 @@ export const CARD_NEWS_HTML = `
       src: '/assets/cards/img-top.jpg',
       alt: 'descripción de imagen'
     }"
-    [tags]="[{name: 'etiqueta 1'}, {name: 'etiqueta 2'}]"
+    [cardBadges]="[{content: 'etiqueta 1'}, {content: 'etiqueta 2'}]"
     [isTitleTruncate]="true"
     [isBordered]="true"
   >

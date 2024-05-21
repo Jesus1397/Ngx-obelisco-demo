@@ -32,6 +32,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { CustomContentComponent } from './custom-content/custom-content.component';
 import { DefaultImageComponent } from './default-image/default-image.component';
 import { AlertComponent } from './alert/alert.component';
+import { BadgeComponent } from './badge/badge.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,11 @@ const routes: Routes = [
     path: 'breadcrumb',
     component: BreadcrumbComponent,
     loadChildren: () => import('./breadcrumb/breadcrumb.module').then((m) => m.BreadcrumbModule)
+  },
+  {
+    path: 'badge',
+    component: BadgeComponent,
+    loadChildren: () => import('./badge/badge.module').then((m) => m.BadgeModule)
   },
   {
     path: 'footer',

@@ -1,0 +1,25 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+
+<ng-container *ngIf="!link && !route; else badgeLink">
+  <span class="badge" [ngClass]="'badge-' + (type ? type : 'secondary') + (customClasses ? ' ' + customClasses : '')">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </span>
+</ng-container>
+<ng-template #badgeLink>
+  <a
+    *ngIf="route"
+    [routerLink]="[route]"
+    class="badge"
+    [ngClass]="'badge-' + (type ? type : 'secondary') + (customClasses ? ' ' + customClasses : '')"
+  >
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </a>
+  <a
+    *ngIf="link"
+    [attr.href]="[link]"
+    class="badge"
+    [ngClass]="'badge-' + (type ? type : 'secondary') + (customClasses ? ' ' + customClasses : '')"
+  >
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </a>
+</ng-template>

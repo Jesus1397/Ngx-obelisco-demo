@@ -24,3 +24,10 @@ export interface MediaPanel extends Media {
   size?: MediaSizes;
   alt?: string;
 }
+export interface MediaHeader extends Media {
+  route?: string;
+  alt?: string;
+  width?: string;
+  height?: string;
+  customClasses?: string;
+}
