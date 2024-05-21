@@ -5,10 +5,11 @@ import { RouterModule } from '@angular/router';
 import { ODefaultImageDirective } from 'ngx-obelisco-example/directives';
 
 import { OCardComponent } from './o-card/o-card.component';
+import { OBadgeModule } from 'ngx-obelisco-example/badge';
 
 @NgModule({
   declarations: [OCardComponent],
-  imports: [CommonModule, RouterModule, ODefaultImageDirective],
+  imports: [CommonModule, RouterModule, ODefaultImageDirective, OBadgeModule],
   exports: [OCardComponent]
 })
 export class OCardModule {}

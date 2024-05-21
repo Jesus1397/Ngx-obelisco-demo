@@ -76,7 +76,7 @@
   <ng-container *ngIf="icon || spinner; else textDefault">
     {{ text }}
   </ng-container>
-  <ng-template #textDefault> {{ text ? text : 'Botón' }} </ng-template>
+  <ng-template #textDefault> {{ text }} </ng-template>
 </ng-template>
 
 <ng-template #buttonContent>

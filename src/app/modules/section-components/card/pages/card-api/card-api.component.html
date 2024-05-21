@@ -24,16 +24,21 @@
   <hr />
 
   <div class="section-type">
-    <h4>Tags</h4>
-    <p>Permite establecer los valores de la propiedad <strong>tags</strong>.</p>
+    <h4>CardBadge</h4>
+    <p>Permite establecer los valores de la propiedad <strong>cardBadges</strong>.</p>
 
     <div class="section-interface">
       <pre class="code import">
-        <code appPrism language="javascript">{{ cardTagsInterface }}</code>
+        <code appPrism language="javascript">{{ cardBadgesInterface }}</code>
       </pre>
       <div class="section-properties">
         <h5>Propiedades</h5>
-        <o-table [columns]="columns" [dataSource]="dataSourceCardTags" [isStriped]="true" [isBordered]="true"></o-table>
+        <o-table
+          [columns]="columns"
+          [dataSource]="dataSourceCardBadges"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
       </div>
     </div>
   </div>
@@ -41,12 +46,12 @@
   <br />
 
   <div class="section-type">
-    <h4>TagTypes</h4>
+    <h4>BadgeTypes</h4>
     <p>Permite establecer los valores de la propiedad <strong>type</strong>.</p>
 
     <div class="section-interface">
       <pre class="code import">
-        <code appPrism>{{ tagTypesInterface }}</code>
+        <code appPrism>{{ badgeTypesInterface }}</code>
       </pre>
     </div>
   </div>

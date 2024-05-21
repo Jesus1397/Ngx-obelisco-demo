@@ -39,11 +39,9 @@
       <ng-container *ngIf="headline">
         <p class="card-headline">{{ headline }}</p>
       </ng-container>
-      <ng-container *ngIf="tags">
+      <ng-container *ngIf="cardBadges">
         <div class="card-badges">
-          <span *ngFor="let tag of tags" class="badge badge-{{ !tag.type ? 'secondary' : tag.type }}">{{
-            tag.name
-          }}</span>
+          <o-badge *ngFor="let cardBadge of cardBadges" [type]="cardBadge.type">{{ cardBadge.content }}</o-badge>
         </div>
       </ng-container>
       <h3 *ngIf="title" class="card-title">

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { COLUMNS } from 'src/app/constants/components.constants';
 import {
+  MEDIA_HEADER_DATA_SOURCE,
+  MEDIA_HEADER_INTERFACE,
   NAVBAR_DATA_SOURCE,
   NAVBAR_ROUTE_ACCOUNT_DATA_SOURCE,
   NAVBAR_ROUTE_ACCOUNT_INTERFACE,
@@ -36,4 +38,7 @@ export class NavbarApiComponent {
   public navbarRouteAccountDataSource = NAVBAR_ROUTE_ACCOUNT_DATA_SOURCE;
   public navbarRouteAccountItemDataSource = NAVBAR_ROUTE_ACCOUNT_ITEM_DATA_SOURCE;
   public searchbarItemDataSource = SEARCHBAR_ITEM_DATA_SOURCE;
+
+  public logoInterface = MEDIA_HEADER_INTERFACE;
+  public logoDataSource = MEDIA_HEADER_DATA_SOURCE;
 }

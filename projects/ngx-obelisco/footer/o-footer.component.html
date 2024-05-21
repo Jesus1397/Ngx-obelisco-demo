@@ -99,7 +99,6 @@
       </section>
     </div>
   </ng-container>
-  <div class="container" *ngIf="oCustomContent">
-    <ng-container [ngTemplateOutlet]="oCustomContent.template"></ng-container>
-  </div>
+
+  <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
 </footer>

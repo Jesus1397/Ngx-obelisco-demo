@@ -9,7 +9,7 @@ import { ButtonTypes, Sizes } from 'ngx-obelisco-example/core/models';
 export class OButtonComponent {
   @Input() public type: ButtonTypes = 'primary';
   @Input() public isOutline?: boolean = false;
-  @Input() public text?: string;
+  @Input() public text: string = '';
   @Input() public size?: Sizes = 'md';
   @Input() public isExpandable: boolean = false;
   @Input() public icon?: string;

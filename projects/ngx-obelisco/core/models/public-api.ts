@@ -9,7 +9,7 @@ export * from './panel.models';
 export * from './sizes.models';
 export * from './step-form.models';
 export * from './table.models';
-export * from './tag.models';
+export * from './card.models';
 export * from './tooltip.models';
 export * from './dropdown.models';
 export * from './navbar.models';

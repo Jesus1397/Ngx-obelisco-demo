@@ -20,23 +20,9 @@ export const NAVBAR_DATA_SOURCE: DataSource[] = [
     }
   },
   {
-    name: { data: '@Input() <br /> routeLogo: string', customClasses: '' },
+    name: { data: '@Input() <br /> logo: MediaHeader', customClasses: '' },
     description: {
-      data: 'Se utiliza para especificar la ruta de la imagen del logotipo que se mostrará en la barra de navegación.',
-      customClasses: ''
-    }
-  },
-  {
-    name: { data: '@Input() <br /> src: string', customClasses: '' },
-    description: {
-      data: 'Se utiliza para definir la fuente de la imagen del logotipo que se mostrará en la barra de navegación.',
-      customClasses: ''
-    }
-  },
-  {
-    name: { data: '@Input() <br /> alt: string', customClasses: '' },
-    description: {
-      data: 'Se utiliza para proporcionar un texto alternativo para la imagen del logotipo, útil para accesibilidad y SEO.',
+      data: 'Se utiliza para especificar la imagen del logotipo que se mostrará en la barra de navegación.',
       customClasses: ''
     }
   },
@@ -114,6 +100,19 @@ export const NAVBAR_ROUTE_BASE_INTERFACE = `
     link?: string;
   }
 `;
+export const MEDIA_HEADER_INTERFACE = `
+  interface Media {
+    src: string;
+  }
+
+  interface MediaHeader extends Media {
+    route?: string;
+    alt?: string;
+    width?: string;
+    height?: string;
+    customClasses?: string;
+  }
+`;
 
 export const NAVBAR_ROUTE_INTERFACE = `
   interface NavbarRoute extends NavbarRouteBase {
@@ -146,6 +145,51 @@ export const NAVBAR_SEARCHITEM_INTERFACE = `
     route: string;
   }
 `;
+
+export const MEDIA_HEADER_DATA_SOURCE: DataSource[] = [
+  {
+    name: { data: '@Input() <br /> route: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para especificar la ruta de la imagen del logotipo que se mostrará en la barra de navegación.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: '@Input() <br /> src: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir la fuente de la imagen del logotipo que se mostrará en la barra de navegación.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: '@Input() <br /> alt: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para proporcionar un texto alternativo para la imagen del logotipo, útil para accesibilidad y SEO.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: '@Input() <br /> width: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el ancho de la imagen del logotipo.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: '@Input() <br /> height: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir el alto de la imagen del logotipo.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas a la imagen del logotipo.',
+      customClasses: ''
+    }
+  }
+];
 
 export const NAVBAR_ROUTE_BASE_DATA_SOURCE: DataSource[] = [
   {

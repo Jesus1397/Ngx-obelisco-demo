@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import {
   CARD_DATA_SOURCE,
-  CARD_TAGS_DATA_SOURCE,
-  CARD_TAGS_INTERFACE,
+  CARD_BADGE_DATA_SOURCE,
+  CARD_BADGES_INTERFACE,
   MEDIAIMAGE_CARDS_DATA_SOURCE,
-  MEDIAIMAGE_CARDS_INTERFACE,
-  TAG_TYPES_INTERFACE
+  MEDIAIMAGE_CARDS_INTERFACE
 } from 'src/app/constants/card.constants';
+import { BADGE_TYPES } from 'src/app/constants/badge.constants';
 import { COLUMNS } from 'src/app/constants/components.constants';
 
 @Component({
@@ -17,9 +17,9 @@ import { COLUMNS } from 'src/app/constants/components.constants';
 export class CardApiComponent {
   public columns = COLUMNS;
   public dataSourceCard = CARD_DATA_SOURCE;
-  public cardTagsInterface = CARD_TAGS_INTERFACE;
-  public dataSourceCardTags = CARD_TAGS_DATA_SOURCE;
-  public tagTypesInterface = TAG_TYPES_INTERFACE;
+  public cardBadgesInterface = CARD_BADGES_INTERFACE;
+  public dataSourceCardBadges = CARD_BADGE_DATA_SOURCE;
+  public badgeTypesInterface = BADGE_TYPES;
   public mediaImageInterface = MEDIAIMAGE_CARDS_INTERFACE;
   public mediaImagedataSourceInterface = MEDIAIMAGE_CARDS_DATA_SOURCE;
 }
