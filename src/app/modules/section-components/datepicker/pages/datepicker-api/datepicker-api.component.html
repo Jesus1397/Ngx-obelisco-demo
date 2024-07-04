@@ -1,25 +1,35 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Datepicker de Obelisco</h2>
-    <pre class="code import">
-        <code appPrism language="javascript" code="import { ODatepickerModule } from 'ngx-obelisco-example/datepicker';"></code>
-      </pre>
+    <h2 class="h3">Referencia de API para el componente Datepicker de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { ODatepickerModule } from 'ngx-obelisco-example/datepicker';"
+      ></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>ODatepicker</h4>
     <p>Selector: <strong>o-datepicker</strong></p>
 
     <div class="section-properties mb-5">
-      <h5>Propiedades</h5>
-      <o-table [columns]="columns" [dataSource]="datepickerDataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="datepickerDataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
     <div class="section-properties mb-5">
-      <h5>Métodos</h5>
+      <h2 class="h3">Métodos</h2>
       <o-table
+        [isScrollable]="true"
         [columns]="columns"
         [dataSource]="datepickerOutputDataSource"
         [isStriped]="true"
@@ -28,35 +38,38 @@
     </div>
   </div>
 
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
   <div class="section-type">
-    <h4>DatepickerDate</h4>
+    <h3>DatepickerDate</h3>
     <p>
       Permite establecer los valores de la propiedad <strong>minDate</strong>, <strong>maxDate</strong> y
       <strong>startDate</strong>.
     </p>
 
     <div class="section-interface mb-5">
-      <pre class="code import">
-        <code appPrism>{{ ngbdatastructDataInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js>{{ ngbdatastructDataInterface }}</code>
+      </div>
     </div>
 
-    <h4>DatePickerItem</h4>
+    <h3>DatePickerItem</h3>
     <p>Permite establecer los valores del servicio <strong>TasksService</strong>.</p>
 
     <div class="section-interface mb-5">
-      <pre class="code import">
-        <code appPrism>{{ datepickertaskInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js>{{ datepickertaskInterface }}</code>
+      </div>
     </div>
 
-    <h4>DatePickerTask</h4>
+    <h3>DatePickerTask</h3>
     <p>Permite establecer los valores de la propiedad <strong>task</strong>.</p>
 
     <div class="section-interface mb-5">
-      <pre class="code import">
-        <code appPrism>{{ taskInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js>{{ taskInterface }}</code>
+      </div>
     </div>
   </div>
 </section>

@@ -251,11 +251,13 @@ export const OTHERS_NAVIGATION = [
 export const COLUMNS = [
   {
     key: 'name',
-    value: 'Nombre'
+    value: 'Nombre',
+    customClasses: 'tb-text'
   },
   {
     key: 'description',
-    value: 'Descripción'
+    value: 'Descripción',
+    customClasses: 'tb-text'
   }
 ];
 

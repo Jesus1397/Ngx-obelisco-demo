@@ -10,16 +10,18 @@ import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 export class OCollapseComponent implements OnChanges {
   @Input() public identifier: string = 'collapse';
   @Input() public dataParent!: string;
+  @Input() public isWhite?: boolean = false;
+  @Input() public customClasses?: string;
+
+  @Input() public children?: CollapseItems[] | CollapseInputs[];
+  @Input() public customClassesContent?: string;
+  @Input() public content?: string | string[];
+  @Input() public customClassesHeader?: string;
   @Input() public icon?: string;
   @Input() public label?: string;
   @Input() public title?: string;
   @Input() public isTitleAlone?: boolean;
   @Input() public subtitle?: string;
-  @Input() public content?: string | string[];
-  @Input() public children?: CollapseItems[] | CollapseInputs[];
-  @Input() public customClassesHeader?: string;
-  @Input() public customClassesContent?: string;
-  @Input() public isWhite?: boolean = false;
 
   isCollapsed = true;
 
@@ -65,7 +67,7 @@ export class OCollapseComponent implements OnChanges {
     this.selectedItemChange.emit(child);
   }
 
-  toggleCollapse() {
+  /* toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
-  }
+  } */
 }

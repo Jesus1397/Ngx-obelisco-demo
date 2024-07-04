@@ -9,10 +9,10 @@
         [isThemeCard]="true"
       ></o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardThemeHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardThemeHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Horizontal - Con ícono">
@@ -33,10 +33,10 @@
         [isHorizontal]="true"
       ></o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardIconHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardIconHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Horizontal - Con imagen">
@@ -57,10 +57,10 @@
         [isHorizontal]="true"
       ></o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardImageHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardImageHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Horizontal - Solo texto">
@@ -79,10 +79,10 @@
         [isHorizontal]="true"
       ></o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardTextHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardTextHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Vertical - Con ícono">
@@ -98,10 +98,10 @@
       <o-card title="Título de la tarjeta" description="Descripción de la tarjeta" route="/components" icon="info">
       </o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardIconVerticalHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardIconVerticalHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Vertical - Con imagen">
@@ -115,10 +115,10 @@
       >
       </o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardImageVerticalHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardImageVerticalHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Vertical - Noticia">
@@ -128,7 +128,7 @@
         description="Descripción de la tarjeta"
         route="/components"
         [image]="imageVertical"
-        [cardBadges]="[{ content: 'etiqueta 1' }, { content: 'etiqueta 2' }]"
+        [cardBadges]="[{ text: 'Etiqueta 1' }, { text: 'Etiqueta 2' }]"
         [isBordered]="true"
       >
         <small #info>Fecha de publicación</small>
@@ -138,17 +138,17 @@
         description="Descripción de la tarjeta"
         route="/components"
         [image]="imageVertical"
-        [cardBadges]="[{ content: 'etiqueta 1' }, { content: 'etiqueta 2' }]"
+        [cardBadges]="[{ text: 'Etiqueta 1' }, { text: 'Etiqueta 2' }]"
         [isTitleTruncate]="true"
         [isBordered]="true"
       >
         <small #info>Fecha de publicación</small>
       </o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardNewsHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardNewsHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Vertical - Agenda">
@@ -162,15 +162,15 @@
         [isBordered]="true"
       >
         <div class="pt-2" #info>
-          <small><span class="material-icons-round">calendar_today</span> Lun 01/1</small>
-          <small><span class="material-icons-round">watch_later</span> 17 | 18 | 19 hs</small>
+          <small><span class="material-icons-round" aria-hidden="true">calendar_today</span> Lun 01/1</small>
+          <small><span class="material-icons-round" aria-hidden="true">watch_later</span> 17 | 18 | 19 hs</small>
         </div>
       </o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardEventHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardEventHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Disposición - Tres columnas">
@@ -208,10 +208,10 @@
         [isBordered]="true"
       ></o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardLayoutThree }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardLayoutThree }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Disposición - Dos columnas">
@@ -241,9 +241,9 @@
         [isBordered]="true"
       ></o-card>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ cardLayoutTwo }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardLayoutTwo }}</code>
+    </div>
   </app-viewer>
 </section>

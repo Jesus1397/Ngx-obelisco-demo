@@ -17,6 +17,7 @@
       <span
         *ngIf="!iconLeft.includes('bx')"
         class="material-icons-round"
+        aria-hidden="true"
         [class.btn-dropdown-icon]="isAnimatedIconLeft"
         >{{ iconLeft }}</span
       >
@@ -27,6 +28,7 @@
       <span
         *ngIf="!iconRight.includes('bx')"
         class="material-icons-round"
+        aria-hidden="true"
         [class.btn-dropdown-icon]="isAnimatedIconRight"
         >{{ iconRight }}</span
       >
@@ -117,8 +119,12 @@
 <ng-template #iconTemplate let-icon="icon" let-animated="animated">
   <ng-container *ngIf="icon">
     <i *ngIf="icon.includes('bx')" class="{{ icon }}" [class.btn-dropdown-icon]="animated"></i>
-    <span *ngIf="!icon.includes('bx')" class="material-icons-round" [class.btn-dropdown-icon]="animated">{{
-      icon
-    }}</span>
+    <span
+      *ngIf="!icon.includes('bx')"
+      class="material-icons-round"
+      aria-hidden="true"
+      [class.btn-dropdown-icon]="animated"
+      >{{ icon }}</span
+    >
   </ng-container>
 </ng-template>

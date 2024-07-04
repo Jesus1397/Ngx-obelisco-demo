@@ -9,14 +9,15 @@ import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
   styleUrls: ['./o-highlighted.component.scss']
 })
 export class OHighlightedComponent {
-  @Input() public title?: string;
-  @Input() public description?: string;
   @Input() public isBgLight?: boolean = false;
   @Input() public type?: HighlightedType = 'banner';
+  @Input() public customClasses: string = '';
+
+  @Input() public title?: string;
+  @Input() public description?: string;
   @Input() public image?: MediaImage;
   @Input() public video?: MediaVideo;
   @Input() public iframe?: MediaIframe;
-  @Input() public customClasses: string = '';
 
   @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
   @ContentChild('children', { read: ElementRef }) children: ElementRef | undefined;

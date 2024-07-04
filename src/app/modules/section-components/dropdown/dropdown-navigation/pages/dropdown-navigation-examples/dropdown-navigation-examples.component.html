@@ -26,14 +26,14 @@
         ></o-dropdown-navigation>
       </div>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">{{exampleIconsHTML}}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism>{{exampleIconsTS}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleIconsHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleIconsTS }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Disposición" [isNavCode]="true">
@@ -54,14 +54,14 @@
         [isAnimatedIconRight]="true"
       ></o-dropdown-navigation>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">{{exampleAlignHTML}}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism>{{exampleAlignTS}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleAlignHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleAlignTS }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con cascada" [isNavCode]="true">
@@ -72,13 +72,13 @@
         title="Desplegable"
       ></o-dropdown-navigation>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">{{exampleCascadeHTML}}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism>{{exampleCascadeTS}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleCascadeHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleCascadeTS }}</code>
+    </div>
   </app-viewer>
 </section>

@@ -1,6 +1,8 @@
 import { BadgeTypes } from './public-api';
 
 export interface CardBadge {
-  content: string;
+  text?: string;
   type?: BadgeTypes;
+  link?: string;
+  route?: string;
 }

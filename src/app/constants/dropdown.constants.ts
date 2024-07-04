@@ -2,34 +2,34 @@ import { DataSource, DropdownNavigationItem, DropdownSelectionItem } from 'ngx-o
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCode = (arrayName: string, array: any, interfaceName: string) => `
-  import { Component  } from '@angular/core';
-  import { ${interfaceName} } from 'ngx-obelisco-example/core/models';
+import { Component  } from '@angular/core';
+import { ${interfaceName} } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public ${arrayName}: ${interfaceName}[] = ${codeFormattingArrayList(array)}
-    ];
-  }
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  public ${arrayName}: ${interfaceName}[] = ${codeFormattingArrayList(array)}
+  ];
+}
 `;
 
 const formattedExampleTsCodeAlign = (arrayLeft: any, arrayRight: any) => `
-  import { Component  } from '@angular/core';
-  import { DropdownNavigationItem } from 'ngx-obelisco-example/core/models';
+import { Component  } from '@angular/core';
+import { DropdownNavigationItem } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public dropdownItemsLeft: DropdownNavigationItem[] = ${codeFormattingArrayList(arrayLeft)}
-    ];
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  public dropdownItemsLeft: DropdownNavigationItem[] = ${codeFormattingArrayList(arrayLeft)}
+  ];
 
-    public dropdownItemsRight: DropdownNavigationItem[] = ${codeFormattingArrayList(arrayRight)}
-    ];
-  }
+  public dropdownItemsRight: DropdownNavigationItem[] = ${codeFormattingArrayList(arrayRight)}
+  ];
+}
 `;
 
 //Routes
@@ -110,21 +110,21 @@ export const DROPDOWN_NAVIGATION_DATA_SOURCE: DataSource[] = [
 ];
 
 export const DROPDOWN_NAVIGATION_INTERFACE = `
-  interface DropdownNavigationItem {
-    id?: string;
-    text?: string;
-    textRight?: boolean;
-    iconLeft?: string;
-    iconRight?: string;
-    isAnimatedIconLeft?: boolean;
-    isAnimatedIconRight?: boolean;
-    textDanger?: boolean;
-    route?: string;
-    link?: string;
-    isDisabled?: boolean;
-    children?: DropdownNavigationItem[];
-    customClasses?: string;
-  }
+interface DropdownNavigationItem {
+  id?: string;
+  text?: string;
+  textRight?: boolean;
+  iconLeft?: string;
+  iconRight?: string;
+  isAnimatedIconLeft?: boolean;
+  isAnimatedIconRight?: boolean;
+  textDanger?: boolean;
+  route?: string;
+  link?: string;
+  isDisabled?: boolean;
+  children?: DropdownNavigationItem[];
+  customClasses?: string;
+}
 `;
 export const DROPDOWN_NAVIGATION_DATA_SOURCE_INTERFACE: DataSource[] = [
   {
@@ -237,14 +237,14 @@ export const DROPDOWN_SELECTION_DATA_SOURCE_OUTPUT: DataSource[] = [
 ];
 
 export const DROPDOWN_SELECTION_INTERFACE = `
-  interface DropdownSelectionItem {
-    id?: string;
-    title?: string;
-    name?: string;
-    value?: string;
-    isDisabled?: boolean;
-    customClasses?: string;
-  }
+interface DropdownSelectionItem {
+  id?: string;
+  title?: string;
+  name?: string;
+  value?: string;
+  isDisabled?: boolean;
+  customClasses?: string;
+}
 `;
 export const DROPDOWN_SELECTION_DATA_SOURCE_INTERFACE: DataSource[] = [
   {
@@ -390,53 +390,53 @@ export const DROPDOWN_ITEMS_WITH_SUBITEMS: DropdownNavigationItem[] = [
 
 // DROPDOWN NAVIGATITS
 export const DROPDOWN_NAVIGATION_EXAMPLE_ICONS_HTML = `
-  <o-dropdown-navigation
-    dataTarget="dropdown1"
-    [dropNavItems]="dropdownItemsIcons"
-    iconRight="expand_more"
-    title="Desplegable"
-    [isAnimatedIconRight]="true"
-  ></o-dropdown-navigation>
+<o-dropdown-navigation
+  dataTarget="dropdown1"
+  [dropNavItems]="dropdownItemsIcons"
+  iconRight="expand_more"
+  title="Desplegable"
+  [isAnimatedIconRight]="true"
+></o-dropdown-navigation>
 
-  <o-dropdown-navigation
-    dataTarget="dropdown2"
-    [dropNavItems]="dropdownItemsIcons"
-    title="Desplegable"
-    iconLeft="menu"
-  ></o-dropdown-navigation>
+<o-dropdown-navigation
+  dataTarget="dropdown2"
+  [dropNavItems]="dropdownItemsIcons"
+  title="Desplegable"
+  iconLeft="menu"
+></o-dropdown-navigation>
 
-  <o-dropdown-navigation
-    dataTarget="dropdown3"
-    [dropNavItems]="dropdownItemsIcons"
-    iconLeft="menu"
-  ></o-dropdown-navigation>
+<o-dropdown-navigation
+  dataTarget="dropdown3"
+  [dropNavItems]="dropdownItemsIcons"
+  iconLeft="menu"
+></o-dropdown-navigation>
 `;
 
 export const DROPDOWN_NAVIGATION_EXAMPLE_ALIGN_HTML = `
-  <o-dropdown-navigation
-    dataTarget="dropdownLeft"
-    [dropNavItems]="dropdownItemsLeft"
-    title="Desplegable Izq."
-    iconRight="expand_more"
-    [isAnimatedIconRight]="true"
-  ></o-dropdown-navigation>
+<o-dropdown-navigation
+  dataTarget="dropdownLeft"
+  [dropNavItems]="dropdownItemsLeft"
+  title="Desplegable Izq."
+  iconRight="expand_more"
+  [isAnimatedIconRight]="true"
+></o-dropdown-navigation>
 
-  <o-dropdown-navigation
-    dataTarget="dropdownRight"
-    [dropNavItems]="dropdownItemsRight"
-    iconLeft="expand_more"
-    title="Desplegable Der."
-    [isPositionRight]="true"
-    [isAnimatedIconRight]="true"
-  ></o-dropdown-navigation>
+<o-dropdown-navigation
+  dataTarget="dropdownRight"
+  [dropNavItems]="dropdownItemsRight"
+  iconLeft="expand_more"
+  title="Desplegable Der."
+  [isPositionRight]="true"
+  [isAnimatedIconRight]="true"
+></o-dropdown-navigation>
 `;
 
 export const DROPDOWN_NAVIGATION_EXAMPLE_CASCADE_HTML = `
-  <o-dropdown-navigation
-    dataTarget="dropdownCascade"
-    [dropNavItems]="dropdownItemsWithSubitems"
-    title="Desplegable"
-  ></o-dropdown-navigation>
+<o-dropdown-navigation
+  dataTarget="dropdownCascade"
+  [dropNavItems]="dropdownItemsWithSubitems"
+  title="Desplegable"
+></o-dropdown-navigation>
 `;
 
 // DROPDOWN NAVIGATION TS
@@ -549,54 +549,54 @@ export const DROPDOWN_ITEMS_CHECKBOX: DropdownSelectionItem[] = [
 
 // DROPDOWN SELECTION HTML
 export const DROPDOWN_SELECTION_EXAMPLE_RADIO_HTML = `
-  <o-dropdown-selection
-    dataTarget="dropdownRadio"
-    title="Desplegable"
-    iconLeft="person"
-    iconRight="expand_more"
-    [dropSelectItems]="dropdownItemsRadio"
-    [isAnimatedIconRight]="true"
-  ></o-dropdown-selection>
+<o-dropdown-selection
+  dataTarget="dropdownRadio"
+  title="Desplegable"
+  iconLeft="person"
+  iconRight="expand_more"
+  [dropSelectItems]="dropdownItemsRadio"
+  [isAnimatedIconRight]="true"
+></o-dropdown-selection>
 `;
 
 export const DROPDOWN_SELECTION_EXAMPLE_CHECKBOX_HTML = `
-  <o-dropdown-selection
-    dataTarget="dropdownChecbox"
-    title="Desplegable"
-    iconLeft="person"
-    iconRight="expand_more"
-    [dropSelectItems]="dropdownItemsCheckbox"
-    [isAnimatedIconRight]="true"
-    [isSelectionMultiple]="true"
-  ></o-dropdown-selection>
+<o-dropdown-selection
+  dataTarget="dropdownChecbox"
+  title="Desplegable"
+  iconLeft="person"
+  iconRight="expand_more"
+  [dropSelectItems]="dropdownItemsCheckbox"
+  [isAnimatedIconRight]="true"
+  [isSelectionMultiple]="true"
+></o-dropdown-selection>
 `;
 
 export const DROPDOWN_SELECTION_EXAMPLE_SIZES_HTML = `
-  <o-dropdown-selection
-    dataTarget="dropdownRadioSm"
-    title="Desplegable"
-    iconRight="expand_more"
-    [dropSelectItems]="dropdownItemsRadio"
-    [isAnimatedIconRight]="true"
-    size="sm"
-  ></o-dropdown-selection>
+<o-dropdown-selection
+  dataTarget="dropdownRadioSm"
+  title="Desplegable"
+  iconRight="expand_more"
+  [dropSelectItems]="dropdownItemsRadio"
+  [isAnimatedIconRight]="true"
+  size="sm"
+></o-dropdown-selection>
 
-  <o-dropdown-selection
-    dataTarget="dropdownRadioMd"
-    title="Desplegable"
-    iconRight="expand_more"
-    [dropSelectItems]="dropdownItemsRadio"
-    [isAnimatedIconRight]="true"
-  ></o-dropdown-selection>
+<o-dropdown-selection
+  dataTarget="dropdownRadioMd"
+  title="Desplegable"
+  iconRight="expand_more"
+  [dropSelectItems]="dropdownItemsRadio"
+  [isAnimatedIconRight]="true"
+></o-dropdown-selection>
 
-  <o-dropdown-selection
-    dataTarget="dropdownRadioLg"
-    title="Desplegable"
-    iconRight="expand_more"
-    [dropSelectItems]="dropdownItemsRadio"
-    [isAnimatedIconRight]="true"
-    size="lg"
-  ></o-dropdown-selection>
+<o-dropdown-selection
+  dataTarget="dropdownRadioLg"
+  title="Desplegable"
+  iconRight="expand_more"
+  [dropSelectItems]="dropdownItemsRadio"
+  [isAnimatedIconRight]="true"
+  size="lg"
+></o-dropdown-selection>
 `;
 
 // DROPDOWN SELECTION TS

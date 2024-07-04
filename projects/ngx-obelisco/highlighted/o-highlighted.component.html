@@ -1,39 +1,20 @@
 <ng-template #highlightedContent>
-  <ng-container *ngIf="image">
-    <img [src]="image.src" [alt]="image.alt ? image.alt : ' '" class="card-img" />
-  </ng-container>
-  <ng-container *ngIf="video">
-    <p class="sr-only">{{ video.title }}</p>
-    <video class="card-img" controls="">
-      <source [src]="video.src" type="video/mp4" />
-      <ng-container *ngIf="video.track">
-        <track [src]="video.track" default="" kind="captions" srclang="es" />
-      </ng-container>
-      <p>
-        Su navegador no soporta vídeos HTML5. Puedes ver el video haciendo clic en
-        <a [href]="video.src">este enlace</a>.
-      </p>
-    </video>
-  </ng-container>
-  <ng-container *ngIf="iframe">
-    <iframe
-      [src]="sanitizeUrl(iframe.src ? iframe.src : '')"
-      class="card-img"
-      [title]="iframe.title ? iframe.title : ' '"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen=""
-    ></iframe>
-  </ng-container>
+  <ng-content select="o-highlighted-image"></ng-content>
+  <ng-content select="o-highlighted-video"></ng-content>
+  <o-highlighted-image *ngIf="image" [image]="image"></o-highlighted-image>
+  <o-highlighted-video *ngIf="video" [video]="video"></o-highlighted-video>
+  <o-highlighted-video *ngIf="iframe" [iframe]="iframe"></o-highlighted-video>
+
   <div class="card-body">
     <ng-container *ngIf="!oCustomContent">
-      <h2 class="card-title">{{ title }}</h2>
-      <ng-container *ngIf="description">
-        <p class="card-text" [innerHTML]="description"></p>
-      </ng-container>
-      <div class="panel-footer" *ngIf="children">
-        <ng-content></ng-content>
-      </div>
+      <ng-content select="o-highlighted-header"></ng-content>
+      <o-highlighted-title *ngIf="title">{{ title }}</o-highlighted-title>
+
+      <ng-content select="o-highlighted-content"></ng-content>
+      <o-highlighted-description *ngIf="description">{{ description }}</o-highlighted-description>
+
+      <ng-content select="o-highlighted-footer"></ng-content>
+      <o-highlighted-footer *ngIf="children"><ng-content></ng-content></o-highlighted-footer>
     </ng-container>
     <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
   </div>

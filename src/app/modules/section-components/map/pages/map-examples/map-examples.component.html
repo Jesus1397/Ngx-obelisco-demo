@@ -1,23 +1,44 @@
 <section class="section-example">
-  <app-viewer title="Horizontal con imagen" [isNavCode]="true">
+  <app-viewer title="Lateral" [isNavCode]="true">
     <div class="col-12 col-lg-6" component>
-      <o-map [title]="'Ubicación'" [description]="'Uspallata 3160'" [iframe]="iframe">
+      <o-map title="Ubicación" description="Uspallata 3160" [iframe]="iframe">
         <o-button
-          text="Cómo llego"
           [isExpandable]="true"
           link="https://mapa.buenosaires.gob.ar/comollego/?lat=-34.640340&lng=-58.407032&zl=15&modo=transporte&dir=Uspallata+3160"
           target="_blank"
           rel="noreferrer"
-        ></o-button>
+          >Cómo llego</o-button
+        >
       </o-map>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ mapHtml }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="javascript">{{ mapTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ mapHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ mapTs }}</code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Institucional" [isNavCode]="true">
+    <div class="col-12 col-lg-8" component>
+      <o-map type="institutional" title="Ubicación" description="Uspallata 3160" [iframe]="iframe">
+        <o-button
+          [isExpandable]="true"
+          link="https://mapa.buenosaires.gob.ar/comollego/?lat=-34.640340&lng=-58.407032&zl=15&modo=transporte&dir=Uspallata+3160"
+          target="_blank"
+          rel="noreferrer"
+          >Cómo llego</o-button
+        >
+      </o-map>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ mapInstitutionalHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ mapTs }}</code>
+    </div>
   </app-viewer>
 </section>

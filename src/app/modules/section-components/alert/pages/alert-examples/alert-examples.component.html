@@ -6,24 +6,24 @@
       <o-alert type="success">Esta es la descripción de una alerta de éxito.</o-alert>
       <o-alert type="danger">Esta es la descripción de una alerta de error.</o-alert>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleColors }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>
+        {{ exampleColors }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con cierre">
     <div class="alert-container" component>
       <o-alert [isDismissible]="true">Esta es la descripción de una alerta de información.</o-alert>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleDismissible }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleDismissible }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con destacado">
@@ -33,12 +33,12 @@
         Esta es la descripción de una alerta de información que continua al texto destacado.
       </o-alert>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleHighlight }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>
+        {{ exampleHighlight }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con hipervínculo">
@@ -49,12 +49,12 @@
         <a [routerLink]="['/']">con enlace</a>.
       </o-alert>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleHighlightLink }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>
+        {{ exampleHighlightLink }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Listas" [isNavCode]="true">
@@ -69,17 +69,17 @@
         información que continua al texto destacado.
       </o-alert>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>
         {{ exampleListsHtml }}
       </code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
         {{ exampleListsTs }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 </section>

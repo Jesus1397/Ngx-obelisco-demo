@@ -11,4 +11,11 @@ export class OBadgeComponent {
   @Input() public link?: string;
   @Input() public route?: string;
   @Input() public customClasses?: string;
+  @Input() public text?: string;
+
+  getBadgesClassNames(): string {
+    const typeClass = this.type ? this.type : 'secondary';
+    const customClass = this.customClasses ? ' ' + this.customClasses : '';
+    return 'badge-' + typeClass + customClass;
+  }
 }

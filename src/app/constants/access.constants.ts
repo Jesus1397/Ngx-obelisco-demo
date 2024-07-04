@@ -90,29 +90,29 @@ export const ACCESS_SIMPLE_DESCRIPTION_HTML = `
 `;
 
 export const ACCESS_SIMPLE_ICON_HTML = `
-  <o-access
-    icon="bx bxs-info-circle"
-    title="Acceso"
-    description="Descripción (Opcional)"
-    route="/home"
-  ></o-access>
+<o-access
+  icon="bx bxs-info-circle"
+  title="Acceso"
+  description="Descripción (Opcional)"
+  route="/home"
+></o-access>
 `;
 
 export const ACCESS_SIMPLE_SIZES_HTML = `
-  <o-access
-    title="Acceso"
-    icon="bx bxs-info-circle"
-    route="/home"
-    description="Descripción (Opcional)"
-  ></o-access>
+<o-access
+  title="Acceso"
+  icon="bx bxs-info-circle"
+  route="/home"
+  description="Descripción (Opcional)"
+></o-access>
 
-  <o-access
-    title="Acceso"
-    icon="bx bxs-info-circle"
-    route="/home"
-    description="Descripción (Opcional)"
-    size="sm"
-  ></o-access>
+<o-access
+  title="Acceso"
+  icon="bx bxs-info-circle"
+  route="/home"
+  description="Descripción (Opcional)"
+  size="sm"
+></o-access>
 `;
 
 export const ACCESS_LAYOUT_FOUR = `
@@ -252,47 +252,47 @@ export const ACCESS_LIST_FOOTER_INTERFACE_DATA_SOURCE: DataSource[] = [
 ];
 
 export const ACCESS_LIST_INTERFACE = `
-  interface AccessList {
-    header?: AccessHeader;
-    children?: Access[] | AccessCategory[];
-    footer?: AccessFootter;
-  }
+interface AccessList {
+  header?: AccessHeader;
+  children?: Access[] | AccessCategory[];
+  footer?: AccessFootter;
+}
 `;
 
 export const ACCESS_LIST_HEADER_INTERFACE = `
-  interface AccessHeader {
-    title?: string;
-    description?: string;
-    icon?: string;
-    iconPositionLeft?: boolean;
-    iconText?: string;
-  }
+interface AccessHeader {
+  title?: string;
+  description?: string;
+  icon?: string;
+  iconPositionLeft?: boolean;
+  iconText?: string;
+}
 `;
 
 export const ACCESS_LIST_ACCESS_INTERFACE = `
-  interface Access {
-    title?: string;
-    description?: string;
-    icon?: string;
-    link?: string;
-    route?: string;
-  }
+interface Access {
+  title?: string;
+  description?: string;
+  icon?: string;
+  link?: string;
+  route?: string;
+}
 `;
 
 export const ACCESS_LIST_ACCESSCATEGORY_INTERFACE = `
-  interface AccessCategory {
-    title?: string;
-    children?: Access[];
-  }
+interface AccessCategory {
+  title?: string;
+  children?: Access[];
+}
 `;
 
 export const ACCESS_LIST_FOOTER_INTERFACE = `
-  interface AccessFootter {
-    title?: string;
-    icon?: string;
-    link?: string;
-    route?: string;
-  }
+interface AccessFootter {
+  title?: string;
+  icon?: string;
+  link?: string;
+  route?: string;
+}
 `;
 
 export const ACCESS_LIST_EXAMPLE_HTML = `

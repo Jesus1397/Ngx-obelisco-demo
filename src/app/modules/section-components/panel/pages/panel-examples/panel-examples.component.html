@@ -8,14 +8,14 @@
       >
       </o-panel-small>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ horizontal }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="javascript">{{ exampleTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ horizontal }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleTs }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Vertical" [isNavCode]="true">
@@ -28,14 +28,14 @@
       >
       </o-panel-small>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ vertical }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="javascript">{{ exampleTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ vertical }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleTs }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Imagen grande" [isNavCode]="true">
@@ -48,14 +48,14 @@
       >
       </o-panel-small>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ vertical }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="javascript">{{ exampleImageLargeTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ vertical }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleImageLargeTs }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con fondos" [isNavCode]="true">
@@ -78,14 +78,14 @@
       >
       </o-panel-small>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ withBg }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="javascript">{{ exampleTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ withBg }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleTs }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Items horizontales" [isNavCode]="true">
@@ -102,14 +102,14 @@
         </ng-container>
       </o-panel-small>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ horizontalItems }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="javascript">{{ exampleTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ horizontalItems }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleTs }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Items verticales" [isNavCode]="true">
@@ -130,13 +130,13 @@
         </ng-container>
       </o-panel-small>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ verticalItems }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="javascript">{{ exampleTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ verticalItems }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleTs }}</code>
+    </div>
   </app-viewer>
 </section>

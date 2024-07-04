@@ -9,7 +9,7 @@ import { TooltipExamplesComponent } from './pages/tooltip-examples/tooltip-examp
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { OTooltipModule } from 'ngx-obelisco-example/tooltip';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 import { OButtonModule } from 'ngx-obelisco-example/button';
@@ -23,7 +23,7 @@ import { OButtonModule } from 'ngx-obelisco-example/button';
     OTableModule,
     ViewerComponent,
     ClipboardDirective,
-    PrismDirective,
+    HighlightJsModule,
     OTooltipModule,
     TabsLinkComponent,
     OButtonModule

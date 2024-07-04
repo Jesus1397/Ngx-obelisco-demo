@@ -8,7 +8,7 @@ import { DropdownNavigationExamplesComponent } from './pages/dropdown-navigation
 import { DropdownNavigationApiComponent } from './pages/dropdown-navigation-api/dropdown-navigation-api.component';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ODropdownModule } from 'ngx-obelisco-example/dropdown';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { OTableModule } from 'ngx-obelisco-example/table';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { OTableModule } from 'ngx-obelisco-example/table';
     TabsLinkComponent,
     ViewerComponent,
     ODropdownModule,
-    PrismDirective,
+    HighlightJsModule,
     OTableModule
   ]
 })

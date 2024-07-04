@@ -7,7 +7,7 @@ import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 
 import { AlertRoutingModule } from './alert-routing.module';
@@ -24,7 +24,7 @@ import { AlertExamplesComponent } from './pages/alert-examples/alert-examples.co
     OTableModule,
     ViewerComponent,
     ClipboardDirective,
-    PrismDirective,
+    HighlightJsModule,
     TabsLinkComponent,
     OAlertModule,
     OCustomContentDirective

@@ -1,22 +1,22 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Galería de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism code="import { OGalleryModule } from 'ngx-obelisco-example/gallery';"></code>
-    </pre>
+    <h2 class="h3">Referencia de API para el componente Galería de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OGalleryModule } from 'ngx-obelisco-example/gallery';"></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>OGallery</h4>
     <p>Selector: <strong>o-gallery</strong></p>
 
     <div class="section-properties">
-      <h5>Propiedades</h5>
+      <h2 class="h3">Propiedades</h2>
 
       <o-table
+        [isScrollable]="true"
         [columns]="columnsGallery"
         [dataSource]="dataSourceGallery"
         [isStriped]="true"
@@ -25,20 +25,21 @@
     </div>
   </div>
 
-  <h3>Tipos de datos</h3>
+  <h2 class="h3">Tipos de datos</h2>
   <hr />
 
   <div class="section-type">
-    <h4>MediaGallery</h4>
+    <h3>MediaGallery</h3>
     <p>Permite establecer los valores de la propiedad <strong>galleryItems</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code">
-        <code appPrism>{{ exampleIterfaceImageItem }}</code>
+      <pre>
+        <code highlight-js [lang]="'ts'" >{{ exampleIterfaceImageItem }}</code>
       </pre>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columnsGallery"
           [dataSource]="dataSourceGalleryInterface"
           [isStriped]="true"

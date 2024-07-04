@@ -31,7 +31,10 @@ export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public logo: MediaHeader = {
     route: '/',
     src: 'https://buenosaires.gob.ar/assets/img/logos/LogoBA.svg',
-    alt: 'Gobierno de la Ciudad de Buenos Aires - Inicio'
+    alt: 'Gobierno de la Ciudad de Buenos Aires - Inicio',
+    customClasses: 'header-logo',
+    height: 76,
+    width: 41
   };
   @Input() public isRouteExact: boolean = false;
   @Input() public routes!: NavbarRoute[];

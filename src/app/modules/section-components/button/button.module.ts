@@ -8,10 +8,11 @@ import { ButtonApiComponent } from './pages/button-api/button-api.component';
 import { ButtonExamplesComponent } from './pages/button-examples/button-examples.component';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 import { OButtonModule } from 'ngx-obelisco-example/button';
+import { OSpinnerModule } from 'ngx-obelisco-example/spinner';
 
 @NgModule({
   declarations: [ButtonComponent, ButtonApiComponent, ButtonExamplesComponent],
@@ -21,10 +22,11 @@ import { OButtonModule } from 'ngx-obelisco-example/button';
     ONavModule,
     OTableModule,
     ViewerComponent,
-    PrismDirective,
+    HighlightJsModule,
     ClipboardDirective,
     TabsLinkComponent,
-    OButtonModule
+    OButtonModule,
+    OSpinnerModule
   ]
 })
 export class ButtonModule {}

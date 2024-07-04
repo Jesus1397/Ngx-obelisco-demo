@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MapApiComponent } from './pages/map-api/map-api.component';
 import { MapExamplesComponent } from './pages/map-examples/map-examples.component';
 import { ONavModule } from 'ngx-obelisco-example/nav';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
@@ -23,7 +23,7 @@ import { OMapModule } from 'ngx-obelisco-example/map/o-map.module';
     OTableModule,
     ViewerComponent,
     ClipboardDirective,
-    PrismDirective,
+    HighlightJsModule,
     TabsLinkComponent,
     OButtonModule,
     MapRoutingModule

@@ -92,47 +92,47 @@ export const NAVBAR_DATA_SOURCE: DataSource[] = [
 ];
 
 export const NAVBAR_ROUTE_BASE_INTERFACE = `
-  interface NavbarRouteBase {
-    iconLeft?: string;
-    title?: string;
-    iconRight?: string;
-    route?: string;
-    link?: string;
-  }
+interface NavbarRouteBase {
+  iconLeft?: string;
+  title?: string;
+  iconRight?: string;
+  route?: string;
+  link?: string;
+}
 `;
 export const MEDIA_HEADER_INTERFACE = `
-  interface Media {
-    src: string;
-  }
+interface Media {
+  src: string;
+}
 
-  interface MediaHeader extends Media {
-    route?: string;
-    alt?: string;
-    width?: string;
-    height?: string;
-    customClasses?: string;
-  }
+interface MediaHeader extends Media {
+  route?: string;
+  alt?: string;
+  width?: string;
+  height?: string;
+  customClasses?: string;
+}
 `;
 
 export const NAVBAR_ROUTE_INTERFACE = `
-  interface NavbarRoute extends NavbarRouteBase {
-    children?: NavbarRouteItem[];
-  }
+interface NavbarRoute extends NavbarRouteBase {
+  children?: NavbarRouteItem[];
+}
 
-  interface NavbarRouteItem extends NavbarRouteBase {
-    isOverviewItem?: boolean;
-  }
+interface NavbarRouteItem extends NavbarRouteBase {
+  isOverviewItem?: boolean;
+}
 `;
 
 export const NAVBAR_ROUTE_ACCOUNT_INTERFACE = `
-  interface NavbarRouteAccount extends NavbarRouteBase {
-    children?: NavbarRouteAccountItem[];
-  }
+interface NavbarRouteAccount extends NavbarRouteBase {
+  children?: NavbarRouteAccountItem[];
+}
 
-  interface NavbarRouteAccountItem extends NavbarRouteBase {
-    isDangerTitle?: boolean;
-    isWithNotification?: boolean;
-  }
+interface NavbarRouteAccountItem extends NavbarRouteBase {
+  isDangerTitle?: boolean;
+  isWithNotification?: boolean;
+}
 `;
 
 export const NAVBAR_ROUTE_LOGIN_INTERFACE = `
@@ -140,10 +140,10 @@ export const NAVBAR_ROUTE_LOGIN_INTERFACE = `
 `;
 
 export const NAVBAR_SEARCHITEM_INTERFACE = `
-  interface SearchbarItem {
-    title: string;
-    route: string;
-  }
+interface SearchbarItem {
+  title: string;
+  route: string;
+}
 `;
 
 export const MEDIA_HEADER_DATA_SOURCE: DataSource[] = [
@@ -298,199 +298,183 @@ export const SEARCHBAR_ITEM_DATA_SOURCE: DataSource[] = [
 ];
 
 export const NAVBAR_SECTIONS_EXAMPLE_HTML = `
-  <o-navbar
-    id="navbarOne"
-    [routes]="routes"
-    [routesLogin]="routesLogin"
-  ></o-navbar>
+<o-navbar
+  id="navbarOne"
+  [routes]="routes"
+  [routesLogin]="routesLogin"
+></o-navbar>
 `;
 
 export const NAVBAR_SECTIONS_EXTENDED_EXAMPLE_HTML = `
-  <o-navbar
-    id="navbarTwo"
-    [routesExtended]="routesExtended"
-    [routesLogin]="routesLogin"
-  ></o-navbar>
+<o-navbar
+  id="navbarTwo"
+  [routesExtended]="routesExtended"
+  [routesLogin]="routesLogin"
+></o-navbar>
 `;
 
 export const NAVBAR_LOGIN_EXAMPLE_HTML = `
-  <o-navbar
-    id="navbarThree"
-    [routes]="routes"
-    [routesAccount]="routesAccount"
-  ></o-navbar>
+<o-navbar
+  id="navbarThree"
+  [routes]="routes"
+  [routesAccount]="routesAccount"
+></o-navbar>
 `;
 
 export const NAVBAR_EXTENDED_LOGIN_EXAMPLE_HTML = `
-  <o-navbar
-    id="navbarFour"
-    [routesExtended]="routesExtended"
-    [routesAccount]="routesAccount"
-  ></o-navbar>
+<o-navbar
+  id="navbarFour"
+  [routesExtended]="routesExtended"
+  [routesAccount]="routesAccount"
+></o-navbar>
 `;
 
 export const NAVBAR_SEARCHBAR_EXAMPLE_HTML = `
-  <o-navbar
-    id="navbarFive"
-    [routes]="routes"
-    [searchbarItems]="searchbarItems"
-  ></o-navbar>
+<o-navbar
+  id="navbarFive"
+  [routes]="routes"
+  [searchbarItems]="searchbarItems"
+></o-navbar>
 `;
 
 export const NAVBAR_SECTIONS_EXAMPLE_TS = `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    routes: NavbarRoute[] = [
-      {
-        title: 'Sección 1',
-        children: [
-          {
-            title: 'Navegación',
-            link: 'https://music.youtube.com/'
-          },
-          {
-            title: 'Navegación',
-            route: '/'
-          }
-        ]
-      },
-      {
-        title: 'Sección 2',
-        route: '/'
-      },
-      {
-        title: 'Sección 3',
-        children: [
-          {
-            title: 'Navegación',
-            route: '/'
-          },
-          {
-            title: 'Navegación',
-            route: '/',
-            isOverviewItem: true
-          }
-        ]
-      }
-    ];
-
-    routesLogin: NavbarRouteLogin = {
-      title: 'Ingresar',
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  routes: NavbarRoute[] = [
+    {
+      title: 'Sección 1',
+      children: [
+        {
+          title: 'Navegación',
+          link: 'https://music.youtube.com/'
+        },
+        {
+          title: 'Navegación',
+          route: '/'
+        }
+      ]
+    },
+    {
+      title: 'Sección 2',
       route: '/'
-    };
-  }
+    },
+    {
+      title: 'Sección 3',
+      children: [
+        {
+          title: 'Navegación',
+          route: '/'
+        },
+        {
+          title: 'Navegación',
+          route: '/',
+          isOverviewItem: true
+        }
+      ]
+    }
+  ];
+
+  routesLogin: NavbarRouteLogin = {
+    title: 'Ingresar',
+    route: '/'
+  };
+}
 `;
 
 export const NAVBAR_SECTIONS_EXTENDED_EXAMPLE_TS = `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    routesExtended: NavbarRoute[] = [
-      {
-        title: 'Sección 1',
-        route: '/'
-      },
-      {
-        title: 'Sección 2',
-        children: [
-          {
-            title: 'Navegación',
-            route: '/'
-          },
-          {
-            title: 'Navegación',
-            route: '/'
-          }
-        ]
-      },
-      {
-        title: 'Sección 3',
-        route: '/'
-      },
-      {
-        title: 'Sección 4',
-        route: '/'
-      },
-      {
-        title: 'Sección 5',
-        children: [
-          {
-            title: 'Navegación',
-            route: '/'
-          },
-          {
-            title: 'Navegación',
-            route: '/',
-            isOverviewItem: true
-          }
-        ]
-      },
-      {
-        title: 'Sección 6',
-        route: '/'
-      }
-    ];
-
-    routesLogin: NavbarRouteLogin = {
-      title: 'Ingresar',
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  routesExtended: NavbarRoute[] = [
+    {
+      title: 'Sección 1',
       route: '/'
-    };
-  }
+    },
+    {
+      title: 'Sección 2',
+      children: [
+        {
+          title: 'Navegación',
+          route: '/'
+        },
+        {
+          title: 'Navegación',
+          route: '/'
+        }
+      ]
+    },
+    {
+      title: 'Sección 3',
+      route: '/'
+    },
+    {
+      title: 'Sección 4',
+      route: '/'
+    },
+    {
+      title: 'Sección 5',
+      children: [
+        {
+          title: 'Navegación',
+          route: '/'
+        },
+        {
+          title: 'Navegación',
+          route: '/',
+          isOverviewItem: true
+        }
+      ]
+    },
+    {
+      title: 'Sección 6',
+      route: '/'
+    }
+  ];
+
+  routesLogin: NavbarRouteLogin = {
+    title: 'Ingresar',
+    route: '/'
+  };
+}
 `;
 
 export const NAVBAR_LOGIN_EXAMPLE_TS = `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    routes: NavbarRoute[] = [
-      {
-        title: 'Sección 1',
-        children: [
-          {
-            title: 'Navegación',
-            link: 'https://music.youtube.com/'
-          },
-          {
-            title: 'Navegación',
-            route: '/'
-          }
-        ]
-      },
-      {
-        title: 'Sección 2',
-        route: '/'
-      },
-      {
-        title: 'Sección 3',
-        children: [
-          {
-            title: 'Navegación',
-            route: '/'
-          },
-          {
-            title: 'Navegación',
-            route: '/',
-            isOverviewItem: true
-          }
-        ]
-      }
-    ];
-
-    routesAccount: NavbarRouteAccount = {
-      title: 'Pefil',
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  routes: NavbarRoute[] = [
+    {
+      title: 'Sección 1',
+      children: [
+        {
+          title: 'Navegación',
+          link: 'https://music.youtube.com/'
+        },
+        {
+          title: 'Navegación',
+          route: '/'
+        }
+      ]
+    },
+    {
+      title: 'Sección 2',
+      route: '/'
+    },
+    {
+      title: 'Sección 3',
       children: [
         {
           title: 'Navegación',
@@ -498,83 +482,58 @@ export const NAVBAR_LOGIN_EXAMPLE_TS = `
         },
         {
           title: 'Navegación',
-          route: '/'
-        },
-        {
-          title: 'Navegación',
-          route: '/'
-        },
-        {
-          title: 'Notificaciones',
           route: '/',
-          isWithNotification: true
-        },
-        {
-          title: 'Cerrar sesión',
-          route: '/',
-          isDangerTitle: true
+          isOverviewItem: true
         }
       ]
-    };
-  }
+    }
+  ];
+
+  routesAccount: NavbarRouteAccount = {
+    title: 'Pefil',
+    children: [
+      {
+        title: 'Navegación',
+        route: '/'
+      },
+      {
+        title: 'Navegación',
+        route: '/'
+      },
+      {
+        title: 'Navegación',
+        route: '/'
+      },
+      {
+        title: 'Notificaciones',
+        route: '/',
+        isWithNotification: true
+      },
+      {
+        title: 'Cerrar sesión',
+        route: '/',
+        isDangerTitle: true
+      }
+    ]
+  };
+}
 `;
 
 export const NAVBAR_EXTENDED_LOGIN_EXAMPLE_TS = `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    routesExtended: NavbarRoute[] = [
-      {
-        title: 'Sección 1',
-        route: '/'
-      },
-      {
-        title: 'Sección 2',
-        children: [
-          {
-            title: 'Navegación',
-            route: '/'
-          },
-          {
-            title: 'Navegación',
-            route: '/'
-          }
-        ]
-      },
-      {
-        title: 'Sección 3',
-        route: '/'
-      },
-      {
-        title: 'Sección 4',
-        route: '/'
-      },
-      {
-        title: 'Sección 5',
-        children: [
-          {
-            title: 'Navegación',
-            route: '/'
-          },
-          {
-            title: 'Navegación',
-            route: '/',
-            isOverviewItem: true
-          }
-        ]
-      },
-      {
-        title: 'Sección 6',
-        route: '/'
-      }
-    ];
-
-    routesAccount: NavbarRouteAccount = {
-      title: 'Pefil',
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  routesExtended: NavbarRoute[] = [
+    {
+      title: 'Sección 1',
+      route: '/'
+    },
+    {
+      title: 'Sección 2',
       children: [
         {
           title: 'Navegación',
@@ -583,81 +542,122 @@ export const NAVBAR_EXTENDED_LOGIN_EXAMPLE_TS = `
         {
           title: 'Navegación',
           route: '/'
-        },
+        }
+      ]
+    },
+    {
+      title: 'Sección 3',
+      route: '/'
+    },
+    {
+      title: 'Sección 4',
+      route: '/'
+    },
+    {
+      title: 'Sección 5',
+      children: [
         {
           title: 'Navegación',
           route: '/'
         },
         {
-          title: 'Notificaciones',
+          title: 'Navegación',
           route: '/',
-          isWithNotification: true
-        },
-        {
-          title: 'Cerrar sesión',
-          route: '/',
-          isDangerTitle: true
+          isOverviewItem: true
         }
       ]
-    };
-  }
+    },
+    {
+      title: 'Sección 6',
+      route: '/'
+    }
+  ];
+
+  routesAccount: NavbarRouteAccount = {
+    title: 'Pefil',
+    children: [
+      {
+        title: 'Navegación',
+        route: '/'
+      },
+      {
+        title: 'Navegación',
+        route: '/'
+      },
+      {
+        title: 'Navegación',
+        route: '/'
+      },
+      {
+        title: 'Notificaciones',
+        route: '/',
+        isWithNotification: true
+      },
+      {
+        title: 'Cerrar sesión',
+        route: '/',
+        isDangerTitle: true
+      }
+    ]
+  };
+}
 `;
 
 export const NAVBAR_SEARCHBAR_EXAMPLE_TS = `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    routes: NavbarRoute[] = [
-      {
-        title: 'Sección 1',
-        children: [
-          {
-            title: 'Navegación',
-            link: 'https://music.youtube.com/'
-          },
-          {
-            title: 'Navegación',
-            route: '/'
-          }
-        ]
-      },
-      {
-        title: 'Sección 2',
-        route: '/'
-      },
-      {
-        title: 'Sección 3',
-        children: [
-          {
-            title: 'Navegación',
-            route: '/'
-          },
-          {
-            title: 'Navegación',
-            route: '/',
-            isOverviewItem: true
-          }
-        ]
-      }
-    ];
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  routes: NavbarRoute[] = [
+    {
+      title: 'Sección 1',
+      children: [
+        {
+          title: 'Navegación',
+          link: 'https://music.youtube.com/'
+        },
+        {
+          title: 'Navegación',
+          route: '/'
+        }
+      ]
+    },
+    {
+      title: 'Sección 2',
+      route: '/'
+    },
+    {
+      title: 'Sección 3',
+      children: [
+        {
+          title: 'Navegación',
+          route: '/'
+        },
+        {
+          title: 'Navegación',
+          route: '/',
+          isOverviewItem: true
+        }
+      ]
+    }
+  ];
 
-    searchbarItems: SearchbarItem[] = [
-      {
-        title: 'Inicio',
-        route: '/'
-      },
-      {
-        title: 'Introducción',
-        route: '/get-started'
-      },
-      {
-        title: 'Componentes',
-        route: '/components'
-      }
-    ];
-  }
+  searchbarItems: SearchbarItem[] = [
+    {
+      title: 'Inicio',
+      route: '/'
+    },
+    {
+      title: 'Introducción',
+      route: '/get-started'
+    },
+    {
+      title: 'Componentes',
+      route: '/components'
+    }
+  ];
+}
 `;

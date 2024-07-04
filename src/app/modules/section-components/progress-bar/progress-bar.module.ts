@@ -5,7 +5,7 @@ import { ONavModule } from 'ngx-obelisco-example/nav';
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 import { ProgressBarApiComponent } from './pages/progress-bar-api/progress-bar-api.component';
 import { ProgressBarDemoComponent } from './pages/progress-bar-examples/demo/progress-bar-demo.component';
@@ -24,7 +24,7 @@ import { OButtonModule } from 'ngx-obelisco-example/button';
     OTableModule,
     OProgressBarModule,
     ViewerComponent,
-    PrismDirective,
+    HighlightJsModule,
     ClipboardDirective,
     TabsLinkComponent,
     OButtonModule

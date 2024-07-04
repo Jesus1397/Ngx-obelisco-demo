@@ -1,49 +1,69 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Botón de Obelisco</h2>
-    <pre class="code import">
-        <code appPrism language="javascript" code="import { OButtonModule } from 'ngx-obelisco-example/button';"></code>
-      </pre>
+    <h2 class="h3">Referencia de API para el componente Botón de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OButtonModule } from 'ngx-obelisco-example/button';"></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>OButton</h4>
     <p>Selector: <strong>o-button</strong></p>
 
     <div class="section-properties mb-5">
-      <h5>Propiedades generales</h5>
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades generales</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
     <div class="section-properties mb-5">
-      <h5>Propiedades en etiqueta &lt;a&gt;</h5>
-      <o-table [columns]="columns" [dataSource]="linkDataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades en etiqueta &lt;a&gt;</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="linkDataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
     <div class="section-properties mb-5">
-      <h5>Propiedades en etiqueta &lt;button&gt;</h5>
-      <o-table [columns]="columns" [dataSource]="buttonDataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades en etiqueta &lt;button&gt;</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="buttonDataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
   </div>
 
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
   <div class="section-type">
-    <h4>ButtonTypes</h4>
+    <h3>ButtonTypes</h3>
     <p>Permite establecer los valores de la propiedad <strong>type</strong>.</p>
 
     <div class="section-interface mb-5">
-      <pre class="code import">
-        <code appPrism>{{ types }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ types }}</code>
+      </div>
     </div>
 
-    <h4>Sizes</h4>
+    <h3>Sizes</h3>
     <p>Permite establecer el <strong>tamaño</strong> del botón</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism>{{ sizes }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ sizes }}</code>
+      </div>
     </div>
   </div>
 </section>

@@ -1,4 +1,4 @@
-import { Component, ContentChild, Input } from '@angular/core';
+import { Component, ContentChild, Directive, ElementRef, Input } from '@angular/core';
 import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 
 @Component({
@@ -14,4 +14,5 @@ export class OBlockComponent {
   @Input() public customClasses: string = '';
 
   @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
+  @ContentChild('children', { read: ElementRef }) children: ElementRef | undefined;
 }

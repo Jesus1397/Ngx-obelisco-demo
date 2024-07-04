@@ -14,16 +14,16 @@ function shortenArray(array: any[]) {
 }
 
 const formattedExampleTsCode = (code: any) => `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public navList = ${codeFormattingArrayList(code)}
-    ];
-  }`;
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  public navList = ${codeFormattingArrayList(code)}
+  ];
+}`;
 
 export const codeFormattingNavigationLevel2 = (code: any) =>
   JSON.stringify(code, null, 6)
@@ -228,180 +228,180 @@ export const TABS_NAVIGATION = NAVIGATIONS_NAVIGATION.map((el) => {
 
 //tabs
 export const NAVIGATION_HORIZONTAL_INTERFACE = `
-  interface NavHorizontalItems {
-    title: string;
-    link: string;
-    route: string;
-    isDisabled: boolean;
-    icon: string;
-  }
+interface NavHorizontalItems {
+  title: string;
+  link: string;
+  route: string;
+  isDisabled: boolean;
+  icon: string;
+}
 `;
 
 export const NAVIGATION_VERTICAL_INTERFACE = `
-  interface NavVerticalItems {
-    title: string;
-    route: string;
-    isDisabled: boolean;
-    icon: string;
-    children: NavVerticalItems[];
-  }
+interface NavVerticalItems {
+  title: string;
+  route: string;
+  isDisabled: boolean;
+  icon: string;
+  children: NavVerticalItems[];
+}
 `;
 
 export const TABS_INTERFACE = `
-  interface TabsProps extends NavHorizontalItems {
-    isActive: boolean;
-    iconRight: boolean;
-    child: any;
-  }
+interface TabsProps extends NavHorizontalItems {
+  isActive: boolean;
+  iconRight: boolean;
+  child: any;
+}
 `;
 
 // EXAMPLES HORIZONTAL
 export const NAVIGATION_HORIZONTAL_EXAMPLE_SIMPLE_HTML = `
-  <o-nav-horizontal
-    [navHorItems]="navList"
-    size="lg"
-  ></o-nav-horizontal>
+<o-nav-horizontal
+  [navHorItems]="navList"
+  size="lg"
+></o-nav-horizontal>
 `;
 
 export const NAVIGATION_HORIZONTAL_EXAMPLE_SIZES = `
-  <o-nav-horizontal
-    [navHorItems]="navList"
-    [isBordered]="true"
-    size="sm"
-  ></o-nav-horizontal>
+<o-nav-horizontal
+  [navHorItems]="navList"
+  [isBordered]="true"
+  size="sm"
+></o-nav-horizontal>
 
-  <o-nav-horizontal
-    [navHorItems]="navList"
-    [isBordered]="true"
-    size="md"
-  ></o-nav-horizontal>
+<o-nav-horizontal
+  [navHorItems]="navList"
+  [isBordered]="true"
+  size="md"
+></o-nav-horizontal>
 
-  <o-nav-horizontal
-    [navHorItems]="navList"
-    [isBordered]="true"
-    size="lg"
-  ></o-nav-horizontal>
+<o-nav-horizontal
+  [navHorItems]="navList"
+  [isBordered]="true"
+  size="lg"
+></o-nav-horizontal>
 `;
 
 export const NAVIGATION_HORIZONTAL_EXAMPLE_SIMPLE_BORDER_HTML = `
-  <o-nav-horizontal
-    [navHorItems]="navList"
-    [isBordered]="true"
-    size="lg"
-  ></o-nav-horizontal>
+<o-nav-horizontal
+  [navHorItems]="navList"
+  [isBordered]="true"
+  size="lg"
+></o-nav-horizontal>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_ICON_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_FIXEDWIDTH_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isFixedWidth]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isFixedWidth]="true"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_SLIDER_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isFixedWidth]="true"
-    [isSlidered]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isFixedWidth]="true"
+  [isSlidered]="true"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_GRAY_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isItemsRounded]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isItemsRounded]="true"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_GRAY_FIXEDWIDTH_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isItemsRounded]="true"
-    [isFixedWidth]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isItemsRounded]="true"
+  [isFixedWidth]="true"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_GRAY_SLIDER_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isItemsRounded]="true"
-    [isFixedWidth]="true"
-    [isSlidered]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isItemsRounded]="true"
+  [isFixedWidth]="true"
+  [isSlidered]="true"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_BACKGROUND_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isItemsRoundedLight]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isItemsRoundedLight]="true"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_BACKGROUND_FIXEDWIDTH_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isItemsRoundedLight]="true"
-    [isFixedWidth]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isItemsRoundedLight]="true"
+  [isFixedWidth]="true"
+></o-tabs>
 `;
 
 export const NAVIGATION_TABS_EXAMPLE_SIMPLE_BACKGROUND_SLIDER_HTML = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isItemsRoundedLight]="true"
-    [isFixedWidth]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isItemsRoundedLight]="true"
+  [isFixedWidth]="true"
+></o-tabs>
 `;
 
 export const SIZES_TABS = `
-  <o-tabs
-    [navTabsItems]="tabList"
-    [size]="'sm'"
-    [isFixedWidth]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [size]="'sm'"
+  [isFixedWidth]="true"
+></o-tabs>
 
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isFixedWidth]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isFixedWidth]="true"
+></o-tabs>
 
-  <o-tabs
-    [navTabsItems]="tabList"
-    [size]="'lg'"
-    [isFixedWidth]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [size]="'lg'"
+  [isFixedWidth]="true"
+></o-tabs>
 
-  <o-tabs
-    [navTabsItems]="tabList"
-    [size]="'sm'"
-    [isFixedWidth]="true"
-    [isItemsRounded]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [size]="'sm'"
+  [isFixedWidth]="true"
+  [isItemsRounded]="true"
+></o-tabs>
 
-  <o-tabs
-    [navTabsItems]="tabList"
-    [isFixedWidth]="true"
-    [isItemsRounded]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [isFixedWidth]="true"
+  [isItemsRounded]="true"
+></o-tabs>
 
-  <o-tabs
-    [navTabsItems]="tabList"
-    [size]="'lg'"
-    [isFixedWidth]="true"
-    [isItemsRounded]="true"
-  ></o-tabs>
+<o-tabs
+  [navTabsItems]="tabList"
+  [size]="'lg'"
+  [isFixedWidth]="true"
+  [isItemsRounded]="true"
+></o-tabs>
 `;
 
 // HTML HORIZONTAL
@@ -592,9 +592,9 @@ export const NAVIGATION_EXAMPLE_SIMPLE_ICON_TS = formattedExampleTsCode(NAVIGATI
 // VERTICAL
 
 export const NAVIGATION_VERTICAL_EXAMPLE_HTML = `
-  <o-nav-vertical
-    [navVertItems]="navList"
-  ></o-nav-vertical>
+<o-nav-vertical
+  [navVertItems]="navList"
+></o-nav-vertical>
 `;
 
 // VERTICAL TS
@@ -677,15 +677,15 @@ export const NAVIGATION_VERTICAL_LV2_VIEWER = [
 export const NAVIGATION_EXAMPLE_VRTICAL_LVL2_TS = formattedExampleTsCode(NAVIGATION_VERTICAL_LV2_VIEWER);
 
 export const NAVIGATION_VERTICAL_EXAMPLE_LV2_TS = `
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    template: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public navList = ${codeFormattingNavigationLevel2(NAVIGATION_VERTICAL_LV2_VIEWER)}
-  }
+@Component({
+  selector: 'app-example',
+  template: './app-example.component.html',
+})
+export class ExampleComponent {
+  public navList = ${codeFormattingNavigationLevel2(NAVIGATION_VERTICAL_LV2_VIEWER)}
+}
 `;
 
 export const NAVIGATION_VERTICAL_ICON_LV2_VIEWER = [
@@ -729,15 +729,15 @@ export const NAVIGATION_VERTICAL_ICON_LV2_VIEWER = [
 ];
 
 export const NAVIGATION_VERTICAL_EXAMPLE_LV2_ICON_TS = `
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    template: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public navList = ${codeFormattingNavigationLevel2(NAVIGATION_VERTICAL_ICON_LV2_VIEWER)}
-  }
+@Component({
+  selector: 'app-example',
+  template: './app-example.component.html',
+})
+export class ExampleComponent {
+  public navList = ${codeFormattingNavigationLevel2(NAVIGATION_VERTICAL_ICON_LV2_VIEWER)}
+}
 `;
 
 export const NAVIGATION_VERTICAL_LV3_VIEWER = [
@@ -789,15 +789,15 @@ export const NAVIGATION_VERTICAL_LV3_VIEWER = [
 ];
 
 export const NAVIGATION_VERTICAL_EXAMPLE_LV3_TS = `
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    template: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public navList = ${codeFormattingNavigationLevel3(NAVIGATION_VERTICAL_LV3_VIEWER)}
-  }
+@Component({
+  selector: 'app-example',
+  template: './app-example.component.html',
+})
+export class ExampleComponent {
+  public navList = ${codeFormattingNavigationLevel3(NAVIGATION_VERTICAL_LV3_VIEWER)}
+}
 `;
 
 export const NAVIGATION_VERTICAL_ICON_LV3_VIEWER = [
@@ -852,13 +852,13 @@ export const NAVIGATION_VERTICAL_ICON_LV3_VIEWER = [
 ];
 
 export const NAVIGATION_VERTICAL_EXAMPLE_ICON_LV3_TS = `
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    template: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public navList = ${codeFormattingNavigationLevel3(NAVIGATION_VERTICAL_ICON_LV3_VIEWER)}
-  }
+@Component({
+  selector: 'app-example',
+  template: './app-example.component.html',
+})
+export class ExampleComponent {
+  public navList = ${codeFormattingNavigationLevel3(NAVIGATION_VERTICAL_ICON_LV3_VIEWER)}
+}
 `;

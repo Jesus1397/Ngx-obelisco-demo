@@ -57,40 +57,44 @@ export const DATA_SOURCE_BREADCRUMB_ROUTE_INTERFACE: DataSource[] = [
 ];
 
 export const BREADCRUMB_INTERFACE1 = `
-  interface Breadcrumb {
-    routes: BreadcrumbRoute[];
-    defaultRoute: string;
-  }
+interface Breadcrumb {
+  routes: BreadcrumbRoute[];
+  defaultRoute: string;
+}
 `;
 
 export const BREADCRUMB_INTERFACE2 = `
-  interface BreadcrumbRoute {
-    name: string;
-    id?: string;
-    route?: string;
-  }
+interface BreadcrumbRoute {
+  name: string;
+  id?: string;
+  route?: string;
+}
+`;
+
+export const BREADCRUMB_EXAMPLE_HTML = `
+<o-breadcrumb></o-breadcrumb>
 `;
 
 export const BREADCRUMB_EXAMPLE_TS = `
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    template: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    constructor(private readonly breadcrumbService: BreadcrumbService) {}
+@Component({
+  selector: 'app-example',
+  template: './app-example.component.html',
+})
+export class ExampleComponent {
+  constructor(private readonly breadcrumbService: BreadcrumbService) {}
 
-    ngOnInit() {
-      this.breadcrumbService.breadcrumb$.next({
-        routes: [
-          { name: 'Inicio', route: '/custom' },
-          { name: 'nivel 2', id: '15151' },
-          { name: 'nivel 3', route: '/custom-routes' },
-          { name: 'Página anterior', id: '525252525', route: '/custom' }
-        ],
-        defaultRoute: '/route-default'
-      });
-    }
+  ngOnInit() {
+    this.breadcrumbService.breadcrumb$.next({
+      routes: [
+        { name: 'Inicio', route: '/custom' },
+        { name: 'nivel 2', id: '15151' },
+        { name: 'nivel 3', route: '/custom-routes' },
+        { name: 'Página anterior', id: '525252525', route: '/custom' }
+      ],
+      defaultRoute: '/route-default'
+    });
   }
+}
 `;

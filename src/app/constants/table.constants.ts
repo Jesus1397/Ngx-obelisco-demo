@@ -114,142 +114,142 @@ export const TABLA_TABLECHECKBOX_INTERFACE: DataSource[] = [
 ];
 
 export const TABLA_INTERFACE_COLUMN = `
-  interface Column {
-    key: string;
-    value: string;
-    customClasses: string;
-  }
+interface Column {
+  key: string;
+  value: string;
+  customClasses: string;
+}
 `;
 
 export const TABLA_INTERFACE_DATASOURCE = `
-  interface DataSource {
-    [key: string]: { data: string; customClasses?: string };
-  }
+interface DataSource {
+  [key: string]: { data: string; customClasses?: string };
+}
 `;
 
 export const TABLA_INTERFACE_TABLECHECKBOX = `
-  interface TableCheckbox {
-    title?: string;
-    customClassesTh?: string;
-    customClassesLabel?: string;
-    isAllSelectable?: boolean;
-  }
+interface TableCheckbox {
+  title?: string;
+  customClassesTh?: string;
+  customClassesLabel?: string;
+  isAllSelectable?: boolean;
+}
 `;
 
 export const TABLE_EXAMPLE_NORMAL_HTML = `
-  <o-table
-    [columns]="columns"
-    [dataSource]="dataSource"
-    [isScrollable]="true"
-  ></o-table>`;
+<o-table
+  [columns]="columns"
+  [dataSource]="dataSource"
+  [isScrollable]="true"
+></o-table>`;
 
 export const TABLE_EXAMPLE_BORDERED_HTML = `
-  <o-table
-    [columns]="columns"
-    [dataSource]="dataSource"
-    [isBordered]="true"
-    [isScrollable]="true"
-  ></o-table>`;
+<o-table
+  [columns]="columns"
+  [dataSource]="dataSource"
+  [isBordered]="true"
+  [isScrollable]="true"
+></o-table>`;
 
 export const TABLE_EXAMPLE_STRIPED_HTML = `
-  <o-table
-    [columns]="columns"
-    [dataSource]="dataSource"
-    [isStriped]="true"
-    [isScrollable]="true"
-  ></o-table>`;
+<o-table
+  [columns]="columns"
+  [dataSource]="dataSource"
+  [isStriped]="true"
+  [isScrollable]="true"
+></o-table>`;
 
 export const TABLE_EXAMPLE_SELECTABLE_HTML = `
-  <o-table
-    id="table-checkbox-test"
-    [columns]="columns"
-    [dataSource]="dataSource"
-    [checkbox]="{
-      title: 'Checkbox',
-      isAllSelectable: true
-    }"
-    [isScrollable]="true"
-    (dataSelectedChange)="onDataSelectedChange($event)"
-  ></o-table>`;
+<o-table
+  id="table-checkbox-test"
+  [columns]="columns"
+  [dataSource]="dataSource"
+  [checkbox]="{
+    title: 'Checkbox',
+    isAllSelectable: true
+  }"
+  [isScrollable]="true"
+  (dataSelectedChange)="onDataSelectedChange($event)"
+></o-table>`;
 export const TABLE_EXAMPLE_NORMAL_TS = `
-  import { Component, OnInit } from '@angular/core';
-  import { Column, DataSource } from 'ngx-obelisco-example/core/models';
+import { Component, OnInit } from '@angular/core';
+import { Column, DataSource } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    columns: Column[] = [
-      { key: 'number', value: 'Número', customClasses: 'tb-number' },
-      { key: 'text', value: 'Texto', customClasses: 'tb-text' },
-      { key: 'link', value: 'Enlace', customClasses: 'tb-link' },
-      { key: 'button', value: 'Botón', customClasses: 'tb-button' },
-      { key: 'tag', value: 'Etiqueta', customClasses: 'tb-tag' },
-      { key: 'icon', value: 'Bóton con ícono', customClasses: 'tb-button ' }
-    ];
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  columns: Column[] = [
+    { key: 'number', value: 'Número', customClasses: 'tb-number' },
+    { key: 'text', value: 'Texto', customClasses: 'tb-text' },
+    { key: 'link', value: 'Enlace', customClasses: 'tb-link' },
+    { key: 'button', value: 'Botón', customClasses: 'tb-button' },
+    { key: 'tag', value: 'Etiqueta', customClasses: 'tb-tag' },
+    { key: 'icon', value: 'Bóton con ícono', customClasses: 'tb-button ' }
+  ];
 
-    dataSource: DataSource[] = [
-      {
-        number: { data: '1', customClasses: 'text-right' },
-        text: { data: 'Juan' },
-        link: { data: this.linkHtml },
-        button: { data: this.buttonHtml },
-        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
-        icon: { data: this.iconsHtml }
-      },
-      {
-        number: { data: '2', customClasses: 'text-right' },
-        text: { data: 'Maria' },
-        link: { data: this.linkHtml },
-        button: { data: this.buttonHtml },
-        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
-        icon: { data: this.iconsHtml }
-      },
-      {
-        number: { data: '3', customClasses: 'text-right' },
-        text: { data: 'Esther' },
-        link: { data: this.linkHtml },
-        button: { data: this.buttonHtml },
-        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
-        icon: { data: this.iconsHtml }
-      },
-      {
-        number: { data: '4', customClasses: 'text-right' },
-        text: { data: 'José' },
-        link: { data: this.linkHtml },
-        button: { data: this.buttonHtml },
-        tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
-        icon: { data: this.iconsHtml }
-      }
-    ];
+  dataSource: DataSource[] = [
+    {
+      number: { data: '1', customClasses: 'text-right' },
+      text: { data: 'Juan' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    },
+    {
+      number: { data: '2', customClasses: 'text-right' },
+      text: { data: 'Maria' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    },
+    {
+      number: { data: '3', customClasses: 'text-right' },
+      text: { data: 'Esther' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    },
+    {
+      number: { data: '4', customClasses: 'text-right' },
+      text: { data: 'José' },
+      link: { data: this.linkHtml },
+      button: { data: this.buttonHtml },
+      tag: { data: '<span class="badge badge-secondary">Etiqueta 1</span>' },
+      icon: { data: this.iconsHtml }
+    }
+  ];
 
-    // Definición de partes comunes
-    linkHtml = '<a href="#" target="_blank" rel="noreferrer">Enlace</a>';
+  // Definición de partes comunes
+  linkHtml = '<a href="#" target="_blank" rel="noreferrer">Enlace</a>';
 
-    buttonHtml = \`
-      <button type="button" class="btn btn-primary btn-icon">
-        <i class="bx bxs-info-circle"></i>
-        botón
-      </button>\`;
+  buttonHtml = \`
+    <button type="button" class="btn btn-primary btn-icon">
+      <i class="bx bxs-info-circle"></i>
+      botón
+    </button>\`;
 
-    iconsHtml = \`
-      <div class="actions-table">
-        <button class="btn button-actions-table" aria-label="Editar">
-          <span class="material-icons-round">edit</span>
-        </button>
-        <button class="btn button-actions-table" aria-label="Visualizar">
-          <span class="material-icons-round">visibility</span>
-        </button>
-        <button class="btn button-actions-table" aria-label="Descargar">
-          <span class="material-icons-round">file_download</span>
-        </button>
-        <button class="btn button-actions-table" aria-label="Eliminar">
-          <span class="material-icons-round">delete</span>
-        </button>
-      </div>\`;
-  }
-  `;
+  iconsHtml = \`
+    <div class="actions-table">
+      <button class="btn button-actions-table" aria-label="Editar">
+        <span class="material-icons-round" aria-hidden="true">edit</span>
+      </button>
+      <button class="btn button-actions-table" aria-label="Visualizar">
+        <span class="material-icons-round" aria-hidden="true">visibility</span>
+      </button>
+      <button class="btn button-actions-table" aria-label="Descargar">
+        <span class="material-icons-round" aria-hidden="true">file_download</span>
+      </button>
+      <button class="btn button-actions-table" aria-label="Eliminar">
+        <span class="material-icons-round" aria-hidden="true">delete</span>
+      </button>
+    </div>\`;
+}
+`;
 
 export const TABLE_EXAMPLE_SELECTABLE_TS = `
 import { Component, OnInit } from '@angular/core';
@@ -320,16 +320,16 @@ export class ExampleComponent {
   iconsHtml = \`
     <div class="actions-table">
       <button class="btn button-actions-table" aria-label="Editar">
-        <span class="material-icons-round">edit</span>
+        <span class="material-icons-round" aria-hidden="true">edit</span>
       </button>
       <button class="btn button-actions-table" aria-label="Visualizar">
-        <span class="material-icons-round">visibility</span>
+        <span class="material-icons-round" aria-hidden="true">visibility</span>
       </button>
       <button class="btn button-actions-table" aria-label="Descargar">
-        <span class="material-icons-round">file_download</span>
+        <span class="material-icons-round" aria-hidden="true">file_download</span>
       </button>
       <button class="btn button-actions-table" aria-label="Eliminar">
-        <span class="material-icons-round">delete</span>
+        <span class="material-icons-round" aria-hidden="true">delete</span>
       </button>
     </div>\`;
 }

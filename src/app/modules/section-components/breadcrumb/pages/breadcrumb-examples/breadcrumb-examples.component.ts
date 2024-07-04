@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreadcrumbService } from 'ngx-obelisco-example/core/services';
-import { BREADCRUMB_EXAMPLE_TS } from 'src/app/constants/breadcrumb.constants';
+import { BREADCRUMB_EXAMPLE_HTML, BREADCRUMB_EXAMPLE_TS } from 'src/app/constants/breadcrumb.constants';
 
 @Component({
   selector: 'app-breadcrumb-examples',
@@ -9,6 +9,7 @@ import { BREADCRUMB_EXAMPLE_TS } from 'src/app/constants/breadcrumb.constants';
 })
 export class BreadcrumbExamplesComponent implements OnInit {
   public exampleTS = BREADCRUMB_EXAMPLE_TS;
+  public exampleHtml = BREADCRUMB_EXAMPLE_HTML;
   constructor(private readonly breadcrumb: BreadcrumbService) {}
 
   ngOnInit(): void {

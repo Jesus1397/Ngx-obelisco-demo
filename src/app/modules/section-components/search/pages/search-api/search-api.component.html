@@ -1,39 +1,45 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Galería de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism code="import { OSearchModule } from 'ngx-obelisco-example/search';"></code>
-    </pre>
-  </div>
-
-  <h3>Etiqueta</h3>
-  <hr />
-
-  <div class="section-selector">
-    <h4>OSearch</h4>
-    <p>Selector: <strong>o-search</strong></p>
-
-    <div class="section-properties">
-      <h5>Propiedades</h5>
-
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    <h2 class="h3">Referencia de API para el componente Galería de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OSearchModule } from 'ngx-obelisco-example/search';"></code>
     </div>
   </div>
 
-  <h3>Tipos de datos</h3>
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-search</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
   <hr />
 
   <div class="section-type">
-    <h4>SearchbarItems</h4>
+    <h3>SearchbarItems</h3>
     <p>Permite establecer los valores de la propiedad <strong>searchbarItems</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code">
-        <code appPrism>{{ searchItemInterface }}</code>
-      </pre>
+      <div>
+        <code highlight-js [lang]="'ts'">{{ searchItemInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="searchItemDataSource"
           [isStriped]="true"

@@ -32,7 +32,9 @@
         (ngModelChange)="onDateChange($event)"
       />
       <div class="input-group-append">
-        <o-button icon="bx bxs-calendar" (click)="d.toggle()"></o-button>
+        <o-button ariaLabel="calendario" (click)="d.toggle()">
+          <i class="bx bxs-calendar"></i>
+        </o-button>
       </div>
     </div>
   </div>

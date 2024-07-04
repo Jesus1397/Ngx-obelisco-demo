@@ -1,37 +1,20 @@
+<ng-template #content><ng-content></ng-content></ng-template>
 <ng-container *ngIf="link || route || download || rel || target; else isButton">
   <ng-container *ngIf="link || download || rel || target; else isRouterLink">
     <a
-      class="btn"
-      [ngClass]="
-        (isOutline ? 'btn-outline-' + type : 'btn-' + type) +
-        (size !== 'md' ? ' btn-' + size : '') +
-        (isExpandable ? ' btn-block' : '') +
-        (icon || spinner ? ' btn-icon' : '') +
-        (customClasses ? ' ' + customClasses : '')
-      "
+      [ngClass]="getClassNames()"
       [attr.aria-label]="ariaLabel"
       [attr.download]="download"
       [attr.rel]="rel ? rel : 'noreferrer'"
       [attr.target]="target ? target : '_blank'"
       [attr.href]="link ? link : '#'"
     >
-      <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+      <ng-container *ngTemplateOutlet="content"></ng-container>
     </a>
   </ng-container>
   <ng-template #isRouterLink>
-    <a
-      class="btn"
-      [ngClass]="
-        (isOutline ? 'btn-outline-' + type : 'btn-' + type) +
-        (size !== 'md' ? ' btn-' + size : '') +
-        (isExpandable ? ' btn-block' : '') +
-        (icon || spinner ? ' btn-icon' : '') +
-        (customClasses ? ' ' + customClasses : '')
-      "
-      [attr.aria-label]="ariaLabel"
-      [routerLink]="route"
-    >
-      <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+    <a [ngClass]="getClassNames()" [attr.aria-label]="ariaLabel" [routerLink]="route">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
     </a>
   </ng-template>
 </ng-container>
@@ -39,90 +22,13 @@
 <ng-template #isButton>
   <button
     type="button"
-    class="btn"
-    [ngClass]="
-      (isOutline ? 'btn-outline-' + type : 'btn-' + type) +
-      (size !== 'md' ? ' btn-' + size : '') +
-      (isExpandable ? ' btn-block' : '') +
-      (icon || spinner ? ' btn-icon' : '') +
-      (customClasses ? ' ' + customClasses : '')
-    "
+    [ngClass]="getClassNames()"
     [attr.aria-label]="ariaLabel"
     [disabled]="isDisabled ? true : null"
     [attr.data-target]="dataTarget ? '#' + dataTarget : null"
     [attr.data-toggle]="dataToggle"
     [attr.data-dismiss]="dataDismiss"
   >
-    <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+    <ng-container *ngTemplateOutlet="content"></ng-container>
   </button>
-</ng-template>
-
-<ng-template #iconContent>
-  <ng-container *ngIf="icon">
-    <i *ngIf="icon.includes('bx')" [ngClass]="icon"></i>
-    <span *ngIf="!icon.includes('bx')" class="material-icons-round">{{ icon }}</span>
-  </ng-container>
-</ng-template>
-
-<ng-template #spinnerContent>
-  <ng-container *ngIf="spinner">
-    <div class="spinner-border text-{{ getSpinnerType() }} spinner-border-sm" role="status">
-      <span class="sr-only">Cargando...</span>
-    </div>
-  </ng-container>
-</ng-template>
-
-<ng-template #textContent>
-  <ng-container *ngIf="icon || spinner; else textDefault">
-    {{ text }}
-  </ng-container>
-  <ng-template #textDefault> {{ text }} </ng-template>
-</ng-template>
-
-<ng-template #buttonContent>
-  <ng-container *ngIf="icon && !spinner">
-    <ng-container *ngIf="!iconPositionRight">
-      <ng-container *ngTemplateOutlet="iconContent"></ng-container>
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-    </ng-container>
-    <ng-container *ngIf="iconPositionRight">
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-      <ng-container *ngTemplateOutlet="iconContent"></ng-container>
-    </ng-container>
-  </ng-container>
-  <ng-container *ngIf="!icon && spinner">
-    <ng-container *ngIf="!spinnerPositionRight">
-      <ng-container *ngTemplateOutlet="spinnerContent"></ng-container>
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-    </ng-container>
-    <ng-container *ngIf="spinnerPositionRight">
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-      <ng-container *ngTemplateOutlet="spinnerContent"></ng-container>
-    </ng-container>
-  </ng-container>
-  <ng-container *ngIf="icon && spinner">
-    <ng-container *ngIf="!spinnerPositionRight && iconPositionRight">
-      <ng-container *ngTemplateOutlet="spinnerContent"></ng-container>
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-      <ng-container *ngTemplateOutlet="iconContent"></ng-container>
-    </ng-container>
-    <ng-container *ngIf="!spinnerPositionRight && !iconPositionRight">
-      <ng-container *ngTemplateOutlet="iconContent"></ng-container>
-      <ng-container *ngTemplateOutlet="spinnerContent"></ng-container>
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-    </ng-container>
-    <ng-container *ngIf="spinnerPositionRight && !iconPositionRight">
-      <ng-container *ngTemplateOutlet="iconContent"></ng-container>
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-      <ng-container *ngTemplateOutlet="spinnerContent"></ng-container>
-    </ng-container>
-    <ng-container *ngIf="spinnerPositionRight && iconPositionRight">
-      <ng-container *ngTemplateOutlet="textContent"></ng-container>
-      <ng-container *ngTemplateOutlet="iconContent"></ng-container>
-      <ng-container *ngTemplateOutlet="spinnerContent"></ng-container>
-    </ng-container>
-  </ng-container>
-  <ng-container *ngIf="!icon && !spinner">
-    <ng-container *ngTemplateOutlet="textContent"></ng-container>
-  </ng-container>
 </ng-template>

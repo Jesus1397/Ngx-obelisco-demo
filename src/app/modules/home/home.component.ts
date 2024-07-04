@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public exampleComment = `// Instalación con npm`;
+  public exampleComment = `// Instalación con npm
+npm install ngx-obelisco-example`;
   public exampleInstall = `npm install ngx-obelisco-example`;
 }

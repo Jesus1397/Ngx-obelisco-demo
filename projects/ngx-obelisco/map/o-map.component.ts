@@ -8,28 +8,18 @@ import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
   templateUrl: './o-map.component.html',
   styleUrls: ['./o-map.component.scss']
 })
-export class OMapComponent implements OnInit {
+export class OMapComponent {
+  constructor(private sanitizer: DomSanitizer) {}
+
+  @Input() public type: 'lateral' | 'institutional' = 'lateral';
   @Input() public title!: string;
   @Input() public description!: string;
   @Input() public iframe!: MediaIframe;
   @Input() public customClasses: string = '';
 
-  safeIframe!: SafeHtml;
-  safeIframeUrl!: SafeResourceUrl;
-
   @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 
-  constructor(private sanitizer: DomSanitizer) {}
-
-  ngOnInit() {
-    this.validateInputs();
-    this.safeIframe = this.sanitizer.bypassSecurityTrustHtml(this.iframe.src ? this.iframe.src : '');
-    this.safeIframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.iframe.src ? this.iframe.src : '');
-  }
-
-  private validateInputs() {
-    if (!this.title || !this.description || !this.iframe) {
-      throw new Error('Title, description, iframe, iframeTitle, and mapUrl are required.');
-    }
+  sanitizeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

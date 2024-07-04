@@ -66,120 +66,120 @@ export const PANEL_SMALL_DATA_SOURCE: DataSource[] = [
 ];
 
 export const PANEL_SMALL_HORIZONTAL = `
-  <o-panel-small
-    [title]="title"
-    [description]="description"
-    [image]="image">
-  </o-panel-small>
+<o-panel-small
+  [title]="title"
+  [description]="description"
+  [image]="image">
+</o-panel-small>
 `;
 
 export const PANEL_SMALL_LARGE_IMAGE_TS = `
-  import { Component } from '@angular/core';
-  import { MediaSizes, MediaPanel } from 'ngx-obelisco-example/core/models';
+import { Component } from '@angular/core';
+import { MediaSizes, MediaPanel } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    template: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public title: string = 'Nombre del titular';
+@Component({
+  selector: 'app-example',
+  template: './app-example.component.html',
+})
+export class ExampleComponent {
+  public title: string = 'Nombre del titular';
 
-    public description: string = 'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
+  public description: string = 'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
 
-    public image: MediaPanel = {
-      src: 'https://gcba.github.io/Obelisco/cards/paseobajo-wide.png',
-      alt: 'descripción de imagen',
-      size: 'lg' as MediaSizes
-    };
-  }
+  public image: MediaPanel = {
+    src: 'https://gcba.github.io/Obelisco/cards/paseobajo-wide.png',
+    alt: 'descripción de imagen',
+    size: 'lg' as MediaSizes
+  };
+}
 `;
 
 export const PANEL_SMALL_TS = `
-  import { Component } from '@angular/core';
-  import { MediaPanel } from 'ngx-obelisco-example/core/models';
+import { Component } from '@angular/core';
+import { MediaPanel } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    template: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public title: string = 'Nombre del titular';
+@Component({
+  selector: 'app-example',
+  template: './app-example.component.html',
+})
+export class ExampleComponent {
+  public title: string = 'Nombre del titular';
 
-    public description: string = 'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
+  public description: string = 'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
 
-    public image: MediaPanel = {
-      src: 'https://gcba.github.io/Obelisco/cards/paseobajo-wide.png',
-      alt: 'descripción de imagen'
-    };
-  }
+  public image: MediaPanel = {
+    src: 'https://gcba.github.io/Obelisco/cards/paseobajo-wide.png',
+    alt: 'descripción de imagen'
+  };
+}
 `;
 
 export const PANEL_SMALL_VERTICAL = `
-  <o-panel-small
-    [title]="title"
-    [description]="description"
-    [image]="image"
-    [isVertical]="true">
-  </o-panel-small>
+<o-panel-small
+  [title]="title"
+  [description]="description"
+  [image]="image"
+  [isVertical]="true">
+</o-panel-small>
 `;
 
 export const PANEL_SMALL_WITH_BG = `
-  <o-panel-small
-    [title]="title"
-    [description]="description"
-    [image]="image"
-    [isVertical]="true"
-    [isBgWhite]="true">
-  </o-panel-small>
+<o-panel-small
+  [title]="title"
+  [description]="description"
+  [image]="image"
+  [isVertical]="true"
+  [isBgWhite]="true">
+</o-panel-small>
 
-  <o-panel-small
-    [title]="title"
-    [description]="description"
-    [image]="image"
-    [isVertical]="true"
-    [isBgLight]="true">
-  </o-panel-small>
+<o-panel-small
+  [title]="title"
+  [description]="description"
+  [image]="image"
+  [isVertical]="true"
+  [isBgLight]="true">
+</o-panel-small>
 `;
 
 export const PANEL_SMALL_ITEMS_VERTICAL = `
-  <o-panel-small
-    [title]="title"
-    [description]="description"
-    [image]="image"
-    [isVertical]="true">
-    <ng-container #listLinkContent>
-      <h4 class="list-link-item-title">Nombre del archivo</h4>
-      <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
-      <h4 class="list-link-item-title">Nombre del archivo</h4>
-      <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
-      <h4 class="list-link-item-title">Nombre del archivo</h4>
-      <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
-    </ng-container>
-  </o-panel-small>
+<o-panel-small
+  [title]="title"
+  [description]="description"
+  [image]="image"
+  [isVertical]="true">
+  <ng-container #listLinkContent>
+    <h4 class="list-link-item-title">Nombre del archivo</h4>
+    <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
+    <h4 class="list-link-item-title">Nombre del archivo</h4>
+    <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
+    <h4 class="list-link-item-title">Nombre del archivo</h4>
+    <a class="btn btn-secondary btn-sm download-link card-link" href="#" download=""> Descargar </a>
+  </ng-container>
+</o-panel-small>
 `;
 
 export const PANEL_SMALL_ITEMS_HORIZONTAL = `
-  <o-panel-small
-    [title]="title"
-    [description]="description"
-    [image]="image"
-    [isVertical]="true">
-    <ng-container #panelFooterContent>
-      <button type="button" class="btn btn-secondary btn-sm card-link">Acción 1</button>
-      <button type="button" class="btn btn-link btn-sm card-link">Acción 2</button>
-    </ng-container>
-  </o-panel-small>
+<o-panel-small
+  [title]="title"
+  [description]="description"
+  [image]="image"
+  [isVertical]="true">
+  <ng-container #panelFooterContent>
+    <button type="button" class="btn btn-secondary btn-sm card-link">Acción 1</button>
+    <button type="button" class="btn btn-link btn-sm card-link">Acción 2</button>
+  </ng-container>
+</o-panel-small>
 `;
 
 export const MEDIAPANEL_INTERFACE = `
-  interface Media {
-    src: string;
-  }
+interface Media {
+  src: string;
+}
 
-  interface MediaPanel extends Media {
-    size: MediaSizes;
-    alt: string;
-  }
+interface MediaPanel extends Media {
+  size: MediaSizes;
+  alt: string;
+}
 `;
 
 export const MEDIAPANEL_DATA_SOURCE = [

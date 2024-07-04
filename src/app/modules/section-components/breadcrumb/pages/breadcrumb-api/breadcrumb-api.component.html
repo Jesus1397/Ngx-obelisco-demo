@@ -1,24 +1,27 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Pan de miga de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism language="javascript" code="import { OBreadcrumbModule } from 'ngx-obelisco-example/breadcrumb';"></code>
-    </pre>
+    <h2 class="h3">Referencia de API para el componente Pan de miga de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OBreadcrumbModule } from 'ngx-obelisco-example/breadcrumb';"
+      ></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
   <div class="section-selector">
-    <h4>OBreadcrumb</h4>
     <p>Selector: <strong>o-breadcrumb</strong></p>
     <div class="section-properties">
-      <h5>Como se usa</h5>
+      <h2 class="h3">Como se usa</h2>
       <p>
         Se puede usar agregando su etiqueta en el html para detectar desde la url que parámetros agregar al breadcrumb.
       </p>
-      <pre class="code import">
-        <code appPrism language="javascript" code="import { BreadCrumbService } from 'ngx-obelisco';"></code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'" code="import { BreadCrumbService } from 'ngx-obelisco';"></code>
+      </div>
       <p class="mb-5">
         De otra forma se tiene que importar el servicio <strong>BreadCrumbService</strong> desde el componente a quien
         le queremos cambiar o personalizar el breadcrumb y agregar el valor al BehaviorSubject
@@ -27,26 +30,38 @@
     </div>
 
     <div class="section-type mt-5">
-      <h4>Breadcrumb</h4>
+      <h3>Breadcrumb</h3>
       <p>Permite establecer los valores de la propiedad <strong>breadcrumb$</strong>.</p>
       <div class="section-interface">
-        <pre class="code import">
-          <code appPrism language="javascript">{{ exampleInterface1 }}</code>
-        </pre>
+        <div class=" ">
+          <code highlight-js [lang]="'ts'">{{ exampleInterface1 }}</code>
+        </div>
         <div class="section-properties">
-          <h5>Propiedades</h5>
-          <o-table [dataSource]="dataSource" [columns]="columns" [isBordered]="true" [isStriped]="true"></o-table>
+          <h4>Propiedades</h4>
+          <o-table
+            [isScrollable]="true"
+            [dataSource]="dataSource"
+            [columns]="columns"
+            [isBordered]="true"
+            [isStriped]="true"
+          ></o-table>
         </div>
       </div>
-      <h4 class="mt-5">Breadcrumb</h4>
+      <h3 class="mt-5">BreadcrumbRoute</h3>
       <p>Permite establecer los valores de la propiedad <strong>breadcrumb$</strong>.</p>
       <div class="section-interface">
-        <pre class="code import">
-          <code appPrism language="javascript">{{ exampleInterface2 }}</code>
-        </pre>
+        <div class=" ">
+          <code highlight-js [lang]="'ts'">{{ exampleInterface2 }}</code>
+        </div>
         <div class="section-properties">
-          <h5>Propiedades</h5>
-          <o-table [dataSource]="dataSourceRoute" [columns]="columns" [isBordered]="true" [isStriped]="true"></o-table>
+          <h4>Propiedades</h4>
+          <o-table
+            [isScrollable]="true"
+            [dataSource]="dataSourceRoute"
+            [columns]="columns"
+            [isBordered]="true"
+            [isStriped]="true"
+          ></o-table>
         </div>
       </div>
     </div>

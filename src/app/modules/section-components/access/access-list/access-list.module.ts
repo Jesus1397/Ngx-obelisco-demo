@@ -5,7 +5,7 @@ import { ONavModule } from 'ngx-obelisco-example/nav';
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { AccessListRoutingModule } from './access-list-routing.module';
 import { AccessListComponent } from './access-list.component';
 import { AccessListApiComponent } from './pages/access-list-api/access-list-api.component';
@@ -19,7 +19,7 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     AccessListRoutingModule,
     ONavModule,
     OTableModule,
-    PrismDirective,
+    HighlightJsModule,
     ClipboardDirective,
     ViewerComponent,
     OAccessModule,

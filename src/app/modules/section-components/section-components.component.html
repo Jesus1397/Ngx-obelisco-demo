@@ -5,7 +5,7 @@
     <o-nav-vertical [navVertItems]="othersNavigation"></o-nav-vertical>
   </div>
   <div class="component-description-content">
-    <h2 class="title-component" #componentTitle>{{ title }}</h2>
+    <h1 class="h2 title-component" #componentTitle>{{ title }}</h1>
 
     <ng-container *ngIf="!isComponentTemplate; else componentTemplate">
       <div class="component-detail" #childComponent>

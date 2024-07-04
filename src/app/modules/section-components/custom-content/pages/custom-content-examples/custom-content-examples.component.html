@@ -2,22 +2,22 @@
   <app-viewer title="Componente Bloque de trámite personalizado">
     <div component style="max-width: 340px">
       <o-block [isBgLight]="true">
-        <ng-container *oCustomContent>
+        <div *oCustomContent class="p-2">
           <p class="mb-1">Título personalizado</p>
           <div class="d-flex justify-content-between font-weight-bold">
             <span>Total:</span>
             <span class="h3 mb-0">$1000</span>
           </div>
-          <o-button [isExpandable]="true" link="#"></o-button>
+          <o-button [isExpandable]="true" link="#">Botón</o-button>
           <hr />
           <p>Texto extendido personalizado de bloque de trámite.</p>
-          <o-button [isOutline]="true" type="secondary" [isExpandable]="true" link="#"></o-button>
-        </ng-container>
+          <o-button [isOutline]="true" type="secondary" [isExpandable]="true" link="#">Botón</o-button>
+        </div>
       </o-block>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{oCustomContentHTML}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ oCustomContentHTML }}</code>
+    </div>
   </app-viewer>
 </section>

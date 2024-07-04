@@ -9,24 +9,23 @@ import { ButtonTypes, Sizes } from 'ngx-obelisco-example/core/models';
 export class OButtonComponent {
   @Input() public type: ButtonTypes = 'primary';
   @Input() public isOutline?: boolean = false;
-  @Input() public text: string = '';
   @Input() public size?: Sizes = 'md';
   @Input() public isExpandable: boolean = false;
-  @Input() public icon?: string;
+  @Input() public hasIcon: boolean = false;
+  @Input() public hasSpinner: boolean = false;
   @Input() public ariaLabel?: string;
-  @Input() public spinner?: boolean = false;
-  @Input() public iconPositionRight?: boolean = false;
-  @Input() public spinnerPositionRight?: boolean = false;
+  @Input() public customClasses: string = '';
+
   @Input() public route!: string;
   @Input() public link?: string;
   @Input() public target?: string;
   @Input() public download?: string;
   @Input() public rel?: string;
+
   @Input() public isDisabled?: boolean;
   @Input() public dataTarget?: string;
   @Input() public dataToggle?: string;
   @Input() public dataDismiss?: string;
-  @Input() public customClasses: string = '';
 
   getSpinnerType(): string {
     const spinnerTypeMappings = {
@@ -41,5 +40,14 @@ export class OButtonComponent {
       return 'light';
     }
     return spinnerTypeMappings[this.type];
+  }
+
+  getClassNames(): string {
+    const sizeClass = this.size !== 'md' ? ' btn-' + this.size : '';
+    const outlineClass = this.isOutline ? ' btn-outline-' + this.type : ' btn-' + this.type;
+    const expandableClass = this.isExpandable ? ' btn-block' : '';
+    const iconClass = this.hasIcon ? ' btn-icon' : '';
+    const customClass = this.customClasses ? ' ' + this.customClasses : '';
+    return 'btn' + outlineClass + sizeClass + expandableClass + iconClass + customClass;
   }
 }

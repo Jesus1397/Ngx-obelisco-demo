@@ -55,58 +55,58 @@ export const DATA_SOURCE_PROGRESS_BAR_OUTPUT: DataSource[] = [
 ];
 
 export const PROGRESS_BAR_EXAMPLE_DIRECTIVE = `
-  <o-progress-bar type="info" description='Descripción' [currentStep]="4" [totalSteps]="8"></o-progress-bar>
+<o-progress-bar type="info" description='Descripción' [currentStep]="4" [totalSteps]="8"></o-progress-bar>
 
-  <o-button oStepPrevious type="link" size="sm" text="Anterior"></o-button>
-  <o-button oStepNext type="link" size="sm" text="Siguiente"></o-button>
+<o-button oStepPrevious type="link" size="sm">Anterior</o-button>
+<o-button oStepNext type="link" size="sm">Siguiente</o-button>
 `;
 
 export const PROGRESS_BAR_EXAMPLE_FUNCIONALITY_HTML = `
-  <o-progress-bar
-    type="success"
-    description='Descripción'
-    [currentStep]="4"
-    [totalSteps]="8"
-    (stopSteps)="stopProgress($event)"
-  ></o-progress-bar>
+<o-progress-bar
+  type="success"
+  description='Descripción'
+  [currentStep]="4"
+  [totalSteps]="8"
+  (stopSteps)="stopProgress($event)"
+></o-progress-bar>
 
-  <o-button type="link" size="sm" text="Anterior" (click)="previousStep()"></o-button>
-  <o-button type="link" size="sm" text="Siguiente" (click)="nextStep()"></o-button>
+<o-button type="link" size="sm" (click)="previousStep()">Anterior</o-button>
+<o-button type="link" size="sm" (click)="nextStep()">Siguiente</o-button>
 `;
 
 export const PROGRESS_BAR_EXAMPLE_FUNCIONALITY_TS = `
-  import { Component, OnInit } from '@angular/core';
-  import { StepService } from 'ngx-obelisco';
+import { Component, OnInit } from '@angular/core';
+import { StepService } from 'ngx-obelisco';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent implements OnInit {
-    constructor(private readonly progressBarService: StepService) {}
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent implements OnInit {
+  constructor(private readonly progressBarService: StepService) {}
 
-    public ngOnInit(): void {
-      this.progressBarService.initialize();
-    }
+  public ngOnInit(): void {
+    this.progressBarService.initialize();
+  }
 
-    public nextStep(): void {
-      this.progressBarService.next();
-    }
+  public nextStep(): void {
+    this.progressBarService.next();
+  }
 
-    public previousStep(): void {
-      this.progressBarService.previous();
-    }
+  public previousStep(): void {
+    this.progressBarService.previous();
+  }
 
-    public stopProgress(event: boolean): void {
-      if (event) {
-        console.log('Completado');
-      }
+  public stopProgress(event: boolean): void {
+    if (event) {
+      console.log('Completado');
     }
   }
+}
 `;
 
 export const PROGRESS_BAR_EXAMPLE_NO_STEPS = `
-  <o-progress-bar type="info" [currentStep]="5"></o-progress-bar>
+<o-progress-bar type="info" [currentStep]="5"></o-progress-bar>
 
-  <o-progress-bar type="success" [currentStep]="4"></o-progress-bar>
+<o-progress-bar type="success" [currentStep]="4"></o-progress-bar>
 `;

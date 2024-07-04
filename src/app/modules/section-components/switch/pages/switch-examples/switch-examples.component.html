@@ -4,24 +4,24 @@
       <o-switch></o-switch>
       <o-switch [switchValue]="true"></o-switch>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exampleDefault }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con label" id="example-directive">
     <div component class="d-flex">
       <o-switch [id]="'example'" [labelOff]="'Apagado'" [labelOn]="'Prendido'"></o-switch>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exampleWithLabel }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 
   <app-viewer title="Oscuro" id="example-directive">
@@ -29,12 +29,12 @@
       <o-switch [isDark]="true"></o-switch>
       <o-switch [switchValue]="true" [isDark]="true"></o-switch>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exampleDark }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 
   <app-viewer title="Chico" id="example-directive">
@@ -42,12 +42,12 @@
       <o-switch [isSmall]="true"></o-switch>
       <o-switch [switchValue]="true" [isSmall]="true"></o-switch>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exampleSmall }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 
   <app-viewer title="Valor fijo" id="example-directive">
@@ -55,12 +55,12 @@
       <o-switch [isFixed]="true"></o-switch>
       <o-switch [switchValue]="true" [isFixed]="true"></o-switch>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exampleChecked }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 
   <app-viewer title="Deshabilitado" id="example-directive">
@@ -68,11 +68,11 @@
       <o-switch [isDisabled]="true" [labelOff]="'Apagado'"></o-switch>
       <o-switch [isDisabled]="true" [labelOn]="'Prendido'" [switchValue]="true"></o-switch>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exampleDisabled }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 </section>

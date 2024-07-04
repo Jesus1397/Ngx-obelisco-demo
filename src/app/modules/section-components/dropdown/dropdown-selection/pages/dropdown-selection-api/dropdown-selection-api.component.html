@@ -1,44 +1,56 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Desplegables de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism code="import { ODropdownModule } from 'ngx-obelisco-example/dropdown';"></code>
-    </pre>
-  </div>
-
-  <h3>Etiqueta</h3>
-  <hr />
-
-  <div class="section-selector">
-    <h4>ODropdownSelection</h4>
-    <p>Selector: <strong>o-dropdown-selection</strong></p>
-    <div class="section-properties">
-      <h5>Propiedades</h5>
-
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
-
-      <br />
-
-      <h5>Métodos</h5>
-
-      <o-table [columns]="columns" [dataSource]="dataSourceOutput" [isStriped]="true" [isBordered]="true"></o-table>
+    <h2 class="h3">Referencia de API para el componente Desplegables de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { ODropdownModule } from 'ngx-obelisco-example/dropdown';"></code>
     </div>
   </div>
 
-  <h3>Tipos de datos</h3>
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-dropdown-selection</strong></p>
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+
+      <br />
+
+      <h2 class="h3">Métodos</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceOutput"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
   <hr />
 
   <div class="section-type">
-    <h4>DropdownSelectionItem</h4>
+    <h3>DropdownSelectionItem</h3>
     <p>Permite establecer los valores de la propiedad <strong>items</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ dropdownSelectionInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ dropdownSelectionInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="dataSourceInterface"
           [isStriped]="true"
@@ -49,15 +61,15 @@
   </div>
 
   <div class="section-type mt-4">
-    <h4>Sizes</h4>
+    <h3>Sizes</h3>
     <p>Permite establecer el tamaño del componente.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-          <code appPrism>
-            {{ sizes }}
-          </code>
-        </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">
+          {{ sizes }}
+        </code>
+      </div>
     </div>
   </div>
 </section>

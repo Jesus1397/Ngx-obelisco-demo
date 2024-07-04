@@ -39,67 +39,67 @@ export const DATA_SOURCE_STEPS_FORM_OUTPUT: DataSource[] = [
 ];
 
 export const STEPS_FORM_EXAMPLE_DIRECTIVE_HTML = `
-  <o-steps-form [steps]="steps" (stopSteps)="stopProgress($event)"></o-steps-form>
+<o-steps-form [steps]="steps" (stopSteps)="stopProgress($event)"></o-steps-form>
 
-  <button oStepPrevious class="btn btn-sm btn-link mr-2">Anterior</button>
-  <button oStepNext class="btn btn-sm btn-link">Siguiente</button>
+<button oStepPrevious class="btn btn-sm btn-link mr-2">Anterior</button>
+<button oStepNext class="btn btn-sm btn-link">Siguiente</button>
 `;
 
 export const STEPS_FORM_EXAMPLE_DIRECTIVE_TS = `
-  import { Component, OnInit } from '@angular/core';
-  import { StepService } from 'ngx-obelisco';
+import { Component, OnInit } from '@angular/core';
+import { StepService } from 'ngx-obelisco';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent implements OnInit {
-    public steps = ['Paso 1', 'Paso 2', 'Paso 3'];
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent implements OnInit {
+  public steps = ['Paso 1', 'Paso 2', 'Paso 3'];
 
-    public stopProgress(event: boolean): void {
-      if (event) {
-        console.log('Completado');
-      }
+  public stopProgress(event: boolean): void {
+    if (event) {
+      console.log('Completado');
     }
   }
+}
 `;
 
 export const STEPS_FORM_EXAMPLE_FUNCTIONALITY_HTML = `
-  <o-steps-form [steps]="steps" (stopSteps)="stopProgress($event)"></o-steps-form>
+<o-steps-form [steps]="steps" (stopSteps)="stopProgress($event)"></o-steps-form>
 
-  <button class="btn btn-sm btn-link mr-2" (click)="previousStep()">Anterior</button>
-  <button class="btn btn-sm btn-link" (click)="nextStep()">Siguiente</button>
+<button class="btn btn-sm btn-link mr-2" (click)="previousStep()">Anterior</button>
+<button class="btn btn-sm btn-link" (click)="nextStep()">Siguiente</button>
 `;
 
 export const STEPS_FORM_EXAMPLE_FUNCTIONALITY_TS = `
-  import { Component, OnInit } from '@angular/core';
-  import { StepService } from 'ngx-obelisco';
+import { Component, OnInit } from '@angular/core';
+import { StepService } from 'ngx-obelisco';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent implements OnInit {
-    public steps = ['Paso 1', 'Paso 2', 'Paso 3'];
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent implements OnInit {
+  public steps = ['Paso 1', 'Paso 2', 'Paso 3'];
 
-    constructor(private readonly stepsFormService: StepService) {}
+  constructor(private readonly stepsFormService: StepService) {}
 
-    public ngOnInit(): void {
-      this.stepsFormService.initialize();
-    }
+  public ngOnInit(): void {
+    this.stepsFormService.initialize();
+  }
 
-    public nextStep(): void {
-      this.stepsFormService.next();
-    }
+  public nextStep(): void {
+    this.stepsFormService.next();
+  }
 
-    public previousStep(): void {
-      this.stepsFormService.previous();
-    }
+  public previousStep(): void {
+    this.stepsFormService.previous();
+  }
 
-    public stopProgress(event: boolean): void {
-      if (event) {
-        console.log('Completado');
-      }
+  public stopProgress(event: boolean): void {
+    if (event) {
+      console.log('Completado');
     }
   }
+}
 `;

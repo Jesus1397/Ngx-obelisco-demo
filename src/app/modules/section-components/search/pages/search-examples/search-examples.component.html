@@ -3,13 +3,13 @@
     <div component class="search-container">
       <o-search [searchbarItems]="routes"></o-search>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">{{ searchExampleHtml }}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="javascript">{{ searchExampleTs }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ searchExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ searchExampleTs }}</code>
+    </div>
   </app-viewer>
 </section>

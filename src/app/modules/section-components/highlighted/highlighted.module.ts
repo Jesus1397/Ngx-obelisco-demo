@@ -10,7 +10,7 @@ import { HighlightedExamplesComponent } from './pages/highlighted-examples/highl
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 import { OHighlightedModule } from 'ngx-obelisco-example/highlighted/o-highlighted.module';
 import { OButtonModule } from 'ngx-obelisco-example/button';
@@ -26,7 +26,7 @@ import { OAccessModule } from 'ngx-obelisco-example/access';
     OTableModule,
     ViewerComponent,
     ClipboardDirective,
-    PrismDirective,
+    HighlightJsModule,
     TabsLinkComponent,
     OHighlightedModule,
     OButtonModule,

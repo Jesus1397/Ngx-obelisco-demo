@@ -7,11 +7,11 @@
       <!-- Logo ↓ -->
       <a class="navbar-brand" [routerLink]="logo.route" *ngIf="logo">
         <img
-          [ngClass]="logo.customClasses ? logo.customClasses : 'header-logo'"
+          [ngClass]="logo.customClasses"
           [src]="logo.src"
           [alt]="logo.alt"
-          [width]="logo.width"
-          [height]="logo.height"
+          [attr.width]="logo.width"
+          [attr.height]="logo.height"
         />
       </a>
       <!-- Login button Mobile ↓ -->
@@ -45,31 +45,31 @@
 <!-- TEMPLATES -->
 <ng-template #iconTemplate let-icon="icon">
   <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
-  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round">{{ icon }}</span>
+  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
 </ng-template>
 
 <ng-template #iconTemplateLink let-icon="icon">
   <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
-  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round">{{ icon }}</span>
-  <span *ngIf="!icon" class="material-icons-round">arrow_forward</span>
+  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
+  <span *ngIf="!icon" class="material-icons-round" aria-hidden="true">arrow_forward</span>
 </ng-template>
 
 <ng-template #iconTemplateDropdown let-icon="icon">
   <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
-  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round">{{ icon }}</span>
+  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
   <span *ngIf="!icon" class="material-icons-round btn-dropdown-icon"> expand_more </span>
 </ng-template>
 
 <ng-template #iconTemplateAccount let-icon="icon">
   <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
-  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round">{{ icon }}</span>
-  <span *ngIf="!icon" class="material-icons-round">person</span>
+  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
+  <span *ngIf="!icon" class="material-icons-round" aria-hidden="true">person</span>
 </ng-template>
 
 <ng-template #iconTemplateLogout let-icon="icon">
   <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
-  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round">{{ icon }}</span>
-  <span *ngIf="!icon" class="material-icons-round">logout</span>
+  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
+  <span *ngIf="!icon" class="material-icons-round" aria-hidden="true">logout</span>
 </ng-template>
 
 <ng-template #accountButtonMobile>
@@ -96,7 +96,7 @@
               [routerLink]="accountChild.route"
             >
               <div class="nav-icon">
-                <span class="material-icons-round">logout</span>
+                <span class="material-icons-round" aria-hidden="true">logout</span>
                 <span>Cerrar sesión</span>
               </div>
             </a>

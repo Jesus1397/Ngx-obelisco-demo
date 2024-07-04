@@ -2,71 +2,70 @@
   <app-viewer title="Tipos" [isNavCode]="true">
     <div class="mb-4" component>
       <o-banner [content]="content"></o-banner>
-    </div>
-    <div class="mb-4" component>
+      <br />
       <o-banner [content]="content" [isDark]="true"></o-banner>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ bannerTypesHTML }}
       </code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
         {{ bannerTypesTS }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
+
   <app-viewer title="Con Botón" [isNavCode]="true">
     <div class="mb-4" component>
       <o-banner [content]="textButton" [icon]="icon">
-        <o-button #children size="sm" type="secondary" link="#"></o-button>
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+      </o-banner>
+      <br />
+      <o-banner [content]="textButton" [icon]="icon" [isDark]="true">
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
       </o-banner>
     </div>
-    <div class="mb-4" component>
-      <o-banner [content]="textButton" [isDark]="true" [icon]="icon">
-        <o-button #children size="sm" type="secondary" link="#"></o-button>
-      </o-banner>
-    </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ bannerButtonHTML }}
       </code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
         {{ bannerButtonTS }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
+
   <app-viewer title="Con Botones" [isNavCode]="true">
     <div class="mb-4" component>
       <o-banner [content]="textButton" [icon]="iconCookie">
-        <o-button #children size="sm" type="secondary" link="#"></o-button>
-        <o-button #children size="sm" link="#"></o-button>
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+        <o-button #children size="sm" link="#">Botón</o-button>
       </o-banner>
-    </div>
-    <div class="mb-4" component>
+      <br />
       <o-banner [content]="textButton" [icon]="iconCookie" [isDark]="true">
-        <o-button #children size="sm" type="secondary" link="#"></o-button>
-        <o-button #children size="sm" link="#"></o-button>
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+        <o-button #children size="sm" link="#">Botón</o-button>
       </o-banner>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ bannerButtonsHTML }}
       </code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
         {{ bannerButtonTS }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 </section>

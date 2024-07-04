@@ -1,31 +1,42 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Mensaje de estado de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism code="import { OStatusMessageModule } from 'ngx-obelisco-example/status-message';"></code>
-    </pre>
+    <h2 class="h3">Referencia de API para el componente Mensaje de estado de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OStatusMessageModule } from 'ngx-obelisco-example/status-message';"
+      ></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>OStatusMessage</h4>
     <p>Selector: <strong>o-status-message</strong></p>
     <div class="section-properties">
-      <h5>Propiedades</h5>
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
   </div>
 
   <br />
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
 
   <div class="section-type">
-    <h4>StatusMessageTypes</h4>
+    <h3>StatusMessageTypes</h3>
     <p>Permite establecer los diferentes tipos de Mensaje de estado.</p>
 
-    <pre class="code import">
-      <code appPrism>{{ type }}</code>
-    </pre>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'">{{ type }}</code>
+    </div>
   </div>
 </section>
