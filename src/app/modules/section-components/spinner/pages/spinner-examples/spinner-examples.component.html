@@ -9,12 +9,12 @@
       <o-spinner type="light"></o-spinner>
       <o-spinner type="dark"></o-spinner>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleColors }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleColors }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Tamaños">
@@ -23,12 +23,12 @@
       <o-spinner></o-spinner>
       <o-spinner size="lg"></o-spinner>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleSizes }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleSizes }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Expandible">
@@ -37,12 +37,12 @@
         <o-spinner [isExpandable]="true"></o-spinner>
       </div>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleBlock }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleBlock }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con mensaje">
@@ -50,11 +50,11 @@
       <o-spinner size="lg"></o-spinner>
       <small class="mt-2">Cargando...</small>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ exampleMessage }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleMessage }}
+      </code>
+    </div>
   </app-viewer>
 </section>

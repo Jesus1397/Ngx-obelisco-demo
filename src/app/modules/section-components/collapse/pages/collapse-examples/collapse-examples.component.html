@@ -5,25 +5,22 @@
         identifier="collapseOne"
         title="Título"
         content="Esta es la descripción que se encuentra dentro de un colapsable."
-      >
-      </o-collapse>
+      ></o-collapse>
       <o-collapse
         identifier="collapseTwo"
         title="Título"
         content="Esta es la descripción que se encuentra dentro de un colapsable."
-      >
-      </o-collapse>
+      ></o-collapse>
       <o-collapse
         identifier="collapseThree"
         title="Título"
         content="Esta es la descripción que se encuentra dentro de un colapsable."
-      >
-      </o-collapse>
+      ></o-collapse>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ collapseMultipleHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseMultipleHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Selección única">
@@ -50,15 +47,80 @@
       >
       </o-collapse>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{collapseUniqueHtml}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseUniqueHtml }}</code>
+    </div>
   </app-viewer>
 
-  <app-viewer title="Con información">
+  <app-viewer title="De color blanco">
+    <div class="bg-light py-4" component>
+      <o-collapse
+        identifier="collapseWhite"
+        [isWhite]="true"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      >
+      </o-collapse>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseWhiteHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <p class="h3 mb-4">Variantes de Encabezado</p>
+  <app-viewer title="Con ícono">
     <o-collapse
-      identifier="collapseInfo"
+      component
+      identifier="collapseIcon"
+      title="Título"
+      icon="bx bxs-user-circle"
+      content="Esta es la descripción que se encuentra dentro de un colapsable."
+    >
+    </o-collapse>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseIconExampleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con ícono, volanta y descripción">
+    <o-collapse
+      component
+      identifier="collapseLabelDescription"
+      title="Título"
+      icon="bx bxs-user-circle"
+      label="Volanta"
+      subtitle="Descripción"
+      content="Esta es la descripción que se encuentra dentro de un colapsable."
+    >
+    </o-collapse>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseIconLabelExampleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <p class="h3 mb-4">Variantes de Contenido</p>
+  <app-viewer title="Con texto">
+    <o-collapse
+      component
+      identifier="collapseText"
+      title="Título"
+      content="Esta es la descripción que se encuentra dentro de un colapsable."
+    ></o-collapse>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseTextExampleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con lista">
+    <o-collapse
+      identifier="collapseList"
       component
       title="$450,00"
       label="Total a pagar"
@@ -76,48 +138,16 @@
       ]"
     >
     </o-collapse>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ collapseInfoExampleHtml }}</code>
-    </pre>
-  </app-viewer>
-
-  <app-viewer title="Con icono">
-    <o-collapse
-      component
-      identifier="collapseIcon"
-      title="Título"
-      content="Esta es la descripción que se encuentra dentro de un colapsable."
-      icon="bx bxs-user-circle"
-    >
-    </o-collapse>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{collapseIconExampleHtml}}</code>
-    </pre>
-  </app-viewer>
-
-  <app-viewer title="Con volanta y descripcion">
-    <o-collapse
-      component
-      identifier="collapseLabel"
-      icon="bx bxs-user-circle"
-      label="Volanta"
-      title="Título"
-      subtitle="Descripción"
-      content="Esta es la descripción que se encuentra dentro de un colapsable."
-    >
-    </o-collapse>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{collapseLabelExampleHtml}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseListExampleHtml }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con lista seleccionable">
     <o-collapse
       component
-      identifier="collapseList"
+      identifier="collapseListInputs"
       title="Tarjeta de crédito / débito"
       subtitle="VISA, MasterCard, AMEX, CABAL, Maestro"
       [children]="[
@@ -140,25 +170,9 @@
       ]"
     >
     </o-collapse>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ collapseListExampleHtml }}</code>
-    </pre>
-  </app-viewer>
-
-  <app-viewer title="De color blanco">
-    <o-collapse
-      component
-      identifier="collapseWhite"
-      [isWhite]="true"
-      title="Título"
-      content="Esta es la descripción que se encuentra dentro de un colapsable."
-      icon="bx bxs-user-circle"
-    >
-    </o-collapse>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">{{ collapseWhiteHtml }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseListInputsExampleHtml }}</code>
+    </div>
   </app-viewer>
 </section>

@@ -80,30 +80,30 @@ export const SWITCH_DATA_SOURCE_OUTPUT: DataSource[] = [
 ];
 
 export const SWITCH_DEFAULT = `
-  <o-switch></o-switch>
-  <o-switch [switchValue]="true"></o-switch>
+<o-switch></o-switch>
+<o-switch [switchValue]="true"></o-switch>
 `;
 
 export const SWITCH_WITH_LABEL = `
-  <o-switch [id]="'example'" [labelOff]="'Apagado'" [labelOn]="'Prendido'"></o-switch>
+<o-switch [id]="'example'" [labelOff]="'Apagado'" [labelOn]="'Prendido'"></o-switch>
 `;
 
 export const SWITCH_DARK = `
-  <o-switch [isDark]="true"></o-switch>
-  <o-switch [isDark]="true" [switchValue]="true"></o-switch>
+<o-switch [isDark]="true"></o-switch>
+<o-switch [isDark]="true" [switchValue]="true"></o-switch>
 `;
 
 export const SWITCH_SMALL = `
-  <o-switch [isSmall]="true"></o-switch>
-  <o-switch [isSmall]="true" [switchValue]="true"></o-switch>
+<o-switch [isSmall]="true"></o-switch>
+<o-switch [isSmall]="true" [switchValue]="true"></o-switch>
 `;
 
 export const SWITCH_CHECKED = `
-  <o-switch [isFixed]="true"></o-switch>
-  <o-switch [isFixed]="true" [switchValue]="true"></o-switch>
+<o-switch [isFixed]="true"></o-switch>
+<o-switch [isFixed]="true" [switchValue]="true"></o-switch>
 `;
 
 export const SWITCH_DISABLED = `
-  <o-switch [isDisabled]="true" [labelOff]="'Apagado'"></o-switch>
-  <o-switch [isDisabled]="true" [labelOn]="'Prendido'" [switchValue]="true"></o-switch>
+<o-switch [isDisabled]="true" [labelOff]="'Apagado'"></o-switch>
+<o-switch [isDisabled]="true" [labelOn]="'Prendido'" [switchValue]="true"></o-switch>
 `;

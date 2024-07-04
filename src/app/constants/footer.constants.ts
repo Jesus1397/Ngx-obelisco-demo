@@ -2,23 +2,23 @@ import { CustomContent, DataSource } from 'ngx-obelisco-example/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCodeAll = (array1: any, array2: any, array3: any) => `
-  import { Component  } from '@angular/core';
-  import { Link, Network, Phone } from 'ngx-obelisco-example/core/models';
+import { Component  } from '@angular/core';
+import { Link, Network, Phone } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public phoneCustomList: Phone[] = ${codeFormattingArrayList(array1)}
-    ];
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  public phoneCustomList: Phone[] = ${codeFormattingArrayList(array1)}
+  ];
 
-    public networkCustomList: Network[] = ${codeFormattingArrayList(array2)}
-    ];
+  public networkCustomList: Network[] = ${codeFormattingArrayList(array2)}
+  ];
 
-    public linkCustomList: Link[] = ${codeFormattingArrayList(array3)}
-    ];
-  }`;
+  public linkCustomList: Link[] = ${codeFormattingArrayList(array3)}
+  ];
+}`;
 
 export const FOOTER_NAVIGATION = [
   {
@@ -157,32 +157,32 @@ export const LINK_CUSTOM_CONTENT: CustomContent = {
 };
 
 export const FOOTER_INTERFACE_PHONE = `
-  interface Phone {
-    title: string;
-    number: string;
-  }
+interface Phone {
+  title: string;
+  number: string;
+}
 `;
 
 export const FOOTER_INTERFACE_NETWORK = `
-  interface Network {
-    title: string;
-    src: string;
-    icon: string;
-  }
+interface Network {
+  title: string;
+  src: string;
+  icon: string;
+}
 `;
 
 export const FOOTER_INTERFACE_LINK = `
-  interface Link {
-    title: string;
-    src: string;
-  }
+interface Link {
+  title: string;
+  src: string;
+}
 `;
 
 export const FOOTER_INTERFACE_CUSTOM_CONTENT = `
-  interface CustomContent {
-    title?: string;
-    content?: string | string[];
-  }
+interface CustomContent {
+  title?: string;
+  content?: string | string[];
+}
 `;
 
 export const FOOTER_INTERFACE_PHONE_DATA_SOURCE: DataSource[] = [
@@ -242,29 +242,29 @@ export const FOOTER_EXAMPLE_ALL_HTML = `
 `;
 
 export const FOOTER_EXAMPLE_INDICATOR_HTML = `
-  <o-footer
-    [hidePhoneSection]="true"
-    indicatorText="¿Te fue útil esta página?"
-  >
-    <button class="btn btn-primary">Sí, me fue útil</button>
-    <button class="btn btn-secondary">No me sirvió</button>
-  </o-footer>
+<o-footer
+  [hidePhoneSection]="true"
+  indicatorText="¿Te fue útil esta página?"
+>
+  <button class="btn btn-primary">Sí, me fue útil</button>
+  <button class="btn btn-secondary">No me sirvió</button>
+</o-footer>
 `;
 
 export const FOOTER_CUSTOM_LIST_HTML = `
-  <o-footer
-    [phoneCustomList]="phoneCustomList"
-    [networkCustomList]="networkCustomList"
-    [linkCustomList]="linkCustomList"
-  ></o-footer>
+<o-footer
+  [phoneCustomList]="phoneCustomList"
+  [networkCustomList]="networkCustomList"
+  [linkCustomList]="linkCustomList"
+></o-footer>
 `;
 
 export const FOOTER_CUSTOM_CONTENT_HTML = `
-  <o-footer
-    [phoneCustomContent]="phoneCustomContent"
-    [networkCustomContent]="networkCustomContent"
-    [linkCustomContent]="linkCustomContent"
-  ></o-footer>
+<o-footer
+  [phoneCustomContent]="phoneCustomContent"
+  [networkCustomContent]="networkCustomContent"
+  [linkCustomContent]="linkCustomContent"
+></o-footer>
 `;
 
 export const FOOTER_CUSTOM_LIST_TS = formattedExampleTsCodeAll(
@@ -274,33 +274,33 @@ export const FOOTER_CUSTOM_LIST_TS = formattedExampleTsCodeAll(
 );
 
 export const FOOTER_CUSTOM_CUSTOM_TS = `
-  import { Component  } from '@angular/core';
-  import { CustomContent } from 'ngx-obelisco-example/core/models';
+import { Component  } from '@angular/core';
+import { CustomContent } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public phoneCustomContent: CustomContent = {
-      title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      content: [
-        "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ]
-    };
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  public phoneCustomContent: CustomContent = {
+    title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    content: [
+      "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    ]
+  };
 
-    public networkCustomContent: CustomContent = {
-      title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      content: [
-        "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ]
-    };
+  public networkCustomContent: CustomContent = {
+    title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    content: [
+      "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    ]
+  };
 
-    public linkCustomContent: CustomContent = {
-      title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      content: "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    };
-  }
+  public linkCustomContent: CustomContent = {
+    title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    content: "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  };
+}
 `;

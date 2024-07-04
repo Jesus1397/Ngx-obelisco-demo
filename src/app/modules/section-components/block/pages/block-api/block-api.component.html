@@ -1,21 +1,58 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Bloque de trámite de Obelisco</h2>
-    <pre class="code import">
-        <code appPrism language="javascript" code="import { OBlockModule } from 'ngx-obelisco-example/block';"></code>
-      </pre>
+    <h2 class="h3">Referencia de API para el componente Bloque de trámite de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OBlockModule } from 'ngx-obelisco-example/block';"></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>OBlock</h4>
     <p>Selector: <strong>o-block</strong></p>
 
     <div class="section-properties mb-5">
-      <h5>Propiedades</h5>
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+
+    <div class="section-properties mb-5">
+      <h2 class="h3">Secciones básicas de OBlock</h2>
+      <p>
+        El componente OBlock puede ser utilizado con las propiedades mencionadas previamente. Además, Ngx-obelisco
+        proporciona una serie de secciones preestablecidas que pueden incluirse dentro de
+        &lt;o-block&gt;&lt;/o-block&gt;.
+      </p>
+      <o-table
+        [columns]="columns"
+        [dataSource]="dataSourceSections"
+        [isBordered]="true"
+        [isStriped]="true"
+        [isScrollable]="true"
+      ></o-table>
+    </div>
+
+    <div class="section-properties mb-5">
+      <p>
+        Tanto <em>o-block-title</em> como <em>o-block-text</em> tienen la propiedad
+        <em><strong>customClasses</strong>: string</em>, la cual permite aplicar clases personalizadas a los mismos.
+      </p>
+    </div>
+
+    <div class="section-properties mb-5">
+      <p>Ejemplo:</p>
+      <div component-html>
+        <code highlight-js>
+          {{ blockSectionsHtml }}
+        </code>
+      </div>
     </div>
   </div>
 </section>

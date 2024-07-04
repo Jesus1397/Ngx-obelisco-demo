@@ -1,14 +1,14 @@
 <section class="section-example">
   <app-viewer title="Sin separadores" [isNavCode]="true">
     <o-table [isScrollable]="true" component [columns]="columns" [dataSource]="dataSource"></o-table>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html" code="{{ exampleNormalHTML }}"></code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>{{ exampleNormalTS }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ exampleNormalHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleNormalTS }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con separadores" [isNavCode]="true">
@@ -19,26 +19,26 @@
       [dataSource]="dataSource"
       [isBordered]="true"
     ></o-table>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html" code="{{ exampleBorderedHTML }}"></code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>{{ exampleNormalTS }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ exampleBorderedHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleNormalTS }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con patron cebra" [isNavCode]="true">
     <o-table [isScrollable]="true" component [columns]="columns" [dataSource]="dataSource" [isStriped]="true"></o-table>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html" code="{{ exampleStripedHTML }}"></code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>{{ exampleNormalTS }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ exampleStripedHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleNormalTS }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con checkbox" [isNavCode]="true">
@@ -64,13 +64,13 @@
       <hr />
     </div>
 
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html" code="{{ exampleSelectableHTML }}"></code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>{{ exampleSelectableTS }}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ exampleSelectableHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ exampleSelectableTS }}</code>
+    </div>
   </app-viewer>
 </section>

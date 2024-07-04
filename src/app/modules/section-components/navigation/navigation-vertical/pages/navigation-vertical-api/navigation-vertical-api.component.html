@@ -1,22 +1,22 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Navegacion vertical de Obelisco</h2>
-    <pre class="code import">
-        <code appPrism code="import { ONavModule } from 'ngx-obelisco-example/nav';"></code>
-      </pre>
+    <h2 class="h3">Referencia de API para el componente Navegacion vertical de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { ONavModule } from 'ngx-obelisco-example/nav';"></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>ONavVertical</h4>
     <p>Selector: <strong>o-nav-vertical</strong></p>
 
     <div class="section-properties">
-      <h5>Propiedades</h5>
+      <h2 class="h3">Propiedades</h2>
 
       <o-table
+        [isScrollable]="true"
         [columns]="columns"
         [dataSource]="dataSourceNavigationVertical"
         [isStriped]="true"
@@ -25,20 +25,21 @@
     </div>
   </div>
 
-  <h3>Tipos de datos</h3>
+  <h2 class="h3">Tipos de datos</h2>
   <hr />
 
   <div class="section-type">
-    <h4>NavVerticalItems</h4>
+    <h3>NavVerticalItems</h3>
     <p>Permite establecer los valores de la propiedad <strong>navVertItems</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ exampleIterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ exampleIterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [dataSource]="dataSourceInterface"
           [columns]="columns"
           [isBordered]="true"

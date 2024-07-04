@@ -9,7 +9,7 @@ import { DropdownSelectionExamplesComponent } from './pages/dropdown-selection-e
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ODropdownModule } from 'ngx-obelisco-example/dropdown';
 import { OTableModule } from 'ngx-obelisco-example/table';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 @NgModule({
   declarations: [DropdownSelectionComponent, DropdownSelectionApiComponent, DropdownSelectionExamplesComponent],
@@ -20,7 +20,7 @@ import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive'
     ViewerComponent,
     ODropdownModule,
     OTableModule,
-    PrismDirective
+    HighlightJsModule
   ]
 })
 export class DropdownSelectionModule {}

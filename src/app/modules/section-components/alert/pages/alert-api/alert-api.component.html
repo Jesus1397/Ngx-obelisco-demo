@@ -1,52 +1,66 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Alerta de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism language="javascript" code="import { OAlertModule } from 'ngx-obelisco-example/alert';"></code>
-    </pre>
+    <h2 class="h3">Referencia de API para el componente Alerta de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OAlertModule } from 'ngx-obelisco-example/alert';"></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>OAlert</h4>
     <p>Selector: <strong>o-alert</strong></p>
 
     <div class="section-properties">
-      <h5>Propiedades</h5>
+      <h2 class="h3">Propiedades</h2>
 
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
   </div>
 
   <br />
 
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
   <div class="section-type">
-    <h4>AlertTypes</h4>
+    <h3>AlertTypes</h3>
     <p>Permite establecer los valores de la propiedad <strong>type</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism>{{ types  }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ types }}</code>
+      </div>
     </div>
   </div>
 
   <div class="section-type">
-    <h4>AlertList</h4>
+    <h3>AlertList</h3>
     <p>Permite establecer los valores de la propiedad <strong>listContent</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism>{{ listInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ listInterface }}</code>
+      </div>
     </div>
 
     <div class="section-properties">
-      <h5>Propiedades</h5>
+      <h4>Propiedades</h4>
 
-      <o-table [columns]="columns" [dataSource]="listInterfaceData" [isStriped]="true" [isBordered]="true"></o-table>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="listInterfaceData"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
   </div>
 </section>

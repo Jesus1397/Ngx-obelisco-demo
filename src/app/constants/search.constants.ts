@@ -37,10 +37,10 @@ export const SEARCH_DATA_SOURCE: DataSource[] = [
 ];
 
 export const SEARCHITEM_INTERFACE = `
-  interface SearchbarItem {
-    title: string;
-    route: string;
-  }`;
+interface SearchbarItem {
+  title: string;
+  route: string;
+}`;
 
 export const SEARCHBAR_ITEM_DATA_SOURCE: DataSource[] = [
   {
@@ -61,31 +61,31 @@ export const SEARCH_EXAMPLE_HTML = `
 `;
 
 export const SEARCH_EXAMPLE_TS = `
-  import { Component  } from '@angular/core';
-  import { SearchbarItem } from 'ngx-obelisco-example/core/models';
+import { Component  } from '@angular/core';
+import { SearchbarItem } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    routes: SearchbarItem[] = [
-      {
-        title: 'Inicio',
-        route: '/'
-      },
-      {
-        title: 'Introducción',
-        route: '/get-started'
-      },
-      {
-        title: 'Componentes',
-        route: '/components'
-      },
-      {
-        title: 'Buscador',
-        route: '/components/search'
-      }
-    ];
-  }
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  routes: SearchbarItem[] = [
+    {
+      title: 'Inicio',
+      route: '/'
+    },
+    {
+      title: 'Introducción',
+      route: '/get-started'
+    },
+    {
+      title: 'Componentes',
+      route: '/components'
+    },
+    {
+      title: 'Buscador',
+      route: '/components/search'
+    }
+  ];
+}
 `;

@@ -13,30 +13,30 @@ export const BLOCK_NAVIGATION = [
 
 //BLOCK EXAMPLES
 export const BLOCK_EXAMPLE_TITLE = `
-  <o-block title="Iniciá el trámite y completá todos los pasos">
-    <o-button button text="Iniciar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
-  </o-block>
+<o-block title="Iniciá el trámite y completá todos los pasos">
+  <o-button #children size="lg" [isExpandable]="true" link="#">Iniciar trámite</o-button>
+</o-block>
 `;
 
 export const BLOCK_EXAMPLE_DESCRIPTION = `
-  <o-block
-    title="Iniciá el trámite y completá todos los pasos"
-    description="Si tenés un trámite iniciado podés continuarlo desde acá."
-  >
-    <o-button button text="Iniciar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
-  </o-block>
+<o-block
+  title="Iniciá el trámite y completá todos los pasos"
+  description="Si tenés un trámite iniciado podés continuarlo desde acá."
+>
+  <o-button #children size="lg" [isExpandable]="true" link="#">Iniciar trámite</o-button>
+</o-block>
 `;
 
 export const BLOCK_EXAMPLE_PROGRESS_BAR = `
-  <o-block title="Este es tu progreso en el trámite">
-    <o-progress-bar progressBar type="success" [currentStep]="4"></o-progress-bar>
-    <o-button button text="Continuar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
-  </o-block>
+<o-block title="Este es tu progreso en el trámite">
+  <o-progress-bar #children type="success" [currentStep]="4"></o-progress-bar>
+  <o-button #children size="lg" [isExpandable]="true" link="#">Continuar trámite</o-button>
+</o-block>
 `;
 export const BLOCK_EXAMPLE_BACKGROUND = `
-  <o-block title="Iniciá el trámite y completá todos los pasos" [isBgLight]="true">
-    <o-button button text="Iniciar trámite" size="lg" [isExpandable]="true" link="#"></o-button>
-  </o-block>
+<o-block title="Iniciá el trámite y completá todos los pasos" [isBgLight]="true">
+  <o-button #children size="lg" [isExpandable]="true" link="#">Iniciar trámite</o-button>
+</o-block>
 `;
 
 //BLOCK API
@@ -71,3 +71,46 @@ export const BLOCK_DATA_SOURCE: DataSource[] = [
     }
   }
 ];
+
+export const BLOCK_DATA_SOURCE_SECTIONS: DataSource[] = [
+  {
+    name: { data: 'o-block-header', customClasses: 'font-italic' },
+    description: {
+      data: 'Sección anclada a la parte superior del componente.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: 'o-block-title', customClasses: 'font-italic' },
+    description: {
+      data: 'Se utiliza dentro de o-block-header, para establecer el título del componente.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: 'o-block-text', customClasses: 'font-italic' },
+    description: {
+      data: 'Se utiliza para establecer el texto del componente.',
+      customClasses: ''
+    }
+  },
+  {
+    name: { data: 'o-block-footer', customClasses: 'font-italic' },
+    description: {
+      data: 'Sección anclada a la parte inferior del componente.',
+      customClasses: ''
+    }
+  }
+];
+
+export const BLOCK_SECTIONS = `
+<o-block>
+  <o-block-header>
+    <o-block-title>Iniciá el trámite y completá todos los pasos</o-block-title>
+  </o-block-header>
+  <o-block-text>Si tenés un trámite iniciado podés continuarlo desde acá.</o-block-text>
+  <o-block-footer>
+    <o-button size="lg" [isExpandable]="true" link="#">Iniciar trámite</o-button>
+  </o-block-footer>
+</o-block>
+`;

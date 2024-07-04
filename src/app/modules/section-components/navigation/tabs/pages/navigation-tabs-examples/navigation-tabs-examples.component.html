@@ -4,18 +4,18 @@
       <o-tabs [navTabsItems]="navigationTabsComponent"></o-tabs>
     </div>
 
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Simple con icono" [isNavCode]="true">
@@ -23,54 +23,54 @@
       <o-tabs [navTabsItems]="simpleIcon"></o-tabs>
     </div>
 
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTMLIcon }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exmapleTsIcon }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTMLIcon }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exmapleTsIcon }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Ancho completo" [isNavCode]="true">
     <div component>
       <o-tabs [navTabsItems]="navigationTabsComponent" [isFixedWidth]="true"></o-tabs>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTMLFixedWidth }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTMLFixedWidth }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Desplazable" [isNavCode]="true">
     <div component>
       <o-tabs [navTabsItems]="navigationTabsComponent" [isFixedWidth]="true" [isSlidered]="true"></o-tabs>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTMLSlider }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTMLSlider }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Simple gris" [isNavCode]="true">
@@ -82,36 +82,36 @@
       <router-outlet></router-outlet>
     </div>
 
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Ancho completo" [isNavCode]="true">
     <div component>
       <o-tabs [navTabsItems]="navigationTabsComponent" [isItemsRounded]="true" [isFixedWidth]="true"></o-tabs>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Desplazable" [isNavCode]="true">
@@ -123,18 +123,18 @@
         [isSlidered]="true"
       ></o-tabs>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Simple con fondo" [isNavCode]="true">
@@ -142,36 +142,36 @@
       <o-tabs [navTabsItems]="navigationTabsComponent" [isItemsRoundedLight]="true"></o-tabs>
     </div>
 
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Ancho completo" [isNavCode]="true">
     <div class="wrapper-bg bg-light" component>
       <o-tabs [navTabsItems]="navigationTabsComponent" [isItemsRoundedLight]="true" [isFixedWidth]="true"></o-tabs>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Desplazable" [isNavCode]="true">
@@ -183,18 +183,18 @@
         [isSlidered]="true"
       ></o-tabs>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ simpleHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="javascript">
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Tamaños" [isNavCode]="true">
@@ -232,17 +232,17 @@
         </div>
       </form>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ sizesHTML }}
-        </code>
-      </pre>
-    <pre appClipboard component-ts class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism>
-          {{ exampleTs }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ sizesHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
   </app-viewer>
 </section>

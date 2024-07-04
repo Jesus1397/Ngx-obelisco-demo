@@ -43,14 +43,15 @@ export const ALERT_TYPES = `
 `;
 
 export const ALERT_LIST_INTERFACE = `
-  export interface AlertList {
-    isUnorderedList?: boolean;
-    listItems: AlertListItems[];
-  }
-  export interface AlertListItems {
-    text?: string;
-    url?: string;
-  }
+export interface AlertList {
+  isUnorderedList?: boolean;
+  listItems: AlertListItems[];
+}
+
+export interface AlertListItems {
+  text?: string;
+  url?: string;
+}
 `;
 export const ALERT_LIST_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
@@ -70,39 +71,39 @@ export const ALERT_LIST_INTERFACE_DATA_SOURCE: DataSource[] = [
 ];
 
 export const ALERT_EXAMPLE_COLORS = `
-  <o-alert>
-    Esta es la descripción de una alerta de información.
-  </o-alert>
-  <o-alert type="primary">
-    Esta es la descripción de una alerta de información.
-  </o-alert>
-  <o-alert type="success">
-    Esta es la descripción de una alerta de información.
-  </o-alert>
-  <o-alert type="danger">
-    Esta es la descripción de una alerta de información.
-  </o-alert>
+<o-alert>
+  Esta es la descripción de una alerta de información.
+</o-alert>
+<o-alert type="primary">
+  Esta es la descripción de una alerta de información.
+</o-alert>
+<o-alert type="success">
+  Esta es la descripción de una alerta de información.
+</o-alert>
+<o-alert type="danger">
+  Esta es la descripción de una alerta de información.
+</o-alert>
 `;
 
 export const ALERT_EXAMPLE_DISMISSIBLE = `
-  <o-alert [isDismissible]="true">
-    Esta es la descripción de una alerta de información.
-  </o-alert>
+<o-alert [isDismissible]="true">
+  Esta es la descripción de una alerta de información.
+</o-alert>
 `;
 
 export const ALERT_EXAMPLE_HIGHLIGHT = `
-  <o-alert>
-    <strong>Este es un destacado de una alerta de información.</strong>
-    Esta es la descripción de una alerta de información que continua al texto destacado.
-  </o-alert>
+<o-alert>
+  <strong>Este es un destacado de una alerta de información.</strong>
+  Esta es la descripción de una alerta de información que continua al texto destacado.
+</o-alert>
 `;
 
 export const ALERT_EXAMPLE_HIGHLIGHT_LINK = `
-  <o-alert>
-    <strong>Este es un destacado de una alerta de información.</strong>
-    Esta es la descripción de una alerta de información que continua al texto destacado, incluso con
-    <a [routerLink]="['/']">con enlace</a>.
-  </o-alert>
+<o-alert>
+  <strong>Este es un destacado de una alerta de información.</strong>
+  Esta es la descripción de una alerta de información que continua al texto destacado, incluso con
+  <a [routerLink]="['/']">con enlace</a>.
+</o-alert>
 `;
 
 export const ALERT_EXAMPLE_LIST_LINK_ITEMS: AlertList = {
@@ -124,43 +125,43 @@ export const ALERT_EXAMPLE_LIST_ITEMS: AlertList = {
   ]
 };
 export const ALERT_EXAMPLE_LISTS_HTML = `
-  <o-alert type="danger" [listContent]="listLinkItems">
-    <strong>Este es un destacado de una alerta de error.</strong> 
-    Esta es la descripción de una alerta de error que continua al texto destacado.
-  </o-alert>
-  
-  <o-alert [listContent]="listItems">
-    <strong>Este es un destacado de una alerta de información.</strong> 
-    Esta es la descripción de una alerta de información que continua al texto destacado.
-  </o-alert>
+<o-alert type="danger" [listContent]="listLinkItems">
+  <strong>Este es un destacado de una alerta de error.</strong>
+  Esta es la descripción de una alerta de error que continua al texto destacado.
+</o-alert>
+
+<o-alert [listContent]="listItems">
+  <strong>Este es un destacado de una alerta de información.</strong>
+  Esta es la descripción de una alerta de información que continua al texto destacado.
+</o-alert>
 `;
 export const ALERT_EXAMPLE_LISTS_TS = `
-  import { Component } from '@angular/core';
-  import { AlertList } from 'ngx-obelisco-example/core/models';
+import { Component } from '@angular/core';
+import { AlertList } from 'ngx-obelisco-example/core/models';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
 
-  export class ExampleComponent {
-    public listLinkItems: AlertList = {
-      listItems: [
-        { text: 'Ancla al error 1', url: '#' },
-        { text: 'Ancla al error 2', url: '#' },
-        { text: 'Ancla al error 3', url: '#' },
-        { text: 'Ancla al error 4', url: '#' },
-        { text: 'Ancla al error 5', url: '#' }
-      ]
-    };
-    public listItems: AlertList = {
-      listItems: [
-        { text: 'Texto descriptivo 1' },
-        { text: 'Texto descriptivo 2' },
-        { text: 'Texto descriptivo 3' },
-        { text: 'Texto descriptivo 4' },
-        { text: 'Texto descriptivo 5' }
-      ]
-    };
-  }
+export class ExampleComponent {
+  public listLinkItems: AlertList = {
+    listItems: [
+      { text: 'Ancla al error 1', url: '#' },
+      { text: 'Ancla al error 2', url: '#' },
+      { text: 'Ancla al error 3', url: '#' },
+      { text: 'Ancla al error 4', url: '#' },
+      { text: 'Ancla al error 5', url: '#' }
+    ]
+  };
+  public listItems: AlertList = {
+    listItems: [
+      { text: 'Texto descriptivo 1' },
+      { text: 'Texto descriptivo 2' },
+      { text: 'Texto descriptivo 3' },
+      { text: 'Texto descriptivo 4' },
+      { text: 'Texto descriptivo 5' }
+    ]
+  };
+}
 `;

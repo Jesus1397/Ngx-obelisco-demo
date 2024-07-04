@@ -8,7 +8,7 @@ import { CalendarComponent } from './calendar.component';
 
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 
 import { ONavModule } from 'ngx-obelisco-example/nav';
@@ -24,7 +24,7 @@ import { OButtonModule } from 'ngx-obelisco-example/button';
     ONavModule,
     OTableModule,
     ViewerComponent,
-    PrismDirective,
+    HighlightJsModule,
     ClipboardDirective,
     TabsLinkComponent,
     OCalendarModule,

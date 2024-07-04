@@ -7,23 +7,23 @@
       <o-badge type="success">Etiqueta</o-badge>
       <o-badge type="danger">Etiqueta</o-badge>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ badgeTypes }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ badgeTypes }}
+      </code>
+    </div>
   </app-viewer>
   <app-viewer title="Con enlace">
     <div class="mb-4 text-center" component>
       <o-badge link="https://gcba.github.io/Obelisco">Etiqueta con link</o-badge>
       <o-badge route="#">Etiqueta con route</o-badge>
     </div>
-    <pre appClipboard component-html class="code">
-        <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-        <code appPrism language="html">
-          {{ badgeLink }}
-        </code>
-      </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ badgeLink }}
+      </code>
+    </div>
   </app-viewer>
 </section>

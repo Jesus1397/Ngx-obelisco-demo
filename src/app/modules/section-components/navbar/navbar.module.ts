@@ -7,7 +7,7 @@ import { NavbarExamplesComponent } from './pages/navbar-examples/navbar-examples
 import { NavbarApiComponent } from './pages/navbar-api/navbar-api.component';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { ONavModule } from 'ngx-obelisco-example/nav';
 import { ONavbarModule } from 'ngx-obelisco-example/navbar';
@@ -23,7 +23,7 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     ONavbarModule,
     ViewerComponent,
     ClipboardDirective,
-    PrismDirective,
+    HighlightJsModule,
     TabsLinkComponent
   ]
 })

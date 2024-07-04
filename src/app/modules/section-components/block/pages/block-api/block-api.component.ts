@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BLOCK_DATA_SOURCE } from 'src/app/constants/block.constants';
+import { BLOCK_DATA_SOURCE, BLOCK_DATA_SOURCE_SECTIONS, BLOCK_SECTIONS } from 'src/app/constants/block.constants';
 import { COLUMNS } from 'src/app/constants/components.constants';
 
 @Component({
@@ -8,6 +8,8 @@ import { COLUMNS } from 'src/app/constants/components.constants';
   styleUrls: ['./block-api.component.scss']
 })
 export class BlockApiComponent {
-  public columns = COLUMNS;
   public dataSource = BLOCK_DATA_SOURCE;
+  public columns = COLUMNS;
+  public dataSourceSections = BLOCK_DATA_SOURCE_SECTIONS;
+  public blockSectionsHtml = BLOCK_SECTIONS;
 }

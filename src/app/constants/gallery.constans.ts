@@ -2,16 +2,16 @@ import { DataSource } from 'ngx-obelisco-example/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCode = (code: any) => `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public galleryItems: MediaGallery[] = ${codeFormattingArrayList(code)}
-    ];
-  }`;
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  public galleryItems: MediaGallery[] = ${codeFormattingArrayList(code)}
+  ];
+}`;
 
 export const GALLERY_NAVIGATION = [
   {
@@ -126,16 +126,16 @@ export const IMAGES_LIST_7 = [
 ];
 
 export const GALLERY_INTERFACE_IMAGE_ITEM = `
-  interface Media {
-w    src: string;
-  }
+interface Media {
+  src: string;
+}
 
-  interface MediaGallery extends Media {
-    author: string;
-    content: string;
-    title: string;
-  }
-  `;
+interface MediaGallery extends Media {
+  author: string;
+  content: string;
+  title: string;
+}
+`;
 
 export const GALLERY_INTERFACE_DATA_SOURCE: DataSource[] = [
   {

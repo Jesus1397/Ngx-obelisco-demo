@@ -8,7 +8,7 @@ import { SwitchExamplesComponent } from './pages/switch-examples/switch-examples
 import { OSwitchModule } from 'ngx-obelisco-example/switch';
 import { ViewerComponent } from 'src/app/components/viewer/viewer.component';
 import { ClipboardDirective } from 'src/app/shared/directives/copy/clipboard.directive';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { OTableModule } from 'ngx-obelisco-example/table';
 import { ONavModule } from 'ngx-obelisco-example/nav';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
@@ -21,7 +21,7 @@ import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.compon
     ONavModule,
     OTableModule,
     ViewerComponent,
-    PrismDirective,
+    HighlightJsModule,
     ClipboardDirective,
     OSwitchModule,
     TabsLinkComponent

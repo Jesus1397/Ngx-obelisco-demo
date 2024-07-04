@@ -6,19 +6,19 @@
       <button class="btn btn-sm btn-link mr-2" (click)="previousStep()">Anterior</button>
       <button class="btn btn-sm btn-link" (click)="nextStep()">Siguiente</button>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exmapleDirectiveHTML }}
       </code>
-    </pre>
+    </div>
 
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
         {{ exmapleDirectiveTS }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 
   <app-viewer title="Con botones y funcionalidad" [isNavCode]="true" id="example-functionality">
@@ -37,18 +37,18 @@
       <button class="btn btn-sm btn-link mr-2" (click)="previousStepExample()">Anterior</button>
       <button class="btn btn-sm btn-link" (click)="nextStepExample()">Siguiente</button>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism language="html">
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
         {{ exmapleFunctionalityHTML }}
       </code>
-    </pre>
+    </div>
 
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code appPrism>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
         {{ exmapleFunctionalityTS }}
       </code>
-    </pre>
+    </div>
   </app-viewer>
 </section>

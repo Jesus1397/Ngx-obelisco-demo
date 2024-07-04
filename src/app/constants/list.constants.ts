@@ -4,16 +4,16 @@ import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 import { DataSource } from 'ngx-obelisco-example/core/models';
 
 const formattedExampleTsCode = (code: any) => `
-  import { Component  } from '@angular/core';
+import { Component  } from '@angular/core';
 
-  @Component({
-    selector: 'app-example',
-    templateUrl: './app-example.component.html',
-  })
-  export class ExampleComponent {
-    public listStepItems: Step[] = ${codeFormattingArrayList(code)}
-    ];
-  }`;
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  public listStepItems: Step[] = ${codeFormattingArrayList(code)}
+  ];
+}`;
 
 const LIST_ROUTE = 'list';
 const LIST_STEP_ROUTE = 'list/list-step';
@@ -63,10 +63,10 @@ export const LIST_STEP_DATA_SOURCE: DataSource[] = [
 ];
 
 export const LIST_STEP_INTERFACE_STEP = `
-  export interface Step {
-    title: string;
-    description: string | string[];
-  }`;
+interface Step {
+  title: string;
+  description: string | string[];
+}`;
 
 export const LIST_STEP_STEP_INTERFACE_DATA_SOURCE: DataSource[] = [
   {

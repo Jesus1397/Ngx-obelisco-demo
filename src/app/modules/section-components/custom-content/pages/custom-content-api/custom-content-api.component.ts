@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CustomContentApiComponent {
   public customExample = `
-  <o-alert>
-    <div *oCustomContent>
-      <p>Contenido personalizado</p>
-    </div>
-  </o-alert>`;
+<o-alert>
+  <div *oCustomContent>
+    <p>Contenido personalizado</p>
+  </div>
+</o-alert>`;
 }

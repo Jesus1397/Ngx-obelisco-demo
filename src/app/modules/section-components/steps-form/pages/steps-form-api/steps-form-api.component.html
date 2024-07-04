@@ -1,31 +1,34 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Pasos de un formulario de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism code="import { OStepsFormModule } from 'ngx-obelisco-example/steps-form';"></code>
-    </pre>
+    <h2 class="h3">Referencia de API para el componente Pasos de un formulario de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OStepsFormModule } from 'ngx-obelisco-example/steps-form';"
+      ></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>OStepsForm</h4>
     <p>Selector: <strong>o-steps-form</strong></p>
 
     <div class="section-properties">
-      <h5>Como se usa</h5>
+      <h2 class="h3">Como se usa</h2>
 
       <p>
         Se puede usar las directivas <strong>StepNextDirective</strong> y
         <strong>StepPreviousDirective</strong> importado en el modulo donde se va a usar y agregarlo en botones
       </p>
-      <pre class="code import">
-        <code appPrism code="import { StepNextDirective } from 'ngx-obelisco';"></code>
-      </pre>
-      <pre class="code import">
-        <code appPrism code="import { StepPreviousDirective } from 'ngx-obelisco';"></code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'" code="import { StepNextDirective } from 'ngx-obelisco';"></code>
+      </div>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'" code="import { StepPreviousDirective } from 'ngx-obelisco';"></code>
+      </div>
 
       <p>
         Ver ejemplo
@@ -37,9 +40,9 @@
         funcionalidad.
       </p>
 
-      <pre class="code import">
-        <code appPrism code="import { StepService } from 'ngx-obelisco';"></code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'" code="import { StepService } from 'ngx-obelisco';"></code>
+      </div>
 
       <p class="mb-4">
         Ver ejemplo
@@ -48,13 +51,24 @@
         </a>
       </p>
 
-      <h5>Propiedades</h5>
-
-      <o-table [columns]="columns" [dataSource]="dataSourceInputs" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceInputs"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
       <br />
 
-      <h5>Métodos</h5>
-      <o-table [columns]="columns" [dataSource]="dataSourceOutput" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Métodos</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceOutput"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
   </div>
 </section>

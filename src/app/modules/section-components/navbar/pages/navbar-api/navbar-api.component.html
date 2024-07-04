@@ -1,39 +1,50 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Encabezado de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism language="javascript" code="import { ONavbarModule } from 'ngx-obelisco-example/navbar';"></code>
-    </pre>
-  </div>
-
-  <h3>Etiqueta</h3>
-  <hr />
-
-  <div class="section-selector">
-    <h4>ONavbar</h4>
-    <p>Selector: <strong>o-navbar</strong></p>
-
-    <div class="section-properties">
-      <h5>Propiedades</h5>
-
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    <h2 class="h3">Referencia de API para el componente Encabezado de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { ONavbarModule } from 'ngx-obelisco-example/navbar';"></code>
     </div>
   </div>
 
-  <h3>Tipos de datos</h3>
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-navbar</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
   <hr />
 
   <div class="section-type">
-    <h4>MediaHeader</h4>
+    <h3>MediaHeader</h3>
     <p>Permite establecer los valores de la propiedad <strong>logo</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ logoInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ logoInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
-        <o-table [columns]="columns" [dataSource]="logoDataSource" [isStriped]="true" [isBordered]="true"></o-table>
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="logoDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
       </div>
     </div>
   </div>
@@ -43,19 +54,20 @@
   <br />
 
   <div class="section-type">
-    <h4>NavbarRouteBase</h4>
+    <h3>NavbarRouteBase</h3>
     <p>
       Interfaz base utilizada en <strong>NavbarRoute</strong>, <strong>NavbarRouteItem</strong>,
       <strong>NavbarRouteAccount</strong>, <strong>NavbarRouteAccountItem</strong> y <strong>NavbarRouteLogin</strong>.
     </p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ navbarRouteBaseInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarRouteBaseInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="navbarRouteBaseDataSource"
           [isStriped]="true"
@@ -70,16 +82,17 @@
   <br />
 
   <div class="section-type">
-    <h4>NavbarRoute</h4>
+    <h3>NavbarRoute</h3>
     <p>Permite establecer los valores de la propiedad <strong>routes</strong> y <strong>routesExtended</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ navbarRouteInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarRouteInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades de NavbarRoute</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="navbarRouteDataSource"
           [isStriped]="true"
@@ -88,8 +101,9 @@
       </div>
 
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades de NavbarRouteItem</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="navbarRouteItemDataSource"
           [isStriped]="true"
@@ -104,16 +118,17 @@
   <br />
 
   <div class="section-type">
-    <h4>NavbarRouteAccount</h4>
+    <h3>NavbarRouteAccount</h3>
     <p>Permite establecer los valores de la propiedad <strong>routesAccount</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ navbarRouteAccountInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarRouteAccountInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades de NavbarRouteAccount</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="navbarRouteAccountDataSource"
           [isStriped]="true"
@@ -121,8 +136,9 @@
         ></o-table>
       </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades de NavbarRouteAccountItem</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="navbarRouteAccountItemDataSource"
           [isStriped]="true"
@@ -137,13 +153,13 @@
   <br />
 
   <div class="section-type">
-    <h4>NavbarRouteLogin</h4>
+    <h3>NavbarRouteLogin</h3>
     <p>Permite establecer los valores de la propiedad <strong>routesLogin</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ navbarRouteLoginInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarRouteLoginInterface }}</code>
+      </div>
     </div>
   </div>
 
@@ -152,16 +168,17 @@
   <br />
 
   <div class="section-type">
-    <h4>SearchbarItem</h4>
+    <h3>SearchbarItem</h3>
     <p>Permite establecer los valores de la propiedad <strong>searchbarItems</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ navbarSearchitemInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarSearchitemInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="searchbarItemDataSource"
           [isStriped]="true"

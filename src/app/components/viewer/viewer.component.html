@@ -1,7 +1,7 @@
 <div class="example-wrapper">
-  <div class="example-viewer p-3">
-    <h5>{{ title }}</h5>
-    <nav>
+  <div class="example-viewer p-3" *ngIf="title">
+    <h2 class="h5">{{ title }}</h2>
+    <nav *ngIf="!isCodeVisible">
       <ul class="nav flex-row nav-pills">
         <li class="nav-item d-flex">
           <a class="btn btn-sm btn-link" [class.active]="isOpenCode" (click)="isOpenCode = !isOpenCode">

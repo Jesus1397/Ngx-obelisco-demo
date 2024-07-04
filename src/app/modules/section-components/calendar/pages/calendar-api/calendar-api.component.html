@@ -1,38 +1,44 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Calendario de Obelisco</h2>
-    <pre class="code import">
-          <code appPrism language="javascript" code="import { OCalendarModule } from 'ngx-obelisco-example/calendar';"></code>
-        </pre>
-  </div>
-
-  <h3>Etiqueta</h3>
-  <hr />
-
-  <div class="section-selector">
-    <h4>OCalendar</h4>
-    <p>Selector: <strong>o-calendar</strong></p>
-
-    <div class="section-properties mb-5">
-      <h5>Propiedades generales</h5>
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    <h2 class="h3">Referencia de API para el componente Calendario de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OCalendarModule } from 'ngx-obelisco-example/calendar';"></code>
     </div>
   </div>
 
-  <h3>Tipos de datos</h3>
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-calendar</strong></p>
+
+    <div class="section-properties mb-5">
+      <h2 class="h3">Propiedades generales</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
   <hr />
 
   <div class="section-type mb-5">
-    <h4>CalendarDate</h4>
+    <h3>CalendarDate</h3>
     <p>Permite establecer los valores de las referencias del mes y año.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ calendarDateInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ calendarDateInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="calendarDateDataSource"
           [isStriped]="true"
@@ -43,16 +49,17 @@
   </div>
 
   <div class="section-type">
-    <h4>ActiveDay</h4>
+    <h3>ActiveDay</h3>
     <p>Permite establecer los valores de las referencias de los días.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism language="javascript">{{ activedayInterface }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ activedayInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [columns]="columns"
           [dataSource]="activedayDataSource"
           [isStriped]="true"
@@ -65,13 +72,13 @@
   <br />
 
   <div class="section-type">
-    <h4>ActiveDayTypes</h4>
+    <h3>ActiveDayTypes</h3>
     <p>Permite establecer los valores de la propiedad <strong>type</strong>.</p>
 
     <div class="section-interface mb-5">
-      <pre class="code import">
-          <code appPrism>{{ activedayTypes }}</code>
-        </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ activedayTypes }}</code>
+      </div>
     </div>
   </div>
 </section>

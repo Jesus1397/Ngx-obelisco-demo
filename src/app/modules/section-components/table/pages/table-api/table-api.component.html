@@ -1,59 +1,77 @@
 <section class="section-api">
   <div class="section-title">
-    <h2>Referencia de API para el componente Tabla de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism code="import { OTableModule } from 'ngx-obelisco-example/table';"></code>
-    </pre>
+    <h2 class="h3">Referencia de API para el componente Tabla de Obelisco</h2>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OTableModule } from 'ngx-obelisco-example/table';"></code>
+    </div>
   </div>
 
-  <h3>Etiqueta</h3>
+  <h2 class="h3">Etiqueta</h2>
   <hr />
 
   <div class="section-selector">
-    <h4>OTable</h4>
     <p>Selector: <strong>o-table</strong></p>
 
     <div class="section-properties">
-      <h5>Propiedades</h5>
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
 
     <div class="section-properties">
-      <h5>Métodos</h5>
-      <o-table [columns]="columns" [dataSource]="dataSourceMethods" [isStriped]="true" [isBordered]="true"></o-table>
+      <h2 class="h3">Métodos</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceMethods"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
   </div>
 
-  <h3>Tipos de datos</h3>
+  <h2 class="h3">Tipos de datos</h2>
   <hr />
 
   <div class="section-type">
-    <h4>Column</h4>
+    <h3>Column</h3>
     <p>Permite establecer los valores de la propiedad <strong>columns</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism code="{{exampleColumnInterface}}"></code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ exampleColumnInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
-        <o-table [dataSource]="dsColumnInterface" [columns]="columns" [isBordered]="true" [isStriped]="true"></o-table>
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [dataSource]="dsColumnInterface"
+          [columns]="columns"
+          [isBordered]="true"
+          [isStriped]="true"
+        ></o-table>
       </div>
     </div>
 
     <br />
     <br />
 
-    <h4>DataSource</h4>
+    <h3>DataSource</h3>
     <p>Permite establecer los valores de la propiedad <strong>dataSource</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism code="{{exampleDataSourceInterface}}"></code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ exampleDataSourceInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [dataSource]="dsDataSourceInterface"
           [columns]="columns"
           [isBordered]="true"
@@ -65,16 +83,17 @@
     <br />
     <br />
 
-    <h4>TableCheckbox</h4>
+    <h3>TableCheckbox</h3>
     <p>Permite establecer los valores de la propiedad <strong>checkbox</strong>.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism code="{{exampleTableCheckboxInterface}}"></code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ exampleTableCheckboxInterface }}</code>
+      </div>
       <div class="section-properties">
-        <h5>Propiedades</h5>
+        <h4>Propiedades</h4>
         <o-table
+          [isScrollable]="true"
           [dataSource]="dsTableCheckboxInterface"
           [columns]="columns"
           [isBordered]="true"

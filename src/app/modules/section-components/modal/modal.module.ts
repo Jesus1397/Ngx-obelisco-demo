@@ -10,7 +10,7 @@ import { ModalRoutingModule } from './modal-routing.module';
 import { ModalComponent } from './modal.component';
 import { ModalApiComponent } from './pages/modal-api/modal-api.component';
 import { ModalExamplesComponent } from './pages/modal-examples/modal-examples.component';
-import { PrismDirective } from 'src/app/shared/directives/prism/prism.directive';
+import { HighlightJsModule } from 'ngx-highlight-js';
 import { TabsLinkComponent } from 'src/app/components/tabs-link/tabs-link.component';
 import { OButtonModule } from 'ngx-obelisco-example/button';
 
@@ -24,7 +24,7 @@ import { OButtonModule } from 'ngx-obelisco-example/button';
     ViewerComponent,
     OModalModule,
     ClipboardDirective,
-    PrismDirective,
+    HighlightJsModule,
     TabsLinkComponent,
     OButtonModule
   ]

@@ -10,14 +10,14 @@
         [isAnimatedIconRight]="true"
       ></o-dropdown-selection>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">{{exampleRadioHTML}}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism>{{exampleRadioTS}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleRadioHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleRadioTS }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Selección múltiple" [isNavCode]="true">
@@ -32,14 +32,14 @@
         [isSelectionMultiple]="true"
       ></o-dropdown-selection>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">{{exampleCheckboxHTML}}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism>{{exampleCheckboxTS}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleCheckboxHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleCheckboxTS }}</code>
+    </div>
   </app-viewer>
 
   <app-viewer title="Tamaños" [isNavCode]="true">
@@ -76,13 +76,13 @@
         ></o-dropdown-selection>
       </div>
     </div>
-    <pre appClipboard component-html class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism language="html">{{exampleSizesHTML}}</code>
-    </pre>
-    <pre appClipboard component-ts class="code">
-      <button class="btn btn-sm btn-outline-link btn-clipboard ">Copiar</button>
-      <code appPrism>{{exampleRadioTS}}</code>
-    </pre>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleSizesHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleRadioTS }}</code>
+    </div>
   </app-viewer>
 </section>

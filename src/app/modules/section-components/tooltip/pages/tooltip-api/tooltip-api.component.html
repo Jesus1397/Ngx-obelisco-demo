@@ -1,9 +1,9 @@
 <section class="section-api">
   <div class="section-title">
     <h2>Referencia de API para el componente Tooltip de Obelisco</h2>
-    <pre class="code import">
-      <code appPrism code="import { OTooltipModule } from 'ngx-obelisco-example/tooltip';"></code>
-    </pre>
+    <div class=" ">
+      <code highlight-js [lang]="'ts'" code="import { OTooltipModule } from 'ngx-obelisco-example/tooltip';"></code>
+    </div>
   </div>
 
   <h3>Etiqueta</h3>
@@ -14,7 +14,13 @@
     <p>Selector: <strong>o-tooltip</strong></p>
     <div class="section-properties">
       <h5>Propiedades</h5>
-      <o-table [columns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
     </div>
   </div>
 
@@ -25,9 +31,9 @@
     <p>Permite establecer la direcciones del componente.</p>
 
     <div class="section-interface">
-      <pre class="code import">
-        <code appPrism>{{ directions }}</code>
-      </pre>
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ directions }}</code>
+      </div>
     </div>
   </div>
 </section>
