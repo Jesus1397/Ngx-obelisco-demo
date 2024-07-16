@@ -33,6 +33,13 @@ export const SEARCH_DATA_SOURCE: DataSource[] = [
       data: 'Se utiliza para definir el texto de marcador de posición en el campo de búsqueda de la barra de navegación.',
       customClasses: ''
     }
+  },
+  {
+    name: { data: '@Input() <br />  type: string', customClasses: '' },
+    description: {
+      data: 'Se utiliza para definir, en caso de ser necesario, el color de fondo del buscador, como por ejemplo light, white. ',
+      customClasses: ''
+    }
   }
 ];
 
@@ -56,9 +63,45 @@ export const SEARCHBAR_ITEM_DATA_SOURCE: DataSource[] = [
   }
 ];
 
-export const SEARCH_EXAMPLE_HTML = `
+export const SEARCH_SIMPLE_EXAMPLE_HTML = `
   <o-search [searchbarItems]="routes"></o-search>
 `;
+
+export const SEARCH_SIMPLE_EXAMPLE_TS = `
+import { Component  } from '@angular/core';
+import { SearchbarItem } from 'ngx-obelisco-example/core/models';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './app-example.component.html',
+})
+export class ExampleComponent {
+  routes: SearchbarItem[] = [
+    {
+      title: 'Inicio',
+      route: '/'
+    },
+    {
+      title: 'Introducción',
+      route: '/get-started'
+    },
+    {
+      title: 'Componentes',
+      route: '/components'
+    },
+    {
+      title: 'Buscador',
+      route: '/components/search'
+    }
+  ];
+}
+`;
+
+export const SEARCH_EXAMPLE_HTML = `
+<o-search 
+  [searchbarItems]="routes" 
+  [onSelectItem]="handleSelectItem"
+></o-search>`;
 
 export const SEARCH_EXAMPLE_TS = `
 import { Component  } from '@angular/core';
@@ -87,5 +130,9 @@ export class ExampleComponent {
       route: '/components/search'
     }
   ];
+
+  handleSelectItem(item: SearchbarItem) {
+    console.log('Item seleccionado:', item.title);
+  }
 }
 `;

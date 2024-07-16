@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { SearchbarItem } from 'ngx-obelisco-example/core/models';
-import { SEARCH_EXAMPLE_HTML, SEARCH_EXAMPLE_TS } from 'src/app/constants/search.constants';
+import {
+  SEARCH_EXAMPLE_HTML,
+  SEARCH_EXAMPLE_TS,
+  SEARCH_SIMPLE_EXAMPLE_HTML,
+  SEARCH_SIMPLE_EXAMPLE_TS
+} from 'src/app/constants/search.constants';
 
 @Component({
   selector: 'app-search-examples',
@@ -10,6 +15,9 @@ import { SEARCH_EXAMPLE_HTML, SEARCH_EXAMPLE_TS } from 'src/app/constants/search
 export class SearchExamplesComponent {
   public searchExampleHtml = SEARCH_EXAMPLE_HTML;
   public searchExampleTs = SEARCH_EXAMPLE_TS;
+
+  public searchSimpleExampleHtml = SEARCH_SIMPLE_EXAMPLE_HTML;
+  public searchSimpleExampleTs = SEARCH_SIMPLE_EXAMPLE_TS;
 
   routes: SearchbarItem[] = [
     {
@@ -29,4 +37,8 @@ export class SearchExamplesComponent {
       route: '/components/search'
     }
   ];
+
+  handleSelectItem(item: SearchbarItem) {
+    console.log('Item seleccionado:', item.title);
+  }
 }

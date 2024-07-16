@@ -11,39 +11,21 @@
   <ng-container *ngIf="!oCustomContent">
     <div class="container">
       <section *ngIf="!isPhoneSectionHidden">
-        <ng-container *ngIf="!phoneCustomContent">
-          <h3>Teléfonos útiles</h3>
-          <ul class="list-inline">
-            <li class="list-inline-item phone-items" *ngFor="let phone of phoneCustomItems">
-              <a [href]="'tel:' + phone.number">{{ phone.title }}</a>
-            </li>
-          </ul>
-          <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles"> Ver todos los teléfonos </a>
-        </ng-container>
-        <ng-container *ngIf="phoneCustomContent">
-          <h3 [innerHTML]="phoneCustomContent.title"></h3>
-          <p class="mb-0" *ngIf="!isPhoneContentArray; else isAarray" [innerHTML]="phoneCustomContent.content"></p>
-          <ng-template #isAarray>
-            <p class="mb-0" *ngFor="let item of phoneContentArray" [innerHTML]="item"></p>
-          </ng-template>
-        </ng-container>
+        <h3>Teléfonos útiles</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item phone-items" *ngFor="let phone of phoneCustomItems">
+            <a [href]="'tel:' + phone.number">{{ phone.title }}</a>
+          </li>
+        </ul>
+        <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles"> Ver todos los teléfonos </a>
       </section>
       <section *ngIf="!isNetworkSectionHidden">
-        <ng-container *ngIf="!networkCustomContent">
-          <h3>Redes de la ciudad</h3>
-          <ul class="list-inline">
-            <li class="list-inline-item redes-items" *ngFor="let network of networkCustomItems">
-              <a [href]="network.src" target="_blank"><i class="bx {{ network.icon }}"></i>{{ network.title }}</a>
-            </li>
-          </ul>
-        </ng-container>
-        <ng-container *ngIf="networkCustomContent">
-          <h3 [innerHTML]="networkCustomContent.title"></h3>
-          <p class="mb-0" *ngIf="!isNetworkContentArray; else isAarray" [innerHTML]="networkCustomContent.content"></p>
-          <ng-template #isAarray>
-            <p class="mb-0" *ngFor="let item of networkContentArray" [innerHTML]="item"></p>
-          </ng-template>
-        </ng-container>
+        <h3>Redes de la ciudad</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item redes-items" *ngFor="let network of networkCustomItems">
+            <a [href]="network.src" target="_blank"><i class="bx {{ network.icon }}"></i>{{ network.title }}</a>
+          </li>
+        </ul>
       </section>
     </div>
     <hr class="divider" *ngIf="!isPhoneSectionHidden || !isNetworkSectionHidden" />
@@ -73,21 +55,12 @@
               alt="Logo de Vamos Buenos Aires"
             />
           </div>
-          <div class="col-12" *ngIf="!isLinkSectionHideen">
-            <ng-container *ngIf="!linkCustomContent">
-              <ul class="list-inline">
-                <li class="list-inline-item" *ngFor="let link of linkCustomItems">
-                  <a [href]="link.src">{{ link.title }}</a>
-                </li>
-              </ul>
-            </ng-container>
-            <ng-container *ngIf="linkCustomContent">
-              <h3 [innerHTML]="linkCustomContent.title"></h3>
-              <p class="mb-0" *ngIf="!isLinkContentArray; else isAarray" [innerHTML]="linkCustomContent.content"></p>
-              <ng-template #isAarray>
-                <p class="mb-0" *ngFor="let item of linkContentArray" [innerHTML]="item"></p>
-              </ng-template>
-            </ng-container>
+          <div class="col-12" *ngIf="!isLinkSectionHidden">
+            <ul class="list-inline">
+              <li class="list-inline-item" *ngFor="let link of linkCustomItems">
+                <a [href]="link.src">{{ link.title }}</a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

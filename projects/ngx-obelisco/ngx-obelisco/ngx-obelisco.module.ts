@@ -30,6 +30,7 @@ import { OCardModule } from 'ngx-obelisco-example/card';
 import { OTooltipModule } from 'ngx-obelisco-example/tooltip';
 import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
 import { ODefaultImageDirective } from 'ngx-obelisco-example/directives';
+import { OIconModule } from 'ngx-obelisco-example/icon';
 
 @NgModule({
   declarations: [],
@@ -64,7 +65,8 @@ import { ODefaultImageDirective } from 'ngx-obelisco-example/directives';
     OCardModule,
     OTooltipModule,
     OCustomContentDirective,
-    ODefaultImageDirective
+    ODefaultImageDirective,
+    OIconModule
   ],
   exports: [
     CommonModule,
@@ -97,7 +99,8 @@ import { ODefaultImageDirective } from 'ngx-obelisco-example/directives';
     OCardModule,
     OTooltipModule,
     OCustomContentDirective,
-    ODefaultImageDirective
+    ODefaultImageDirective,
+    OIconModule
   ]
 })
 export class NgxObeliscoModule {}

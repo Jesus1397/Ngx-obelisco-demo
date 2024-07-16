@@ -10,13 +10,13 @@ import { Link, Network, Phone } from 'ngx-obelisco-example/core/models';
   templateUrl: './app-example.component.html',
 })
 export class ExampleComponent {
-  public phoneCustomList: Phone[] = ${codeFormattingArrayList(array1)}
+  public phoneCustomItems: Phone[] = ${codeFormattingArrayList(array1)}
   ];
 
-  public networkCustomList: Network[] = ${codeFormattingArrayList(array2)}
+  public networkCustomItems: Network[] = ${codeFormattingArrayList(array2)}
   ];
 
-  public linkCustomList: Link[] = ${codeFormattingArrayList(array3)}
+  public linkCustomItems: Link[] = ${codeFormattingArrayList(array3)}
   ];
 }`;
 
@@ -32,39 +32,27 @@ export const FOOTER_NAVIGATION = [
 ];
 export const FOOTER_DATA_SOURCE: DataSource[] = [
   {
-    name: { data: '@Input() <br /> phoneCustomList: Phone[]', customClasses: '' },
+    name: { data: '@Input() <br /> phoneCustomItems: Phone[]', customClasses: '' },
     description: { data: 'Se utiliza para mostrar una lista personalizada de teléfonos.', customClasses: '' }
   },
   {
-    name: { data: '@Input() <br /> networkCustomList: Network[]', customClasses: '' },
+    name: { data: '@Input() <br /> networkCustomItems: Network[]', customClasses: '' },
     description: { data: 'Se utiliza para mostrar una lista personalizada de redes.', customClasses: '' }
   },
   {
-    name: { data: '@Input() <br /> linkCustomList: Link[]', customClasses: '' },
+    name: { data: '@Input() <br /> linkCustomItems: Link[]', customClasses: '' },
     description: { data: 'Se utiliza para mostrar una lista personalizada de enlaces.', customClasses: '' }
   },
   {
-    name: { data: '@Input() <br /> phoneCustomContent: CustomContent', customClasses: '' },
-    description: { data: 'Se utiliza para personalizar el contenido de la sección de teléfonos.', customClasses: '' }
-  },
-  {
-    name: { data: '@Input() <br /> networkCustomContent: CustomContent', customClasses: '' },
-    description: { data: 'Se utiliza para personalizar el contenido de la sección de redes.', customClasses: '' }
-  },
-  {
-    name: { data: '@Input() <br /> linkCustomContent: CustomContent', customClasses: '' },
-    description: { data: 'Se utiliza para personalizar el contenido de la sección de enlaces.', customClasses: '' }
-  },
-  {
-    name: { data: '@Input() <br /> hidePhoneSection: boolean', customClasses: '' },
+    name: { data: '@Input() <br /> isPhoneSectionHidden: boolean', customClasses: '' },
     description: { data: 'Se utiliza para ocultar la sección de teléfonos.', customClasses: '' }
   },
   {
-    name: { data: '@Input() <br /> hideNetworkSection: boolean', customClasses: '' },
+    name: { data: '@Input() <br /> isNetworkSectionHidden: boolean', customClasses: '' },
     description: { data: 'Se utiliza para ocultar la sección de redes.', customClasses: '' }
   },
   {
-    name: { data: '@Input() <br /> hideLinkSection: boolean', customClasses: '' },
+    name: { data: '@Input() <br /> isLinkSectionHidden: boolean', customClasses: '' },
     description: { data: 'Se utiliza para ocultar la sección de enlaces.', customClasses: '' }
   },
   {
@@ -178,13 +166,6 @@ interface Link {
 }
 `;
 
-export const FOOTER_INTERFACE_CUSTOM_CONTENT = `
-interface CustomContent {
-  title?: string;
-  content?: string | string[];
-}
-`;
-
 export const FOOTER_INTERFACE_PHONE_DATA_SOURCE: DataSource[] = [
   {
     name: { data: 'title: string', customClasses: '' },
@@ -222,19 +203,8 @@ export const FOOTER_INTERFACE_LINKS_DATA_SOURCE: DataSource[] = [
   }
 ];
 
-export const FOOTER_INTERFACE_CUSTOMCONTENT_DATA_SOURCE: DataSource[] = [
-  {
-    name: { data: 'title: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el nombre del enlace.', customClasses: '' }
-  },
-  {
-    name: { data: 'content: string | string[]', customClasses: '' },
-    description: { data: 'Se utiliza para especificar el contenido.', customClasses: '' }
-  }
-];
-
 export const FOOTER_EXAMPLE_LINKS_HTML = `
-  <o-footer [hidePhoneSection]="true" [hideNetworkSection]="true"></o-footer>
+  <o-footer [isPhoneSectionHidden]="true" [isNetworkSectionHidden]="true"></o-footer>
 `;
 
 export const FOOTER_EXAMPLE_ALL_HTML = `
@@ -243,7 +213,7 @@ export const FOOTER_EXAMPLE_ALL_HTML = `
 
 export const FOOTER_EXAMPLE_INDICATOR_HTML = `
 <o-footer
-  [hidePhoneSection]="true"
+  [isPhoneSectionHidden]="true"
   indicatorText="¿Te fue útil esta página?"
 >
   <button class="btn btn-primary">Sí, me fue útil</button>
@@ -253,9 +223,9 @@ export const FOOTER_EXAMPLE_INDICATOR_HTML = `
 
 export const FOOTER_CUSTOM_LIST_HTML = `
 <o-footer
-  [phoneCustomList]="phoneCustomList"
-  [networkCustomList]="networkCustomList"
-  [linkCustomList]="linkCustomList"
+  [phoneCustomItems]="phoneCustomItems"
+  [networkCustomItems]="networkCustomItems"
+  [linkCustomItems]="linkCustomItems"
 ></o-footer>
 `;
 

@@ -11,6 +11,18 @@ $icon-fail: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/
   }
 }
 
+body {
+  padding: 0px;
+  margin: 0px;
+  // overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  // &::-webkit-scrollbar {
+  //   width: 4px;
+  // }
+}
+
 .section-overview,
 .section-api,
 .section-examples {
@@ -125,17 +137,6 @@ $icon-fail: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/
 @media (max-width: 480px) {
   .section {
     padding: 0;
-  }
-}
-
-body {
-  padding: 0px;
-  margin: 0px;
-  overflow: scroll;
-  overflow-x: hidden;
-
-  &::-webkit-scrollbar {
-    width: 0px;
   }
 }
 

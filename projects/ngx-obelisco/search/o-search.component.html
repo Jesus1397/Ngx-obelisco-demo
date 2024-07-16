@@ -6,6 +6,7 @@
         #inputElement
         type="search"
         class="form-control input-search"
+        [ngClass]="type ? 'bg-' + type : ''"
         id="name-input"
         name="name"
         aria-label="Ingrese su búsqueda"

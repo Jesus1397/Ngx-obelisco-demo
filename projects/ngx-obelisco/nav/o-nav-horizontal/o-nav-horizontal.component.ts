@@ -11,6 +11,7 @@ export class ONavHorizontalComponent implements AfterViewInit {
   @Input() public navHorItems: NavHorizontalItems[] = [];
   @Input() public isBordered: boolean = false;
   @Input() public size: Sizes = 'md';
+  @Input() public exactRouteActive: boolean = false;
   @Input() public customClasses: string = '';
 
   @ViewChildren('navLink') public navLinks!: QueryList<ElementRef>;

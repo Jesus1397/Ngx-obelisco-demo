@@ -102,40 +102,12 @@ export class OFooterComponent {
 
   @Input() public isPhoneSectionHidden: boolean = false;
   @Input() public isNetworkSectionHidden: boolean = false;
-  @Input() public isLinkSectionHideen: boolean = false;
-
-  @Input() public phoneCustomContent!: CustomContent;
-  @Input() public networkCustomContent!: CustomContent;
-  @Input() public linkCustomContent!: CustomContent;
+  @Input() public isLinkSectionHidden: boolean = false;
 
   @Input() public indicatorText!: string;
 
   @Input() public customClasses: string = '';
   @Input() public customClassesIndicator: string = '';
-
-  get isPhoneContentArray(): boolean {
-    return Array.isArray(this.phoneCustomContent.content);
-  }
-
-  get phoneContentArray(): string[] {
-    return Array.isArray(this.phoneCustomContent.content) ? this.phoneCustomContent.content : [];
-  }
-
-  get isNetworkContentArray(): boolean {
-    return Array.isArray(this.networkCustomContent.content);
-  }
-
-  get networkContentArray(): string[] {
-    return Array.isArray(this.networkCustomContent.content) ? this.networkCustomContent.content : [];
-  }
-
-  get isLinkContentArray(): boolean {
-    return Array.isArray(this.linkCustomContent.content);
-  }
-
-  get linkContentArray(): string[] {
-    return Array.isArray(this.linkCustomContent.content) ? this.linkCustomContent.content : [];
-  }
 
   @ContentChild(OCustomContentDirective, { static: true }) oCustomContent?: OCustomContentDirective;
 }

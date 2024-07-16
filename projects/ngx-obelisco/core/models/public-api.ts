@@ -19,3 +19,4 @@ export * from './media.models';
 export * from './datepicker.models';
 export * from './calendar.models';
 export * from './alert.models';
+export * from './icons.models';

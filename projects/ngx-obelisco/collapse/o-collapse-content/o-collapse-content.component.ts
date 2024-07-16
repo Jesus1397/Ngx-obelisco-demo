@@ -14,10 +14,12 @@ export class OCollapseContentComponent implements AfterContentInit {
   @ContentChild(OCollapseInputComponent, { static: true }) inputComponent?: OCollapseInputComponent;
 
   public identifierContent: string | undefined;
+  public dataParentContent: string | undefined;
 
   ngAfterContentInit() {
     if (this.oCollapse) {
       this.identifierContent = this.oCollapse.identifier;
+      this.dataParentContent = this.oCollapse.dataParent;
     }
   }
 }

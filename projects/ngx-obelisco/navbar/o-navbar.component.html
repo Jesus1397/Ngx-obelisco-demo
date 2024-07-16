@@ -499,6 +499,6 @@
     [attr.aria-expanded]="isMenuExpanded ? 'true' : 'false'"
     aria-label="Menú"
     (click)="toggleMenu()"
-    *ngIf="routes || routesExtended"
+    *ngIf="routes || routesExtended || routesAccount || searchbarItems"
   ></button>
 </ng-template>

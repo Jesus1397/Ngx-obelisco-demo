@@ -8,6 +8,7 @@ import { NavVerticalItems } from 'ngx-obelisco-example/core/models';
 })
 export class ONavVerticalComponent {
   @Input() public navVertItems: NavVerticalItems[] = [];
+  @Input() public exactRouteActive: boolean = false;
   @Input() public customClasses: string = '';
 
   public scrollToTop(): void {

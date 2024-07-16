@@ -37,6 +37,7 @@ export enum ComponentEnum {
   search = 'Buscador',
   customContent = 'Contenido personalizable',
   defaultImage = 'Imagen por defecto',
+  icon = 'Iconos',
   badge = 'Etiqueta',
   calendar = 'Calendario'
   // datePicker = 'Datepicker'
@@ -245,6 +246,14 @@ export const OTHERS_NAVIGATION = [
     title: 'Imagen por defecto',
     image: { src: 'assets/component-cards/' },
     route: '/components/default-image'
+  }
+];
+
+export const ICONS_NAVIGATION = [
+  {
+    title: 'Iconos',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/icon'
   }
 ];
 

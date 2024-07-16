@@ -1,6 +1,6 @@
 <ng-template #content><ng-content></ng-content></ng-template>
 
-<div [id]="identifierContent" class="collapse">
+<div [id]="identifierContent" class="collapse" [attr.data-parent]="dataParentContent ? '#' + dataParentContent : null">
   <div class="card-body" [ngClass]="customClasses" *ngIf="!inputComponent; else inputContent">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </div>

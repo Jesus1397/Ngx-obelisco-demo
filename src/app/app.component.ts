@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { COMPONENTS_NAVIGATION } from './constants/components.constants';
+import { COMPONENTS_NAVIGATION, OTHERS_NAVIGATION, ICONS_NAVIGATION } from './constants/components.constants';
 import { NavbarRoute } from 'ngx-obelisco-example/core/models';
 
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent {
     }
   ];
 
-  componentRoutes = COMPONENTS_NAVIGATION;
+  componentRoutes = COMPONENTS_NAVIGATION.concat(OTHERS_NAVIGATION).concat(ICONS_NAVIGATION);
 
   searchItemsList = this.componentRoutes
     .flatMap((item) => {

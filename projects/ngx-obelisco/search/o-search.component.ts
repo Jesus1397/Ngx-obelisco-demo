@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchbarItem } from 'ngx-obelisco-example/core/models';
 
@@ -11,6 +11,8 @@ export class OSearchComponent implements AfterViewInit {
   @Input() public searchbarItems!: SearchbarItem[];
   @Input() public maxLengthResults: number = 10;
   @Input() public placeholder: string = 'Buscar...';
+  @Input() public type: string = '';
+  @Input() public onSelectItem?: (item: SearchbarItem) => void;
 
   term = '';
   isHover = false;
@@ -59,7 +61,11 @@ export class OSearchComponent implements AfterViewInit {
   }
 
   goTo(e: SearchbarItem) {
-    this.router.navigate([e.route]);
+    if (this.onSelectItem) {
+      this.onSelectItem(e);
+    } else {
+      this.router.navigate([e.route]);
+    }
     this.resetSearch();
   }
 
@@ -77,7 +83,7 @@ export class OSearchComponent implements AfterViewInit {
   }
 
   onDown() {
-    if (this.selectedIndex < this.filteredResults.length) {
+    if (this.selectedIndex < this.filteredResults.length - 1) {
       this.selectedIndex++;
       this.isHover = false;
     }

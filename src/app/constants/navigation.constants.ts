@@ -65,6 +65,13 @@ export const NAVIGATION_VERTICAL_DATA_SOURCE: DataSource[] = [
     description: { data: 'Se utiliza para definir los items del menú.', customClasses: '' }
   },
   {
+    name: { data: '@Input() <br /> exactRouteActive: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para que la clase "active" se aplique cuando la ruta actual coincide exactamente con la ruta del item de navegación. Por defecto es false.',
+      customClasses: ''
+    }
+  },
+  {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
@@ -85,6 +92,13 @@ export const NAVIGATION_HORIZONTAL_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> size: Sizes', customClasses: '' },
     description: { data: 'Se utiliza para definir el tamaño del menú.', customClasses: '' }
+  },
+  {
+    name: { data: '@Input() <br /> exactRouteActive: boolean', customClasses: '' },
+    description: {
+      data: 'Se utiliza para que la clase "active" se aplique cuando la ruta actual coincide exactamente con la ruta del item de navegación. Por defecto es false.',
+      customClasses: ''
+    }
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },

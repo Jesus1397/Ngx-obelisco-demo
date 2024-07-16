@@ -31,6 +31,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CustomContentComponent } from './custom-content/custom-content.component';
 import { DefaultImageComponent } from './default-image/default-image.component';
+import { IconComponent } from './icon/icon.component';
 import { AlertComponent } from './alert/alert.component';
 import { BadgeComponent } from './badge/badge.component';
 
@@ -194,6 +195,11 @@ const routes: Routes = [
     path: 'default-image',
     component: DefaultImageComponent,
     loadChildren: () => import('./default-image/default-image.module').then((m) => m.DefaultImageModule)
+  },
+  {
+    path: 'icon',
+    component: IconComponent,
+    loadChildren: () => import('./icon/icon.module').then((m) => m.IconModule)
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];

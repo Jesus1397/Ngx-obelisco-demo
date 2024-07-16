@@ -42,21 +42,4 @@
       <code highlight-js [lang]="'ts'">{{ exampleCustomListTS }}</code>
     </div>
   </app-viewer>
-
-  <app-viewer title="Contenido personalizado" [isNavCode]="true">
-    <o-footer
-      component
-      [phoneCustomContent]="phoneCustomContent"
-      [networkCustomContent]="networkCustomContent"
-      [linkCustomContent]="linkCustomContent"
-    ></o-footer>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code highlight-js>{{ exampleCustomContentHTML }}</code>
-    </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
-      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
-      <code highlight-js [lang]="'ts'">{{ exampleCustomCustomTS }}</code>
-    </div>
-  </app-viewer>
 </section>
