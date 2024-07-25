@@ -14,13 +14,16 @@ $icon-fail: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/
 body {
   padding: 0px;
   margin: 0px;
-  // overflow: scroll;
-  overflow-x: hidden;
-  overflow-y: hidden;
 
-  // &::-webkit-scrollbar {
-  //   width: 4px;
-  // }
+  overflow: hidden;
+
+  &.scrollable {
+    overflow: auto;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
 }
 
 .section-overview,

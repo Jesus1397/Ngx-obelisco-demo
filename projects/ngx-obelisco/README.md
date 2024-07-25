@@ -1,8 +1,5 @@
 # NgxObelisco
 
-[![Versión de Obelisco en npm](https://img.shields.io/npm/v/ngx-obelisco-example?label=NgxObelisco%20en%20npm&logo=npm)](https://www.npmjs.com/package/ngx-obelisco-example)
-![Deploy](https://github.com/gcba/ngx-obelisco/workflows/Build%20and%20Deploy/badge.svg?branch=main)
-
 NgxObelisco es una libreria de Angular basado en el sistema de diseño Obelisco y en componentes para los productos digitales de la ciudad de Buenos Aires.
 
 ### [Ver la documentación de componentes del Sistema de Diseño Obelisco](https://gcba.github.io/estandares/componentes/)

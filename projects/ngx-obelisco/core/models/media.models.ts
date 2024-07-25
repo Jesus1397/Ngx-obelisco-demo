@@ -25,9 +25,12 @@ export interface MediaPanel extends Media {
   alt?: string;
 }
 export interface MediaHeader extends Media {
-  route?: string;
   alt?: string;
   width?: number;
   height?: number;
   customClasses?: string;
+}
+export interface LogoHeader {
+  route?: string;
+  img?: MediaHeader[];
 }

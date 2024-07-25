@@ -20,9 +20,9 @@ export const NAVBAR_DATA_SOURCE: DataSource[] = [
     }
   },
   {
-    name: { data: '@Input() <br /> logo: MediaHeader', customClasses: '' },
+    name: { data: '@Input() <br /> logo: LogoHeader', customClasses: '' },
     description: {
-      data: 'Se utiliza para especificar la imagen del logotipo que se mostrará en la barra de navegación.',
+      data: 'Se utiliza para especificar la ruta e imagen del logotipo que se mostrará en la barra de navegación.',
       customClasses: ''
     }
   },
@@ -100,17 +100,21 @@ interface NavbarRouteBase {
   link?: string;
 }
 `;
-export const MEDIA_HEADER_INTERFACE = `
+export const LOGO_HEADER_INTERFACE = `
 interface Media {
   src: string;
 }
 
 interface MediaHeader extends Media {
-  route?: string;
   alt?: string;
   width?: string;
   height?: string;
   customClasses?: string;
+}
+
+interface LogoHeader {
+  route?: string;
+  img?: MediaHeader[];
 }
 `;
 
@@ -146,7 +150,7 @@ interface SearchbarItem {
 }
 `;
 
-export const MEDIA_HEADER_DATA_SOURCE: DataSource[] = [
+export const LOGO_HEADER_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br /> route: string', customClasses: '' },
     description: {
@@ -154,6 +158,15 @@ export const MEDIA_HEADER_DATA_SOURCE: DataSource[] = [
       customClasses: ''
     }
   },
+  {
+    name: { data: '@Input() <br /> img: MediaHeader[]', customClasses: '' },
+    description: {
+      data: 'Se utiliza para especificar la o las imagenes del logotipo que se mostrará en la barra de navegación.',
+      customClasses: ''
+    }
+  }
+];
+export const MEDIA_HEADER_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br /> src: string', customClasses: '' },
     description: {

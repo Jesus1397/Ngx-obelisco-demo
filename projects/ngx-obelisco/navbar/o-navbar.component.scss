@@ -62,3 +62,14 @@
     }
   }
 }
+
+.navbar .header-container .navbar-brand {
+  @media (min-width: 976px) {
+    margin-top: 0px;
+  }
+}
+.navbar .header-container .navbar-brand .header-logo {
+  @media (min-width: 976px) {
+    margin-top: 3.5px;
+  }
+}

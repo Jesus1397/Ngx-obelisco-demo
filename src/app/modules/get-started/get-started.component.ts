@@ -77,6 +77,15 @@ npm install material-icons@latest
   "node_modules/ngx-obelisco-example/scss/obelisco.scss"
 ]`;
 
+  public accessImport = `
+import { OAccessModule } from 'ngx-obelisco-example/access';
+import { OAlertModule } from 'ngx-obelisco-example/alert';
+  `;
+
+  public ngxImport = `
+import { NgxObeliscoModule } from 'ngx-obelisco-example/ngx-obelisco';
+  `;
+
   currentSection = 'section1';
 
   @HostListener('window:scroll', ['$event'])

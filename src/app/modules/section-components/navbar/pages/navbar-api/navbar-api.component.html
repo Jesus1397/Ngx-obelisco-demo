@@ -29,7 +29,7 @@
   <hr />
 
   <div class="section-type">
-    <h3>MediaHeader</h3>
+    <h3>LogoHeader</h3>
     <p>Permite establecer los valores de la propiedad <strong>logo</strong>.</p>
 
     <div class="section-interface">
@@ -42,6 +42,21 @@
           [isScrollable]="true"
           [columns]="columns"
           [dataSource]="logoDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+
+    <h3>MediaHeader</h3>
+    <p>Permite establecer los valores de la propiedad <strong>img</strong>.</p>
+    <div class="section-interface">
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="mediaDataSource"
           [isStriped]="true"
           [isBordered]="true"
         ></o-table>

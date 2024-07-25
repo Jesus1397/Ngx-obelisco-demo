@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { COMPONENTS_NAVIGATION, OTHERS_NAVIGATION, ICONS_NAVIGATION } from './constants/components.constants';
 import { NavbarRoute } from 'ngx-obelisco-example/core/models';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   routes: NavbarRoute[] = [
     {
       title: 'Introducción',
@@ -41,10 +42,22 @@ export class AppComponent {
     })
     .sort((a, b) => a.title.localeCompare(b.title));
 
-  constructor() {
+  constructor(private router: Router) {
     this.searchItemsList.push({ title: 'Inicio', route: '/home' });
     this.searchItemsList.push({ title: 'Componentes', route: '/components' });
     this.searchItemsList.push({ title: 'Comenzar', route: '/get-started' });
     this.searchItemsList.sort((a, b) => a.title.localeCompare(b.title));
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url === '/get-started') {
+          document.body.classList.add('scrollable');
+        } else {
+          document.body.classList.remove('scrollable');
+        }
+      }
+    });
   }
 }

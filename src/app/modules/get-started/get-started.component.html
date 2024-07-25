@@ -24,25 +24,32 @@
             [ngClass]="{ 'current-section': currentSection === 'section3' }"
             class="section-item"
           >
-            Iconografía
+            Importar módulos
           </button>
           <button
             (click)="scrollTo('section4')"
             [ngClass]="{ 'current-section': currentSection === 'section4' }"
             class="section-item"
           >
-            Tipografía
+            Iconografía
           </button>
           <button
             (click)="scrollTo('section5')"
             [ngClass]="{ 'current-section': currentSection === 'section5' }"
             class="section-item"
           >
-            Javascript
+            Tipografía
           </button>
           <button
             (click)="scrollTo('section6')"
             [ngClass]="{ 'current-section': currentSection === 'section6' }"
+            class="section-item"
+          >
+            Javascript
+          </button>
+          <button
+            (click)="scrollTo('section7')"
+            [ngClass]="{ 'current-section': currentSection === 'section7' }"
             class="section-item"
           >
             Mantenimiento y colaboración
@@ -140,6 +147,21 @@
       </section>
 
       <section class="mb-3 pt-5 section-intro" id="section3">
+        <h2>Importar módulos</h2>
+        <hr />
+        <p>Además de importar componente por componente como por ejemplo:</p>
+        <div class="d-flex flex-column align-items-end p-0" appClipboard>
+          <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+          <code highlight-js lang="'typescript'">{{ accessImport }}</code>
+        </div>
+        <p class="mb-0">Ó Puedes usar este que trae todos los módulos:</p>
+        <div class="d-flex flex-column align-items-end p-0" appClipboard>
+          <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+          <code highlight-js lang="'typescript'">{{ ngxImport }}</code>
+        </div>
+      </section>
+
+      <section class="mb-3 pt-5 section-intro" id="section4">
         <h2>Iconografía</h2>
         <hr />
         <div class="mt-4">
@@ -185,7 +207,7 @@
         </div>
       </section>
 
-      <section class="mb-3 pt-5 section-intro" id="section4">
+      <section class="mb-3 pt-5 section-intro" id="section5">
         <h2>Tipografía</h2>
         <hr />
         <p>
@@ -209,7 +231,7 @@
 
         </section> -->
 
-      <section class="mb-3 pt-5 section-intro" id="section5">
+      <section class="mb-3 pt-5 section-intro" id="section6">
         <h2>Javascript</h2>
         <hr />
         <p>
@@ -230,7 +252,7 @@
  -->
       </section>
 
-      <section class="mb-3 pt-5 section-intro pb-5 mb-5" id="section6">
+      <section class="mb-3 pt-5 section-intro pb-5" id="section7">
         <h2>Mantenimiento y colaboración</h2>
         <hr />
         <p>

@@ -1,5 +1,5 @@
 import {
-  MediaHeader,
+  LogoHeader,
   NavbarRoute,
   NavbarRouteAccount,
   NavbarRouteLogin,
@@ -28,13 +28,17 @@ import { Router } from '@angular/router';
 export class ONavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   // Navbar
   @Input() public id: string = 'ONavbar';
-  @Input() public logo: MediaHeader = {
+  @Input() public logo: LogoHeader = {
     route: '/',
-    src: 'https://buenosaires.gob.ar/assets/img/logos/LogoBA.svg',
-    alt: 'Gobierno de la Ciudad de Buenos Aires - Inicio',
-    customClasses: 'header-logo',
-    height: 76,
-    width: 41
+    img: [
+      {
+        src: 'https://buenosaires.gob.ar/assets/img/logos/LogoBA.svg',
+        alt: 'Gobierno de la Ciudad de Buenos Aires - Inicio',
+        customClasses: 'header-logo',
+        height: 41,
+        width: 76
+      }
+    ]
   };
   @Input() public isRouteExact: boolean = false;
   @Input() public routes!: NavbarRoute[];

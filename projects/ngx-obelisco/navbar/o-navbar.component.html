@@ -7,11 +7,12 @@
       <!-- Logo ↓ -->
       <a class="navbar-brand" [routerLink]="logo.route" *ngIf="logo">
         <img
-          [ngClass]="logo.customClasses"
-          [src]="logo.src"
-          [alt]="logo.alt"
-          [attr.width]="logo.width"
-          [attr.height]="logo.height"
+          *ngFor="let media of logo.img"
+          [ngClass]="media.customClasses"
+          [src]="media.src"
+          [alt]="media.alt"
+          [attr.width]="media.width"
+          [attr.height]="media.height"
         />
       </a>
       <!-- Login button Mobile ↓ -->
